@@ -129,4 +129,13 @@ public class Rational {
     return (double)getNumerator() / (double)getDenominator();
   }
   
+  /**
+   * Name:          toString
+   * Description:   Returns a human-readable version of the string.
+   * 
+   * @return value  a string of "numerator/denominator".
+   */
+  public String toString() {
+    return getNumerator().toString() + "/" + getDenominator().toString();
+  }
 }

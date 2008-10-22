@@ -86,4 +86,11 @@ public class RationalTest {
     assertEquals( 0.5, rationalNumber.getValue(), 0.0001 );
   }
   
+  @Test public void testToString() {
+    rationalNumber.setNumerator(1);
+    rationalNumber.setDenominator(2);
+    
+    assertEquals( "1/2", rationalNumber.toString() );
+  }
+  
 }
