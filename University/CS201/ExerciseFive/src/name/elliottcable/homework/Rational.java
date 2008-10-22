@@ -80,4 +80,27 @@ public class Rational {
     this(0, 1);
   }
   
+  // ===========
+  // = Helpers =
+  // ===========
+  
+  /**
+   * Name:          getGCD
+   * Description:   Returns the greatest common denominator of the numerator
+   *                and denominator.
+   * 
+   * @return greatestCommonDenominator a number common to both the rational's
+   *                                   numerator and denominator
+   */
+  public Integer getGCD() {
+    // Since the easiest way to calculate GCD is a recursive method, we'll
+    // proxy to a version that takes arguments (so it can call itself with new
+    // arguments without changing our numerator or denominator)
+    return getGCD(getNumerator(), getDenominator());
+  }
+  
+  private Integer getGCD(Integer a, Integer b) {
+    if(b == 0) return a;
+    else return getGCD(b, a % b);
+  }
 }
