@@ -14,6 +14,18 @@ import static org.junit.Assert.*;
 public class RationalTest {
   Rational rationalNumber;
   
+  @Test public void testConstructor() {
+    Rational aRational = new Rational(123, 456);
+    assertEquals( (int)aRational.numerator, 123 );
+    assertEquals( (int)aRational.denominator, 456 );
+  }
+  
+  @Test public void testConstructorDefault() {
+    Rational aRational = new Rational();
+    assertEquals( (int)aRational.numerator, 0 );
+    assertEquals( (int)aRational.denominator, 1 );
+  }
+  
   @Before public void setUp() {
     rationalNumber = new Rational();
   }
