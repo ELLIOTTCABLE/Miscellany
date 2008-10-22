@@ -118,4 +118,15 @@ public class Rational {
       gcd = getGCD();
     }
   }
+  
+  /**
+   * Name:          getValue
+   * Description:   Returns the greatest common denominator of the numerator.
+   * 
+   * @return value  the value of the Rational, converted to a double
+   */
+  public Double getValue() {
+    return (double)getNumerator() / (double)getDenominator();
+  }
+  
 }
