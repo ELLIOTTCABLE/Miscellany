@@ -12,7 +12,10 @@ import org.junit.*;
 import static org.junit.Assert.*;
 
 public class RationalTest {
-  Rational rationalNumber;
+  
+  // =====================
+  // = Constructor tests =
+  // =====================
   
   @Test public void testConstructor() {
     Rational aRational = new Rational(1, 2);
@@ -35,6 +38,11 @@ public class RationalTest {
     assertEquals( (Integer)152, aRational.denominator );
   }
   
+  // ===================
+  // = Attribute tests =
+  // ===================
+  
+  Rational rationalNumber;
   @Before public void setUp() {
     rationalNumber = new Rational();
   }
@@ -50,6 +58,10 @@ public class RationalTest {
     
     assertEquals( (Integer)456, rationalNumber.getDenominator() );
   }
+  
+  // ================
+  // = Helper tests =
+  // ================
   
   @Test public void testGetGCD() {
     rationalNumber.setNumerator(123);
