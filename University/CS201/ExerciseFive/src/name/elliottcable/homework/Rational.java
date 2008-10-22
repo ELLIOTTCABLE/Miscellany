@@ -103,4 +103,18 @@ public class Rational {
     if(b == 0) return a;
     else return getGCD(b, a % b);
   }
+  
+  /**
+   * Name:          simplify
+   * Description:   Simplifies the numerator and denominator by GCDs.
+   *                Descructive!
+   */
+  public void simplify() {
+    Integer gcd = getGCD();
+    while(gcd > 1) {
+      setNumerator(getNumerator() / gcd);
+      setDenominator(getDenominator() / gcd);
+      gcd = getGCD();
+    }
+  }
 }
