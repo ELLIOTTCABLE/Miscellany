@@ -19,6 +19,10 @@ package name.elliottcable.homework;
 //////////////////////////////////////////////////////////////////////////////
 public class Rational {
   
+  // ==============
+  // = Attributes =
+  // ==============
+  
   public Integer numerator;
   /**
    * Name:          setNumerator, getNumerator
@@ -55,11 +59,23 @@ public class Rational {
     return denominator;
   }
   
+  // ===============
+  // = Constructor =
+  // ===============
+  
+  /**
+   * Name:          Rational
+   * Description:   Rational constructor, calls simplify (defaults to 0/1)
+   *
+   * @param initialNumerator initial value for the numerator
+   *                         (will be simplified down)
+   * @param initialDenominator initial value for the denominator
+   *                           (will be simplified down)
+   */
   public Rational(int initialNumerator, int initialDenominator) {
     setNumerator(   (Integer)initialNumerator   );
     setDenominator( (Integer)initialDenominator );
   }
-  
   public Rational() {
     this(0, 1);
   }
