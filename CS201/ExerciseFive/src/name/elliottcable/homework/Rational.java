@@ -27,14 +27,14 @@ public class Rational {
    * @param newNumerator new value for numerator
    */
   public void setNumerator(Integer newNumerator) {
-      numerator = newNumerator;
+    numerator = newNumerator;
   }
 
   /**
    * @return numerator
    */
   public Integer getNumerator() {
-      return numerator;
+    return numerator;
   }
   
   public Integer denominator;
@@ -45,14 +45,23 @@ public class Rational {
    * @param newDenominator new value for denominator
    */
   public void setDenominator(Integer newDenominator) {
-      denominator = newDenominator;
+    denominator = newDenominator;
   }
 
   /**
    * @return denominator
    */
   public Integer getDenominator() {
-      return denominator;
+    return denominator;
+  }
+  
+  public Rational(int initialNumerator, int initialDenominator) {
+    setNumerator(   (Integer)initialNumerator   );
+    setDenominator( (Integer)initialDenominator );
+  }
+  
+  public Rational() {
+    this(0, 1);
   }
   
 }
