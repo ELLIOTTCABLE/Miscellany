@@ -48,4 +48,12 @@ public class RationalTest {
     assertEquals( rationalNumber.getGCD(), (Integer)3 );
   }
   
+  @Test public void testSimplify() {
+    rationalNumber.setNumerator(123);
+    rationalNumber.setDenominator(456);
+    rationalNumber.simplify();
+    assertEquals( rationalNumber.getNumerator(), (Integer)41 );
+    assertEquals( rationalNumber.getDenominator(), (Integer)152 );
+  }
+  
 }
