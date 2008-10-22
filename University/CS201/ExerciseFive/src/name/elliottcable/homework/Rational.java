@@ -75,6 +75,7 @@ public class Rational {
   public Rational(int initialNumerator, int initialDenominator) {
     setNumerator(   (Integer)initialNumerator   );
     setDenominator( (Integer)initialDenominator );
+    simplify();
   }
   public Rational() {
     this(0, 1);
