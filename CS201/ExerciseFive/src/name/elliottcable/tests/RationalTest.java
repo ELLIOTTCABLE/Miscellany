@@ -42,4 +42,10 @@ public class RationalTest {
     assertNotNull( rationalNumber.denominator );
   }
   
+  @Test public void testGetGCD() {
+    rationalNumber.setNumerator(123);
+    rationalNumber.setDenominator(456);
+    assertEquals( (int)rationalNumber.getGCD(), 3 );
+  }
+  
 }
