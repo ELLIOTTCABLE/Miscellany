@@ -15,10 +15,10 @@ public class RationalTest {
   Rational rationalNumber;
   
   @Test public void testConstructor() {
-    Rational aRational = new Rational(123, 456);
+    Rational aRational = new Rational(1, 2);
     
-    assertEquals( (Integer)123, aRational.numerator );
-    assertEquals( (Integer)456, aRational.denominator );
+    assertEquals( (Integer)1, aRational.numerator );
+    assertEquals( (Integer)2, aRational.denominator );
   }
   
   @Test public void testConstructorDefault() {
@@ -26,6 +26,13 @@ public class RationalTest {
     
     assertEquals( (Integer)0, aRational.numerator );
     assertEquals( (Integer)1, aRational.denominator );
+  }
+  
+  @Test public void testConstructorSimplification() {
+    Rational aRational = new Rational(123, 456);
+    
+    assertEquals( (Integer)41, aRational.numerator );
+    assertEquals( (Integer)152, aRational.denominator );
   }
   
   @Before public void setUp() {
