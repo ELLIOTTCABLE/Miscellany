@@ -67,4 +67,12 @@ public class RationalTest {
     assertEquals( (Integer)152, rationalNumber.getDenominator() );
   }
   
+  @Test public void testGetValue() {
+    rationalNumber.setNumerator(1);
+    rationalNumber.setDenominator(2);
+    rationalNumber.simplify();
+    
+    assertEquals( 0.5, rationalNumber.getValue(), 0.0001 );
+  }
+  
 }
