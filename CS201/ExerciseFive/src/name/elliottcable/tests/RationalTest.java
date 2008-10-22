@@ -16,14 +16,14 @@ public class RationalTest {
   
   @Test public void testConstructor() {
     Rational aRational = new Rational(123, 456);
-    assertEquals( (int)aRational.numerator, 123 );
-    assertEquals( (int)aRational.denominator, 456 );
+    assertEquals( aRational.numerator, (Integer)123 );
+    assertEquals( aRational.denominator, (Integer)456 );
   }
   
   @Test public void testConstructorDefault() {
     Rational aRational = new Rational();
-    assertEquals( (int)aRational.numerator, 0 );
-    assertEquals( (int)aRational.denominator, 1 );
+    assertEquals( aRational.numerator, (Integer)0 );
+    assertEquals( aRational.denominator, (Integer)1 );
   }
   
   @Before public void setUp() {
@@ -32,20 +32,20 @@ public class RationalTest {
   
   @Test public void testNumeratorBean() {
     rationalNumber.setNumerator(123);
-    assertEquals( (int)rationalNumber.getNumerator(), 123 );
+    assertEquals( rationalNumber.getNumerator(), (Integer)123 );
     assertNotNull( rationalNumber.numerator );
   }
   
   @Test public void testDenominatorBean() {
     rationalNumber.setDenominator(456);
-    assertEquals( (int)rationalNumber.getDenominator(), 456 );
+    assertEquals( rationalNumber.getDenominator(), (Integer)456 );
     assertNotNull( rationalNumber.denominator );
   }
   
   @Test public void testGetGCD() {
     rationalNumber.setNumerator(123);
     rationalNumber.setDenominator(456);
-    assertEquals( (int)rationalNumber.getGCD(), 3 );
+    assertEquals( rationalNumber.getGCD(), (Integer)3 );
   }
   
 }
