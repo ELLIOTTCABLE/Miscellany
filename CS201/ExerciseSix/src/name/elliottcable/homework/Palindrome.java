@@ -24,6 +24,11 @@ public class Palindrome {
   
   static Scanner keyboard = new Scanner(System.in);
   
+  /**
+   * Name:          main()
+   * Description:   Allows a user to enter phrases to be tested for palindrome
+   *                  -ness.
+   */
   public static void main(String args[]) {
     boolean enter_another;
     do {
@@ -43,11 +48,15 @@ public class Palindrome {
   }
   
   /**
-   * Name:          isPalindrome
+   * Name:          isPalindrome()
    * Description:   Checks whether characters are actually a palindrome or not.
    * 
-   * Returns:       isPalindrome whether or not this Palindrome object's
-   *                  characters array is actually a palindrome.
+   * Arguments:     characters -    Characters to test for palindrome-ness.
+   *                used -          How many slots are used in the
+   *                                  `characters` array.
+   * Returns:       isPalindrome -  Whether or not this Palindrome object's
+   *                                  characters array is actually a
+   *                                  palindrome.
    */
   public static boolean isPalindrome(char[] characters, int used) {
     int middle = used / 2;
