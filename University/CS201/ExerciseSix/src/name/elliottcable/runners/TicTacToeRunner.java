@@ -13,11 +13,11 @@ import java.util.Hashtable;
 
 //////////////////////////////////////////////////////////////////////////////
 //
-// Description:   Allows one to play the TicTacToeBoard through a terminal.
+// Description:   Allows one to play the TicTacToe through a terminal.
 //	
-// Inputs:        N/A
+// Inputs:        Various, will be prompted.
 //	
-// Outputs:       N/A
+// Outputs:       Various.
 //
 //////////////////////////////////////////////////////////////////////////////
 public class TicTacToeRunner {
@@ -50,11 +50,12 @@ public class TicTacToeRunner {
    */
   public static void play_game() {
     TicTacToe board = new TicTacToe();
+    System.out.println("** (Enter moves as X and Y co-ordinates, seperated with a space)");
+    
     do {
       System.out.println("-- ---- ---- ---- --");
-      System.out.println("** "+board.player+" move (X and Y co-ordinates, seperated with a space):");
+      System.out.print(board.player+"> ");
       
-      System.out.print(">> ");
       int x = keyboard.nextInt();
       int y = keyboard.nextInt();
       board.move(x,y);
