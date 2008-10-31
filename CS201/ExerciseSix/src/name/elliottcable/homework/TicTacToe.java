@@ -124,8 +124,8 @@ public class TicTacToe {
    *                                  state.
    */
   public String toString() {
-    String boardAsString = " X1 2 3X";
-    boardAsString = boardAsString + '\n' + "Y+------";
+    String boardAsString = "  1 2 3";
+    boardAsString = boardAsString + '\n' + " +------";
     
     for(int i=1; i <= 3; i++) {
       boardAsString = boardAsString + '\n';
@@ -135,7 +135,6 @@ public class TicTacToe {
       boardAsString = boardAsString + ' ' + board[i][3];
     }
     
-    boardAsString = boardAsString + "\nY";
     return boardAsString;
   }
   
