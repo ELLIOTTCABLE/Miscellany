@@ -12,8 +12,8 @@ import java.util.Scanner;
 //////////////////////////////////////////////////////////////////////////////
 //
 // Description:   This class, a subclass of Student, describes a specific type
-//                  of Student — one who is also an athelete. Provides for
-//                  storing and manipulating an athelete's jersey number and
+//                  of Student — one who is also an athlete. Provides for
+//                  storing and manipulating an athlete's jersey number and
 //                  grade point average.
 //	
 // Inputs:        N/A
