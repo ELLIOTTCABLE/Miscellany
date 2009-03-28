@@ -12,15 +12,15 @@
   
 .text
   main:
-    la $a0, Greeting($zero);
+    la $a0, Greeting($zero)
     li $v0, 4; syscall # print_string
   
   MOTHERLOOP_start:
-    la $ra, MOTHERLOOP_have_input;
-    lb $t1, BInput($zero);
-    beq $t1, 0, READ_NEW_INPUT;
+    la $ra, MOTHERLOOP_have_input
+    lb $t1, BInput($zero)
+    beq $t1, 0, READ_NEW_INPUT
   MOTHERLOOP_have_input:
-    j EXIT;
+    j EXIT
 
 # ---- ---- ! ---- ---- #
   
@@ -36,11 +36,11 @@
     li $v0, 10; syscall # exit
   
   READ_NEW_INPUT:
-    la $a0, Prompt($zero);
+    la $a0, Prompt($zero)
     li $v0, 4; syscall # print_string
     
-    la $a0, BInput;
-    li $a1, 128;
+    la $a0, BInput
+    li $a1, 128
     li $v0, 8; syscall # read_string
     
     j $ra
@@ -49,6 +49,6 @@
   j ERROR
   EXIT:
     la $a0, Goodbye($zero)
-    li $v0, 4; syscall; # print_string
+    li $v0, 4; syscall # print_string
 
-    li $v0, 10; syscall; # exit
+    li $v0, 10; syscall # exit
