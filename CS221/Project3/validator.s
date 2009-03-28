@@ -1,7 +1,8 @@
 .data
-  Greeting:     .asciiz "Enter commands, and hit return to process:\n"
+  # Output messages
+  Greeting:     .asciiz "** Enter commands, and hit return to process:\n"
   Prompt:       .asciiz ">> "
-  Goodbye:      .asciiz "Awwww...\n"
+  Goodbye:      .asciiz "** Awwww...\n"
   # Buffers
   BInput:       .asciiz ""
   BProcessing:  .asciiz ""
