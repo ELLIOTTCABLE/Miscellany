@@ -2,12 +2,12 @@
   # Output messages
   Greeting:     .asciiz "** Enter commands, and hit return to process:\n"
   Prompt:       .asciiz ">> "
+  Error:        .asciiz "!! Oh-oh! Something happened that shouldn't have: Error #"
   Goodbye:      .asciiz "** Awwww...\n"
   # Buffers
   BInput:       .asciiz ""
   BProcessing:  .asciiz ""
   # Debugging
-  WTF:          .asciiz "WTF!\n"
   YAY:          .asciiz "YAY!\n"
   
 .text
@@ -24,9 +24,16 @@
 
 # ---- ---- ! ---- ---- #
   
-  uhmmmm:
-    la $a0, WTF($zero);
+  li $a0, 0
+  ERROR:
+    move $t0, $a0
+    la $a0, Error($zero)
     li $v0, 4; syscall # print_string
+    
+    move $a0, $t0
+    li $v0, 1; syscall # print_int
+    
+    li $v0, 10; syscall # exit
   
   READ_NEW_INPUT:
     la $a0, Prompt($zero);
@@ -38,6 +45,8 @@
     
     j $ra
   
+  li $a0, 1
+  j ERROR
   EXIT:
     la $a0, Goodbye($zero)
     li $v0, 4; syscall; # print_string
