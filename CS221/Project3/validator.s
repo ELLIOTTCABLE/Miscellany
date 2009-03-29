@@ -4,14 +4,14 @@
   Prompt:   .asciiz ">> "
   Error:    .asciiz "!! Oh-oh! Something happened that shouldn't have: Error #"
   Goodbye:  .asciiz "** Awwww...\n"
-  Newline:  .asciiz "\n"
   # Buffers
   # These have to have a lot of whitespace to pre-allocate the (possibly)
   # necessary memory
-  BInput:      .asciiz "                                                                                                                               "
-  BProcessing: .asciiz "                                                                                                                               "
+  BInput:      .asciiz "                                                                                                                              ;"
+  BProcessing: .asciiz "                                                                                                                              ;"
   # Debugging
-  BDebug: .asciiz "                                                                                                                                                                                                                                                                    "
+  Ender: .asciiz "]\n"
+  Seperator: .asciiz "# ---- ---- ! ---- ---- #\n"
   
 .text
   main:
@@ -19,14 +19,16 @@
     li $v0, 4; syscall # print_string
   
   MOTHERLOOP_start:
-    D1:; la $ra, AD1; j DEBUG; AD1:
     la $ra, MOTHERLOOP_after_shift
+    la $a0, BInput($zero)
+    la $a1, BProcessing($zero)
     j SHIFT
   MOTHERLOOP_after_shift:
-    la $ra, MOTHERLOOP_have_input
+    D1:; la $ra, AD1; j DEBUG; AD1:
+    la $ra, MOTHERLOOP_have_processable
     lb $t1, BInput($zero)
     beq $t1, 0, READ_NEW_INPUT
-  MOTHERLOOP_have_input:
+  MOTHERLOOP_have_processable:
     j EXIT
 
 # ---- ---- ! ---- ---- #
@@ -47,7 +49,18 @@
     sw $s0, 0($sp)
     move $s0, $ra
     
-    # …
+    la $a0, Seperator($zero)
+    li $v0, 4; syscall # print_string
+    la $a0, BInput($zero)
+    li $v0, 4; syscall # print_string
+    la $a0, Ender($zero)
+    li $v0, 4; syscall # print_string
+    la $a0, BProcessing($zero)
+    li $v0, 4; syscall # print_string
+    la $a0, Ender($zero)
+    li $v0, 4; syscall # print_string
+    la $a0, Seperator($zero)
+    li $v0, 4; syscall # print_string
     
     move $ra, $s0
     lw $s0, 0($sp)
