@@ -5,8 +5,10 @@
   Error:        .asciiz "!! Oh-oh! Something happened that shouldn't have: Error #"
   Goodbye:      .asciiz "** Awwww...\n"
   # Buffers
-  BInput:       .asciiz ""
-  BProcessing:  .asciiz ""
+  # These have to have a lot of whitespace to pre-allocate the (possibly)
+  # necessary memory
+  BInput:       .asciiz "                                                                                                                               "
+  BProcessing:  .asciiz "                    "
   # Debugging
   YAY:          .asciiz "YAY!\n"
   

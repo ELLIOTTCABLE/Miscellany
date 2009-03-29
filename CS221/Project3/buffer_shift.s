@@ -1,7 +1,7 @@
 .data
   # Buffers
   BInput:       .asciiz "int count; count = 54321; print count;"
-  BProcessing:  .asciiz "                                      "
+  BProcessing:  .asciiz "              "
   # String
   Newline:      .asciiz "\n"
   Seperator:    .asciiz "# ---- ---- ! ---- ----\n"
