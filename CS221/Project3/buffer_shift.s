@@ -1,25 +1,25 @@
 .data
   # Buffers
-  BInput:       .asciiz "int count; count = 54321; print count;"
-  BProcessing:  .asciiz "              "
+  BInput:       .asciiz "                                                                                                                              ;"
+  BProcessing:  .asciiz "                                                                                                                              ;"
   # String
-  Newline:      .asciiz "\n"
-  Seperator:    .asciiz "# ---- ---- ! ---- ----\n"
+  Seperator1:   .asciiz "]\n"
+  Seperator2:   .asciiz "# ---- ---- ! ---- ---- #\n"
 
 .text
 main:
   main_start:
     la $a0, BInput($zero)
     li $v0, 4; syscall # print_string
-    la $a0, Newline($zero)
+    la $a0, Seperator1($zero)
     li $v0, 4; syscall # print_string
     
     la $a0, BProcessing($zero)
     li $v0, 4; syscall # print_string
-    la $a0, Newline($zero)
+    la $a0, Seperator1($zero)
     li $v0, 4; syscall # print_string
     
-    la $a0, Seperator($zero)
+    la $a0, Seperator2($zero)
     li $v0, 4; syscall # print_string
     
     lb $t0, BInput($zero)

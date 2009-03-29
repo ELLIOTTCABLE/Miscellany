@@ -1,16 +1,17 @@
 .data
   # Output messages
-  Greeting:     .asciiz "** Enter commands, and hit return to process:\n"
-  Prompt:       .asciiz ">> "
-  Error:        .asciiz "!! Oh-oh! Something happened that shouldn't have: Error #"
-  Goodbye:      .asciiz "** Awwww...\n"
+  Greeting: .asciiz "** Enter commands, and hit return to process:\n"
+  Prompt:   .asciiz ">> "
+  Error:    .asciiz "!! Oh-oh! Something happened that shouldn't have: Error #"
+  Goodbye:  .asciiz "** Awwww...\n"
+  Newline:  .asciiz "\n"
   # Buffers
   # These have to have a lot of whitespace to pre-allocate the (possibly)
   # necessary memory
   BInput:      .asciiz "                                                                                                                               "
   BProcessing: .asciiz "                                                                                                                               "
   # Debugging
-  YAY:          .asciiz "YAY!\n"
+  BDebug: .asciiz "                                                                                                                                                                                                                                                                    "
   
 .text
   main:
@@ -18,6 +19,7 @@
     li $v0, 4; syscall # print_string
   
   MOTHERLOOP_start:
+    D1:; la $ra, AD1; j DEBUG; AD1:
     la $ra, MOTHERLOOP_after_shift
     j SHIFT
   MOTHERLOOP_after_shift:
@@ -40,6 +42,20 @@
     
     li $v0, 10; syscall # exit
   
+  DEBUG:
+    addi $sp, $sp, -4
+    sw $s0, 0($sp)
+    move $s0, $ra
+    
+    # …
+    
+    move $ra, $s0
+    lw $s0, 0($sp)
+    addi $sp, $sp, 4
+    j $ra
+  
+  li $a0, 1
+  j ERROR
   READ_NEW_INPUT:
     la $a0, Prompt($zero)
     li $v0, 4; syscall # print_string
@@ -50,7 +66,7 @@
     
     j $ra
   
-  li $a0, 1
+  li $a0, 2
   j ERROR
   SHIFT:
     addi $sp, $sp, -4
@@ -98,7 +114,7 @@
       sb $zero, 0($t2)
       j $ra
   
-  li $a0, 2
+  li $a0, 4
   j ERROR
   EXIT:
     la $a0, Goodbye($zero)
