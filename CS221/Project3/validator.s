@@ -4,6 +4,12 @@
   Prompt:   .asciiz ">> "
   Error:    .asciiz "!! Oh-oh! Something happened that shouldn't have: Error #"
   Goodbye:  .asciiz "** Awwww...\n"
+  # Static messages
+  Exit:       .asciiz "exit"
+  Int:        .asciiz "int "
+  Print:      .asciiz "print "
+  Equals:     .asciiz " = "
+  PlusEquals: .asciiz " += "
   # Buffers
   # These have to have a lot of whitespace to pre-allocate the (possibly)
   # necessary memory
@@ -34,7 +40,9 @@
     lb $t1, BInput($zero)
     beq $t1, 0, READ_NEW_INPUT
   MOTHERLOOP_have_processable:
-    j EXIT
+    la $ra, MOTHERLOOP_start
+    lb $a0, BProcessing($zero)
+    j PROCESS
 
 # ---- ---- ! ---- ---- #
   
@@ -123,13 +131,67 @@
   
   li $a0, 4
   j ERROR
+  # Processes a null-terminated string, containing a valid instruction.
+  # 
+  # Takes as arguments: $a0 containing an address to the null-terminated
+  # string containing the input.
+  PROCESS:
+    move $s0, $ra
+    
+    PROCESS_exit:
+      la $ra, PROCESS_exit_2
+      la $a0, Exit($zero)
+      la $a1, BProcessing($zero)
+      j COMPARE
+    PROCESS_exit_2:
+      bnez $v0, IS_EXIT
+    
+    PROCESS_int:
+      # …
+    
+    move $ra, $s0
+    j $ra
+  
+  li $a0, 5
+  j ERROR
+  # Compares one string to another.
+  # 
+  # Takes as arguments: $a0 containing the address to the first null-
+  # terminated string, $a1 containing the address to the second null-
+  # terminated string.
+  # 
+  # Returns: $v0 containing boolean 1 or 0.
+  COMPARE:
+    li $t0, 0 # current_byte
+    move $t1, $a0
+    move $t2, $a1
+    
+    COMPARE_loop_start:
+      bne $t1, $t2, COMPARE_fail
+      beqz $t1, COMPARE_end
+    
+    COMPARE_fail:
+      li $v0, 0
+      j $ra
+    
+    COMPARE_end:
+      li $v0, 1
+      j $ra
+  
+  li $a0, 6
+  j ERROR
+  IS_EXIT:
+    la $a0, Goodbye($zero)
+    li $v0, 4; syscall # print_string
+    
+    j EXIT
+  
+  li $a0, 7
+  j ERROR
   EXIT:
     lw $s2, 0($sp)
     lw $s1, 4($sp)
     lw $s0, 8($sp)
     addi $sp, $sp, 12
-    
-    la $a0, Goodbye($zero)
-    li $v0, 4; syscall # print_string
     
     li $v0, 10; syscall # exit
