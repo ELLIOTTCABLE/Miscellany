@@ -17,6 +17,11 @@
   main:
     la $a0, Greeting($zero)
     li $v0, 4; syscall # print_string
+    
+    addi $sp, $sp, -12
+    sw $s0, 8($sp)
+    sw $s1, 4($sp)
+    sw $s2, 0($sp)
   
   MOTHERLOOP_start:
     la $ra, MOTHERLOOP_after_shift
@@ -45,10 +50,6 @@
     li $v0, 10; syscall # exit
   
   DEBUG:
-    addi $sp, $sp, -4
-    sw $s0, 0($sp)
-    move $s0, $ra
-    
     la $a0, Seperator($zero)
     li $v0, 4; syscall # print_string
     la $a0, BInput($zero)
@@ -62,9 +63,6 @@
     la $a0, Seperator($zero)
     li $v0, 4; syscall # print_string
     
-    move $ra, $s0
-    lw $s0, 0($sp)
-    addi $sp, $sp, 4
     j $ra
   
   li $a0, 1
@@ -82,8 +80,6 @@
   li $a0, 2
   j ERROR
   SHIFT:
-    addi $sp, $sp, -4
-    sw $s0, 0($sp)
     move $s0, $ra
     
     SHIFT_start:
@@ -101,8 +97,6 @@
       
     SHIFT_end:
       move $ra, $s0
-      lw $s0, 0($sp)
-      addi $sp, $sp, 4
       j $ra
   
   li $a0, 3
@@ -130,6 +124,11 @@
   li $a0, 4
   j ERROR
   EXIT:
+    lw $s2, 0($sp)
+    lw $s1, 4($sp)
+    lw $s0, 8($sp)
+    addi $sp, $sp, 12
+    
     la $a0, Goodbye($zero)
     li $v0, 4; syscall # print_string
     
