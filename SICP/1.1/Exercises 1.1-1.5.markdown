@@ -20,3 +20,24 @@
              (else -1))             ;
        (+ a 1))                     ;  16
 
+### Exercise 1.2
+    (/
+       (+ 5 4 (- 2 (- 3 (+ 6 (/ 4 5)))))
+       (* 3 (- 6 2) (- 2 7)))
+
+### Exercise 1.3
+Laborious approach, but we don't have the tools yet, afaict ...
+
+    (define (on-largest-of op a b c)
+       (cond ((and (< c b) (< c a)) (op a b))
+             ((and (< b c) (< b a)) (op a c))
+             ((and (< a b) (< a c)) (op b c))))
+
+    (define (sum-squares a b)
+       (+ (* a a) (* b b)))
+
+    (define (sum-squares-of-largest a b c)
+       (on-largest-of sum-squares a b c))
+
+### Exercise 1.4
+b is tested ...
