@@ -62,3 +62,26 @@ it won't:
 
 Presumably, a normal-order interpreter would never terminate in this case, unless it detected such
 cases heuristically.
+
+### Exercise 1.6
+`#noidea`
+
+### Exercise 1.7
+The difference between a very, very small number and the predicted result will always been very,
+very small; and without a smaller ‘tolerance,’ the algorithm will cease attempting to improve it
+even if it's radically distant in percentage terms. (For instance, `(sqrt 0.00001)` yields
+0.03135, when the real answer is something closer to 0.00316. Off by an order of magnitude.)
+
+As for large numbers, blahblahblah something IEEE floats blah `#noidea`
+
+    (define (good-enough? previous current)
+      (< (abs (- previous current))
+         (/ current 100000)))
+
+    (define (sqrt-iter previous current x)
+      (if (good-enough? previous current)
+          current
+          (sqrt-iter current (improve current x) x)))
+
+    (define (sqrt x)
+      (sqrt-iter 0.0 1.0 x))
