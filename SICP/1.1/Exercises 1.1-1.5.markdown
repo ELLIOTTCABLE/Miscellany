@@ -40,4 +40,25 @@ Laborious approach, but we don't have the tools yet, afaict ...
        (on-largest-of sum-squares a b c))
 
 ### Exercise 1.4
-b is tested ...
+b is tested to be positive or negative, and they are either added or sutracted as necessary to
+maintain a positive result.
+
+### Exercise 1.5
+In normal-order evaluation, the interpreter will have to actually attempt to expand the
+infinitely-recursive function `p`:
+
+    (test 0 (p))
+    (test 0 (p))
+    (test 0 (p))
+    ; ... and so on.
+
+A real interpreter, however, won't attempt to evaluate `(p)` until it needs to, which, in this case,
+it won't:
+
+    (test 0 (p))
+    (if (= 0 0) 0 (p))
+    (if #t 0 (p))
+    0
+
+Presumably, a normal-order interpreter would never terminate in this case, unless it detected such
+cases heuristically.
