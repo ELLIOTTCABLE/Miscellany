@@ -153,4 +153,56 @@
 \end{enumerate}
 \end{multicols}
 
+\begin{multicols}{2}
+\raggedcolumns
+
+\section*{№ 14}
+   \begin{align*}
+               & \mathsf{ (¬p \wedge (p \rightarrow q)) \rightarrow ¬q}             \\
+      \equiv\; & \mathsf{¬(¬p \wedge (p \rightarrow q)) \vee ¬q}                    \\
+      \equiv\; & \mathsf{(p \vee ¬(p \rightarrow q)) \vee ¬q}                       \\
+      \equiv\; & \mathsf{(p \vee (p \wedge ¬q)) \vee ¬q}                            \\
+      \equiv\; & \mathsf{p \vee ¬q} \equiv \bm{\mathsf{q \rightarrow p}}            \\
+   \end{align*}
+
+   \noindent This cannot be reduced to $\bm{\mathsf{T}}$; so this is not a tautology.
+
+\section*{№ 22}
+   \begin{align*}
+               & \mathsf{( p \rightarrow q) \wedge (p \rightarrow r)}               \\
+      \equiv\; & \mathsf{(¬p \vee        q) \wedge (¬p \vee       r)}               \\
+      \equiv\; & \mathsf{ ¬p \vee (q \wedge r) \equiv p \rightarrow (q \wedge r)}   \\
+   \end{align*}
+
+\pagebreak[2]
+\section*{№ 24}
+   \begin{align*}
+               & \mathsf{( p \rightarrow q) \vee (p \rightarrow r)}                 \\
+      \equiv\; & \mathsf{(¬p \vee        q) \vee (¬p \vee       r)}                 \\
+      \equiv\; & \mathsf{ ¬p \vee (q \vee r) \equiv p \rightarrow (q \vee r)}       \\
+   \end{align*}
+
+\end{multicols}
+
+\pagebreak[2]
+\section*{№\kern-0.5bp\textsuperscript{s} 42–44}      % This pluralization is fugly.
+
+Disjunctive normal form exists as a formalization of the concept of the ‘truth table’ itself: each
+disjunction ‘section’ of the final form is a \textit{conjunction of} the propositional variables
+whose values were \textsf{true} going into a particular row of the table whose truth-value was also
+\textsf{true}, and the negation of the corresponding \textsf{false} variables from that row.
+
+Meanwhile, because you \textit{can} write down any truth-table in disjunctive-normal form,
+\textit{and} any compound proposition can be represented by a truth-table, it follows that any
+compound proposition can be represented in that form.
+
+Finally, since a disjunction can be represented by a conjunction of negations (by De Morgan's Law),
+you can further reduce disjunctive-normal form to a series of only conjunctions and negations of the
+form:
+
+\begin{align*}
+            & \mathsf{¬(a \wedge b \wedge ¬c \wedge d) \wedge ¬(a \wedge ¬b \wedge ¬c \wedge ¬d)} \\
+   \wedge\; & \mathsf{¬(¬a \wedge b \wedge c \wedge d) \wedge ¬(¬a \wedge b \wedge ¬c \wedge ¬d)} \\
+\end{align*}
+
 \end{document}
