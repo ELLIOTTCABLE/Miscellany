@@ -13,6 +13,7 @@
    textheight=700px,
    head=18.27997pt
 ]{geometry}
+\usepackage{etoolbox}
 
 \usepackage{scrlayer-scrpage}
 
@@ -50,7 +51,8 @@
 
 \lohead{\bfseries\headmark}    %% Top left on odd pages (and single-sided)
 \rohead{\bfseries\pagemark}    %% Top right on odd pages (and single-sided)
-\ofoot{\currfilename}
+\lofoot{\ttfamily\currfilename}
+\rofoot{\today}
 \chead{}                       %% Top center
 \cfoot{}                       %% Bottom center
 
@@ -60,7 +62,17 @@
 %      \usefont{OT1}{phv}{b}{n}%
 %      \sectionrule{0pt}{0pt}{-5pt}{3pt} }
 
+%%% Patch the title to remove the date
+\makeatletter
+\patchcmd{\@maketitle}% <cmd>
+   {{\usekomafont{date}{\@date \par}}%
+      \vskip \z@ \@plus 1em}% <search>
+   {}% <replace>
+   {}{}% <success><failure>
+\makeatother
+
 %%% === Content ===
 \begin{document}
+   \maketitle
 
 \end{document}
