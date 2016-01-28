@@ -85,6 +85,11 @@
    {}{}% <success><failure>
 \makeatother
 
+%%% Text
+\setlength{\parindent}{3ex}
+\setlength{\mathindent}{1em}
+
+
 %%% === Content ===
 \begin{document}
 \maketitle
@@ -93,56 +98,58 @@
 
 \begin{multicols}{2}
 \begin{enumerate}[a)]
-   \item
-      Taking \textit{“Kwame will take a job in industry”} as $\bm{\mathsf{i}}$, and \textit{“Kwame
-      will go to graduate school”} as $\bm{\mathsf{g}}$, then …
+\raggedcolumns
 
-      \begin{align*}
-         & \mathsf{i \vee g}                                         \\\equiv\;
-         & \mathsf{¬(i \vee g) \equiv ¬i \wedge ¬g}
-      \end{align*}
+\item
+   Taking \textit{“Kwame will take a job in industry”} as $\bm{\mathsf{i}}$, and \textit{“Kwame will
+   go to graduate school”} as $\bm{\mathsf{g}}$, then …
 
-      Thus, we derive: \textit{“Kwame will not take a job in industry and Kwame will not go to
-      graduate school,”} or more simply, \textit{“Kwame will not take a job in industry, nor go to
-      graduate school.”}
+   \begin{align*}
+    & \mathsf{i \vee g}                                              \\\equiv\;
+    & \mathsf{¬(i \vee g) \equiv ¬i \wedge ¬g}
+   \end{align*}
 
-   \item
-      Taking \textit{“Yoshiko knows Java”} as $\bm{\mathsf{j}}$, and \textit{“Yoshiko knows
-      calculus”} as $\bm{\mathsf{c}}$, then …
+   Thus, we derive: \textit{“Kwame will not take a job in industry and Kwame will not go to graduate
+   school,”} or more simply, \textit{“Kwame will not take a job in industry, nor go to graduate
+   school.”}
 
-      \begin{align*}
-         & \mathsf{j \wedge c}                                       \\\equiv\;
-         & \mathsf{¬(j \wedge c) \equiv ¬j \vee ¬c}
-      \end{align*}
+\item
+   Taking \textit{“Yoshiko knows Java”} as $\bm{\mathsf{j}}$, and \textit{“Yoshiko knows calculus”}
+   as $\bm{\mathsf{c}}$, then …
 
-      Thus, we derive: \textit{“Yoshiko does not know Java or Yoshiko does not know calculus”} or
-      more simply, \textit{“Yoshiko does not know at least one of Java or calculus.”}
+   \begin{align*}
+    & \mathsf{j \wedge c}                                            \\\equiv\;
+    & \mathsf{¬(j \wedge c) \equiv ¬j \vee ¬c}
+   \end{align*}
 
-  %\columnbreak
+   Thus, we derive: \textit{“Yoshiko does not know Java or Yoshiko does not know calculus”} or more
+   simply, \textit{“Yoshiko does not know at least one of Java or calculus.”}
 
-   \item
-      Taking \textit{“James is young”} as $\bm{\mathsf{y}}$, and \textit{“James is strong”} as
-      $\bm{\mathsf{s}}$, then …
+\columnbreak
 
-      \begin{align*}
-         & \mathsf{y \wedge s}                                       \\\equiv\;
-         & \mathsf{¬(y \wedge s) \equiv ¬y \vee ¬s}
-      \end{align*}
+\item
+   Taking \textit{“James is young”} as $\bm{\mathsf{y}}$, and \textit{“James is strong”} as $\bm{
+   \mathsf{s}}$, then …
 
-      Thus, we derive: \textit{“James is not young or James is not strong”} or more simply,
-      \textit{“James is old and/or weak.”}
+   \begin{align*}
+    & \mathsf{y \wedge s}                                            \\\equiv\;
+    & \mathsf{¬(y \wedge s) \equiv ¬y \vee ¬s}
+   \end{align*}
 
-   \item
-      Taking \textit{“Rita will move to Oregon”} as $\bm{\mathsf{o}}$, and \textit{“Rita will move
-      to Washington”} as $\bm{\mathsf{w}}$, then …
+   Thus, we derive: \textit{“James is not young or James is not strong”} or more simply, \textit{
+   “James is old and/or weak.”}
 
-      \begin{align*}
-         & \mathsf{o \vee w}                                         \\\equiv\;
-         & \mathsf{¬(o \vee w) \equiv ¬o \wedge ¬w}
-      \end{align*}
+\item
+   Taking \textit{“Rita will move to Oregon”} as $\bm{\mathsf{o}}$, and \textit{“Rita will move to
+   Washington”} as $\bm{\mathsf{w}}$, then …
 
-      Thus, we derive: \textit{“Rita will not move to Oregon and Rita will not move to Washington”}
-      or more simply, \textit{“Rita will not move to either Oregon or Washington.”}
+   \begin{align*}
+    & \mathsf{o \vee w}                                              \\\equiv\;
+    & \mathsf{¬(o \vee w) \equiv ¬o \wedge ¬w}
+   \end{align*}
+
+   Thus, we derive: \textit{“Rita will not move to Oregon and Rita will not move to Washington”} or
+   more simply, \textit{“Rita will not move to either Oregon or Washington.”}
 \end{enumerate}
 \end{multicols}
 
