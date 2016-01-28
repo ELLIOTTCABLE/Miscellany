@@ -1,0 +1,62 @@
+\synctex=1
+\documentclass[paper=a4,fontsize=11pt]{scrartcl}
+
+\usepackage{amsmath,amsfonts,amsthm}
+\usepackage{mathtools}
+\usepackage[svgnames]{xcolor}
+\usepackage{graphics}
+\usepackage[
+   textheight=700px,
+   head=18.27997pt
+]{geometry}
+
+\usepackage{scrlayer-scrpage}
+
+\usepackage{fontspec}
+   %\defaultfontfeatures{}
+   \setmainfont{EB Garamond}[Numbers={OldStyle,Proportional}]
+   \setsansfont{Linux Biolinum O}
+   \setmonofont{Fantasque Sans Mono}
+\setkomafont{disposition}{\normalfont}
+
+\usepackage{url}        % Pretty, line-breaking URLs                                            \url
+\usepackage{currfile}   % Get the current filename (for the footer)                    \currfilename
+\usepackage{lastpage}   % A reference to the page-number of the last page         \pageref{LastPage}
+
+%%% === Layout ===
+%\pagestyle{empty}
+\automark[subsection]{section}
+\pagestyle{scrheadings}
+
+%%% Title
+\setkomafont{author}{\scshape}
+
+\title{Assignment 1}
+\subtitle{CS 330}
+\author{elliottcable}
+
+%%% Header / footer
+\setkomafont{pagehead}{\normalfont\sffamily\upshape}
+\setkomafont{pagefoot}{\normalfont\sffamily\upshape}
+\setkomafont{pagenumber}{\normalfont\sffamily\upshape}
+
+\renewcommand\pagemark{{\usekomafont{pagenumber}%
+   \thepage\nobreakspace of\nobreakspace\pageref{LastPage}%
+}}
+
+\lohead{\bfseries\headmark}    %% Top left on odd pages (and single-sided)
+\rohead{\bfseries\pagemark}    %% Top right on odd pages (and single-sided)
+\ofoot{\currfilename}
+\chead{}                       %% Top center
+\cfoot{}                       %% Bottom center
+
+%%% Headings
+%\usepackage{sectsty}
+%   \sectionfont{%
+%      \usefont{OT1}{phv}{b}{n}%
+%      \sectionrule{0pt}{0pt}{-5pt}{3pt} }
+
+%%% === Content ===
+\begin{document}
+
+\end{document}
