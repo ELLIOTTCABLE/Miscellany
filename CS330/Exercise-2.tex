@@ -15,14 +15,11 @@
 \usepackage{etoolbox}
 
 \usepackage{scrlayer-scrpage}
-\usepackage{enumerate}
+\usepackage{enumitem}   % To adjust the spacing of multiline ‘definition lists’
 \usepackage{multicol}
-   \setlength\columnsep{20pt}
-   \setlength{\columnseprule}{0.5pt}
-   \def\columnseprulecolor{\color{gray}}
 
-\usepackage{amsmath,amsfonts,amsthm}
 \usepackage{mathtools}
+\usepackage{amsfonts,amsthm,amssymb}
 \usepackage[math-style=TeX]{unicode-math}
    \setmathfont{xits-math.otf}
 %  \setmathfont[Scale=MatchLowercase,math-style=upright,vargreek-shape=unicode]{Neo Euler}
@@ -85,42 +82,154 @@
    {}{}% <success><failure>
 \makeatother
 
+%%% Columns
+\setlength\columnsep{3.5em}
+\setlength{\columnseprule}{0.5pt}
+\def\columnseprulecolor{\color{gray}}
+
 %%% Text
 \setlength{\parindent}{3ex}
 \setlength{\mathindent}{1em}
 
+%%% Macros
+% ‘Boolean true’ (and false)
+\newcommand{\BT}{$\bm{\mathsf{T}}$}
+\newcommand{\BF}{$\bm{\mathsf{F}}$}
+\renewcommand{\qed}{\hfill\blacksquare}
+
+% ‘Logical math’ and ‘logical variable’
+%\definecolor{light-gray}{gray}{0.89}
+%\newcommand{\Pm}[1]{\colorbox{light-gray}{\ensuremath{\mathsf{#1}}}}
+%\newcommand{\Pv}[1]{\colorbox{light-gray}{\ensuremath{\mathit{#1}}}}
+\newcommand{\Pm}[1]{\ensuremath{\mathsf{#1}}}
+\newcommand{\Pv}[1]{\ensuremath{\mathit{#1}}}
+
+%\usepackage{showframe}
 
 %%% === Content ===
 \begin{document}
 \maketitle
 
-\section*{№ 48}
-%\begin{addmargin}[0.5em]{0.5em}
-\begin{quote}{\sffamily
-   “Establish these logical equivalences, where $\mathit{x}$ does not occur as a free variable in $\mathit{A}$.
-   Assume that the domain is nonempty.”
-}\end{quote}
-%\end{addmargin}
+% ==== ==== ====
+\section*{1.4 | № 48}
+\begin{addmargin}[2.5em]{2.5em}{\sffamily
+      “Establish these logical equivalences, where \Pv{x} does not occur as a free variable in
+      \Pm{A}. Assume that the domain is nonempty.”
+}\end{addmargin}
 
 \begin{multicols}{2}
-\begin{enumerate}[a.]
+\begin{enumerate}[
+      leftmargin=0pt, labelsep=0.25em,
+      label=\textsf{\textbf{\alph*)}}
+]
 \raggedcolumns
-   \item
-   Taking \textit{“Kwame will take a job in industry”} as $\bm{\mathsf{i}}$, and \textit{“Kwame will
-   go to graduate school”} as $\bm{\mathsf{g}}$, then …
 
-   \begin{align*}
-    & \mathsf{i \vee g}                                              \\\equiv\;
-    & \mathsf{¬(i \vee g) \equiv ¬i \wedge ¬g}
-   \end{align*}
+   % The \begin{aligned} mess is to center an equation *and* keep it on the same line as the item.
+   \item\hfil$\begin{aligned}[t]
+      \Pm{\forall x (A \rightarrow P(x)) \equiv A \rightarrow \forall x P(x)}
+   \end{aligned}$
 
-   Thus, we derive: \textit{“Kwame will not take a job in industry and Kwame will not go to graduate
-   school,”} or more simply, \textit{“Kwame will not take a job in industry, nor go to graduate
-   school.”}
-   
+   In both the left- and right-hand sides, there are two basic cases of truth: the first where
+   \Pm{A} is \BF, and the second where it is \BT.
+   \begin{description}[labelwidth=1em, labelsep=0em, leftmargin=1em]
+      \item[F]
+      When \Pm{A} is \BF, we find that the implication \Pm{A \rightarrow P(x)} is \textit{always}
+      vacuously true, regardless of the value of \Pm{P(x)}.
+
+      Since this reasoning applies to the expressions on both sides of the equivalence, regardless
+      of the presence or absence of quantification around \Pm{A}, in this case, the expressions are
+      confirmed equivalent.
+
+      \item[T]
+      When \Pm{A} is \BT, we can conclude that the truth-value of the left-hand expression relies
+      entirely on that of \Pm{P(x)}, quantified by \Pm{\forall x}. As this is exactly what is
+      expressed by the right-hand side, we can conclude that in this case, too, the expressions are
+      equivalent.
+   \end{description}
+
+   As we have shown the two expressions to be equivalent in every case, we can conclude them to be
+   logically equivalent. \qed
+
 \columnbreak
+
+   \item\hfil$\begin{aligned}[t]
+      \Pm{\exists x (A \rightarrow P(x)) \equiv A \rightarrow \exists x P(x)}
+   \end{aligned}$
+
+   As with the previous, there are two cases for both of these expressions: the first, where \Pm{A}
+   is \BF, and a second where it is \BT.
+   \begin{description}[labelwidth=1em, labelsep=0em, leftmargin=1em]
+      \item[F]
+      Again, here, the implication \Pm{A \rightarrow P(x)} is vacuously true.
+
+      Also again, as this reasoning applies to the both expressions, regardless
+      of the quantification, in this case, the expressions are equivalent.
+
+      \item[T]
+      When \Pm{A} is \BT, the truth-value of the left-hand expression relies on that of \Pm{P(x)},
+      quantified by \Pm{\exists x}. As this is, again, exactly what is expressed by the right-hand
+      side, we conclude that these expressions are equivalent. \qed
+   \end{description}
 
 \end{enumerate}
 \end{multicols}
+
+% ==== ==== ====
+\section*{1.4 | № 62}
+\begin{addmargin}[2.5em]{2.5em}{\sffamily
+   “Let \Pm{P(x)}, \Pm{Q(x)}, \Pm{R(x)}, and \Pm{S(x)} be the statements ‘\Pv{x} is a duck,’ ‘\Pv{x}
+   is one of my poultry,’ ‘\Pv{x} is an officer,’ and ‘\Pv{x} is willing to waltz,’ respectively.
+   Express each of these statements using quantifiers; logical connectives; and \Pm{P(x)},
+   \Pm{Q(x)}, \Pm{R(x)}, and \Pm{S(x)}.”
+}\end{addmargin}
+
+\begin{enumerate}[
+      leftmargin=0pt, labelsep=0.25em,
+      label=\textsf{\textbf{\alph*)}}
+]
+\begin{multicols}{2}
+\raggedcolumns
+
+   \item “No ducks are willing to waltz.”
+   \\ \Pm{¬\exists x (\: P(x) \wedge S(x) \:)}
+
+   \item “No officers ever decline to waltz.”
+   \\ \Pm{¬\exists x (\: R(x) \wedge ¬S(x) \:)}
+
+   \item “All my poultry are ducks.”
+   \\ \Pm{\forall x (\: Q(x) \rightarrow P(x) \:)}
+
+   \item “My poultry are not officers.”
+   \\ \Pm{\forall x (\: Q(x) \rightarrow ¬R(x) \:)}
+
+\end{multicols}
+
+   \item “Does \textit{d} follow from \textit{a}, \textit{b}, and \textit{c}? If not, is there a
+   correct conclusion?”
+
+   Yes, \textit{d} follows from \textit{a}, \textit{b}, and \textit{c}.
+
+\end{enumerate}
+
+% ==== ==== ====
+\section*{1.5 | № 6}
+\begin{addmargin}[2.5em]{2.5em}{\sffamily
+      “Let \Pm{C(x, y)} mean that student \Pv{x} is enrolled in class \Pv{y}, where the domain for
+      \Pv{x} consists of all students in your school and the domain for \Pv{y} consists of all
+      classes being given at your school. Express each of these statements by a simple English
+      sentence.”
+}\end{addmargin}
+
+\begin{enumerate}[
+      leftmargin=0pt, labelsep=0.25em,
+      label=\textsf{\textbf{\alph*)}}
+]
+\begin{multicols}{2}
+\raggedcolumns
+
+
+
+\end{multicols}
+\end{enumerate}
 
 \end{document}
