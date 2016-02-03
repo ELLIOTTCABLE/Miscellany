@@ -1,0 +1,126 @@
+\synctex=1
+\documentclass[
+   paper=a4,
+   fontsize=11pt,
+   parskip=no,       % FIXME: I want this to be `half`, but that breaks *all* my spacing rn
+   fleqn             % Align math left? o_O
+]{scrartcl}
+
+\usepackage[svgnames]{xcolor}
+\usepackage{graphics}
+\usepackage[
+   textheight=700px,
+   head=18.27997pt
+]{geometry}
+\usepackage{etoolbox}
+
+\usepackage{scrlayer-scrpage}
+\usepackage{enumerate}
+\usepackage{multicol}
+   \setlength\columnsep{20pt}
+   \setlength{\columnseprule}{0.5pt}
+   \def\columnseprulecolor{\color{gray}}
+
+\usepackage{amsmath,amsfonts,amsthm}
+\usepackage{mathtools}
+\usepackage[math-style=TeX]{unicode-math}
+   \setmathfont{xits-math.otf}
+%  \setmathfont[Scale=MatchLowercase,math-style=upright,vargreek-shape=unicode]{Neo Euler}
+%  \setmathfont[range=\mathbfsfit/{greek,Greek,latin,Latin}]{EB Garamond}
+
+\usepackage{fontspec}
+   %\defaultfontfeatures{}
+   \setmainfont{EB Garamond}[Numbers={OldStyle,Proportional}]
+   \setsansfont{Linux Biolinum O}
+   \setmonofont{Fantasque Sans Mono}
+\setkomafont{disposition}{\normalfont}
+\usepackage{bm}         % Bold-math handling
+
+\usepackage{url}        % Pretty, line-breaking URLs                                            \url
+\usepackage{currfile}   % Get the current filename (for the footer)                    \currfilename
+\usepackage{lastpage}   % A reference to the page-number of the last page         \pageref{LastPage}
+
+\usepackage{blindtext}
+
+%%% === Layout ===
+%\pagestyle{empty}
+\automark[subsection]{section}
+\pagestyle{scrheadings}
+
+%%% Title
+\setkomafont{author}{\scshape}
+
+\title{Assignment 2}
+\subtitle{CS 330}
+\author{elliottcable}
+
+%%% Header / footer
+\setkomafont{pagehead}{\normalfont\sffamily\upshape}
+\setkomafont{pagefoot}{\normalfont\sffamily\upshape}
+\setkomafont{pagenumber}{\normalfont\sffamily\upshape}
+
+\renewcommand\pagemark{{\usekomafont{pagenumber}%
+   \thepage\nobreakspace of\nobreakspace\pageref{LastPage}%
+}}
+
+\lohead{\bfseries\headmark}    %% Top left on odd pages (and single-sided)
+\rohead{\bfseries\pagemark}    %% Top right on odd pages (and single-sided)
+\lofoot{\ttfamily\currfilename}
+\rofoot{\today}
+\chead{}                       %% Top center
+\cfoot{}                       %% Bottom center
+
+%%% Headings
+%\usepackage{sectsty}
+%   \sectionfont{%
+%      \usefont{OT1}{phv}{b}{n}%
+%      \sectionrule{0pt}{0pt}{-5pt}{3pt} }
+
+%%% Patch the title to remove the date
+\makeatletter
+\patchcmd{\@maketitle}% <cmd>
+   {{\usekomafont{date}{\@date \par}}%
+      \vskip \z@ \@plus 1em}% <search>
+   {}% <replace>
+   {}{}% <success><failure>
+\makeatother
+
+%%% Text
+\setlength{\parindent}{3ex}
+\setlength{\mathindent}{1em}
+
+
+%%% === Content ===
+\begin{document}
+\maketitle
+
+\section*{№ 48}
+%\begin{addmargin}[0.5em]{0.5em}
+\begin{quote}{\sffamily
+   “Establish these logical equivalences, where $\mathit{x}$ does not occur as a free variable in $\mathit{A}$.
+   Assume that the domain is nonempty.”
+}\end{quote}
+%\end{addmargin}
+
+\begin{multicols}{2}
+\begin{enumerate}[a.]
+\raggedcolumns
+   \item
+   Taking \textit{“Kwame will take a job in industry”} as $\bm{\mathsf{i}}$, and \textit{“Kwame will
+   go to graduate school”} as $\bm{\mathsf{g}}$, then …
+
+   \begin{align*}
+    & \mathsf{i \vee g}                                              \\\equiv\;
+    & \mathsf{¬(i \vee g) \equiv ¬i \wedge ¬g}
+   \end{align*}
+
+   Thus, we derive: \textit{“Kwame will not take a job in industry and Kwame will not go to graduate
+   school,”} or more simply, \textit{“Kwame will not take a job in industry, nor go to graduate
+   school.”}
+   
+\columnbreak
+
+\end{enumerate}
+\end{multicols}
+
+\end{document}
