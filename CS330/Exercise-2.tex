@@ -226,9 +226,96 @@
 \begin{multicols}{2}
 \raggedcolumns
 
+   \item \Pm{C(\, \textsf{Randy Goldberg}, \textsf{CS 252} \,)}
+   \\ “Randy Goldberg is enrolled in CS 252.”
 
+   \item \Pm{\exists x C(\, x, \textsf{MATH 695} \,)}
+   \\ “Somebody is enrolled in MATH 695.”
+
+   \item \Pm{\exists y C(\, \textsf{Carol Sitea}, y \,)}
+   \\ “Carol Sitea is enrolled in a class.”
+
+   \item \Pm{\exists x (\; C(\, x, \textsf{MATH 222} \,) \wedge C(\, x, \textsf{CS 252} \,) \;)}
+   \\ “Someone is enrolled in both MATH 222 and CS 252.”
+
+   \item \Pm{\exists x \exists y \forall z (\;
+      (x ≠ y) \wedge (\, C(x, z) \rightarrow C(y, z) \,) \;)}
+   \\ “There is a student who is only in classes that a particular second student is \textit{also}
+   in.”
+
+   \item \Pm{\exists x \exists y \forall z (\;
+      (x ≠ y) \wedge (\, C(x, z) \leftrightarrow C(y, z) \,) \;)}
+   \\ “There are two students who share all of the same class enrollments.”
 
 \end{multicols}
 \end{enumerate}
+
+% ==== ==== ====
+\section*{1.5 | № 16}
+\begin{addmargin}[2.5em]{2.5em}{\sffamily
+   “A discrete mathematics class contains 1 mathematics major who is a freshman, 12 mathematics
+   majors who are sophomores, 15 computer science majors who are sophomores, 2 mathematics majors
+   who are juniors, 2 computer science majors who are juniors, and 1 computer science major who is a
+   senior. Express each of these statements in terms of quantifiers and then determine its truth
+   value.”
+}\end{addmargin}
+
+\vspace{1em}
+\noindent\textit{Given that \Pm{M(x, y)} means “\Pm{x} is a \Pm{y} major,” and \Pm{Y(x, y)} means
+“\Pm{x} is in their \Pm{y} year of study,”}
+
+\begin{enumerate}[
+      leftmargin=0pt, labelsep=0.25em,
+      label=\textsf{\textbf{\alph*)}}
+]
+\begin{multicols}{2}
+\raggedcolumns
+
+   \item “There is a student in the class who is a junior.”
+   \\ \Pm{\exists s Y(\, s, \textsf{junior} \,)
+      : \textsf{\textbf{T}}}
+
+   \item “Every student in the class is a computer science major.”
+   \\ \Pm{\forall s M(\, s, \textsf{CS} \,)
+      : \textsf{\textbf{F}}}
+
+   \item “There is a student in the class who is neither a mathematics major nor a junior.”
+   \\ \Pm{\exists s (\; ¬M(\, s, \textsf{Math} \,) \wedge ¬Y(\, s, \textsf{junior} \,) \;)
+      : \textsf{\textbf{T}}}
+
+\columnbreak
+
+   \item “Every student in the class is either a sophomore or a computer science major.”
+   \\ \Pm{\forall s (\; M(\, s, \textsf{CS} \,) \vee Y(\, s, \textsf{sophomore} \,) \;)
+      : \textsf{\textbf{F}}}
+
+   \item “There is a major such that there is a student in the class in every year of study with
+   that major.”
+   \\ \Pm{\exists m \forall y \exists s (\: M(s, m) \wedge Y(s, y) \:)
+      : \textsf{\textbf{F}}}
+
+\end{multicols}
+\end{enumerate}
+
+% ==== ==== ====
+\section*{1.5 | № 36}
+\begin{addmargin}[2.5em]{2.5em}{\sffamily
+   “Express each of these statements using quantifiers. Then form the negation of hte statement so
+   that no negation is to the left of the quantifier. Next, express the negation in simple English.
+   (Do not simply use the phrase “It is not the case that …”)
+}\end{addmargin}
+
+\begin{enumerate}[
+      leftmargin=0pt, labelsep=0.25em,
+      label=\textsf{\textbf{\alph*)}}
+]
+\begin{multicols}{2}
+\raggedcolumns
+
+   \item “No one has lost more than one thousand dollars playing the lottery.”
+
+\end{multicols}
+\end{enumerate}
+
 
 \end{document}
