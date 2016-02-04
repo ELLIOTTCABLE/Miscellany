@@ -313,23 +313,30 @@
 \raggedcolumns
 
    \item “No one has lost more than one thousand dollars playing the lottery.”
-   \begin{align*}\mathsf{
+   \begin{align*}
       ¬&\exists x (\: Q(x) \rightarrow P(x) \:)
+   \\  &\line(1,0){100}
    \\  &\exists x (\: Q(x) \rightarrow P(x) \:)
-   }
    \end{align*}
    “Someone has lost more than one thousand dollars playing the lottery.”
 
    \item “There is a student in this class who has chatted with exactly one other student.”
-   \begin{align*}\mathsf{
+   \begin{align*}
        &\exists x \in ℂ \,  \exists ! y C(x,y)
-   \\ ¬&\exists x \in ℂ \,  \exists ! y C(x,y)
-   \\  &\forall x \in ℂ \, ¬\exists ! y C(x,y)
-   \\  &\forall x \in ℂ \, ¬(\, \exists y (\, P(y)
-   \\  &\mspace{54mu}  \wedge ¬\exists z (\, P(z) \wedge z ≠ y \,) \,) \,)
-   }
+   \\  &\line(1,0){100}
+   \\     ¬& \exists x \in ℂ \,      \exists ! y     C(x,y)
+   \\\equiv& \forall x \in ℂ \,     ¬\exists ! y     C(x,y)
+   \\\equiv& \forall x \in ℂ \, ¬(\, \exists   y (\, C(x,y)
+   \\      & \mspace{36mu}  \wedge  ¬\exists   z (\, C(x,z) \wedge z ≠ y \,) \,) \,)
+   \\\equiv& \forall x \in ℂ \,      \forall  y ¬(\, C(x,y)
+   \\      & \mspace{36mu}  \wedge  ¬\exists   z (\, C(x,z) \wedge z ≠ y \,) \,)
+   \\\equiv& \forall x \in ℂ \,      \forall  y  (\,¬C(x,y)
+   \\      & \mspace{36mu}  \vee     \exists   z (\, C(x,z) \wedge z ≠ y \,) \,)
+   \\\equiv& ???
    \end{align*}
-   “Someone has lost more than one thousand dollars playing the lottery.”
+   “???”
+   
+\columnbreak
 
    \item “No student in this class has sent e-mail to exactly two other students in this class.”
 
