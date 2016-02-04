@@ -313,6 +313,29 @@
 \raggedcolumns
 
    \item “No one has lost more than one thousand dollars playing the lottery.”
+   \begin{align*}\mathsf{
+      ¬&\exists x (\: Q(x) \rightarrow P(x) \:)
+   \\  &\exists x (\: Q(x) \rightarrow P(x) \:)
+   }
+   \end{align*}
+   “Someone has lost more than one thousand dollars playing the lottery.”
+
+   \item “There is a student in this class who has chatted with exactly one other student.”
+   \begin{align*}\mathsf{
+       &\exists x \in ℂ \,  \exists ! y C(x,y)
+   \\ ¬&\exists x \in ℂ \,  \exists ! y C(x,y)
+   \\  &\forall x \in ℂ \, ¬\exists ! y C(x,y)
+   \\  &\forall x \in ℂ \, ¬(\, \exists y (\, P(y)
+   \\  &\mspace{54mu}  \wedge ¬\exists z (\, P(z) \wedge z ≠ y \,) \,) \,)
+   }
+   \end{align*}
+   “Someone has lost more than one thousand dollars playing the lottery.”
+
+   \item “No student in this class has sent e-mail to exactly two other students in this class.”
+
+   \item “Some student has solved every exercise in this book.”
+
+   \item “No student has solved at least one exercise in every section of this book.”
 
 \end{multicols}
 \end{enumerate}
