@@ -35,7 +35,7 @@ Uncovered:
 
 
 ### Reviews of Literature
- - *An international survey of sleeping problems in the general population.* (Léger, Poursain,
+ * *An international survey of sleeping problems in the general population.* (Léger, Poursain,
    Neubauer, Uchiyama)
 
    Contains information on sleep-issue prevalence: “In a representative sample, Leger et al. [2]
@@ -55,9 +55,9 @@ Uncovered:
 
  * *The evolution of insomnia in relation to comorbidity* (Drake, Schwartz, Roth)
 
-5. *Which nondrug alternatives can help with insomnia?* (Whitworth, Crownover, Nichols)
+ * *Which nondrug alternatives can help with insomnia?* (Whitworth, Crownover, Nichols)
 
-6. *Drug Treatment of Primary Insomnia - A Meta-Analysis of Polysomnographic Randomized Controlled
+ * *Drug Treatment of Primary Insomnia - A Meta-Analysis of Polysomnographic Randomized Controlled
    Trials* (Winkler, Auer, Doering, Rief)
 
  - *Sleep in women: A review* (Bei, Coo, Baker, Trinder)
@@ -295,3 +295,26 @@ CBT for insomnia, mostly reviewing Perlis:
    in Western Europe, the USA and Japan demonstrated that the burden of insomnia on sufferers is
    considerable, although only 3% (Japan) to 22% (France) of individuals consulted a physician about
    their symptoms.”
+ - “When extrapolated to the general population, this indicates that 131.3 million people in the USA
+   (± 1.5%), 82.3 million people in Western Europe (± 1.3%), and 25.6 million people in Japan (±
+   2.4%) have had sleep problems within the past 12 months.”
+ - “Conversely the fact that more females than males reported sleep problems is consistent with
+   previous studies investigating the epidemiology of sleep disorders.”
+
+### Which nondrug alternatives can help with insomnia? (Whitworth, Crownover, Nichols)
+
+ - “CBT interventions are based on the notion that distorted thoughts about sleep and learned
+   behavior patterns hyperarouse the central nervous system and deregulate sleep cycles, resulting
+   in chronic insomnia.”
+ - “CBT interventions combine empirically tested behavioral, cognitive, and educational procedures
+   to alter faulty beliefs and attitudes, modify sleep habits, and regulate sleep-wake schedules.”
+ - “The American Psychological Association (APA) recommends CBT as tbe "treatment of choice" for
+   chronic insomnia, witb 70% to 80% of patients showing a treatment response.”
+
+### Drug Treatment of Primary Insomnia - A Meta-Analysis of Polysomnographic Randomized Controlled Trials (Winkler, Auer, Doering, Rief)
+
+>  “Benzodiazepine receptor agonists and classical benzodiazepines are significantly more effective
+>  than antidepressants (including low-dose doxepin) in reducing the sleep onset latency of patients
+>  suffering from primary insomnia.”
+
+>  “... benzodiazepines, benzodiazepine receptor agonists (zopiclone, zolpidem and zaleplon), antidepressants (including low-dose doxepin), neuropeptides, progesterone receptor antagonists, hormones, melatonin receptor agonists, antihistamines, antiepileptics, and narcotics.”
