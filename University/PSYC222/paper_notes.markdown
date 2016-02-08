@@ -30,8 +30,18 @@ https://ezproxy.gl.iit.edu/login?url=http://search.ebscohost.com/login.asp?profi
     - Methods of application, Cost-effectiveness
        - CCBT (computerized) over the Internet; application by primary-care nursing personnel
 
+Uncovered:
+ - perpetuating features (smoking, alcohol, bad sleep hygiene)
+
 
 ### Reviews of Literature
+ - *An international survey of sleeping problems in the general population.* (Léger, Poursain,
+   Neubauer, Uchiyama)
+
+   Contains information on sleep-issue prevalence: “In a representative sample, Leger et al. [2]
+   found a prevalence of sleeping problems (during the past 12 months) of 56% in the USA, 31% in
+   Western Europe, and 23% in Japan.”
+
  * *Comparative meta-analysis of pharmacotherapy and behavior therapy for persistent insomnia* (Smith, Perlis, Park, Smith, Pennington, Giles, Buysse)
 
 1. *A meta‐analysis on the treatment effectiveness of cognitive behavioral therapy for primary
@@ -43,7 +53,7 @@ https://ezproxy.gl.iit.edu/login?url=http://search.ebscohost.com/login.asp?profi
 3. *The efficacy of cognitive behavioral therapy: A review of meta-analyses* (Hofmann, Asnaani,
    Vonk, Sawyer, Fang)
 
-4. *The evolution of insomnia in relation to comorbidity* (Drake, Schwartz, Roth)
+ * *The evolution of insomnia in relation to comorbidity* (Drake, Schwartz, Roth)
 
 5. *Which nondrug alternatives can help with insomnia?* (Whitworth, Crownover, Nichols)
 
@@ -116,14 +126,6 @@ https://ezproxy.gl.iit.edu/login?url=http://search.ebscohost.com/login.asp?profi
    Insomnia* (Jansson-Fröjmark, Linton)
 
    Reduction of ‘sleep-related beliefs’ shows improvement in daytime symptoms, but not sleep symtoms
-
-### Requested on ILL
- - *An international survey of sleeping problems in the general population.* (Léger, Poursain,
-   Neubauer, Uchiyama)
-
-   Contains information on sleep-issue prevalence: “In a representative sample, Leger et al. [2]
-   found a prevalence of sleeping problems (during the past 12 months) of 56% in the USA, 31% in
-   Western Europe, and 23% in Japan.”
 
 Notes
 =====
@@ -261,3 +263,35 @@ CBT for insomnia, mostly reviewing Perlis:
 
 >  “Among primary insomniacs, an increase in stress-related thoughts has been found to be related to
 >  sleep complaints and reduced delta power on the electroencephalogram.”
+
+### An international survey of sleeping problems in the general population (Léger, Poursain, Neubauer, Uchiyama)
+
+ - “A total of 10 132 individuals were included in this survey. The prevalence of sleeping problems
+   was 56% in the USA, 31% in Western Europe and 23% in Japan.”
+ - “Most individuals with sleeping problems considered these to have an impact on their daily
+   functioning, with family life most affected in the Western European sample, personal activities
+   in the US sample and professional activities in the Japanese sample.”
+ - “Almost half of individuals with sleep problems had never taken any steps to resolving them, and
+   the majority of respondents had not spoken with a physician about their problems.”
+ - “Of those individuals who had consulted a physician, drug prescriptions had been given to
+   approximately 50% in Western Europe and the USA and 90% in Japan.”
+ - “Multiple logistic regression analysis showed that advanced age, being unemployed, lack of
+   habitual exercise, perceived poor health, and stress were associated with a higher likelihood of
+   insomnia.”
+ - “An analysis of 28 epidemiological studies found that insomnia is associated with psychological
+   disorders, being a risk factor for depression, anxiety disorders, alcohol and drug abuse, and
+   suicide. ... Furthermore, there is at the very least an association between insomnia and
+   decreased immune function, and a possible association with cardiovascular disease.”
+ - “Walsh and Engelhardt estimated the direct costs of insomnia (costs of substances used to treat
+   the condition and related healthcare services) in the USA were almost US$14 billion in 1995, much
+   of which was attributed to nursing home care for the elderly. In France in 1995, estimates of the
+   direct costs of insomnia were US$2 billion. It should be noted that these values do not take into
+   consideration the indirect or related costs of insomnia such as reduced work productivity or
+   increased likelihood of accidents, which would be expected to at least double the economic burden
+   of sleep disorders.”
+ - “In an omnibus consumer survey conducted in France, Germany, Italy and the UK, it was found that
+   37% of respondents with insomnia took no action to resolve it at all, while 10% used
+   over-the-counter remedies and 13% adopted non-pharmacological measures. A recent survey conducted
+   in Western Europe, the USA and Japan demonstrated that the burden of insomnia on sufferers is
+   considerable, although only 3% (Japan) to 22% (France) of individuals consulted a physician about
+   their symptoms.”
