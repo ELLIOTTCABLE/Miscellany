@@ -1,13 +1,30 @@
 Insomnia
 --------
 
+ - Overview of insomnia
+ - Occurence of insomnia
+    - Figures for general population
+    - Increased risk for women
+    - (Black populations?)
+    - Non-pharmacological treatments (acupuncture?)
  - Overview CBT:
     - Reduce negative behaviour patterns (categorized as either a deficit in desired behaviour, or
       an excess of undesired behaviour) by attacking ‘cognitive distortions’: so-called errors in
       thinking that are thought to cause or reinforce these negative behaviour patterns (ex.
       overgeneralizing, or focusing on the negatives of a situation.)
+       - “... behavioral therapy approaches during the first half of treatment and cognitive therapy
+         during the latter portion.”
     - Has been widely shown to be effective to many disorders besides insomnia, including ...
- - Overview of insomnia
+ - Behavioural factors in insomnia
+    - In both primary and comorbid
+    - Things like sleep hygiene, dysfunctional beliefs and attitudes about sleep;
+       - Official sleep scales like the DBAS, SHPS
+ - Effectiveness of CBT on insomnia
+    - Generally, a large number of studies show effective results
+    - Specific CBT techniques, however, 
+    - Methods of application, Cost-effectiveness
+       - CCBT (computerized) over the Internet; application by primary-care nursing personnel
+
 
 ### Reviews of Literature
 1. *A meta‐analysis on the treatment effectiveness of cognitive behavioral therapy for primary
@@ -43,7 +60,7 @@ Insomnia
 
 ### CBT
 
- - *Treatment of adult insomnia with cognitive-behavioral therapy* (Pigeon)
+1. *Treatment of adult insomnia with cognitive-behavioral therapy* (Pigeon)
 
    A review of “the typical assessment and CBT for adult insomnia, which have substantial empirical
    support for its efficacy.”
@@ -77,6 +94,22 @@ Insomnia
    Individually-administered CBT showed markedly superior effectualness compared to
    group-administered CBT.
 
+ - *Baseline depression levels do not affect efficacy of cognitive‐behavioral self‐help treatment
+   for insomnia* (Lancee, van den Bout, van Straten, Spoormaker)
+
+   Shows that CBT treatment for insomnia is equally effective *whether or not* the patient is
+   depressive.
+
+ - *Cognitive and behavioral factors in insomnia comorbid with depression and anxiety* (Tsai, Chen,
+   Cheng, Chang, Chen, Yang)
+
+   A comparison of primary-insomnia with various comorbid insomnias
+
+ - *The Role of Sleep-Related Beliefs to Improvement in Early Cognitive Behavioral Therapy for
+   Insomnia* (Jansson-Fröjmark, Linton)
+
+   Reduction of ‘sleep-related beliefs’ shows improvement in daytime symptoms, but not sleep symtoms
+
 ### Requested on ILL
  - *An international survey of sleeping problems in the general population.* (Léger, Poursain,
    Neubauer, Uchiyama)
@@ -84,3 +117,8 @@ Insomnia
    Contains information on sleep-issue prevalence: “In a rep- resentative sample, Leger et al. [2]
    found a prevalence of sleeping problems (during the past 12 months) of 56 % in the USA, 31 % in
    Western Europe, and 23 % in Japan.”
+
+Notes
+=====
+### Treatment of adult insomnia with cognitive-behavioral therapy (Pigeon)
+
