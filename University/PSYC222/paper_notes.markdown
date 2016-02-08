@@ -225,11 +225,39 @@ CBT for insomnia, mostly reviewing Perlis:
    treated either pharmacologically or using cognitive behavioral techniques.”
  - “In other disorders including cancer, diabetes, hypertension, chronic pain, and gastrointestinal
    problems, prevalence of insomnia was similar, ranging from 41.5% to 55.4%.”
+ - “Comparisons consistently showed that most individuals within each disease category did not have
+   insomnia, suggesting that those also reporting disturbed sleep patterns may have some underlying
+   vulnerability.”
+ - “Specific stressors associated with onset of insomnia were identified by 78.6% of insomniacs,
+   with so-called “personal events” displaying the greatest disparity between insomniacs and
+   controls.”
 
 >  “Diagnostic criteria for insomnia include difficulty in initiating, maintaining, or having
->  non-restorative sleep patterns for at least 1 month; however, individuals are considered as meet-
->  ing these criteria only when clinically significant impairment or distress in important areas of
->  waking function is present. Typically, patients need to experience at least three nights of sleep
->  disturbance per week”
+>  non-restorative sleep patterns for at least 1 month; however, individuals are considered as
+>  meeting these criteria only when clinically significant impairment or distress in important areas
+>  of waking function is present. Typically, patients need to experience at least three nights of
+>  sleep disturbance per week”
+
+ - “... evidence continues to support a stress-related model of insomnia, including recent evidence
+   for dysregulation of central corticotropin releasing hormone (CRH) and noradrenergic pathways.
+   The literature on insomnia clearly supports the contention that stress is an important trigger of
+   insomnia.”
+    - “If this widely held assumption is true, the pathophysiology of insomnia may be related to
+      hyperactivation of stress-response systems, which may in fact be the underlying cause of
+      vulnerability in individuals predisposed to insomnia.”
+ - “Current models of insomnia pathophysiology include abnormalities of the circadian system. Some
+   support for this model comes from studies demonstrating reduced melatonin secretion10 and
+   improvement of sleep disturbance in primary insomnia using medications that act directly on
+   central melatonin receptors.”
+ - “Thus, impaired homeostatic drive is at best a contributing factor to the evolution of insomnia.”
 
 
+>  “... treatment regimens have benefited from heuristic models for decades, most of all the 3-P
+>  model. This model, originally proposed by Speilman, posits three critical components involved in
+>  the development of insomnia over time: a) vulnerability is thought to predispose normal
+>  individuals to development of insomnia following b) exposure to some precipitating event, even
+>  after this precipitating event is resolved, and c) perpetuating aspects continue to maintain
+>  insomnia.”
+
+>  “Among primary insomniacs, an increase in stress-related thoughts has been found to be related to
+>  sleep complaints and reduced delta power on the electroencephalogram.”
