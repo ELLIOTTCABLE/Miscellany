@@ -1,11 +1,14 @@
 Insomnia
 --------
+https://ezproxy.gl.iit.edu/login?url=http://search.ebscohost.com/login.asp?profile=web&defaultdb=psyh
 
- - Overview of insomnia
  - Occurence of insomnia
     - Figures for general population
     - Increased risk for women
     - (Black populations?)
+    - Few patients actually seek aid, resorting to over-the-counter solutions, alcohol, etc
+    - Pharmacological treatments:
+       - benzodiazepines and benzodiazepine receptor agonists
     - Non-pharmacological treatments (acupuncture?)
  - Overview CBT:
     - Reduce negative behaviour patterns (categorized as either a deficit in desired behaviour, or
@@ -21,12 +24,14 @@ Insomnia
        - Official sleep scales like the DBAS, SHPS
  - Effectiveness of CBT on insomnia
     - Generally, a large number of studies show effective results
-    - Specific CBT techniques, however, 
+    - Specific CBT techniques, however, aren't shown to work well
     - Methods of application, Cost-effectiveness
        - CCBT (computerized) over the Internet; application by primary-care nursing personnel
 
 
 ### Reviews of Literature
+0. *Comparative meta-analysis of pharmacotherapy and behavior therapy for persistent insomnia* (Smith, Perlis, Park, Smith, Pennington, Giles, Buysse)
+
 1. *A meta‐analysis on the treatment effectiveness of cognitive behavioral therapy for primary
    insomnia* (Okajima, Komada, Inoue)
 
@@ -120,5 +125,50 @@ Insomnia
 
 Notes
 =====
+### Comparative Meta-Analysis of Pharmacotherapy and Behavior Therapy for Persistent Insomnia (Smith, Perlis, Park, Smith, Pennington, Giles, Buysse)
+
+ - “Ten percent to 15% of adults report persistent sleep problems”
+ - “The cost of insomnia in terms of lost productivity and accidents has been estimated to be $77–$92
+   billion annually”
+ - “More than 50% of primary care patients experience insomnia, but only about one-third mention
+   this problem to their physicians, and only 5% seek treatment.”
+
+Shows that behaviour therapy and pharmacotherapy produce similar short-term results in primary
+insomnia.
+
 ### Treatment of adult insomnia with cognitive-behavioral therapy (Pigeon)
 
+Measurement mechanisms for sleep:
+>  “Finally, among the several validated, self-report instruments for the assessment of sleep
+>  disturbance, the most widely used when assessing insomnia are the Pittsburgh Sleep Quality Index
+>  (Buysee, Reynolds, Monk, Berman, & Kupfer, 1989), which provides a global assessment of sleep,
+>  and the more disease-specific Insomnia Severity Index (Bastien, Vallieres, & Morin, 2001)”
+
+‘Underpinnings’ of CBT-I:
+>  “the application of both operant and classical conditioning paradigms in the from of stimulus
+>  control instructions (Bootzin & Nicassio, 1978); (b) the focus on sleep-interfering behaviors in
+>  the form of sleep hygiene (Hauri, 1982); (c) the recognition of and focus on reducing the
+>  hyperarousal features of insomnia (Lichstein, 1988); (d) the improvement of circadian and sleep
+>  homeostasis regulation of sleep with sleep scheduling and limited, partial sleep deprivation
+>  (Spielman, Caruso, & Glovinsky, 1987); and (e) the adaptation of cognitive therapy to insomnia”
+
+“The standard delivery of CBT-I is structured to allow for weekly sessions to occur over 6–8 weeks.”
+
+Types of involved therapy:
+ - “Stimulus control therapy limits the amount of time patients spend awake in bed or in the bedroom
+   and also begins to develop a more consistent sleep schedule.”
+ - “Sleep restriction therapy limits the amount of time that patients spend in bed to an amount that
+   matches their ability to fill this with mostly sleep.”
+ - “Sleep hygiene is a catch-all term for a set of instructions geared toward helping the patient
+   maintain good sleep habits, such as keeping an environment and routine conducive to sleep,
+   maintaining a regular bed and wake time, and avoiding tobacco, alcohol, large meals, and vigorous
+   exercise for several hours prior to bed.”
+ - “Cognitive therapy may take one of several forms that differ slightly with respect to emphasis,
+   although all focus on the negative thoughts and/or maladaptive beliefs about sleep, insomnia, and
+   its consequences. ... helping patients to challenge the veracity and usefulness of these
+   unhelpful thoughts and beliefs and then to change or modify them is the goal.”
+
+“the standard insomnia patient encountered in clinical practice is seldom free of
+comorbidities.”
+
+Closes with a case-study on a 40-year-old father, Jerry.
