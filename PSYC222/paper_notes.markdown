@@ -3,9 +3,11 @@ Insomnia
 https://ezproxy.gl.iit.edu/login?url=http://search.ebscohost.com/login.asp?profile=web&defaultdb=psyh
 
  - Occurence of insomnia
+    - Problem of insomnia: prevalence, cost, etc.
     - Figures for general population
     - Increased risk for women
     - (Black populations?)
+    - Often co-morbid with other diseases
     - Few patients actually seek aid, resorting to over-the-counter solutions, alcohol, etc
     - Pharmacological treatments:
        - benzodiazepines and benzodiazepine receptor agonists
@@ -21,7 +23,7 @@ https://ezproxy.gl.iit.edu/login?url=http://search.ebscohost.com/login.asp?profi
  - Behavioural factors in insomnia
     - In both primary and comorbid
     - Things like sleep hygiene, dysfunctional beliefs and attitudes about sleep;
-       - Official sleep scales like the DBAS, SHPS
+       - Official sleep scales like the DBAS, SHPS, PSQI, ISI
  - Effectiveness of CBT on insomnia
     - Generally, a large number of studies show effective results
     - Specific CBT techniques, however, aren't shown to work well
@@ -30,16 +32,16 @@ https://ezproxy.gl.iit.edu/login?url=http://search.ebscohost.com/login.asp?profi
 
 
 ### Reviews of Literature
-0. *Comparative meta-analysis of pharmacotherapy and behavior therapy for persistent insomnia* (Smith, Perlis, Park, Smith, Pennington, Giles, Buysse)
+ * *Comparative meta-analysis of pharmacotherapy and behavior therapy for persistent insomnia* (Smith, Perlis, Park, Smith, Pennington, Giles, Buysse)
 
 1. *A meta‐analysis on the treatment effectiveness of cognitive behavioral therapy for primary
    insomnia* (Okajima, Komada, Inoue)
 
-2. CBT & anxiety-comorbid insomnia, overview: *Cognitive behavioural therapy for anxiety disorders
-   and insomnia: a commentary on future directions* (Aho, Pickett∗, Hamill)
+ * *Cognitive behavioural therapy for anxiety disorders and insomnia: a commentary on future
+   directions* (Aho, Pickett, Hamill)
 
-3. *Cognitive behavioural therapy for anxiety disorders and insomnia - a commentary on future
-   directions* (Hofmann, Asnaani, Vonk, Sawyer, Fang)
+3. *The efficacy of cognitive behavioral therapy: A review of meta-analyses* (Hofmann, Asnaani,
+   Vonk, Sawyer, Fang)
 
 4. *The evolution of insomnia in relation to comorbidity* (Drake, Schwartz, Roth)
 
@@ -65,7 +67,7 @@ https://ezproxy.gl.iit.edu/login?url=http://search.ebscohost.com/login.asp?profi
 
 ### CBT
 
-1. *Treatment of adult insomnia with cognitive-behavioral therapy* (Pigeon)
+ * *Treatment of adult insomnia with cognitive-behavioral therapy* (Pigeon)
 
    A review of “the typical assessment and CBT for adult insomnia, which have substantial empirical
    support for its efficacy.”
@@ -119,9 +121,9 @@ https://ezproxy.gl.iit.edu/login?url=http://search.ebscohost.com/login.asp?profi
  - *An international survey of sleeping problems in the general population.* (Léger, Poursain,
    Neubauer, Uchiyama)
 
-   Contains information on sleep-issue prevalence: “In a rep- resentative sample, Leger et al. [2]
-   found a prevalence of sleeping problems (during the past 12 months) of 56 % in the USA, 31 % in
-   Western Europe, and 23 % in Japan.”
+   Contains information on sleep-issue prevalence: “In a representative sample, Leger et al. [2]
+   found a prevalence of sleeping problems (during the past 12 months) of 56% in the USA, 31% in
+   Western Europe, and 23% in Japan.”
 
 Notes
 =====
@@ -172,3 +174,62 @@ Types of involved therapy:
 comorbidities.”
 
 Closes with a case-study on a 40-year-old father, Jerry.
+
+### Cognitive behavioural therapy for anxiety disorders and insomnia: a commentary on future directions (Aho, Pickett, Hamill)
+
+ - “patients prefer CBT-I relative to drug treatment”
+
+>  “CBT has overwhelming success for the treatment of anxiety disorders and is recommended as the
+>  preliminary and foundational treatment for insomnia.”
+
+CBT > pharmacological for anxiety:
+>  “Although research also supports similar drug treatments for anxiety disorders and insomnia, such
+>  as SSRIs, SNRIs, and benzodiazepines, many clinicians are not adequately trained to provide
+>  evidence-based pharmacological treatment for anxiety. Further, the American Academy of Sleep
+>  Medicine recommends that short-term drug intervention be used conservatively and be supplemented
+>  by CBT. Pharmacological therapy is associated with high costs, daytime sleepiness, poor sleep
+>  latency and continuity, amnesia, behavioural disinhibition, drug tolerance, cognitive impairment,
+>  anxiety and insomnia rebound, and unknown or harmful long-term outcomes. By contrast, CBT
+>  sustains improvements over a longer period of time relative to pharmacological intervention and
+>  is preferred by patients.”
+
+>  “Over 325 studies have established the efficacy of CBT, which decreases safety behaviours and
+>  utilizes exposure, attention focus modification, and cognitive restructuring to gradually expose
+>  patients to increasingly feared stimuli and allow habituation and extinction to occur. An effect
+>  size of 0.64–0.70 has been observed for the efficacy of CBT for GAD, and CBT sustains treatment
+>  effects for at least 2 years.”
+
+Insomnia is a risk-factor for anxiety:
+>  “Insomnia exacerbates anxiety disorder symptoms and is a significant risk factor in the
+>  development of anxiety and other mental health disorders.”
+
+CBT for insomnia, mostly reviewing Perlis:
+>  “CBT-I includes sleep restriction, stimulus control, cognitive restructuring, and sleep hygiene
+>  education. During sleep restriction therapy, insomnia patients attempt to lie in bed only for an
+>  amount of time equal to their average sleep time. Although counterintuitive, sleep restriction
+>  increases sleep exigency, decreases sleep latency, affords better sleep quality by inducing mild
+>  distress, and may ameliorate sleep-related performance anxiety. Stimulus control therapy, a
+>  principal treatment, significantly reduces insomnia through sleep environment modification, which
+>  alleviates negative associations with the sleep environment. Modifications include lying in bed
+>  only when sleepy, avoiding behaviours in the bedroom other than sleep or sexual activities, and
+>  leaving the bedroom if awake after 15 minutes. Cognitive-based treatments generally include
+>  patients’ education of the cognitive model of insomnia and addressing maladaptive thoughts about
+>  the effects of insomnia on health in an attempt to ameliorate sleep-related anxiety. Finally,
+>  sleep hygiene educates patients with empirically sound instructions to improve sleep quality,
+>  quantity, and knowledge.”
+
+### The evolution of insomnia in relation to comorbidity (Drake, Schwartz, Roth)
+
+ - “One study has estimated that up to 70% of psychiatric patients also experience insomnia.”
+ - “... sleep disturbance remains the most common refractory symptom of MDD in patients successfully
+   treated either pharmacologically or using cognitive behavioral techniques.”
+ - “In other disorders including cancer, diabetes, hypertension, chronic pain, and gastrointestinal
+   problems, prevalence of insomnia was similar, ranging from 41.5% to 55.4%.”
+
+>  “Diagnostic criteria for insomnia include difficulty in initiating, maintaining, or having
+>  non-restorative sleep patterns for at least 1 month; however, individuals are considered as meet-
+>  ing these criteria only when clinically significant impairment or distress in important areas of
+>  waking function is present. Typically, patients need to experience at least three nights of sleep
+>  disturbance per week”
+
+
