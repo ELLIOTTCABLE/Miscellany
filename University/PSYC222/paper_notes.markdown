@@ -1,7 +1,5 @@
 Insomnia
 --------
-https://ezproxy.gl.iit.edu/login?url=http://search.ebscohost.com/login.asp?profile=web&defaultdb=psyh
-
  - Occurence of insomnia
     - Problem of insomnia: prevalence, cost, etc.
     - Figures for general population
@@ -266,7 +264,7 @@ CBT for insomnia, mostly reviewing Perlis:
 
 ### An international survey of sleeping problems in the general population (Léger, Poursain, Neubauer, Uchiyama)
 
- - “A total of 10 132 individuals were included in this survey. The prevalence of sleeping problems
+ - “A total of 10132 individuals were included in this survey. The prevalence of sleeping problems
    was 56% in the USA, 31% in Western Europe and 23% in Japan.”
  - “Most individuals with sleeping problems considered these to have an impact on their daily
    functioning, with family life most affected in the Western European sample, personal activities
@@ -317,4 +315,25 @@ CBT for insomnia, mostly reviewing Perlis:
 >  than antidepressants (including low-dose doxepin) in reducing the sleep onset latency of patients
 >  suffering from primary insomnia.”
 
->  “... benzodiazepines, benzodiazepine receptor agonists (zopiclone, zolpidem and zaleplon), antidepressants (including low-dose doxepin), neuropeptides, progesterone receptor antagonists, hormones, melatonin receptor agonists, antihistamines, antiepileptics, and narcotics.”
+>  “... benzodiazepines, benzodiazepine receptor agonists (zopiclone, zolpidem and zaleplon),
+>  antidepressants (including low-dose doxepin), neuropeptides, progesterone receptor antagonists,
+>  hormones, melatonin receptor agonists, antihistamines, antiepileptics, and narcotics.”
+
+### Cognitive and behavioral factors in insomnia comorbid with depression and anxiety (Tsai, Chen, Cheng, Chang, Chen, Yang)
+
+>  “The results suggest that patients with comorbid insomnia have similar dysfunctional sleep
+>  beliefs and mala- daptive sleep hygiene practices as in those with primary insomnia. Sleep
+>  related cognition and behavior also play an important role in the pathology of comorbid insomnia.
+>  In addition to their mood symptoms, interventions targeting these factors might be helpful to
+>  alleviate the insomnia in comorbid populations.”
+
+>  “Depressive and anxiety disorders are the most common problems in mental health clinics with high
+>  prevalence rates. Studies indicate that the lifetime prevalence of major depressive disorder is
+>  17.1%. Also, one in every four people were reported to have symptoms of anxiety.”
+
+>  “Insomnia is one of the most common complaints in patients with depression and/or anxiety
+>  disorder. It was reported that 67% to 84% of patients with depressive disorder also have
+>  insomnia2–5 and two-thirds of patients with generalized anxiety disorder reported at least one
+>  form of comorbid sleep disorder.6 On the other hand, the percentages of individuals with insomnia
+>  complaints found to have a concomitant mental disorder (mainly depressive or anxiety disorder)
+>  was also high. About 28% of subjects with insomnia had a current diagnosis of mental disorders”
