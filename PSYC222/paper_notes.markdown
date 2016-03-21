@@ -337,3 +337,21 @@ CBT for insomnia, mostly reviewing Perlis:
 >  form of comorbid sleep disorder.6 On the other hand, the percentages of individuals with insomnia
 >  complaints found to have a concomitant mental disorder (mainly depressive or anxiety disorder)
 >  was also high. About 28% of subjects with insomnia had a current diagnosis of mental disorders”
+
+### Revision
+
+Feedback:
+ - ‘fix header’ ???
+ - remove redundancies
+ - no exclamation points
+ - expand a couple acronyms
+ - reduce unnecessary stylistic emphasis
+ - get rid of all 1st-person
+ - get rid of reference to ‘lay-people’
+ - missing source(?) on list of CBT-elements
+ - alphabetize sources
+
+ - long. sentences.
+    - never more than 24 words!
+
+ - make sure my data is never my argument
