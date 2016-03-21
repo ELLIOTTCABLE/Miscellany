@@ -17,7 +17,7 @@ experiencing insomnia, less than 30% actually contact a physician about their pr
 insignificant number actually *seek treatment*, as detailed by Smith et al. (2002). This disease has
 also been shown to disproportionately affect otherwise-disadvantaged groups: not only does it often
 manifest comorbidly with several other mental disorders, but insomnia manifests symptoms
-significantly more often in both female (Bei, Coo, Baker, & Trinder, 2015; Léger et. al, 2008) and
+significantly more often in both female (Bei, Coo, Baker, & Trinder, 2015; Léger et al., 2008) and
 African American (Ruiter, Decoster, Jacobs, & Lichstein, 2010) populations. In addition to those
 suffering so-called ‘primary insomnia’ (that is, insomnia manifesting in the absence of another,
 additional, related disorder), insomnia manifests with or acts as a risk factor for a number of
@@ -30,7 +30,7 @@ economic cost on the order of US$ 100 billion dollars is effected worldwide each
 reduced productivity and accidents) by insomnia and sleep deprivation. Even disregarding estimated
 economic impacts, the *direct* costs (that is, the cost of substances used to treat the condition,
 along with related healthcare services) of insomnia in the United States were over US$ 14 billion in
-1995 (according to Léger et. al, 2008). Such substances come in a very wide range, including the
+1995 (according to Léger et al., 2008). Such substances come in a very wide range, including the
 traditional benzodiazepines and associated benzodiazepine receptor agonists (zopiclone, zolpidem and
 zaleplon), as well as rarer prescriptions for sleep disorders like antidepressants (doxepin),
 neuropeptides, progesterone receptor antagonists, hormones, melatonin receptor agonists,
