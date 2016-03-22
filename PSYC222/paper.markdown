@@ -9,22 +9,22 @@ promise: ‘CBT-I,’ or cognitive-behavioural therapy for insomnia. Herein foll
 the recent research on this topic; in measuring the extent of these diseases, and in psychological
 treatments thereof.
 
-Insomnia is more common than one might expect. Léger, Poursain, Neubauer, and Uchiyama (2008)
+Insomnia is more common than might be expected. Léger, Poursain, Neubauer, and Uchiyama (2008)
 performed a study on this topic across over 10,000 individuals. They found that more than a quarter
 thereof experienced ‘sleeping problems’ in Europe and Japan; rising to a striking 56% in the U.S.
-Despite more than *half* of primary-care patients experiencing insomnia, less than 30% actually
-contact a physician about their problems. Meanwhile, an almost insignificant number of these
-patients actually seek treatment, as detailed by Smith et al. (2002). This disease has also been
-shown to disproportionately affect otherwise-disadvantaged groups. Besides often manifesting
+Despite more than *half* of primary-care patients experiencing insomnia, less than 30% of those
+actually contact a physician about their problems. Meanwhile, an almost insignificant number of
+these patients actually seek treatment, as detailed by Smith et al. (2002). This disease has also
+been shown to disproportionately affect otherwise-disadvantaged groups. Besides often manifesting
 comorbidly with several other mental disorders, insomnia manifests symptoms significantly more often
 in both female (Bei, Coo, Baker, & Trinder, 2015; Léger et al., 2008) and African American (Ruiter,
 Decoster, Jacobs, & Lichstein, 2010) populations. Insomnia is often recognized as referring to
-‘primary insomnia’ (that is, insomnia manifesting in the absence of another, additional, related
-disorder).  Unfortunately, insomnia also manifests with or acts as a risk factor for a number of
-other debilitating conditions. These include alcohol and drug abuse, suicidal impulses, decreased
-immune function, and reduced cardiovascular function. Most notably, however, insomnia often
-manifests co-morbidly with the closely-related disorders of anxiety and depression (Major Depressive
-Disorder, MDD).
+‘primary insomnia’ (that is, insomnia manifesting in the absence of an additional related disorder).
+Unfortunately, insomnia also manifests with or acts as a risk factor for a number of other
+debilitating conditions. These include alcohol and drug abuse, suicidal impulses, decreased immune
+function, and reduced cardiovascular function. Most notably, however, insomnia often manifests
+co-morbidly with the closely-related disorders of anxiety and depression (Major Depressive Disorder,
+MDD).
 
 As also detailed in Smith et al.'s summary (2002), these sleep issues claim much more than
 individual well-being and happiness. An economic cost of US$ ~100 billion dollars (in terms of
@@ -47,13 +47,13 @@ those that did only tried over-the-counter solutions, while 13% adopted alternat
 non-pharmacological measures besides CBT-I. Further, of those respondents, as few as 3% (in Japan)
 consulted a physician about their symptoms (Smith et al., 2002). This shows the unfortunate tendency
 for patients to treat insomnia (and mental disorders in general) as less serious than physical
-disabilities or sicknesses. Unfortunately, some of the at-home remedies undertaken by sufferers
-actually act as perpetuating influences; for instance, cigarettes or alcohol consumed
-immediately before bedtime (Drake, Schwartz, & Roth, 2008).
+disabilities or sicknesses. Even worse, some of the at-home remedies undertaken by sufferers
+actually act as perpetuating influences; for instance, cigarettes or alcohol consumed immediately
+before bedtime (Drake, Schwartz, & Roth, 2008).
 
 There is a growing body of literature supporting cognitive-behavioural therapy
 as one of the strongest tools with which to address sleep-disorders. CBT-I involves four
-primary components (Pigeon, 2014):
+primary components, as described by Pigeon (2014):
 
 a. *Stimulus control therapy*. The limiting of time spent awake in the bedroom, engaged in
    activities other than sexual coitus and sleep. This also includes, in general, promoting a
@@ -99,9 +99,9 @@ than, benzodiazepines (Smith et al., 2002). For comparison, amongst the various 
 treatments for the insomnias, Winkler, Auer, Doering, and Rief (2014) show that benzodiazepines are
 the most effective. Further, CBT-I has no known negative side-effects; and is preferred by most
 patients, compared to prospective pharmacological treatment (Aho, Pickett, & Hamill, 2014). Most
-tellingly, the American Psychological Association (APA) has chosen CBT as the ‘treatment of choice’
-for chronic insomnia, both primary and comorbid. This is partially due to 70-80% of CBT-I treatments
-showing a positive response (Whitworth, Crownover, & Nichols, 2007).
+tellingly, the American Psychological Association (APA) has chosen CBT-I as the ‘treatment of
+choice’ for chronic insomnia, both primary and comorbid. This is partially due to 70-80% of
+treatments showing a positive response (Whitworth, Crownover, & Nichols, 2007).
 
 Importantly, however, insomnia cannot be examined in a vacuum: it appears in concert with other,
 related mental disorders very, very often. Drake, Schwartz, and Roth (2008) synthesize prior work
@@ -116,17 +116,18 @@ major-depressive disorder. Tsai et al. (2013) place further numbers on this prev
 and 84% for depression, and around two-thirds for generalized anxiety disorder (GAD). Conversely,
 around 28% of general insomnia subjects presented another mental disorder comorbidly.
 
-This is important, because CBT-I is developed from the related CBT treatments originally created for
-those precise mental disorders. Illustratively, Aho, Pickett, and Hamill (2014) wrote that “CBT-A
-[cognitive-behavioural therapy for anxiety] has overwhelming success for the treatment of anxiety
-disorders.” They also mention that it is recommended strongly as the “preliminary and foundational”
-treatment in current practice. Over 300 studies have shown CBT-A's efficacy; with an effect between
-64% and 70%, and with positive effects sustained for over two years. In addition, just as above with
-CBT-I, CBT-A is shown to be superior to pharmacological treatment for GAD in numerous ways. These
-matter, because a combined CBT program can be constructed for the vast number of patients
-experiencing insomnia comorbid with other psychiatric disorders. Such a program can simultaneously
-improve on their various disorders in a concerted fashion, to great effect. It can mitigate such
-tightly integrated disorders without allowing either to defeat treatment by reinforcing the other.
+These facts are relevant, because CBT-I is developed from the related CBT treatments originally
+created for those precise mental disorders. Illustratively, Aho, Pickett, and Hamill (2014) wrote
+that “CBT-A [cognitive-behavioural therapy for anxiety] has overwhelming success for the treatment
+of anxiety disorders.” They also mention that it is recommended strongly as the “preliminary and
+foundational” treatment in current practice. Over 300 studies have shown CBT-A's efficacy; with an
+effect between 64% and 70%, and with positive effects sustained for over two years. In addition,
+just as above with CBT-I, CBT-A is shown to be superior to pharmacological treatment for GAD in
+numerous ways. These matter, because a combined CBT program can be constructed for the vast number
+of patients experiencing insomnia comorbid with other psychiatric disorders. Such a program can
+simultaneously improve on their various disorders in a concerted fashion, to great effect. It can
+mitigate such tightly integrated disorders without allowing either to defeat treatment by
+reinforcing the other.
 
 In the developed world, and the United States in particular (with ~131 million people suffering from
 sleep disorders), insomnia, anxiety, and depression are epidemic. Cognitive-behavioural therapies
