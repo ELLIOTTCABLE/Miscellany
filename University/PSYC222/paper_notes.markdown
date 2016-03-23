@@ -342,16 +342,19 @@ CBT for insomnia, mostly reviewing Perlis:
 
 Feedback:
  - ‘fix header’ ???
- - remove redundancies
- - no exclamation points
- - expand a couple acronyms
- - reduce unnecessary stylistic emphasis
- - get rid of all 1st-person
- - get rid of reference to ‘lay-people’
- - missing source(?) on list of CBT-elements
  - alphabetize sources
 
- - long. sentences.
-    - never more than 24 words!
+ - reduce unnecessary stylistic emphasis
+ * no exclamation points
+ * expand a couple acronyms
+ - remove redundancies
+
+ - get rid of all 1st-person
+ * get rid of reference to ‘lay-people’
+ * missing source(?) on list of CBT-elements
+
+ * long. sentences.
+    * never more than 24 words!
 
  - make sure my data is never my argument
+
