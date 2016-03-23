@@ -5,7 +5,7 @@ more than half of the population here in the United States. They're even a risk 
 other serious disorders both mental and physiological; particularly, anxiety and depression.
 Treatment is available for insomnia and related sleep disorders through a range of programmes, both
 pharmacological and non-medicinal in nature. However, one treatment in particular has shown great
-promise: ‘CBT-I,’ or cognitive-behavioural therapy for insomnia. Herein follows an examination of of
+promise: ‘CBT-I,’ or cognitive-behavioural therapy for insomnia. Herein follows an examination of
 the recent research on this topic; in measuring the extent of these diseases, and in psychological
 treatments thereof.
 
@@ -29,16 +29,16 @@ MDD).
 As also detailed in Smith et al.'s summary (2002), these sleep issues claim much more than
 individual well-being and happiness. An economic cost of US$ ~100 billion dollars (in terms of
 reduced productivity and accidents) is effected worldwide, each year, by these sleep disorders. Even
-disregarding general economic impact, the *direct* costs (the cost of pharmacological treatments and
+disregarding general economic impact, the ‘direct costs’ (the cost of pharmacological treatments and
 related healthcare services) are immense. In the United States alone, these totaled to over US$ 14
 billion in 1995 (according to Léger et al., 2008). Such substances come in a very wide range of
 treatment options. One may be prescribed the traditional benzodiazepines and associated
 benzodiazepine receptor agonists (zopiclone, zolpidem and zaleplon). Additionally, there exist rarer
 prescriptions for sleep disorders, such as antidepressants (doxepin), neuropeptides, progesterone
 receptor antagonists, hormones, melatonin receptor agonists, antihistamines, antiepileptics, and
-narcotics (Winkler, Auer, Doering, & Rief, 2014). Beyond a laundry-list of such pharmaceuticals,
+narcotics (Winkler, Auer, Doering, & Rief, 2014). Beyond this laundry-list of pharmaceuticals,
 there's non-pharmacological treatments for these disorders, including everything from the
-cognitive-behavioural therapies discussed below to acupuncture.
+cognitive-behavioural therapies discussed, below to acupuncture.
 
 Despite the quantity of such empirically-studied treatments available, however, a substantial subset
 of these populations takes little-to-no advantage. More than one third of insomnia sufferers in
@@ -47,9 +47,9 @@ those that did only tried over-the-counter solutions, while 13% adopted alternat
 non-pharmacological measures besides CBT-I. Further, of those respondents, as few as 3% (in Japan)
 consulted a physician about their symptoms (Smith et al., 2002). This shows the unfortunate tendency
 for patients to treat insomnia (and mental disorders in general) as less serious than physical
-disabilities or sicknesses. Even worse, some of the at-home remedies undertaken by sufferers
-actually act as perpetuating influences; for instance, cigarettes or alcohol consumed immediately
-before bedtime (Drake, Schwartz, & Roth, 2008).
+disabilities or sicknesses. Even worse, some of the remedies undertaken by sufferers actually act as
+perpetuating influences; for instance, cigarettes or alcohol consumed immediately before bedtime
+(Drake, Schwartz, & Roth, 2008).
 
 There is a growing body of literature supporting cognitive-behavioural therapy
 as one of the strongest tools with which to address sleep-disorders. CBT-I involves four
@@ -116,7 +116,7 @@ major-depressive disorder. Tsai et al. (2013) place further numbers on this prev
 and 84% for depression, and around two-thirds for generalized anxiety disorder (GAD). Conversely,
 around 28% of general insomnia subjects presented another mental disorder comorbidly.
 
-These facts are relevant, because CBT-I is developed from the related CBT treatments originally
+These links are crucial, because CBT-I is developed from the related CBT treatments originally
 created for those precise mental disorders. Illustratively, Aho, Pickett, and Hamill (2014) wrote
 that “CBT-A [cognitive-behavioural therapy for anxiety] has overwhelming success for the treatment
 of anxiety disorders.” They also mention that it is recommended strongly as the “preliminary and
