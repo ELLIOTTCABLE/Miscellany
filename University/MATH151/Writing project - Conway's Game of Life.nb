@@ -10,14 +10,71 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[      8050,        206]
-NotebookOptionsPosition[      7742,        191]
-NotebookOutlinePosition[      8101,        207]
-CellTagsIndexPosition[      8058,        204]
+NotebookDataLength[     21350,        512]
+NotebookOptionsPosition[     20129,        468]
+NotebookOutlinePosition[     20563,        487]
+CellTagsIndexPosition[     20520,        484]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
 Notebook[{
+Cell[TextData[StyleBox["Math 151 Project: The Game of Life", "Title"]], \
+"Chapter",
+ CellChangeTimes->{{3.669856506014607*^9, 3.669856517714652*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[TextData[StyleBox["ELLIOTTCABLE, Illinois Tech", "Subchapter"]], \
+"Chapter",
+ CellChangeTimes->{{3.6698565264006042`*^9, 3.6698565323287086`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[TextData[StyleBox["Introduction", "Subsection"]], "Subsubsection",
+ CellChangeTimes->{{3.669856594372963*^9, 3.6698565968815403`*^9}}],
+
+Cell["\<\
+In 1970, a mathematician at Cambridge, John Horton Conway, devised a \
+framework for cellular automatons (known as \[OpenCurlyQuote]patterns\
+\[CloseCurlyQuote]), that we now know as \[OpenCurlyDoubleQuote]Conway\
+\[CloseCurlyQuote]s Game of Life.\[CloseCurlyDoubleQuote] Following a simple \
+set of instructions devised by Conway, a \[OpenCurlyQuote]playing board\
+\[CloseCurlyQuote] of individual cells (with each representing the states of \
+either \[OpenCurlyQuote]alive\[CloseCurlyQuote] or \[OpenCurlyQuote]dead\
+\[CloseCurlyQuote]) can be evolved to a subsequent state; and by applying \
+this process recursively, deterministic (but not necessarily simple!) \
+evolutions can be observed from a given initial state.\
+\>", "Text",
+ CellChangeTimes->{{3.669851607456332*^9, 3.669851608439849*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[StyleBox["The Game", "Subsection"]], "Subsubsection",
+ CellChangeTimes->{{3.6698565781622763`*^9, 3.669856579950191*^9}}],
+
+Cell[TextData[{
+ "The dead-or-alive state of a cell during a given iteration (",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["S", "i"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ ") is determined by the prior state of that cell (",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["S", 
+    RowBox[{"i", "-", "1"}]], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ "), and the states of its eight immediate neighbours (",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["N", 
+    RowBox[{"i", "-", "1"}]], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ "). The evolution during each iteration follows this algorithm:"
+}], "Text",
+ CellChangeTimes->{3.6698515988454113`*^9}],
+
 Cell[BoxData[
  FormBox[
   RowBox[{
@@ -77,13 +134,191 @@ Cell[BoxData[
  GridBoxAlignment->{
   "Columns" -> {{"\[AlignmentMarker]"}}, "Rows" -> {{"\[AlignmentMarker]"}}}}],
 
+Cell["\<\
+Conway\[CloseCurlyQuote]s game was originally developed by hand, in pursuit \
+of a drastically simplified version of von Neumann\[CloseCurlyQuote]s \
+cellular automata. The original design work was preformed by hand on a Go \
+board, by Conway himself, and publicized by Martin Gardner in several \
+sequential releases of Scientific American in the 1970s. Its popularity is \
+largely attributed to a combination of its\[CloseCurlyQuote] properties of \
+being simple to compute (at a time when home microcontrollers were just \
+becoming popular with hobbyists), Turing-complete (and thus theoretically \
+able to encode any computable algorithm), and aesthetically / visually \
+pleasing to watch unfold.\
+\>", "Text",
+ CellChangeTimes->{{3.669854679373795*^9, 3.6698546805202103`*^9}, {
+  3.669854860747739*^9, 3.669854930801056*^9}, {3.669854966767461*^9, 
+  3.669855029408001*^9}, {3.669855059694112*^9, 3.669855128948958*^9}, {
+  3.669855228569276*^9, 3.669855243924822*^9}, {3.6698553072746964`*^9, 
+  3.66985531301956*^9}}],
+
+Cell["\<\
+Amongst \[OpenCurlyQuote]players,\[CloseCurlyQuote] or aficionados of the \
+Game of Life automaton, there is a particular lingo for the processes that \
+unfold. Individual chunks of initial state, with predictable or \
+otherwise-interesting evolutionary behaviours, are known as \
+\[OpenCurlyQuote]patterns.\[CloseCurlyQuote] These patterns are analyzed for \
+their reptition, interactions, and other behaviours; and ongoing research is \
+applied to deriving new such patterns. These patterns are also categorized by \
+such behaviours, into classes described with terms ranging from the mundane (\
+\[OpenCurlyQuote]oscillator\[CloseCurlyQuote]) to the exotic (\
+\[OpenCurlyQuote]barberpoles\[CloseCurlyQuote] and even the theoretical \
+\[OpenCurlyQuote]zebraships\[CloseCurlyQuote]!)\
+\>", "Text",
+ CellChangeTimes->{{3.6698552702279177`*^9, 3.6698552829619627`*^9}, {
+  3.669855320589471*^9, 3.669855396925836*^9}, {3.669855439328053*^9, 
+  3.669855440812132*^9}, {3.6698555250197983`*^9, 3.669855638408814*^9}, {
+  3.669855772588457*^9, 3.669855791207157*^9}}],
+
+Cell["\<\
+There are several distinct patterns with well-known and much-popularized \
+behaviours, not the least of which is the infamous \[OpenCurlyQuote]Glider.\
+\[CloseCurlyQuote] In some communities, this has even become an iconic \
+representation of the \[OpenCurlyDoubleQuote]hacker ethos.\
+\[CloseCurlyDoubleQuote]\
+\>", "Text",
+ CellChangeTimes->{{3.669855811031639*^9, 3.669855849392755*^9}, {
+  3.6698559551073837`*^9, 3.669855961049717*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  GraphicsBox[
+   TagBox[RasterBox[CompressedData["
+1:eJzt1NFpHGYURGHh5MFtuJS4BKcCG5zXgGww7i99TWRwCTt3YM/5QWL19HG4
+o/3w5d9P/7x7eXn59v7t16fPP/56ff388+8/3/74+PP71y9/vH347/fPr88+
+3wNfzp/oU6KoWNEqiooVraKoWNEqiooVraKoWNEqiooVraKoWNEqiooVraKo
+WNEqiooVraKoWNEqiooVraKoWNEqiooVraKoWNEqiooVraKoWNEqiooVraKo
+WNEqiooVraKoWNEqiooVraKoWNEqiooVraKoWNEqiooVraKoWNEqiooVraKo
+WNEqiooVraKoWNEqiooVraKoWNEqiooVraKoWNEqiooVraKoWNEq6vM98E02
+LPp8KCo2t1/F29J7FBUbt9REUbFxS00UFRu31ERRsXFLTRQVG7fURFGxcUtN
+FBUbt9REUbFxS00UFRu31ERRsXFLTRQVG7fURFGxcUtNFBUbt9REUbFxS00U
+FRu31ERRsXFLTRQVG7fURFGxcUtNFBUbt9REUbFxS00UFRu31ERRsXFLTRQV
+G7fURFGxcUtNFBUbt9REUbFxS00UFRu31ERRsXFLTRQVG7fURFGxcUtNFBUb
+t9REUbFxS00UFRu31ERRsXFLTRQVG7fURFGxolXU53vgm2xY9PlQVOwKPf5m
+cEtPjLqlqotC3VLVRaFuqeqiULdUdVGoW6q6KNQtVV0U6paqLgp1S1UXhbql
+qotC3VLVRaFuqeqiULdUdVGoW6q6KNQtVV0U6paqLgp1S1UXhbqlqotC3VLV
+RaFuqeqiULdUdVGoW6q6KNQtVV0U6paqLgp1S1UXhbqlqotC3VLVRaFuqeqi
+ULdUdVGoW6q6KNQtVV0U6paqLgp1S1UXhbqlqotC3VLVRaFuqeqKPh/q8z3w
+TTYs+nzoMPb4/4WG3t905YZ01gl6f9OVG9JZJ+j9TVduSGedoPc3XbkhnXWC
+3t905YZ01gl6f9OVG9JZJ+j9TVduSGedoPc3XbkhnXWC3t905YZ01gl6f9OV
+G9JZJ+j9TVduSGedoPc3XbkhnXWC3t905YZ01gl6f9OVG9JZJ+j9TVduSGed
+oPc3XbkhnXWC3t905YZ01gl6f9OVG9JZJ+j9TVduSGedoPc3XbkhnXWC3t90
+5YZ01gl6f9OVG9JZJ+j9TVduSGedoPc3XbkhnXWC3t905YZ01gl6f9OVG9JZ
+J+j9TVduSGedoPc3XbkhnXWC3t905YZ01gl6f9OVG9JZJ+j9TVduSGedoPc3
+XbkhnXWC3t905YZ01gl6f9OVG9JZJ+j9TVduSGedoPc3Xbmiz4f6fA98kw2L
+Ph+KihWtoqhY0SqKihWtoqhY0SqKihWtoqhY0SqKihWtoqhY0SqKihWtoqhY
+0SqKihWtoqhY0SqKihWtoqhY0SqKihWtoqhY0SqKihWtoqhY0SqKihWtoqhY
+0SqKihWtoqhY0SqKihWtoqhY0SqKihWtoqhY0SqKihWtoqhY0SqKihWtoqhY
+0SqKihWtoqhY0SqKihWtoqhY0SqKihWtoqhY0SqKihWtoj7fo97/aXHeRw==
+
+     "], {{0, 196}, {196, 0}}, {0, 255},
+     ColorFunction->RGBColor],
+    BoxForm`ImageTag["Byte", ColorSpace -> "RGB", Interleaving -> True],
+    Selectable->False],
+   BaseStyle->"ImageGraphics",
+   ImageSize->{118.17317708333218`, Automatic},
+   ImageSizeRaw->{196, 196},
+   PlotRange->{{0, 196}, {0, 196}}], 
+  GraphicsBox[
+   TagBox[RasterBox[CompressedData["
+1:eJzt08FJA1EABuFFPaQNSzElxAqyoFchESTd2ZlZwQJCeJEvyfywyy7MYRje
+e54/Nu8P0zTtV8trs/162e22h9en5Wd9+HybH5eP+e/5/f5ubeh+Tt598qaV
+xptWGm9aabxppfGmlcabVhpvWmm8aaXxppXGm1Yab1ppvGml8aaVxrc2dtoJ
+13jTSuNNK403rTTetNJ400rjTSuNN6003rTSeNNK400rjTetNN600njTSuNb
+G7tLn9jp5P0Pf96Nq1KVqlSlKlWpSlWqUpWqVKUqVen2KrU2avd2g867cVWq
+UpWqVKUqValKVapSlapUpSrdXqXWRu3SJ/baedNK400rjTetNN600njTSuNN
+K403rTTetNJ400rjTSuNN6003rTSeNNK41sbO+2Ea7xppfGmlcabVhpvWmm8
+aaXxppXGm1Yab1ppvGml8aaVxptWGm9aabxppfGtjdoRfAgV1Q==
+     "], {{0, 98}, {98, 
+     0}}, {0, 255},
+     ColorFunction->RGBColor],
+    BoxForm`ImageTag["Byte", ColorSpace -> "RGB", Interleaving -> True],
+    Selectable->False],
+   BaseStyle->"ImageGraphics",
+   ImageSize->{118.47699652777652`, Automatic},
+   ImageSizeRaw->{98, 98},
+   PlotRange->{{0, 98}, {0, 98}}], 
+  GraphicsBox[
+   TagBox[RasterBox[CompressedData["
+1:eJztlVFKglEYRH+qh7bRUmoJtgKFeg0sCHfnzsqgFTgP33HuEUZUOMyMw73/
+0+Fj9363bdvn4+Vtt/9+Ph73p9eHy5eX09fb4f7y4fivvx/P5/OPUoqla1/y
+DJ6SQz7jKTnkM56SQz7jKTnkM56SQz7jKTnkM56SQz7jKTnkM56SQz7jKTnk
+M56SQz7jKTnkM56SQz7jlVI8ped627arROGn+6f+lB7T/HT/1J/SY5qf7p/6
+U3pM89P9U39Kj2l+un/qT+kxzU/3T/0pPab56f6pP6XHND/dP/Wn9Jjmp/un
+/pQe0/x0/9Sf0mOan+6f+lN6TPPT/VN/So9pfrp/6k/pMc1P90/9lVI83fq9
+sjrvjh28O3bw7tjBu2MH744dvDt28O7YwbtjB++OHbw7dvDu2MG7Ywfvjh28
+Uoqn6Xthmk+fC9PPFcr/OM27Ywfvjh28O3bw7tjBu2MH744dvDt28O7Ywbtj
+B++OHbw7dvDu2MG37KiU4ig91yl/6/fatL87MvKn/u7IyJ/6uyMjf+rvjoz8
+qb87MvKn/u7IyJ/6uyMjf+rvjoz8qb87MvKn/u7IyJ/6uyMjf+rvjoz8qb87
+MvKn/kopnm79Xlndv6XH6v4tPVb3b+mxun9Lj9X9W3qs7t/SY3X/lh6r+7f0
+WN2/pcfq/i09Vvdv6bG6f0uP1f1beqzur5TiKT3X8rM8JYd8xlNyyGc8JYd8
+xlNyyGc8JYd8xlNyyGc8JYd8xlNyyGc8JYd8xlNyyGc8JYd8xlNyyGc8JYd8
+xiulOPoFejnQkw==
+     "], {{0, 114}, {114, 0}}, {0, 255},
+     ColorFunction->RGBColor],
+    BoxForm`ImageTag["Byte", ColorSpace -> "RGB", Interleaving -> True],
+    Selectable->False],
+   BaseStyle->"ImageGraphics",
+   ImageSize->{119.14735243055358`, Automatic},
+   ImageSizeRaw->{114, 114},
+   PlotRange->{{0, 114}, {0, 114}}]}]], "Input",
+ CellChangeTimes->{{3.669856048643465*^9, 3.669856086828403*^9}}],
+
+Cell[TextData[StyleBox["Demonstration", "Subsection"]], "Text",
+ CellChangeTimes->{{3.669856651466951*^9, 3.669856666463264*^9}}],
+
+Cell[TextData[{
+ "As it turns out, ",
+ StyleBox["Mathematica",
+  FontSlant->"Italic"],
+ " itself even includes a native implementation of cellular automatons like \
+the Game of Life, in the form of the ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"CellularAutomaton", "[", "]"}], TraditionalForm]],
+  FormatType->"TraditionalForm",
+  FontWeight->"Bold"],
+ " function: given a set of rules (such as those simple ones comprising the \
+Game of Life), and an initial matrix-state, ",
+ StyleBox["Mathematica",
+  FontSlant->"Italic"],
+ " will produce any number of subsequent states, as required. This feature is \
+put to great use by this ",
+ Cell[BoxData[
+  FormBox[
+   StyleBox[
+    RowBox[{"Manipulate", "[", "]"}],
+    FontWeight->"Bold"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " widget, developed by John Qiu and Henry Huang. Using it, you can manually \
+input an initial-state grid (or generate one automatically), and then animate \
+it through a number of steps \[Ellipsis] and thus witness the Game of Life, \
+in all its\[CloseCurlyQuote] grandeur."
+}], "Text",
+ CellChangeTimes->{{3.66985610894302*^9, 3.669856113263138*^9}, {
+  3.66985619152984*^9, 3.669856345465062*^9}, {3.669856460879325*^9, 
+  3.669856482153512*^9}, {3.669856671863699*^9, 3.669856705906541*^9}}],
+
+Cell[TextData[{
+ "For example, in the below widget, select \[OpenCurlyQuote]manual\
+\[CloseCurlyQuote]; then bequeath life upon squares in the grid on the left \
+by clicking on them individually. (Try reproducing one of the patterns from \
+the above examples!) Once an initial state is prepared, you can click the \
+disclosure-cross beside the \[OpenCurlyQuote]steps\[CloseCurlyQuote] control, \
+and click the black arrow to animate the evolution of that pattern. ",
+ StyleBox["Try it!",
+  FontSlant->"Italic"]
+}], "Text",
+ CellChangeTimes->{{3.669856710958028*^9, 3.669856751097889*^9}, {
+  3.66985680436775*^9, 3.6698568740274143`*^9}}],
+
 Cell[BoxData[
  TagBox[
   StyleBox[
    DynamicModuleBox[{$CellContext`choice$$ = 
-    False, $CellContext`initialconditions$$ = 199, $CellContext`sr$$ = 
-    11112, $CellContext`Steps$$ = 0, $CellContext`x$$ = {{5, 10}, {6, 10}, {6,
-     12}, {8, 11}, {9, 10}, {10, 10}, {11, 10}}, Typeset`show$$ = True, 
+    False, $CellContext`initialconditions$$ = 200, $CellContext`sr$$ = 
+    11112, $CellContext`Steps$$ = 85, $CellContext`x$$ = {{5, 10}, {6, 10}, {
+    6, 12}, {8, 11}, {9, 10}, {10, 10}, {11, 10}}, Typeset`show$$ = True, 
     Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
     Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
     "\"untitled\"", Typeset`specs$$ = {{{
@@ -105,11 +340,11 @@ Cell[BoxData[
         Dynamic[$CellContext`choice$$]]], 
       Manipulate`Dump`ThisIsNotAControl}, {{
        Hold[$CellContext`x$$], {{8, 9}}}}}, Typeset`size$$ = {
-    609., {147.134033203125, 152.865966796875}}, Typeset`update$$ = 0, 
+    439., {105.93650388717651`, 110.06349611282349`}}, Typeset`update$$ = 0, 
     Typeset`initDone$$, Typeset`skipInitDone$$ = 
     False, $CellContext`choice$5106$$ = False, $CellContext`Steps$5107$$ = 
-    0, $CellContext`initialconditions$5108$$ = 
-    169.6471056175232, $CellContext`sr$5109$$ = 0}, 
+    0, $CellContext`initialconditions$5108$$ = 171, $CellContext`sr$5109$$ = 
+    0}, 
     DynamicBox[Manipulate`ManipulateBoxes[
      2, StandardForm, 
       "Variables" :> {$CellContext`choice$$ = 
@@ -169,7 +404,7 @@ $CellContext`initialconditions$5108$$, 0],
          Dynamic[$CellContext`choice$$]], {{$CellContext`x$$, {{8, 9}}}, 
          ControlType -> None}}, "Options" :> {AutorunSequencing -> {1}}, 
       "DefaultOptions" :> {}],
-     ImageSizeCache->{654., {263., 268.}},
+     ImageSizeCache->{473., {193.9365038871765, 198.0634961128235}},
      SingleEvaluation->True],
     Deinitialization:>None,
     DynamicModuleValues:>{},
@@ -188,9 +423,54 @@ $CellContext`initialconditions$5108$$, 0],
    StripOnInput->False],
   Manipulate`InterpretManipulate[1]]], "Output",
  CellChangeTimes->{3.669848808252109*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Sources", "Section",
+ CellChangeTimes->{{3.669856909375984*^9, 3.669856915585204*^9}}],
+
+Cell[TextData[{
+ "\[Bullet] \[OpenCurlyDoubleQuote]Cellular Automaton\[CloseCurlyDoubleQuote] \
+from Wolfram ",
+ StyleBox["MathWorld",
+  FontSlant->"Italic"],
+ ". Web. April 16th, 2016. \
+<http://mathworld.wolfram.com/CellularAutomaton.html>"
+}], "Text",
+ CellChangeTimes->{{3.6698570056991262`*^9, 3.669857061881194*^9}}],
+
+Cell["\<\
+\[Bullet] \[OpenCurlyDoubleQuote]Conway\[CloseCurlyQuote]s Game of Life\
+\[CloseCurlyDoubleQuote] from Wikipedia. Web. April 16th, 2016. \
+<https://en.wikipedia.org/wiki/Conway's_Game_of_Life>\
+\>", "Text",
+ CellChangeTimes->{{3.6698570056991262`*^9, 3.669857061881194*^9}, {
+  3.669857132678164*^9, 3.669857160525362*^9}}],
+
+Cell["\<\
+\[Bullet] \[OpenCurlyDoubleQuote]LifeWiki.\[CloseCurlyDoubleQuote] Web. April \
+16th, 2016. <http://www.conwaylife.com/wiki/Main_Page>\
+\>", "Text",
+ CellChangeTimes->{{3.6698570056991262`*^9, 3.669857061881194*^9}, {
+  3.66985709386662*^9, 3.669857102541658*^9}}],
+
+Cell["\<\
+\[Bullet] \[OpenCurlyDoubleQuote]Game of Life with Random Initial Conditions\
+\[CloseCurlyDoubleQuote] from the Wolfram Demonstrations Project \
+<http://demonstrations.wolfram.com/GameOfLifeWithRandomInitialConditions/> \
+Contributed by: John Qiu, Henry Huang\
+\>", "Text",
+ CellChangeTimes->{{3.669856943710347*^9, 3.669856982954811*^9}, {
+  3.66985704812252*^9, 3.669857068091352*^9}}]
+}, Open  ]]
+}, Open  ]]
 },
-WindowSize->{808, 1028},
-WindowMargins->{{Automatic, 270}, {0, Automatic}},
+ShowPageBreaks->True,
+WindowSize->{807, 997},
+WindowMargins->{{Automatic, 271}, {Automatic, 3}},
+PrintingCopies->1,
+PrintingPageRange->{1, Automatic},
 FrontEndVersion->"10.3 for Mac OS X x86 (32-bit, 64-bit Kernel) (December 10, \
 2015)",
 StyleDefinitions->"Default.nb"
@@ -206,11 +486,36 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 1865, 57, 73, InheritFromParent],
-Cell[2426, 79, 5312, 110, 548, "Output"]
+Cell[558, 20, 150, 2, 54, "Chapter"],
+Cell[CellGroupData[{
+Cell[733, 26, 152, 2, 34, "Chapter"],
+Cell[CellGroupData[{
+Cell[910, 32, 139, 1, 32, "Subsubsection"],
+Cell[1052, 35, 811, 12, 70, "Text"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[1900, 52, 135, 1, 32, "Subsubsection"],
+Cell[2038, 55, 682, 20, 43, "Text"],
+Cell[2723, 77, 1865, 57, 50, InheritFromParent],
+Cell[4591, 136, 1035, 16, 97, "Text"],
+Cell[5629, 154, 1072, 16, 84, "Text"],
+Cell[6704, 172, 450, 8, 43, "Text"],
+Cell[7157, 182, 4084, 82, 96, "Input"],
+Cell[11244, 266, 129, 1, 22, "Text"],
+Cell[11376, 269, 1283, 30, 97, "Text"],
+Cell[12662, 301, 638, 11, 57, "Text"],
+Cell[13303, 314, 5331, 110, 402, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[18671, 429, 92, 1, 45, "Section"],
+Cell[18766, 432, 322, 8, 30, "Text"],
+Cell[19091, 442, 333, 6, 30, "Text"],
+Cell[19427, 450, 274, 5, 17, "Text"],
+Cell[19704, 457, 397, 7, 43, "Text"]
+}, Open  ]]
+}, Open  ]]
 }
 ]
 *)
 
 (* End of internal cache information *)
-
