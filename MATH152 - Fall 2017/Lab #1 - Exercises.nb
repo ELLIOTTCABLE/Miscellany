@@ -1,0 +1,1623 @@
+(* Content-type: application/mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 7.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       145,          7]
+NotebookDataLength[     58057,       1614]
+NotebookOptionsPosition[     54392,       1492]
+NotebookOutlinePosition[     54975,       1515]
+CellTagsIndexPosition[     54932,       1512]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Lab #1 - Exercises", "Title"],
+
+Cell[CellGroupData[{
+
+Cell["Exercises", "Section",
+ Editable->False],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "Problem 1: Typesetting Mathematics within Text using ",
+ StyleBox["Mathematica",
+  FontSlant->"Italic"],
+ " "
+}], "Subsection"],
+
+Cell[TextData[{
+ "One of the objectives of our Calculus II course is for students to become \
+more effective communicators in the area of technical writing. The ",
+ StyleBox["Mathematica",
+  FontSlant->"Italic"],
+ " labs are the environment where you will be able to practice your technical \
+writing skills. With a bit of practice you can learn how to embed \
+mathematical expressions into text cells to produce very nice looking \
+documents. "
+}], "Text",
+ TextAlignment->Left],
+
+Cell["\<\
+In this first assignment you are just asked to typeset some text containing \
+mathematics along with English words. In particular you are required to type \
+the statemnt of the Inverse Function Theorem found on page 308 of our text \
+book in the box labelled with the number 7 and part of its proof. For your \
+convenenience a .pdf of the statement of the theorem and its proof are \
+provided on blackboard. \
+\>", "Text"],
+
+Cell[CellGroupData[{
+
+Cell["\<\
+type the statemnt of the Inverse Function Theorem found on page 308 of our \
+text book (and page 389 of the e-book) in the box labelled with the number 7. \
+\>", "Subitem"],
+
+Cell[TextData[{
+ "type the first paragraph of the proof of this theorem, ending with \
+\[OpenCurlyDoubleQuote]",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"y", "\[Rule]", "b"}], TraditionalForm]]],
+ ". Therefore\[CloseCurlyDoubleQuote]"
+}], "Subitem"],
+
+Cell["\<\
+(Bonus) Type in the remainder of the proof which ends at the bottom of page \
+308. \
+\>", "Subitem"]
+}, Open  ]],
+
+Cell["\<\
+You may find the following key board short cuts worth committing to memory.\
+\>", "Text"],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "When you begin a new cell in ",
+ StyleBox["Mathematica",
+  FontSlant->"Italic"],
+ " (prior to typing anything) \[AltKey]-7 makes the cell a Text cell. (You \
+can also click on the plus symbol that you see when you are about to start a \
+new cell and select the type of cell you want). "
+}], "Subitem"],
+
+Cell["\<\
+While typing in a text cell \[ControlKey]-9 begins an embeded math expression \
+and \[ControlKey]-0 ends the embedded expression\
+\>", "Subitem"],
+
+Cell["\<\
+While working in a math cell  the arrow key \[LongRightArrow] moves the \
+\"level\" of the cursor.\
+\>", "Subitem"]
+}, Open  ]],
+
+Cell[TextData[{
+ StyleBox["Theorem: ",
+  FontWeight->"Bold"],
+ "If ",
+ Cell[BoxData[
+  FormBox["f", TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " is a one-to-one differentiable function, with inverse function ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["f", 
+    RowBox[{"-", "1"}]], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " and ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{
+     RowBox[{"f", "'"}], 
+     RowBox[{"(", 
+      RowBox[{
+       SuperscriptBox["f", 
+        RowBox[{"-", "1"}]], "(", "a", ")"}], ")"}]}], "\[NotEqual]", "0"}], 
+   TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ ", then the inverse function is differentiable at ",
+ Cell[BoxData[
+  FormBox["a", TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ ", and:"
+}], "Text",
+ Background->RGBColor[0.94, 0.91, 0.88]],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     RowBox[{"(", 
+      SuperscriptBox["f", 
+       RowBox[{"-", "1"}]], ")"}], "'"}], 
+    RowBox[{"(", "a", ")"}]}], "=", 
+   FractionBox["1", 
+    RowBox[{
+     RowBox[{"f", "'"}], 
+     RowBox[{"(", 
+      RowBox[{
+       SuperscriptBox["f", 
+        RowBox[{"-", "1"}]], "(", "a", ")"}], ")"}]}]]}], 
+  TraditionalForm]], "DisplayFormula",
+ TextAlignment->Center,
+ Background->RGBColor[0.94, 0.91, 0.88]],
+
+Cell[TextData[{
+ StyleBox["Proof:",
+  FontWeight->"Bold"],
+ " Write the definition of derivative as in Equation 2.1.5:"
+}], "Text",
+ Background->RGBColor[0.94, 0.91, 0.88]],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     RowBox[{"(", 
+      SuperscriptBox["f", 
+       RowBox[{"-", "1"}]], ")"}], "'"}], 
+    RowBox[{"(", "a", ")"}]}], "=", 
+   RowBox[{
+    UnderscriptBox["lim", 
+     RowBox[{"x", "\[Rule]", "a"}]], 
+    FractionBox[
+     RowBox[{
+      RowBox[{
+       SuperscriptBox["f", 
+        RowBox[{"-", "1"}]], 
+       RowBox[{"(", "x", ")"}]}], "-", 
+      RowBox[{
+       SuperscriptBox["f", 
+        RowBox[{"-", "1"}]], "(", "a", ")"}]}], 
+     RowBox[{"x", "-", "a"}]]}]}], TraditionalForm]], "DisplayFormula",
+ TextAlignment->Center,
+ Background->RGBColor[0.94, 0.91, 0.88]],
+
+Cell[TextData[{
+ "If ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"f", "(", "b", ")"}], "=", "a"}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ ", then ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{
+     SuperscriptBox["f", 
+      RowBox[{"-", "1"}]], "(", "a", ")"}], "=", "b"}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ ". And if we let ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"y", "=", 
+    RowBox[{
+     SuperscriptBox["f", 
+      RowBox[{"-", "1"}]], "(", "x", ")"}]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ ", then ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"f", "(", "y", ")"}], "=", "x"}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ ". Since ",
+ Cell[BoxData[
+  FormBox["f", TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " is differentiable, it is continuous, so ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["f", 
+    RowBox[{"-", "1"}]], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " by Theorem 6. Thus, if ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"x", "\[Rule]", "a"}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ ", \[Ellipsis]"
+}], "Text",
+ Background->RGBColor[0.94, 0.91, 0.88]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "Problem 2: Solving a difficult equation with ",
+ StyleBox["Mathematica",
+  FontSlant->"Italic"]
+}], "Subsection"],
+
+Cell[TextData[{
+ "The goal of this exercise is to find real solutions to the equation ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SuperscriptBox["2", "x"], "=", " ", 
+    SuperscriptBox["x", "8"]}], TraditionalForm]]],
+ " . "
+}], "Text",
+ TextAlignment->Left],
+
+Cell[TextData[{
+ "Use the Solve command to get ",
+ StyleBox["Mathematica",
+  FontSlant->"Italic"],
+ " to solve this equation."
+}], "Item"],
+
+Cell[TextData[{
+ " ",
+ StyleBox["Mathematica",
+  FontSlant->"Italic"],
+ "'s output (after it gives some warning messages) should be a list of 9 \
+exact solutions each of which is described in terms of a function that you \
+probably have never heard of before called ProductLog. "
+}], "Text"],
+
+Cell[TextData[{
+ "Use ",
+ StyleBox["Mathematica",
+  FontSlant->"Italic"],
+ "'s built in help feature to find out what the definition of this ProductLog \
+function is. Write down this definition in your ",
+ StyleBox["Mathematica",
+  FontSlant->"Italic"],
+ " notebook (i.e., what you submit).  "
+}], "Item"],
+
+Cell[TextData[{
+ "Investigate each of the 9 solutions ",
+ StyleBox["Mathematica",
+  FontSlant->"Italic"],
+ " produced by using the N command along with the rules replacement command \
+/. as was done in the discussion earlier in this lab. "
+}], "Text"],
+
+Cell[TextData[{
+ "Find all of the solutions to this equation which are real numbers. Give 10 \
+digits of accuracy for each of these solutions. [Hint: Use the built in help \
+feature to learn about some optional inputs to ",
+ StyleBox["Solve",
+  FontFamily->"Courier New"],
+ " and ",
+ StyleBox["N",
+  FontFamily->"Courier New"],
+ ".]"
+}], "Item"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Solve", "[", 
+  RowBox[{
+   RowBox[{
+    SuperscriptBox["2", "x"], "\[Equal]", 
+    SuperscriptBox["x", "8"]}], ",", "x"}], "]"}]], "Input",
+ Background->RGBColor[0.94, 0.91, 0.88]],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Solve", "::", "ifun"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Inverse functions are being used by \
+\[NoBreak]\\!\\(\\*RowBox[{\\\"Solve\\\"}]\\)\[NoBreak], so some solutions \
+may not be found; use Reduce for complete solution information. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/Solve/ifun\\\", \
+ButtonNote -> \\\"Solve::ifun\\\"]\\)\"\>"}]], "Message", "MSG",
+ Background->RGBColor[0.94, 0.91, 0.88]],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"x", "\[Rule]", 
+     RowBox[{"-", 
+      FractionBox[
+       RowBox[{"8", " ", 
+        RowBox[{"ProductLog", "[", 
+         RowBox[{"-", 
+          FractionBox[
+           RowBox[{"Log", "[", "2", "]"}], "8"]}], "]"}]}], 
+       RowBox[{"Log", "[", "2", "]"}]]}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"x", "\[Rule]", 
+     RowBox[{"-", 
+      FractionBox[
+       RowBox[{"8", " ", 
+        RowBox[{"ProductLog", "[", 
+         RowBox[{
+          RowBox[{"-", 
+           FractionBox["1", "8"]}], " ", "\[ImaginaryI]", " ", 
+          RowBox[{"Log", "[", "2", "]"}]}], "]"}]}], 
+       RowBox[{"Log", "[", "2", "]"}]]}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"x", "\[Rule]", 
+     RowBox[{"-", 
+      FractionBox[
+       RowBox[{"8", " ", 
+        RowBox[{"ProductLog", "[", 
+         RowBox[{
+          FractionBox["1", "8"], " ", "\[ImaginaryI]", " ", 
+          RowBox[{"Log", "[", "2", "]"}]}], "]"}]}], 
+       RowBox[{"Log", "[", "2", "]"}]]}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"x", "\[Rule]", 
+     RowBox[{"-", 
+      FractionBox[
+       RowBox[{"8", " ", 
+        RowBox[{"ProductLog", "[", 
+         FractionBox[
+          RowBox[{"Log", "[", "2", "]"}], "8"], "]"}]}], 
+       RowBox[{"Log", "[", "2", "]"}]]}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"x", "\[Rule]", 
+     RowBox[{"-", 
+      FractionBox[
+       RowBox[{"8", " ", 
+        RowBox[{"ProductLog", "[", 
+         RowBox[{
+          RowBox[{"-", 
+           FractionBox["1", "8"]}], " ", 
+          SuperscriptBox[
+           RowBox[{"(", 
+            RowBox[{"-", "1"}], ")"}], 
+           RowBox[{"1", "/", "4"}]], " ", 
+          RowBox[{"Log", "[", "2", "]"}]}], "]"}]}], 
+       RowBox[{"Log", "[", "2", "]"}]]}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"x", "\[Rule]", 
+     RowBox[{"-", 
+      FractionBox[
+       RowBox[{"8", " ", 
+        RowBox[{"ProductLog", "[", 
+         RowBox[{
+          FractionBox["1", "8"], " ", 
+          SuperscriptBox[
+           RowBox[{"(", 
+            RowBox[{"-", "1"}], ")"}], 
+           RowBox[{"1", "/", "4"}]], " ", 
+          RowBox[{"Log", "[", "2", "]"}]}], "]"}]}], 
+       RowBox[{"Log", "[", "2", "]"}]]}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"x", "\[Rule]", 
+     RowBox[{"-", 
+      FractionBox[
+       RowBox[{"8", " ", 
+        RowBox[{"ProductLog", "[", 
+         RowBox[{
+          RowBox[{"-", 
+           FractionBox["1", "8"]}], " ", 
+          SuperscriptBox[
+           RowBox[{"(", 
+            RowBox[{"-", "1"}], ")"}], 
+           RowBox[{"3", "/", "4"}]], " ", 
+          RowBox[{"Log", "[", "2", "]"}]}], "]"}]}], 
+       RowBox[{"Log", "[", "2", "]"}]]}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"x", "\[Rule]", 
+     RowBox[{"-", 
+      FractionBox[
+       RowBox[{"8", " ", 
+        RowBox[{"ProductLog", "[", 
+         RowBox[{
+          FractionBox["1", "8"], " ", 
+          SuperscriptBox[
+           RowBox[{"(", 
+            RowBox[{"-", "1"}], ")"}], 
+           RowBox[{"3", "/", "4"}]], " ", 
+          RowBox[{"Log", "[", "2", "]"}]}], "]"}]}], 
+       RowBox[{"Log", "[", "2", "]"}]]}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"x", "\[Rule]", 
+     RowBox[{"-", 
+      FractionBox[
+       RowBox[{"8", " ", 
+        RowBox[{"ProductLog", "[", 
+         RowBox[{
+          RowBox[{"-", "1"}], ",", 
+          RowBox[{"-", 
+           FractionBox[
+            RowBox[{"Log", "[", "2", "]"}], "8"]}]}], "]"}]}], 
+       RowBox[{"Log", "[", "2", "]"}]]}]}], "}"}]}], "}"}]], "Output",
+ Background->RGBColor[0.94, 0.91, 0.88]],
+
+Cell[TextData[{
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"ProductLog", "[", "z", "]"}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ ":\n",
+ StyleBox["\tgives the principal solution for ",
+  FontSlant->"Italic"],
+ Cell[BoxData[
+  StyleBox["w", "TI"]], "InlineFormula"],
+ StyleBox[" in ",
+  FontSlant->"Italic"],
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"z", "\[LongEqual]", 
+    RowBox[{"w", "\[InvisibleSpace]", 
+     SuperscriptBox["e", "w"]}]}], TraditionalForm]], "InlineMath"],
+ StyleBox[". ",
+  FontSlant->"Italic"]
+}], "Text",
+ Background->RGBColor[0.94, 0.91, 0.88]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Solve", "[", 
+   RowBox[{
+    RowBox[{
+     SuperscriptBox["2", "x"], "\[Equal]", 
+     SuperscriptBox["x", "8"]}], ",", "x"}], "]"}], " ", "~", "N", "~", " ", 
+  "10"}]], "Input",
+ Background->RGBColor[0.94, 0.91, 0.88]],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Solve", "::", "ifun"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Inverse functions are being used by \
+\[NoBreak]\\!\\(\\*RowBox[{\\\"Solve\\\"}]\\)\[NoBreak], so some solutions \
+may not be found; use Reduce for complete solution information. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/Solve/ifun\\\", \
+ButtonNote -> \\\"Solve::ifun\\\"]\\)\"\>"}]], "Message", "MSG",
+ Background->RGBColor[0.94, 0.91, 0.88]],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"x", "\[Rule]", "1.09999703023760940043686504803356185728`10."}], 
+    "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"x", "\[Rule]", 
+     RowBox[{
+      RowBox[{
+      "-", "0.08495979560995775642414221918517942319`9.082925387639854"}], 
+      "+", 
+      RowBox[{
+      "0.98902339063719176678743059811675183098`10.148918491580892", " ", 
+       "\[ImaginaryI]"}]}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"x", "\[Rule]", 
+     RowBox[{
+      RowBox[{
+      "-", "0.08495979560995775642414221918517942319`9.082925387639854"}], 
+      "-", 
+      RowBox[{
+      "0.98902339063719176678743059811675183098`10.148918491580892", " ", 
+       "\[ImaginaryI]"}]}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"x", "\[Rule]", 
+     RowBox[{"-", "0.92313178622436464518194104083388734607`10."}]}], "}"}], 
+   ",", 
+   RowBox[{"{", 
+    RowBox[{"x", "\[Rule]", 
+     RowBox[{
+     "0.69721140899698037302050426247124772798`9.967644289588375", "+", 
+      RowBox[{
+      "0.80144572043840114148690065879178688535`10.028153918601747", " ", 
+       "\[ImaginaryI]"}]}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"x", "\[Rule]", 
+     RowBox[{
+      RowBox[{
+      "-", "0.70067660900108188399061517049063850863`10.02239820189287"}], 
+      "-", 
+      RowBox[{
+      "0.62826424444321448484746273791656708114`9.97502292640548", " ", 
+       "\[ImaginaryI]"}]}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"x", "\[Rule]", 
+     RowBox[{
+      RowBox[{
+      "-", "0.70067660900108181051010162733915882013`10.02239820189287"}], 
+      "+", 
+      RowBox[{
+      "0.62826424444321460433625933414523407133`9.97502292640548", " ", 
+       "\[ImaginaryI]"}]}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"x", "\[Rule]", 
+     RowBox[{"0.6972114089969802453839795010956211691`9.967644289588375", "-", 
+      RowBox[{
+      "0.80144572043840126599507922503565789131`10.028153918601747", " ", 
+       "\[ImaginaryI]"}]}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"x", "\[Rule]", "43.55926043688165641731317052950256077738`10."}],
+     "}"}]}], "}"}]], "Output",
+ Background->RGBColor[0.94, 0.91, 0.88]]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Problem 3: The denisity of the prime numbers", "Subsection"],
+
+Cell["\<\
+This problem corresponds to homework problem #74 in section 6.3 of our e-text \
+(see page 410) which says (with a slight notational change): \
+\>", "Text"],
+
+Cell[TextData[{
+ "\"A ",
+ StyleBox["prime number",
+  FontFamily->"Times New Roman",
+  FontWeight->"Bold"],
+ " is a positive integer that has no factors other than 1 and itself. The \
+first few primes are 2, 3, 5, 7, 11, 13, 17, ... . We denote by ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"p", "(", "n", ")"}], TraditionalForm]]],
+ " the number of primes that are less than or equal to ",
+ Cell[BoxData[
+  FormBox["n", TraditionalForm]]],
+ ". For instance ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"p", "(", "15", ")"}], " ", "=", " ", "6"}], TraditionalForm]]],
+ " because there are six primes smaller than ",
+ Cell[BoxData[
+  FormBox["15", TraditionalForm]]],
+ ". \n\t(a) Calculate ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"p", "(", "25", ")"}], " "}], TraditionalForm]]],
+ " and ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"p", "(", "100", ")"}], TraditionalForm]]],
+ " \n\t(b) By inspecting tables of prime numbers and tables of logarithms, \
+the great Mathematician K.F. Gauss made the guess in 1792 (when he was 15) \
+that the number of primes up to ",
+ Cell[BoxData[
+  FormBox["n", TraditionalForm]]],
+ " is approximately ",
+ Cell[BoxData[
+  FormBox[
+   FractionBox["n", 
+    RowBox[{"ln", " ", 
+     RowBox[{"(", "n", ")"}]}]], TraditionalForm]]],
+ " when ",
+ Cell[BoxData[
+  FormBox["n", TraditionalForm]]],
+ " is large. More precisely, he conjectured that \n\t\t\t\t",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{
+     SubscriptBox["lim", 
+      RowBox[{"n", " ", "\[Rule]", " ", "\[Infinity]", " "}]], 
+     FractionBox[
+      RowBox[{"p", "(", "n", ")"}], 
+      RowBox[{"n", " ", "/", " ", 
+       RowBox[{"ln", "(", "n", ")"}]}]]}], "=", " ", "1"}], TraditionalForm]]],
+ "\nThis was finally proved, a hundred years later by Jaques Hadamard and \
+Charles de la Vall\[EAcute]e and is called the Prime Number Theorem. Provide \
+evidence for the truth of this theorem by computing the ratio of ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"p", "(", "n", ")"}], TraditionalForm]]],
+ " to ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"n", "/", 
+    RowBox[{"ln", "(", "n", ")"}]}], TraditionalForm]]],
+ " for ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"n", " ", "=", " ", "100"}], ",", " ", "1000", ",", " ", 
+    SuperscriptBox["10", "4"], ",", " ", 
+    SuperscriptBox["10", "5"], ",", " ", 
+    SuperscriptBox["10", "6"], ",", " ", 
+    SuperscriptBox["10", "7"]}], TraditionalForm]]],
+ ". Use the following data: ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"p", "(", "1000", ")"}], " ", "=", " ", "168"}], 
+   TraditionalForm]]],
+ ", ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"p", "(", 
+     SuperscriptBox["10", "4"], ")"}], " ", "=", " ", "1229", " "}], 
+   TraditionalForm]]],
+ ", ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"p", "(", 
+     SuperscriptBox["10", "5"], ")"}], " ", "=", " ", "9592", " "}], 
+   TraditionalForm]]],
+ ", ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{
+     RowBox[{"p", "(", 
+      SuperscriptBox["10", "6"], ")"}], " ", "=", " ", "78"}], ",", "498", 
+    " "}], TraditionalForm]]],
+ ", ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{
+     RowBox[{"p", "(", 
+      SuperscriptBox["10", "7"], ")"}], " ", "=", " ", "664"}], ",", "579", 
+    " "}], TraditionalForm]]],
+ ". \n\t(c) Use the Prime Number Theorem to estimate the number of primes up \
+to a billion.\""
+}], "Text"],
+
+Cell[TextData[{
+ " In this problem you are asked to define the function ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"p", "(", "n", ")"}], TraditionalForm]]],
+ " using ",
+ StyleBox["Mathematica",
+  FontSlant->"Italic"]
+}], "Item"],
+
+Cell[TextData[{
+ "Hint: Your function can be built using the following ",
+ StyleBox["Mathematica",
+  FontSlant->"Italic"],
+ " commands: PrimeQ, If, Table, and Total\n\nExtended Hint:  The function \
+\"PrimeQ\" returns a value of True or False, use the \"If\" command to \
+convert this output to a 1 if the value was true and a 0 if the value was \
+false. ",
+ StyleBox["Mathematica'",
+  FontSlant->"Italic"],
+ "s ability to work with lists allows very powerful commands to be \
+constructed by a single line of code. Build a list of 0's and 1's by using \
+the \"Table\" command, and then find the Total of number of the entries in \
+this list. This can all be done in a single line by nesting these functions. \
+Build this in steps, get the inner nested functions working before you put it \
+all together in one line of ",
+ StyleBox["Mathematica",
+  FontSlant->"Italic"],
+ " code. But before trying to get a concise answer, experiment with each of \
+the commands to make sure you understand them. "
+}], "Text"],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "Verify the values of ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"p", "(", "n", ")"}], TraditionalForm]]],
+ " given in the statement of the homework problem are equal to the values \
+computed by your function ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"p", "(", "n", ")"}], TraditionalForm]]],
+ ". Note that computing the value of ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"p", "(", 
+    SuperscriptBox["10", "7"], ")"}], TraditionalForm]]],
+ " may take ",
+ StyleBox["Mathematica",
+  FontSlant->"Italic"],
+ " a minute or two. "
+}], "Item"],
+
+Cell[TextData[{
+ "Answer part (c) of the homework problem. You should do this by using the \
+Prime Number Theorem, not by getting ",
+ StyleBox["Mathematica",
+  FontSlant->"Italic"],
+ " to calculate ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"p", "(", 
+    RowBox[{"1", ",", "000", ",", "000", ",", "000"}], ")"}], 
+   TraditionalForm]]],
+ " which would take a long time. Explain your reasoning."
+}], "Item"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"p", "[", "n_", "]"}], ":=", 
+  RowBox[{"Total", "[", 
+   RowBox[{"Table", "[", 
+    RowBox[{
+     RowBox[{"If", "[", 
+      RowBox[{
+       RowBox[{"PrimeQ", "[", "i", "]"}], ",", "1", ",", "0"}], "]"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"i", ",", " ", "n"}], "}"}]}], "]"}], "]"}]}]], "Input",
+ Background->RGBColor[0.94, 0.91, 0.88]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"p", "[", 
+    SuperscriptBox["10", "#"], "]"}], "&"}], "/@", 
+  RowBox[{"Range", "[", 
+   RowBox[{"2", ",", "7"}], "]"}]}]], "Input",
+ Background->RGBColor[0.94, 0.91, 0.88]],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+  "25", ",", "168", ",", "1229", ",", "9592", ",", "78498", ",", "664579"}], 
+  "}"}]], "Output",
+ Background->RGBColor[0.94, 0.91, 0.88]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  FractionBox["1000000000", 
+   RowBox[{"Log", "[", "1000000000", "]"}]], "//", "N"}]], "Input",
+ Background->RGBColor[0.94, 0.91, 0.88]],
+
+Cell[BoxData["4.825494243369465`*^7"], "Output",
+ Background->RGBColor[0.94, 0.91, 0.88]]
+}, Open  ]],
+
+Cell[TextData[{
+ "I applied Gauss\[CloseCurlyQuote]s conjecture that one can number the \
+primes up to ",
+ Cell[BoxData[
+  FormBox["n", TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " by applying ",
+ Cell[BoxData[
+  FormBox[
+   FractionBox["n", 
+    RowBox[{"ln", " ", 
+     RowBox[{"(", "n", ")"}]}]], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ ", substituting 1,000,000,000 for ",
+ Cell[BoxData[
+  FormBox["n", TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ "."
+}], "Text",
+ Background->RGBColor[0.94, 0.91, 0.88]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "Problem 4: The Curious Expression, ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox[
+    RowBox[{"(", 
+     RowBox[{"1", "+", 
+      FractionBox["1", "x"]}], ")"}], "x"], TraditionalForm]], "None"]
+}], "Subsection"],
+
+Cell["\<\
+This exercise corresponds to the discussion at the end of section 6.4 of the \
+text. \
+\>", "Text"],
+
+Cell[TextData[{
+ "As ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"x", "\[Rule]", " ", "\[Infinity]"}], TraditionalForm]]],
+ ", the base of the expression  ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox[
+    RowBox[{"(", 
+     RowBox[{"1", "+", 
+      FractionBox["1", "x"]}], ")"}], "x"], TraditionalForm]]],
+ " goes to 1, while the exponent goes to infinity. For short, people often \
+write this as saying the limit of the expression has the form of \" ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["1", "\[Infinity]"], TraditionalForm]]],
+ " \", this is an \"indeterminate form,\" which is to say that the value of \
+the limit of  ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox[
+    RowBox[{"(", 
+     RowBox[{"1", "+", 
+      FractionBox["1", "x"]}], ")"}], "x"], TraditionalForm]]],
+ " as ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"x", "\[Rule]", " ", "\[Infinity]"}], TraditionalForm]]],
+ " is not obvious. Is the limit 1? Does the limit go to infinity? How does \
+the limit change if we change the base to something like ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"(", 
+    RowBox[{"1", "+", 
+     FractionBox[
+      RowBox[{"ln", " ", "2"}], "x"]}], ")"}], TraditionalForm]]],
+ " ? Investigate this expression. Your answer should include:"
+}], "Text"],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "A plot of ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox[
+    RowBox[{"(", 
+     RowBox[{"1", "+", 
+      FractionBox["1", "x"]}], ")"}], "x"], TraditionalForm]]],
+ " that includes a large enough value for ",
+ Cell[BoxData[
+  FormBox["x", TraditionalForm]]],
+ " to show that the limit is most likely not ",
+ Cell[BoxData[
+  FormBox["1", TraditionalForm]]],
+ "."
+}], "Item"],
+
+Cell[TextData[{
+ "An evaluation of the limit of ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox[
+    RowBox[{"(", 
+     RowBox[{"1", "+", 
+      FractionBox["1", "x"]}], ")"}], "x"], TraditionalForm]]],
+ " as ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"x", "\[Rule]", " ", "\[Infinity]"}], TraditionalForm]]],
+ "."
+}], "Item"],
+
+Cell[TextData[{
+ "An evaluation of the limit of ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox[
+    RowBox[{"(", 
+     RowBox[{"1", "+", 
+      FractionBox[
+       RowBox[{"ln", " ", "2"}], "x"]}], ")"}], "x"], TraditionalForm]]],
+ "as ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"x", "\[Rule]", " ", "\[Infinity]"}], TraditionalForm]]],
+ "."
+}], "Item"],
+
+Cell[TextData[{
+ "A conjecture as to the value of the limit of ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox[
+    RowBox[{"(", 
+     RowBox[{"1", "+", 
+      FractionBox["c", "x"]}], ")"}], "x"], TraditionalForm]]],
+ " as ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"x", "\[Rule]", " ", "\[Infinity]"}], TraditionalForm]]],
+ "."
+}], "Item"]
+}, Open  ]],
+
+Cell[TextData[{
+ "Useful commands for this exercise are ",
+ StyleBox["Plot",
+  FontFamily->"Courier New"],
+ " and ",
+ StyleBox["Limit",
+  FontFamily->"Courier New"]
+}], "Text"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"c", "[", "x_", "]"}], ":=", 
+  SuperscriptBox[
+   RowBox[{"(", 
+    RowBox[{"1", "+", 
+     FractionBox["1", "x"]}], ")"}], "x"]}]], "Input",
+ Background->RGBColor[0.94, 0.91, 0.88]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Plot", "[", 
+  RowBox[{
+   RowBox[{"c", "[", "x", "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", "0", ",", 
+     SuperscriptBox["2", "28"]}], "}"}], ",", 
+   RowBox[{"PlotStyle", "\[Rule]", "Thin"}]}], "]"}]], "Input",
+ Background->RGBColor[0.94, 0.91, 0.88]],
+
+Cell[BoxData[
+ GraphicsBox[{{}, {}, 
+   {RGBColor[0.368417, 0.506779, 0.709798], Thickness[Tiny], Opacity[1.], 
+    LineBox[CompressedData["
+1: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
+a9hfMpQlR/7940O26TDi+R+lHu+k
+     "]]}},
+  AspectRatio->NCache[GoldenRatio^(-1), 0.6180339887498948],
+  Axes->{True, True},
+  AxesLabel->{None, None},
+  AxesOrigin->{0, 2.71828168},
+  DisplayFunction->Identity,
+  Frame->{{False, False}, {False, False}},
+  FrameLabel->{{None, None}, {None, None}},
+  FrameTicks->{{Automatic, Automatic}, {Automatic, Automatic}},
+  GridLines->{None, None},
+  GridLinesStyle->Directive[
+    GrayLevel[0.5, 0.4]],
+  Method->{
+   "DefaultBoundaryStyle" -> Automatic, "DefaultMeshStyle" -> 
+    AbsolutePointSize[6], "ScalingFunctions" -> None},
+  PlotRange->{{0, 268435456}, {2.71828168659275, 2.718281901871964}},
+  PlotRangeClipping->True,
+  PlotRangePadding->{{
+     Scaled[0.02], 
+     Scaled[0.02]}, {
+     Scaled[0.05], 
+     Scaled[0.05]}},
+  Ticks->{Automatic, Automatic}]], "Output",
+ Background->RGBColor[0.94, 0.91, 0.88]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Limit", "[", 
+  RowBox[{
+   SuperscriptBox[
+    RowBox[{"(", 
+     RowBox[{"1", "+", 
+      FractionBox["1", "x"]}], ")"}], "x"], ",", 
+   RowBox[{"x", "\[Rule]", "\[Infinity]"}]}], "]"}]], "Input",
+ Background->RGBColor[0.94, 0.91, 0.88]],
+
+Cell[BoxData["\[ExponentialE]"], "Output",
+ Background->RGBColor[0.94, 0.91, 0.88]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Limit", "[", 
+  RowBox[{
+   SuperscriptBox[
+    RowBox[{"(", 
+     RowBox[{"1", "+", 
+      FractionBox[
+       RowBox[{"Log", "[", "2", "]"}], "x"]}], ")"}], "x"], ",", 
+   RowBox[{"x", "\[Rule]", "\[Infinity]"}]}], "]"}]], "Input",
+ Background->RGBColor[0.94, 0.91, 0.88]],
+
+Cell[BoxData["2"], "Output",
+ Background->RGBColor[0.94, 0.91, 0.88]],
+
+Cell[BoxData[
+ RowBox[{"Limit", "[", 
+  RowBox[{
+   SuperscriptBox[
+    RowBox[{"(", 
+     RowBox[{"1", "+", 
+      FractionBox["2", "x"]}], ")"}], "x"], ",", 
+   RowBox[{"x", "\[Rule]", "\[Infinity]"}]}], "]"}]], "Input",
+ Background->RGBColor[0.94, 0.91, 0.88]],
+
+Cell[BoxData[
+ SuperscriptBox["\[ExponentialE]", "2"]], "Output",
+ Background->RGBColor[0.94, 0.91, 0.88]]
+}, Open  ]],
+
+Cell[TextData[{
+ "Well, it ",
+ StyleBox["looks",
+  FontSlant->"Italic"],
+ " like it\[CloseCurlyQuote]s going to whatever\[CloseCurlyQuote]s in the \
+denominator is going to end up being the power of ",
+ Cell[BoxData[
+  FormBox["\[ExponentialE]", TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ ". Sooooo,"
+}], "Text",
+ Background->RGBColor[0.94, 0.91, 0.88]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Limit", "[", 
+  RowBox[{
+   SuperscriptBox[
+    RowBox[{"(", 
+     RowBox[{"1", "+", 
+      FractionBox["c", "x"]}], ")"}], "x"], ",", 
+   RowBox[{"x", "\[Rule]", "\[Infinity]"}]}], "]"}]], "Input",
+ Background->RGBColor[0.94, 0.91, 0.88]],
+
+Cell[BoxData[
+ SuperscriptBox["\[ExponentialE]", "c"]], "Output",
+ Background->RGBColor[0.94, 0.91, 0.88]]
+}, Open  ]],
+
+Cell[BoxData[""], "Input"],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{
+   RowBox[{
+    UnderscriptBox["lim", 
+     RowBox[{"x", "\[Rule]", "\[Infinity]"}]], "\[ThinSpace]", 
+    SuperscriptBox["\[ExponentialE]", 
+     RowBox[{"log", "(", 
+      SuperscriptBox[
+       RowBox[{"(", 
+        RowBox[{
+         FractionBox["2", "x"], "+", "1"}], ")"}], "x"], ")"}]]}], "=", 
+   RowBox[{
+    RowBox[{
+     UnderscriptBox["lim", 
+      RowBox[{"x", "\[Rule]", "\[Infinity]"}]], "\[ThinSpace]", 
+     SuperscriptBox["\[ExponentialE]", 
+      RowBox[{"x", "\[CenterDot]", 
+       RowBox[{"log", "(", 
+        RowBox[{
+         FractionBox["2", "x"], "+", "1"}], ")"}]}]]}], "=", 
+    RowBox[{
+     SuperscriptBox["\[ExponentialE]", 
+      RowBox[{
+       UnderscriptBox["lim", 
+        RowBox[{"x", "\[Rule]", "\[Infinity]"}]], " ", 
+       RowBox[{"x", "\[CenterDot]", 
+        RowBox[{"log", "(", 
+         RowBox[{
+          FractionBox["2", "x"], "+", "1"}], ")"}]}]}]], "\[Ellipsis]"}]}]}], 
+  TraditionalForm]], "Input"]
+},
+CellGrouping->Manual,
+WindowSize->{1387, 1373},
+WindowMargins->{{Automatic, 9}, {Automatic, 4}},
+PrivateNotebookOptions->{"VersionedStylesheet"->{"Default.nb"[8.] -> True}},
+ShowCellBracket->True,
+ShowGroupOpener->True,
+ShowCellLabel->True,
+TrackCellChangeTimes->False,
+Magnification:>1.5 Inherited,
+FrontEndVersion->"10.3 for Mac OS X x86 (32-bit, 64-bit Kernel) (December 10, \
+2015)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[567, 22, 35, 0, 115, "Title"],
+Cell[CellGroupData[{
+Cell[627, 26, 46, 1, 101, "Section"],
+Cell[CellGroupData[{
+Cell[698, 31, 145, 5, 52, "Subsection"],
+Cell[846, 38, 479, 10, 87, "Text"],
+Cell[1328, 50, 432, 7, 87, "Text"],
+Cell[CellGroupData[{
+Cell[1785, 61, 182, 3, 31, "Subitem"],
+Cell[1970, 66, 246, 7, 31, "Subitem"],
+Cell[2219, 75, 110, 3, 31, "Subitem"]
+}, Open  ]],
+Cell[2344, 81, 99, 2, 40, "Text"],
+Cell[CellGroupData[{
+Cell[2468, 87, 319, 7, 52, "Subitem"],
+Cell[2790, 96, 155, 3, 31, "Subitem"],
+Cell[2948, 101, 125, 3, 31, "Subitem"]
+}, Open  ]],
+Cell[3088, 107, 832, 31, 70, "Text"],
+Cell[3923, 140, 470, 18, 86, "DisplayFormula"],
+Cell[4396, 160, 172, 5, 64, "Text"],
+Cell[4571, 167, 635, 23, 84, "DisplayFormula"],
+Cell[5209, 192, 1196, 46, 67, "Text"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[6442, 243, 131, 4, 52, "Subsection"],
+Cell[6576, 249, 260, 9, 43, "Text"],
+Cell[6839, 260, 138, 5, 31, "Item"],
+Cell[6980, 267, 291, 7, 64, "Text"],
+Cell[7274, 276, 305, 9, 52, "Item"],
+Cell[7582, 287, 251, 6, 64, "Text"],
+Cell[7836, 295, 345, 10, 54, "Item"],
+Cell[CellGroupData[{
+Cell[8206, 309, 205, 6, 73, "Input"],
+Cell[8414, 317, 551, 11, 58, "Message"],
+Cell[8968, 330, 3601, 113, 244, "Output"],
+Cell[12572, 445, 575, 20, 88, "Text"],
+Cell[CellGroupData[{
+Cell[13172, 469, 256, 8, 73, "Input"],
+Cell[13431, 479, 551, 11, 58, "Message"],
+Cell[13985, 492, 2159, 62, 111, "Output"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[16205, 561, 66, 0, 52, "Subsection"],
+Cell[16274, 563, 165, 3, 40, "Text"],
+Cell[16442, 568, 3382, 113, 295, "Text"],
+Cell[19827, 683, 225, 8, 31, "Item"],
+Cell[20055, 693, 1008, 20, 181, "Text"],
+Cell[CellGroupData[{
+Cell[21088, 717, 548, 19, 58, "Item"],
+Cell[21639, 738, 404, 12, 52, "Item"]
+}, Open  ]]
+}, Open  ]],
+Cell[22070, 754, 375, 11, 64, "Input"],
+Cell[CellGroupData[{
+Cell[22470, 769, 221, 7, 72, "Input"],
+Cell[22694, 778, 178, 5, 64, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[22909, 788, 161, 4, 95, "Input"],
+Cell[23073, 794, 89, 1, 69, "Output"]
+}, Open  ]],
+Cell[23177, 798, 542, 19, 75, "Text"],
+Cell[CellGroupData[{
+Cell[23744, 821, 231, 8, 70, "Subsection"],
+Cell[23978, 831, 109, 3, 40, "Text"],
+Cell[24090, 836, 1250, 38, 123, "Text"],
+Cell[CellGroupData[{
+Cell[25365, 878, 391, 15, 43, "Item"],
+Cell[25759, 895, 322, 13, 43, "Item"],
+Cell[26084, 910, 350, 14, 44, "Item"],
+Cell[26437, 926, 337, 13, 41, "Item"]
+}, Open  ]],
+Cell[26789, 942, 176, 7, 42, "Text"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+Cell[27004, 954, 217, 7, 91, "Input"],
+Cell[CellGroupData[{
+Cell[27246, 965, 288, 8, 73, "Input"],
+Cell[27537, 975, 23880, 403, 371, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[51454, 1383, 263, 8, 91, "Input"],
+Cell[51720, 1393, 83, 1, 64, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[51840, 1399, 298, 9, 91, "Input"],
+Cell[52141, 1410, 69, 1, 64, "Output"],
+Cell[52213, 1413, 263, 8, 91, "Input"],
+Cell[52479, 1423, 106, 2, 69, "Output"]
+}, Open  ]],
+Cell[52600, 1428, 364, 11, 64, "Text"],
+Cell[CellGroupData[{
+Cell[52989, 1443, 263, 8, 88, "Input"],
+Cell[53255, 1453, 106, 2, 67, "Output"]
+}, Open  ]],
+Cell[53376, 1458, 26, 0, 40, "Input"],
+Cell[53405, 1460, 983, 30, 71, "Input"]
+}
+]
+*)
+
+(* End of internal cache information *)

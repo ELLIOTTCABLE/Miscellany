@@ -1,0 +1,497 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     16336,        487]
+NotebookOptionsPosition[     15894,        466]
+NotebookOutlinePosition[     16250,        482]
+CellTagsIndexPosition[     16207,        479]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"D", "[", 
+    RowBox[{"#", ",", "x"}], "]"}], "&"}], "/@", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"ArcSinh", "[", "x", "]"}], ",", 
+    RowBox[{"ArcCosh", "[", "x", "]"}], ",", 
+    RowBox[{"ArcTanh", "[", "x", "]"}], ",", 
+    RowBox[{"ArcCsch", "[", "x", "]"}], ",", 
+    RowBox[{"ArcSech", "[", "x", "]"}], ",", 
+    RowBox[{"ArcCoth", "[", "x", "]"}]}], "}"}]}]], "Input",
+ CellChangeTimes->{{3.71408749425397*^9, 3.714087512807263*^9}, {
+  3.714087559675352*^9, 3.714087587852221*^9}, {3.714087689881372*^9, 
+  3.7140877318235617`*^9}, {3.714090994703871*^9, 3.714091005972727*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   FractionBox["1", 
+    SqrtBox[
+     RowBox[{"1", "+", 
+      SuperscriptBox["x", "2"]}]]], ",", 
+   FractionBox["1", 
+    RowBox[{
+     SqrtBox[
+      RowBox[{
+       RowBox[{"-", "1"}], "+", "x"}]], " ", 
+     SqrtBox[
+      RowBox[{"1", "+", "x"}]]}]], ",", 
+   FractionBox["1", 
+    RowBox[{"1", "-", 
+     SuperscriptBox["x", "2"]}]], ",", 
+   RowBox[{"-", 
+    FractionBox["1", 
+     RowBox[{
+      SqrtBox[
+       RowBox[{"1", "+", 
+        FractionBox["1", 
+         SuperscriptBox["x", "2"]]}]], " ", 
+      SuperscriptBox["x", "2"]}]]}], ",", 
+   RowBox[{"-", 
+    FractionBox["1", 
+     RowBox[{"x", " ", 
+      SqrtBox[
+       FractionBox[
+        RowBox[{"1", "-", "x"}], 
+        RowBox[{"1", "+", "x"}]]], " ", 
+      RowBox[{"(", 
+       RowBox[{"1", "+", "x"}], ")"}]}]]}], ",", 
+   FractionBox["1", 
+    RowBox[{"1", "-", 
+     SuperscriptBox["x", "2"]}]]}], "}"}]], "Output",
+ CellChangeTimes->{3.7140875883018093`*^9, 3.714087762740143*^9, 
+  3.7140910065950117`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"TableForm", "[", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"Grid", "[", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"Sin", "[", "x", "]"}], ",", 
+            RowBox[{"Cos", "[", "x", "]"}], ",", 
+            RowBox[{"Tan", "[", "x", "]"}], ",", 
+            RowBox[{"Csc", "[", "x", "]"}], ",", 
+            RowBox[{"Sec", "[", "x", "]"}], ",", 
+            RowBox[{"Cot", "[", "x", "]"}]}], "}"}], ",", 
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"Cos", "[", "x", "]"}], ",", 
+            RowBox[{"-", 
+             RowBox[{"Sin", "[", "x", "]"}]}], ",", 
+            SuperscriptBox[
+             RowBox[{"Sec", "[", "x", "]"}], "2"], ",", 
+            RowBox[{
+             RowBox[{"-", 
+              RowBox[{"Cot", "[", "x", "]"}]}], " ", 
+             RowBox[{"Csc", "[", "x", "]"}]}], ",", 
+            RowBox[{
+             RowBox[{"Sec", "[", "x", "]"}], " ", 
+             RowBox[{"Tan", "[", "x", "]"}]}], ",", 
+            RowBox[{"-", 
+             SuperscriptBox[
+              RowBox[{"Csc", "[", "x", "]"}], "2"]}]}], "}"}]}], "}"}], ",", 
+        RowBox[{"Frame", "\[Rule]", "All"}], ",", 
+        RowBox[{"ItemSize", "\[Rule]", "9"}]}], "]"}], ",", 
+      "\[IndentingNewLine]", 
+      RowBox[{"Grid", "[", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"Sinh", "[", "x", "]"}], ",", 
+            RowBox[{"Cosh", "[", "x", "]"}], ",", 
+            RowBox[{"Tanh", "[", "x", "]"}], ",", 
+            RowBox[{"Csch", "[", "x", "]"}], ",", 
+            RowBox[{"Sech", "[", "x", "]"}], ",", 
+            RowBox[{"Coth", "[", "x", "]"}]}], "}"}], ",", 
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"Cosh", "[", "x", "]"}], ",", 
+            RowBox[{"Sinh", "[", "x", "]"}], ",", 
+            SuperscriptBox[
+             RowBox[{"Sech", "[", "x", "]"}], "2"], ",", 
+            RowBox[{
+             RowBox[{"-", 
+              RowBox[{"Coth", "[", "x", "]"}]}], " ", 
+             RowBox[{"Csch", "[", "x", "]"}]}], ",", 
+            RowBox[{
+             RowBox[{"-", 
+              RowBox[{"Sech", "[", "x", "]"}]}], " ", 
+             RowBox[{"Tanh", "[", "x", "]"}]}], ",", 
+            RowBox[{"-", 
+             SuperscriptBox[
+              RowBox[{"Csch", "[", "x", "]"}], "2"]}]}], "}"}]}], "}"}], ",", 
+        
+        RowBox[{"Frame", "\[Rule]", "All"}], ",", 
+        RowBox[{"ItemSize", "\[Rule]", "9"}]}], "]"}], ",", 
+      "\[IndentingNewLine]", 
+      RowBox[{"Grid", "[", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"ArcSin", "[", "x", "]"}], ",", 
+            RowBox[{"ArcCos", "[", "x", "]"}], ",", 
+            RowBox[{"ArcTan", "[", "x", "]"}], ",", 
+            RowBox[{"ArcCsc", "[", "x", "]"}], ",", 
+            RowBox[{"ArcSec", "[", "x", "]"}], ",", 
+            RowBox[{"ArcCot", "[", "x", "]"}]}], "}"}], ",", 
+          RowBox[{"{", 
+           RowBox[{
+            FractionBox["1", 
+             SqrtBox[
+              RowBox[{"1", "-", 
+               SuperscriptBox["x", "2"]}]]], ",", 
+            RowBox[{"-", 
+             FractionBox["1", 
+              SqrtBox[
+               RowBox[{"1", "-", 
+                SuperscriptBox["x", "2"]}]]]}], ",", 
+            FractionBox["1", 
+             RowBox[{"1", "+", 
+              SuperscriptBox["x", "2"]}]], ",", 
+            RowBox[{"-", 
+             FractionBox["1", 
+              RowBox[{
+               SqrtBox[
+                RowBox[{"1", "-", 
+                 FractionBox["1", 
+                  SuperscriptBox["x", "2"]]}]], " ", 
+               SuperscriptBox["x", "2"]}]]}], ",", 
+            FractionBox["1", 
+             RowBox[{
+              SqrtBox[
+               RowBox[{"1", "-", 
+                FractionBox["1", 
+                 SuperscriptBox["x", "2"]]}]], " ", 
+              SuperscriptBox["x", "2"]}]], ",", 
+            RowBox[{"-", 
+             FractionBox["1", 
+              RowBox[{"1", "+", 
+               SuperscriptBox["x", "2"]}]]}]}], "}"}]}], "}"}], ",", 
+        RowBox[{"Frame", "\[Rule]", "All"}], ",", 
+        RowBox[{"ItemSize", "\[Rule]", "9"}]}], "]"}], ",", 
+      "\[IndentingNewLine]", 
+      RowBox[{"Grid", "[", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"ArcSinh", "[", "x", "]"}], ",", 
+            RowBox[{"ArcCosh", "[", "x", "]"}], ",", 
+            RowBox[{"ArcTanh", "[", "x", "]"}], ",", 
+            RowBox[{"ArcCsch", "[", "x", "]"}], ",", 
+            RowBox[{"ArcSech", "[", "x", "]"}], ",", 
+            RowBox[{"ArcCoth", "[", "x", "]"}]}], "}"}], ",", 
+          RowBox[{"{", 
+           RowBox[{
+            FractionBox["1", 
+             SqrtBox[
+              RowBox[{"1", "+", 
+               SuperscriptBox["x", "2"]}]]], ",", 
+            FractionBox["1", 
+             RowBox[{
+              SqrtBox[
+               RowBox[{
+                RowBox[{"-", "1"}], "+", "x"}]], " ", 
+              SqrtBox[
+               RowBox[{"1", "+", "x"}]]}]], ",", 
+            FractionBox["1", 
+             RowBox[{"1", "-", 
+              SuperscriptBox["x", "2"]}]], ",", 
+            RowBox[{"-", 
+             FractionBox["1", 
+              RowBox[{
+               SqrtBox[
+                RowBox[{"1", "+", 
+                 FractionBox["1", 
+                  SuperscriptBox["x", "2"]]}]], " ", 
+               SuperscriptBox["x", "2"]}]]}], ",", 
+            RowBox[{"-", 
+             FractionBox["1", 
+              RowBox[{"x", " ", 
+               SqrtBox[
+                FractionBox[
+                 RowBox[{"1", "-", "x"}], 
+                 RowBox[{"1", "+", "x"}]]], " ", 
+               RowBox[{"(", 
+                RowBox[{"1", "+", "x"}], ")"}]}]]}], ",", 
+            FractionBox["1", 
+             RowBox[{"1", "-", 
+              SuperscriptBox["x", "2"]}]]}], "}"}]}], "}"}], ",", 
+        RowBox[{"Frame", "\[Rule]", "All"}], ",", 
+        RowBox[{"ItemSize", "\[Rule]", "9"}]}], "]"}]}], 
+     "\[IndentingNewLine]", "}"}], "]"}], "//", "TraditionalForm"}], 
+  "\[IndentingNewLine]"}]], "Input",
+ CellChangeTimes->CompressedData["
+1:eJxTTMoPSmViYGAQAWIQzROWzMC/5rVjHLMIO4jW6RXgBdGetov4QLQJv6ww
+iPZQrhMB0UvbVKVA9IoZE6VB9KJETn0Q7fbtmhGIPv2M0xFExzoKeoBouT+8
+YSD6wtLWcBC9v4E1BkRPvSoApnfdWZMDog3aGApBNNOzeeUCQFrtcHEziP7d
+atoOos/MsO0A0TF+z/tBdIdu6SQQzbXn9jQQPX+i8HQQPbWhZAGIPmX4YQWI
+/nKAaSOIvnqmaweIZvt+YD9Yv+HMUyD62pZJl0A045u2KyD6gvWJOyD6PVPg
+IxD9v3zuaxAt+KjxHYiWnf+OURBIT2ao4ADRAGv4mIE=
+  "]],
+
+Cell[BoxData[
+ FormBox[
+  TagBox[
+   TagBox[GridBox[{
+      {
+       TagBox[GridBox[{
+          {
+           RowBox[{"sin", "(", "x", ")"}], 
+           RowBox[{"cos", "(", "x", ")"}], 
+           RowBox[{"tan", "(", "x", ")"}], 
+           RowBox[{"csc", "(", "x", ")"}], 
+           RowBox[{"sec", "(", "x", ")"}], 
+           RowBox[{"cot", "(", "x", ")"}]},
+          {
+           RowBox[{"cos", "(", "x", ")"}], 
+           RowBox[{"-", 
+            RowBox[{"sin", "(", "x", ")"}]}], 
+           RowBox[{
+            SuperscriptBox["sec", "2"], "(", "x", ")"}], 
+           RowBox[{
+            RowBox[{"-", 
+             RowBox[{"cot", "(", "x", ")"}]}], " ", 
+            RowBox[{"csc", "(", "x", ")"}]}], 
+           RowBox[{
+            RowBox[{"tan", "(", "x", ")"}], " ", 
+            RowBox[{"sec", "(", "x", ")"}]}], 
+           RowBox[{"-", 
+            RowBox[{
+             SuperscriptBox["csc", "2"], "(", "x", ")"}]}]}
+         },
+         AutoDelete->False,
+         GridBoxFrame->{"Columns" -> {{True}}, "Rows" -> {{True}}},
+         GridBoxItemSize->{"Columns" -> {{9}}}],
+        "Grid"]},
+      {
+       TagBox[GridBox[{
+          {
+           RowBox[{"sinh", "(", "x", ")"}], 
+           RowBox[{"cosh", "(", "x", ")"}], 
+           RowBox[{"tanh", "(", "x", ")"}], 
+           RowBox[{"csch", "(", "x", ")"}], 
+           RowBox[{"sech", "(", "x", ")"}], 
+           RowBox[{"coth", "(", "x", ")"}]},
+          {
+           RowBox[{"cosh", "(", "x", ")"}], 
+           RowBox[{"sinh", "(", "x", ")"}], 
+           RowBox[{
+            SuperscriptBox["sech", "2"], "(", "x", ")"}], 
+           RowBox[{
+            RowBox[{"-", 
+             RowBox[{"coth", "(", "x", ")"}]}], " ", 
+            RowBox[{"csch", "(", "x", ")"}]}], 
+           RowBox[{
+            RowBox[{"tanh", "(", "x", ")"}], " ", 
+            RowBox[{"(", 
+             RowBox[{"-", 
+              RowBox[{"sech", "(", "x", ")"}]}], ")"}]}], 
+           RowBox[{"-", 
+            RowBox[{
+             SuperscriptBox["csch", "2"], "(", "x", ")"}]}]}
+         },
+         AutoDelete->False,
+         GridBoxFrame->{"Columns" -> {{True}}, "Rows" -> {{True}}},
+         GridBoxItemSize->{"Columns" -> {{9}}}],
+        "Grid"]},
+      {
+       TagBox[GridBox[{
+          {
+           RowBox[{
+            SuperscriptBox["sin", 
+             RowBox[{"-", "1"}]], "(", "x", ")"}], 
+           RowBox[{
+            SuperscriptBox["cos", 
+             RowBox[{"-", "1"}]], "(", "x", ")"}], 
+           RowBox[{
+            SuperscriptBox["tan", 
+             RowBox[{"-", "1"}]], "(", "x", ")"}], 
+           RowBox[{
+            SuperscriptBox["csc", 
+             RowBox[{"-", "1"}]], "(", "x", ")"}], 
+           RowBox[{
+            SuperscriptBox["sec", 
+             RowBox[{"-", "1"}]], "(", "x", ")"}], 
+           RowBox[{
+            SuperscriptBox["cot", 
+             RowBox[{"-", "1"}]], "(", "x", ")"}]},
+          {
+           FractionBox["1", 
+            SqrtBox[
+             RowBox[{"1", "-", 
+              SuperscriptBox["x", "2"]}]]], 
+           RowBox[{"-", 
+            FractionBox["1", 
+             SqrtBox[
+              RowBox[{"1", "-", 
+               SuperscriptBox["x", "2"]}]]]}], 
+           FractionBox["1", 
+            RowBox[{
+             SuperscriptBox["x", "2"], "+", "1"}]], 
+           RowBox[{"-", 
+            FractionBox["1", 
+             RowBox[{
+              SqrtBox[
+               RowBox[{"1", "-", 
+                FractionBox["1", 
+                 SuperscriptBox["x", "2"]]}]], " ", 
+              SuperscriptBox["x", "2"]}]]}], 
+           FractionBox["1", 
+            RowBox[{
+             SqrtBox[
+              RowBox[{"1", "-", 
+               FractionBox["1", 
+                SuperscriptBox["x", "2"]]}]], " ", 
+             SuperscriptBox["x", "2"]}]], 
+           RowBox[{"-", 
+            FractionBox["1", 
+             RowBox[{
+              SuperscriptBox["x", "2"], "+", "1"}]]}]}
+         },
+         AutoDelete->False,
+         GridBoxFrame->{"Columns" -> {{True}}, "Rows" -> {{True}}},
+         GridBoxItemSize->{"Columns" -> {{9}}}],
+        "Grid"]},
+      {
+       TagBox[GridBox[{
+          {
+           RowBox[{
+            SuperscriptBox["sinh", 
+             RowBox[{"-", "1"}]], "(", "x", ")"}], 
+           RowBox[{
+            SuperscriptBox["cosh", 
+             RowBox[{"-", "1"}]], "(", "x", ")"}], 
+           RowBox[{
+            SuperscriptBox["tanh", 
+             RowBox[{"-", "1"}]], "(", "x", ")"}], 
+           RowBox[{
+            SuperscriptBox["csch", 
+             RowBox[{"-", "1"}]], "(", "x", ")"}], 
+           RowBox[{
+            SuperscriptBox["sech", 
+             RowBox[{"-", "1"}]], "(", "x", ")"}], 
+           RowBox[{
+            SuperscriptBox["coth", 
+             RowBox[{"-", "1"}]], "(", "x", ")"}]},
+          {
+           FractionBox["1", 
+            SqrtBox[
+             RowBox[{
+              SuperscriptBox["x", "2"], "+", "1"}]]], 
+           FractionBox["1", 
+            RowBox[{
+             SqrtBox[
+              RowBox[{"x", "-", "1"}]], " ", 
+             SqrtBox[
+              RowBox[{"x", "+", "1"}]]}]], 
+           FractionBox["1", 
+            RowBox[{"1", "-", 
+             SuperscriptBox["x", "2"]}]], 
+           RowBox[{"-", 
+            FractionBox["1", 
+             RowBox[{
+              SqrtBox[
+               RowBox[{
+                FractionBox["1", 
+                 SuperscriptBox["x", "2"]], "+", "1"}]], " ", 
+              SuperscriptBox["x", "2"]}]]}], 
+           RowBox[{"-", 
+            FractionBox["1", 
+             RowBox[{"x", " ", 
+              SqrtBox[
+               FractionBox[
+                RowBox[{"1", "-", "x"}], 
+                RowBox[{"x", "+", "1"}]]], " ", 
+              RowBox[{"(", 
+               RowBox[{"x", "+", "1"}], ")"}]}]]}], 
+           FractionBox["1", 
+            RowBox[{"1", "-", 
+             SuperscriptBox["x", "2"]}]]}
+         },
+         AutoDelete->False,
+         GridBoxFrame->{"Columns" -> {{True}}, "Rows" -> {{True}}},
+         GridBoxItemSize->{"Columns" -> {{9}}}],
+        "Grid"]}
+     },
+     GridBoxAlignment->{
+      "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+       "RowsIndexed" -> {}},
+     GridBoxSpacings->{"Columns" -> {
+         Offset[0.27999999999999997`], {
+          Offset[0.5599999999999999]}, 
+         Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+         Offset[0.2], {
+          Offset[0.4]}, 
+         Offset[0.2]}, "RowsIndexed" -> {}}],
+    Column],
+   Function[BoxForm`e$, 
+    TableForm[BoxForm`e$]]], TraditionalForm]], "Output",
+ CellChangeTimes->{
+  3.714090581053759*^9, {3.7140906451340923`*^9, 3.714090660693701*^9}, {
+   3.7140907447378683`*^9, 3.714090797490302*^9}, {3.714090846190866*^9, 
+   3.714090868459396*^9}, {3.7140910448912477`*^9, 3.7140910832076483`*^9}, {
+   3.7140911567992773`*^9, 3.7140911629808893`*^9}}]
+}, Open  ]]
+},
+WindowSize->{831, 993},
+WindowMargins->{{Automatic, 6}, {Automatic, 6}},
+FrontEndVersion->"10.3 for Mac OS X x86 (32-bit, 64-bit Kernel) (December 10, \
+2015)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 636, 15, 28, "Input"],
+Cell[1219, 39, 1029, 38, 75, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2285, 82, 6682, 178, 482, "Input"],
+Cell[8970, 262, 6908, 201, 260, "Output"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
+

@@ -1,0 +1,237 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      6306,        228]
+NotebookOptionsPosition[      5686,        202]
+NotebookOutlinePosition[      6072,        219]
+CellTagsIndexPosition[      6029,        216]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[TextData[{
+ "Notes ",
+ StyleBox["(MATH152, 2017-10-02)",
+  FontSlant->"Italic"]
+}], "Title",
+ CellChangeTimes->{
+  3.713267301164419*^9, {3.713699038922448*^9, 3.713699044162322*^9}, {
+   3.714132060676626*^9, 3.714132060811331*^9}, {3.7143040346241007`*^9, 
+   3.7143040347131033`*^9}, 3.7147357752270327`*^9, {3.715340758836698*^9, 
+   3.71534075906161*^9}, {3.7155153524343243`*^9, 3.715515352713121*^9}, {
+   3.715945426846643*^9, 3.715945433004888*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[TextData[StyleBox["Section 11", "Subchapter",
+ FontWeight->"Bold"]], "Section",
+ CellChangeTimes->{{3.714133669310968*^9, 3.7141336706338987`*^9}, {
+   3.7147370462499857`*^9, 3.714737048950677*^9}, 3.715340789444729*^9, {
+   3.715341981694352*^9, 3.71534198205567*^9}, {3.715342108717293*^9, 
+   3.7153421165983467`*^9}, {3.7155153433940897`*^9, 3.715515344762432*^9}, {
+   3.715515504947435*^9, 3.7155155099517183`*^9}, {3.715945444597558*^9, 
+   3.715945459642952*^9}}],
+
+Cell[BoxData[{
+ FormBox[
+  RowBox[{
+   SubscriptBox["a", "0"], "=", 
+   FractionBox["3", "5"]}], TraditionalForm], "\[IndentingNewLine]", 
+ FormBox[
+  RowBox[{
+   SubscriptBox["a", "n"], "=", 
+   RowBox[{
+    RowBox[{"-", 
+     SuperscriptBox["1", "n"]}], 
+    FractionBox[
+     RowBox[{"n", "+", "3"}], 
+     SuperscriptBox["5", 
+      RowBox[{"n", "+", "1"}]]]}]}], 
+  TraditionalForm], "\[IndentingNewLine]", 
+ FormBox[
+  RowBox[{
+   SubscriptBox["b", "1"], "=", 
+   FractionBox["3", "5"]}], TraditionalForm], "\[IndentingNewLine]", 
+ FormBox[
+  RowBox[{
+   SubscriptBox["b", "k"], "=", 
+   RowBox[{
+    RowBox[{"-", 
+     SuperscriptBox["1", 
+      RowBox[{"k", "-", "1"}]]}], 
+    FractionBox[
+     RowBox[{"k", "+", "2"}], 
+     SuperscriptBox["5", "k"]]}]}], TraditionalForm]}], "Input",
+ CellChangeTimes->{{3.715945586049478*^9, 3.715945597209072*^9}, {
+  3.715945648179244*^9, 3.715945740285194*^9}}],
+
+Cell[TextData[{
+ "Let ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"n", "=", 
+    RowBox[{"k", "-", "1"}]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ ", ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"k", "=", 
+    RowBox[{"n", "+", "1"}]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ ":"
+}], "Text",
+ CellChangeTimes->{{3.7159458348926487`*^9, 3.715945846285157*^9}}],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{
+   RowBox[{
+    RowBox[{"-", 
+     SuperscriptBox["1", "n"]}], 
+    FractionBox[
+     RowBox[{"n", "+", "3"}], 
+     SuperscriptBox["5", 
+      RowBox[{"n", "+", "1"}]]]}], "=", 
+   RowBox[{
+    RowBox[{"-", 
+     SuperscriptBox["1", 
+      RowBox[{"k", "-", "1"}]]}], 
+    FractionBox[
+     RowBox[{"k", "+", "2"}], 
+     SuperscriptBox["5", "k"]]}]}], TraditionalForm]], "Input",
+ CellChangeTimes->{{3.715945847311635*^9, 3.7159458685585747`*^9}}],
+
+Cell["", "Text",
+ Editable->False,
+ Selectable->False,
+ CellFrame->{{0, 0}, {0, 0.5}},
+ ShowCellBracket->False,
+ CellMargins->{{0, 0}, {1, 1}},
+ CellElementSpacings->{"CellMinHeight"->1},
+ CellFrameMargins->0,
+ CellFrameColor->RGBColor[0, 0, 1],
+ CellSize->{Inherited, 3}],
+
+Cell[TextData[{
+ "We say ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{
+     UnderscriptBox["lim", 
+      RowBox[{"n", "\[Rule]", "\[Infinity]"}]], 
+     SubscriptBox["a", "n"]}], "=", "L"}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ "if ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["a", "n"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " approaches ",
+ Cell[BoxData[
+  FormBox["L", TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " to an infinitesimal difference:\nIf for every ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"\[Epsilon]", ">", "0"}], ",", " ", 
+    RowBox[{"\[Exists]", 
+     SubscriptBox["N", "\[Epsilon]"]}]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ ": if ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"n", ">", "N"}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ ", ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"|", 
+    RowBox[{
+     SubscriptBox["a", "n"], "-", "L"}], "|", 
+    RowBox[{"<", "\[Epsilon]"}]}], TraditionalForm]],
+  FormatType->"TraditionalForm"]
+}], "Text",
+ CellChangeTimes->{{3.715947146009602*^9, 3.715947267811389*^9}}],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{
+   RowBox[{Cell["Let "], "N"}], "=", 
+   RowBox[{
+    RowBox[{
+     RowBox[{
+      FractionBox["1", "\[Epsilon]"], "-", 
+      RowBox[{"1", Cell["; If "], "n"}]}], ">", 
+     RowBox[{"N", ":", "\[IndentingNewLine]", 
+      RowBox[{"|", 
+       RowBox[{"1", "-", 
+        FractionBox["n", 
+         RowBox[{"n", "+", "1"}]]}], "|"}]}]}], "=", 
+    RowBox[{
+     RowBox[{"|", 
+      FractionBox["1", 
+       RowBox[{"n", "+", "1"}]], "|", 
+      RowBox[{"<", " ", 
+       RowBox[{"|", 
+        FractionBox["1", 
+         RowBox[{"N", "+", "1"}]], "|"}]}]}], "=", 
+     RowBox[{
+      RowBox[{"|", 
+       FractionBox["1", 
+        RowBox[{
+         FractionBox["1", "\[Epsilon]"], "-", "1", "+", "1"}]], "|"}], "=", 
+      RowBox[{
+       RowBox[{"|", "\[Epsilon]", "|"}], "=", "\[Epsilon]"}]}]}]}]}], 
+  TraditionalForm]], "Input",
+ CellChangeTimes->{{3.715947377748806*^9, 3.7159475112854147`*^9}}]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{1431, 851},
+WindowMargins->{{Automatic, 3}, {Automatic, 0}},
+Magnification:>2. Inherited,
+FrontEndVersion->"10.3 for Mac OS X x86 (32-bit, 64-bit Kernel) (December 10, \
+2015)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 463, 10, 182, "Title"],
+Cell[CellGroupData[{
+Cell[1068, 36, 477, 7, 128, "Section"],
+Cell[1548, 45, 909, 31, 341, "Input"],
+Cell[2460, 78, 380, 15, 61, "Text"],
+Cell[2843, 95, 484, 17, 99, "Input"],
+Cell[3330, 114, 272, 9, 11, "Text"],
+Cell[3605, 125, 1117, 41, 105, "Text"],
+Cell[4725, 168, 933, 30, 196, "Input"]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)

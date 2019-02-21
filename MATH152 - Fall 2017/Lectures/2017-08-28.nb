@@ -1,0 +1,733 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     20895,        724]
+NotebookOptionsPosition[     19373,        679]
+NotebookOutlinePosition[     19729,        695]
+CellTagsIndexPosition[     19686,        692]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[TextData[{
+ "Notes ",
+ StyleBox["(MATH152, 2017-08-28)",
+  FontSlant->"Italic"]
+}], "Title",
+ CellChangeTimes->{{3.71266226711128*^9, 3.712662268694374*^9}, {
+  3.712662306559126*^9, 3.712662344392305*^9}, {3.712921888142641*^9, 
+  3.712921888221633*^9}}],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.712921910451824*^9, 3.712921911230213*^9}}],
+
+Cell[BoxData[
+ RowBox[{"\[Integral]", 
+  RowBox[{
+   SuperscriptBox["x", "2"], 
+   SuperscriptBox["e", 
+    SuperscriptBox["x", "3"]], 
+   RowBox[{"\[DifferentialD]", 
+    RowBox[{"x", 
+     OverscriptBox["\[LongRightArrow]", 
+      RowBox[{"y", "=", 
+       SuperscriptBox["x", "2"]}]], 
+     RowBox[{"\[Integral]", 
+      RowBox[{
+       SuperscriptBox["ye", 
+        RowBox[{"??", "?"}]], 
+       RowBox[{"\[DifferentialD]", "y"}], " ", 
+       "\[Ellipsis]"}]}]}]}]}]}]], "Input",
+ CellChangeTimes->{{3.7129219508448677`*^9, 3.712922064470484*^9}}],
+
+Cell["", "Text",
+ Editable->False,
+ Selectable->False,
+ CellFrame->{{0, 0}, {0, 0.5}},
+ ShowCellBracket->False,
+ CellMargins->{{0, 0}, {1, 1}},
+ CellElementSpacings->{"CellMinHeight"->1},
+ CellFrameMargins->0,
+ CellFrameColor->RGBColor[0, 0, 1],
+ CellSize->{Inherited, 3}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"f", 
+    RowBox[{"(", "x", ")"}]}], "=", 
+   SuperscriptBox["b", "2"]}], ",", 
+  RowBox[{"b", ">", "0"}], ",", 
+  RowBox[{"b", "\[NotEqual]", "1"}]}], "\[IndentingNewLine]", 
+ RowBox[{"f", ":", 
+  RowBox[{"\[DoubleStruckCapitalR]", "\[LongRightArrow]", 
+   RowBox[{"(", 
+    RowBox[{"0", ",", "\[Infinity]"}], ")"}]}]}]}], "DisplayFormula",
+ CellChangeTimes->{{3.7129220969348803`*^9, 3.7129222111171217`*^9}}],
+
+Cell[TextData[{
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SuperscriptBox["f", 
+     RowBox[{"-", "1"}]], "(", "a", ")"}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " is the exponent, \[DoubleStruckC], such that ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SuperscriptBox["b", "c"], "=", "a"}], TraditionalForm]],
+  FormatType->"TraditionalForm"]
+}], "Text",
+ CellChangeTimes->{{3.712922188230394*^9, 3.712922225017597*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   SuperscriptBox["f", 
+    RowBox[{"-", "1"}]], 
+   RowBox[{"(", "x", ")"}]}], "=", 
+  RowBox[{
+   SubscriptBox["log", "b"], "x"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  SuperscriptBox["f", 
+   RowBox[{"-", "1"}]], ":", 
+  RowBox[{
+   RowBox[{"(", 
+    RowBox[{"0", ",", "\[Infinity]"}], ")"}], "\[LongRightArrow]", 
+   "\[DoubleStruckCapitalR]"}]}]}], "DisplayFormula",
+ CellChangeTimes->{{3.712922231955852*^9, 3.712922268294818*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   UnderscriptBox["lim", 
+    RowBox[{"x", "\[Rule]", "\[Infinity]"}]], 
+   RowBox[{
+    SubscriptBox["log", "b"], "x"}]}], "=", 
+  "\[Infinity]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   UnderscriptBox["lim", 
+    RowBox[{"x", "\[Rule]", "0"}]], 
+   RowBox[{
+    SubscriptBox["log", "b"], "x"}]}], "=", 
+  RowBox[{"-", "\[Infinity]"}]}]}], "DisplayFormula",
+ CellChangeTimes->{{3.712922455614012*^9, 3.7129224701768703`*^9}}],
+
+Cell[TextData[{
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{
+     SubscriptBox["log", "a"], 
+     SuperscriptBox["a", "x"]}], "=", "x"}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " for ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"x", "\[Element]", "\[DoubleStruckCapitalR]"}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ "\n",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SuperscriptBox["a", 
+     RowBox[{
+      SubscriptBox["log", "a"], "x"}]], "=", "x"}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " for ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"x", ">", "0"}], TraditionalForm]],
+  FormatType->"TraditionalForm"]
+}], "Text",
+ CellChangeTimes->{{3.712922795594494*^9, 3.71292287048599*^9}}],
+
+Cell["", "Text",
+ Editable->False,
+ Selectable->False,
+ CellFrame->{{0, 0}, {0, 0.5}},
+ ShowCellBracket->False,
+ CellMargins->{{0, 0}, {1, 1}},
+ CellElementSpacings->{"CellMinHeight"->1},
+ CellFrameMargins->0,
+ CellFrameColor->RGBColor[0, 0, 1],
+ CellSize->{Inherited, 3}],
+
+Cell[TextData[{
+ "Let ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"m", "=", 
+    SuperscriptBox["a", "s"]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ ", ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"n", "=", 
+    SuperscriptBox["a", "t"]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ "."
+}], "Text",
+ CellChangeTimes->{{3.712922928124749*^9, 3.712922942701429*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"m", "\[CenterDot]", "n"}], "=", 
+  SuperscriptBox["a", 
+   RowBox[{"s", "+", "t"}]]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    SubscriptBox["log", "a"], 
+    RowBox[{"(", 
+     RowBox[{"m", "\[CenterDot]", "n"}], ")"}]}], "=", 
+   RowBox[{
+    RowBox[{
+     SubscriptBox["log", "a"], 
+     SuperscriptBox["a", 
+      RowBox[{"s", "+", "t"}]]}], "=", 
+    RowBox[{
+     RowBox[{"s", "+", "t"}], "=", 
+     RowBox[{
+      RowBox[{
+       SubscriptBox["log", "a"], "m"}], "+", 
+      RowBox[{
+       SubscriptBox["log", "a"], "n"}]}]}]}]}], 
+  " "}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"\[Therefore]", 
+   RowBox[{
+    SubscriptBox["log", "a"], "mn"}]}], "=", 
+  RowBox[{
+   RowBox[{
+    SubscriptBox["log", "a"], "m"}], "+", 
+   RowBox[{
+    SubscriptBox["log", "a"], "n"}]}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   SubscriptBox["log", "a"], 
+   FractionBox["m", "n"]}], "=", 
+  RowBox[{
+   RowBox[{
+    SubscriptBox["log", "a"], "m"}], "-", 
+   RowBox[{
+    SubscriptBox["log", "a"], "n"}]}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   SubscriptBox["log", "a"], 
+   SuperscriptBox["m", "r"]}], "=", 
+  RowBox[{
+   RowBox[{
+    SubscriptBox["log", "a"], 
+    SuperscriptBox[
+     RowBox[{"(", 
+      SuperscriptBox["a", "s"], ")"}], "r"]}], "=", 
+   RowBox[{
+    RowBox[{
+     SubscriptBox["log", "a"], 
+     RowBox[{"(", 
+      SuperscriptBox["a", "sr"], ")"}]}], "=", 
+    RowBox[{"sr", "=", 
+     RowBox[{
+      RowBox[{"r", "\[CenterDot]", 
+       SubscriptBox["log", "a"]}], "m"}]}]}]}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"\[Therefore]", 
+   RowBox[{
+    SubscriptBox["log", "a"], 
+    SuperscriptBox["m", "r"]}]}], "=", 
+  RowBox[{
+   RowBox[{"r", "\[CenterDot]", 
+    SubscriptBox["log", "a"]}], "m"}]}]}], "DisplayFormula",
+ CellChangeTimes->{{3.712922952228867*^9, 3.712923169243267*^9}}],
+
+Cell["", "Text",
+ Editable->False,
+ Selectable->False,
+ CellFrame->{{0, 0}, {0, 0.5}},
+ ShowCellBracket->False,
+ CellMargins->{{0, 0}, {1, 1}},
+ CellElementSpacings->{"CellMinHeight"->1},
+ CellFrameMargins->0,
+ CellFrameColor->RGBColor[0, 0, 1],
+ CellSize->{Inherited, 3}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    SubscriptBox["log", "6"], "4"}], "+", 
+   RowBox[{
+    SubscriptBox["log", "6"], "9"}]}], "=", 
+  RowBox[{
+   RowBox[{
+    SubscriptBox["log", "6"], "36"}], "=", "2"}]}]], "DisplayFormula",
+ CellChangeTimes->{{3.712923272396558*^9, 3.712923298393388*^9}}],
+
+Cell["", "Text",
+ Editable->False,
+ Selectable->False,
+ CellFrame->{{0, 0}, {0, 0.5}},
+ ShowCellBracket->False,
+ CellMargins->{{0, 0}, {1, 1}},
+ CellElementSpacings->{"CellMinHeight"->1},
+ CellFrameMargins->0,
+ CellFrameColor->RGBColor[0, 0, 1],
+ CellSize->{Inherited, 3}],
+
+Cell[TextData[{
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["log", "a"], "x"}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " in terms of ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["log", "b"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ ".\nLet ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"y", "=", 
+    RowBox[{
+     SubscriptBox["log", "a"], "x"}]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " (",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"\[DoubleLeftRightArrow]", 
+     SuperscriptBox["a", "y"]}], "=", "x"}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ ")."
+}], "Text",
+ CellChangeTimes->{{3.7129237583644114`*^9, 3.712923777383576*^9}, {
+  3.712923834222146*^9, 3.712923834493413*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   SubscriptBox["log", "b"], 
+   SuperscriptBox["a", "y"]}], "=", 
+  RowBox[{
+   SubscriptBox["log", "b"], "x"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"y", "\[CenterDot]", 
+    SubscriptBox["log", "b"]}], "a"}], "=", 
+  RowBox[{
+   SubscriptBox["log", "b"], "x"}]}], "\[IndentingNewLine]", 
+ RowBox[{"y", "=", 
+  RowBox[{
+   FractionBox[
+    RowBox[{
+     SubscriptBox["log", "b"], "x"}], 
+    RowBox[{
+     SubscriptBox["log", "b"], "a"}]], "=", 
+   RowBox[{
+    SubscriptBox["log", "a"], "x", "\[Square]"}]}]}]}], "DisplayFormula",
+ CellChangeTimes->{{3.712923841412139*^9, 3.712923937192314*^9}, 
+   3.712923967605398*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"e", ".", "g", ".", "\[IndentingNewLine]", 
+    SubscriptBox["log", "8"]}], "5"}], "=", 
+  FractionBox[
+   RowBox[{"ln", " ", "5"}], 
+   RowBox[{"ln", " ", "8"}]]}]], "DisplayFormula",
+ CellChangeTimes->{{3.712923978121642*^9, 3.7129239986452208`*^9}}],
+
+Cell["", "Text",
+ Editable->False,
+ Selectable->False,
+ CellFrame->{{0, 0}, {0, 0.5}},
+ ShowCellBracket->False,
+ CellMargins->{{0, 0}, {1, 1}},
+ CellElementSpacings->{"CellMinHeight"->1},
+ CellFrameMargins->0,
+ CellFrameColor->RGBColor[0, 0, 1],
+ CellSize->{Inherited, 3}],
+
+Cell[BoxData[{
+ RowBox[{"100", "mg", " ", 
+  RowBox[{
+   RowBox[{
+    SuperscriptBox["\[InvisiblePrefixScriptBase]", "90"], "Sr"}], 
+   OverscriptBox["\[LongRightArrow]", 
+    RowBox[{"28.8", "yr"}]], "50"}], "mg", " ", 
+  RowBox[{
+   SuperscriptBox["\[InvisiblePrefixScriptBase]", "90"], 
+   "Sr"}]}], "\[IndentingNewLine]", 
+ RowBox[{"y", "=", 
+  RowBox[{"100", 
+   SuperscriptBox[
+    RowBox[{"(", 
+     FractionBox["1", "2"], ")"}], 
+    RowBox[{"t", "/", "28.8"}]]}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"lg", " ", "y"}], "=", 
+  RowBox[{
+   RowBox[{"lg", 
+    RowBox[{"(", 
+     RowBox[{"100", 
+      SuperscriptBox[
+       RowBox[{"(", 
+        FractionBox["1", "2"], ")"}], 
+       RowBox[{"t", "/", "28.8"}]]}], ")"}]}], "=", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"lg", " ", "100"}], " ", "+", " ", 
+     RowBox[{"lg", " ", 
+      SuperscriptBox["2", 
+       RowBox[{
+        RowBox[{"-", "t"}], "/", "28.8"}]]}]}], "=", 
+    RowBox[{
+     RowBox[{"lg", " ", "100"}], " ", "-", " ", 
+     RowBox[{"t", "/", "28.8"}]}]}]}]}], "\[IndentingNewLine]", 
+ RowBox[{"t", "=", 
+  RowBox[{"28.8", 
+   RowBox[{"(", 
+    RowBox[{"lg", " ", 
+     RowBox[{"100", "/", "y"}]}], ")"}]}]}]}], "DisplayFormula",
+ CellChangeTimes->{{3.712924152899741*^9, 3.71292427644414*^9}, {
+  3.7129243139640408`*^9, 3.7129243859275837`*^9}}],
+
+Cell["", "Text",
+ Editable->False,
+ Selectable->False,
+ CellFrame->{{0, 0}, {0, 0.5}},
+ ShowCellBracket->False,
+ CellMargins->{{0, 0}, {1, 1}},
+ CellElementSpacings->{"CellMinHeight"->1},
+ CellFrameMargins->0,
+ CellFrameColor->RGBColor[0, 0, 1],
+ CellSize->{Inherited, 3}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   FractionBox["\[DifferentialD]", 
+    RowBox[{"\[DifferentialD]", "x"}]], "ln"}], " ", 
+  "x"}], "\[IndentingNewLine]", 
+ RowBox[{"y", "=", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"ln", " ", "x"}], " ", "\[DoubleLeftRightArrow]", "x"}], "=", 
+   SuperscriptBox["e", "y"]}]}]}], "DisplayFormula",
+ CellChangeTimes->{{3.712924832196754*^9, 3.712924851303138*^9}}],
+
+Cell[BoxData[{
+ RowBox[{"1", "=", 
+  RowBox[{
+   SuperscriptBox["e", "y"], 
+   FractionBox[
+    RowBox[{"\[DifferentialD]", "y"}], 
+    RowBox[{"\[DifferentialD]", "x"}]]}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  FractionBox[
+   RowBox[{"\[DifferentialD]", "y"}], 
+   RowBox[{"\[DifferentialD]", "x"}]], "=", 
+  RowBox[{
+   FractionBox["1", 
+    SuperscriptBox["e", "y"]], "=", 
+   FractionBox["1", "x"]}]}]}], "Input",
+ CellChangeTimes->{{3.712924853770495*^9, 3.712924899710536*^9}}],
+
+Cell["", "Text",
+ Editable->False,
+ Selectable->False,
+ CellFrame->{{0, 0}, {0, 0.5}},
+ ShowCellBracket->False,
+ CellMargins->{{0, 0}, {1, 1}},
+ CellElementSpacings->{"CellMinHeight"->1},
+ CellFrameMargins->0,
+ CellFrameColor->RGBColor[0, 0, 1],
+ CellSize->{Inherited, 3}],
+
+Cell[TextData[{
+ "For the natural log, ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"ln", "(", "x", ")"}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ ":"
+}], "Text",
+ CellChangeTimes->{{3.712925051463793*^9, 3.712925058608975*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   FractionBox["\[DifferentialD]", 
+    RowBox[{"\[DifferentialD]", "x"}]], "ln"}], 
+  RowBox[{"(", 
+   RowBox[{
+    SuperscriptBox["x", "3"], "+", "1"}], ")"}]}], "\[IndentingNewLine]", 
+ RowBox[{"=", 
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     FractionBox["1", 
+      RowBox[{
+       SuperscriptBox["x", "3"], "+", "1"}]], "\[CenterDot]", "3"}], 
+    SuperscriptBox["x", "2"]}], "=", 
+   FractionBox[
+    RowBox[{"3", 
+     SuperscriptBox["x", "2"]}], 
+    RowBox[{
+     SuperscriptBox["x", "3"], "+", "1"}]]}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"\[Therefore]", 
+   RowBox[{
+    RowBox[{
+     FractionBox["\[DifferentialD]", 
+      RowBox[{"\[DifferentialD]", "x"}]], "ln"}], 
+    RowBox[{"(", 
+     RowBox[{"f", 
+      RowBox[{"(", "x", ")"}]}], ")"}]}]}], "=", 
+  FractionBox[
+   RowBox[{
+    RowBox[{"f", "'"}], 
+    RowBox[{"(", "x", ")"}]}], 
+   RowBox[{"f", 
+    RowBox[{"(", "x", ")"}]}]]}]}], "DisplayFormula",
+ CellChangeTimes->{{3.71292494484273*^9, 3.712924981802327*^9}, {
+  3.712925068559698*^9, 3.712925068758367*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    FractionBox["\[DifferentialD]", 
+     RowBox[{"\[DifferentialD]", "x"}]], "ln"}], 
+   RowBox[{"(", 
+    RowBox[{"sin", 
+     RowBox[{"(", "x", ")"}]}], ")"}]}], "=", 
+  RowBox[{
+   FractionBox[
+    RowBox[{"cos", 
+     RowBox[{"(", "x", ")"}]}], 
+    RowBox[{"sin", 
+     RowBox[{"(", "x", ")"}]}]], "=", 
+   RowBox[{"cot", 
+    RowBox[{"(", "x", ")"}]}]}]}]], "DisplayFormula",
+ CellChangeTimes->{{3.712925077818445*^9, 3.7129251286091633`*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"ln", "|", "x", "|"}], "=", 
+  TagBox[GridBox[{
+     {"\[Piecewise]", GridBox[{
+        {
+         RowBox[{"ln", 
+          RowBox[{"(", "x", ")"}]}], 
+         RowBox[{"x", ">", "0"}]},
+        {
+         RowBox[{"ln", 
+          RowBox[{"(", 
+           RowBox[{"-", "x"}], ")"}]}], 
+         RowBox[{"x", "<", "0"}]}
+       },
+       AllowedDimensions->{2, Automatic},
+       Editable->True,
+       GridBoxAlignment->{
+        "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}},
+          "RowsIndexed" -> {}},
+       GridBoxItemSize->{
+        "Columns" -> {{Automatic}}, "ColumnsIndexed" -> {}, "Rows" -> {{1.}}, 
+         "RowsIndexed" -> {}},
+       GridBoxSpacings->{"Columns" -> {
+           Offset[0.27999999999999997`], {
+            Offset[0.84]}, 
+           Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+           Offset[0.2], {
+            Offset[0.4]}, 
+           Offset[0.2]}, "RowsIndexed" -> {}},
+       Selectable->True]}
+    },
+    GridBoxAlignment->{
+     "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+      "RowsIndexed" -> {}},
+    GridBoxItemSize->{
+     "Columns" -> {{Automatic}}, "ColumnsIndexed" -> {}, "Rows" -> {{1.}}, 
+      "RowsIndexed" -> {}},
+    GridBoxSpacings->{"Columns" -> {
+        Offset[0.27999999999999997`], {
+         Offset[0.35]}, 
+        Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+        Offset[0.2], {
+         Offset[0.4]}, 
+        Offset[0.2]}, "RowsIndexed" -> {}}],
+   "Piecewise",
+   DeleteWithContents->True,
+   Editable->False,
+   SelectWithContents->True,
+   Selectable->False]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"\[Therefore]", 
+   RowBox[{
+    RowBox[{
+     FractionBox["\[DifferentialD]", 
+      RowBox[{"\[DifferentialD]", "x"}]], "ln"}], "|", "x", "|"}]}], "=", 
+  RowBox[{
+   TagBox[GridBox[{
+      {"\[Piecewise]", GridBox[{
+         {
+          FractionBox["1", "x"], 
+          RowBox[{"x", ">", "0"}]},
+         {
+          RowBox[{
+           RowBox[{"-", 
+            FractionBox["1", 
+             RowBox[{"-", "x"}]]}], "=", 
+           FractionBox["1", "x"]}], 
+          RowBox[{"x", "<", "0"}]}
+        },
+        AllowedDimensions->{2, Automatic},
+        Editable->True,
+        GridBoxAlignment->{
+         "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, 
+          "Rows" -> {{Baseline}}, "RowsIndexed" -> {}},
+        GridBoxItemSize->{
+         "Columns" -> {{Automatic}}, "ColumnsIndexed" -> {}, "Rows" -> {{1.}},
+           "RowsIndexed" -> {}},
+        GridBoxSpacings->{"Columns" -> {
+            Offset[0.27999999999999997`], {
+             Offset[0.84]}, 
+            Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, 
+          "Rows" -> {
+            Offset[0.2], {
+             Offset[0.4]}, 
+            Offset[0.2]}, "RowsIndexed" -> {}},
+        Selectable->True]}
+     },
+     GridBoxAlignment->{
+      "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+       "RowsIndexed" -> {}},
+     GridBoxItemSize->{
+      "Columns" -> {{Automatic}}, "ColumnsIndexed" -> {}, "Rows" -> {{1.}}, 
+       "RowsIndexed" -> {}},
+     GridBoxSpacings->{"Columns" -> {
+         Offset[0.27999999999999997`], {
+          Offset[0.35]}, 
+         Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+         Offset[0.2], {
+          Offset[0.4]}, 
+         Offset[0.2]}, "RowsIndexed" -> {}}],
+    "Piecewise",
+    DeleteWithContents->True,
+    Editable->False,
+    SelectWithContents->True,
+    Selectable->False], "=", 
+   FractionBox["1", "x"]}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"\[Therefore]", 
+   RowBox[{"\[Integral]", 
+    RowBox[{
+     FractionBox["1", "x"], 
+     RowBox[{"\[DifferentialD]", "x"}]}]}]}], "=", 
+  RowBox[{"ln", "|", "x", "|", 
+   RowBox[{"+", "C"}]}]}]}], "DisplayFormula",
+ CellChangeTimes->{{3.712925221371323*^9, 3.7129252273100986`*^9}, 
+   3.7129252662026787`*^9, {3.712925311048561*^9, 3.712925367778368*^9}, {
+   3.712925473877427*^9, 3.712925500585355*^9}, {3.712925537041675*^9, 
+   3.712925558114958*^9}, 3.712925737822679*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"e", ".", "g", ".", "\[IndentingNewLine]", 
+   RowBox[{
+    SuperscriptBox[
+     SubscriptBox["\[Integral]", "1"], "2"], 
+    RowBox[{
+     FractionBox["1", "x"], 
+     RowBox[{"\[DifferentialD]", "x"}]}]}]}], "=", 
+  RowBox[{"ln", "|", "x", "|", "..."}]}]], "DisplayFormula",
+ CellChangeTimes->{{3.712925567334873*^9, 3.712925664216463*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"ln", " ", "x"}], "=", 
+  RowBox[{
+   SubsuperscriptBox["\[Integral]", "1", "x"], 
+   RowBox[{
+    FractionBox["1", "t"], 
+    RowBox[{"\[DifferentialD]", "t"}]}]}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"\[Integral]", 
+   FractionBox[
+    RowBox[{"\[DifferentialD]", "u"}], "u"]}], "=", 
+  RowBox[{"ln", "|", "u", "|", 
+   RowBox[{"+", "C"}]}]}]}], "DisplayFormula",
+ CellChangeTimes->{{3.712925669165609*^9, 3.712925735324398*^9}}]
+}, Open  ]]
+},
+WindowSize->{949, 843},
+WindowMargins->{{6, Automatic}, {Automatic, 6}},
+FrontEndVersion->"10.3 for Mac OS X x86 (32-bit, 64-bit Kernel) (December 10, \
+2015)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 260, 7, 92, "Title"],
+Cell[843, 31, 92, 1, 28, "Input"],
+Cell[938, 34, 552, 17, 49, "Input"],
+Cell[1493, 53, 272, 9, 5, "Text"],
+Cell[1768, 64, 458, 12, 45, "DisplayFormula"],
+Cell[2229, 78, 435, 14, 32, "Text"],
+Cell[2667, 94, 473, 15, 49, "DisplayFormula"],
+Cell[3143, 111, 471, 15, 61, "DisplayFormula"],
+Cell[3617, 128, 726, 27, 54, "Text"],
+Cell[4346, 157, 272, 9, 5, "Text"],
+Cell[4621, 168, 380, 15, 32, "Text"],
+Cell[5004, 185, 1891, 69, 139, "DisplayFormula"],
+Cell[6898, 256, 272, 9, 5, "Text"],
+Cell[7173, 267, 306, 10, 26, "DisplayFormula"],
+Cell[7482, 279, 272, 9, 5, "Text"],
+Cell[7757, 290, 753, 28, 55, "Text"],
+Cell[8513, 320, 682, 23, 85, "DisplayFormula"],
+Cell[9198, 345, 298, 8, 62, "DisplayFormula"],
+Cell[9499, 355, 272, 9, 5, "Text"],
+Cell[9774, 366, 1331, 42, 135, "DisplayFormula"],
+Cell[11108, 410, 272, 9, 5, "Text"],
+Cell[11383, 421, 395, 11, 63, "DisplayFormula"],
+Cell[11781, 434, 484, 15, 88, "Input"],
+Cell[12268, 451, 272, 9, 5, "Text"],
+Cell[12543, 462, 237, 8, 31, "Text"],
+Cell[12783, 472, 1080, 37, 131, "DisplayFormula"],
+Cell[13866, 511, 497, 17, 44, "DisplayFormula"],
+Cell[14366, 530, 4133, 118, 154, "DisplayFormula"],
+Cell[18502, 650, 376, 10, 65, "DisplayFormula"],
+Cell[18881, 662, 476, 14, 83, "DisplayFormula"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)

@@ -1,0 +1,292 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      8175,        282]
+NotebookOptionsPosition[      7584,        256]
+NotebookOutlinePosition[      7943,        272]
+CellTagsIndexPosition[      7900,        269]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Quiz #3", "Title",
+ CellChangeTimes->{{3.713113959602583*^9, 3.713113962912912*^9}, {
+  3.7137186645972853`*^9, 3.7137186646926327`*^9}, {3.714131698802322*^9, 
+  3.714131698962948*^9}}],
+
+Cell[CellGroupData[{
+
+Cell["Problem 1.", "Subchapter",
+ CellChangeTimes->{{3.713113970242354*^9, 3.713113971096498*^9}, 
+   3.7137189346538*^9}],
+
+Cell["\[Ellipsis]", "Text",
+ CellChangeTimes->{{3.714131701484926*^9, 3.714131760805306*^9}, 
+   3.7155142574095182`*^9}],
+
+Cell[BoxData[{
+ FormBox[
+  RowBox[{
+   RowBox[{
+    SubsuperscriptBox["\[Integral]", "2", "3"], 
+    RowBox[{
+     FractionBox["1", 
+      SqrtBox[
+       RowBox[{
+        SuperscriptBox["x", "2"], "-", 
+        RowBox[{"2", "x"}]}]]], 
+     RowBox[{"\[DifferentialD]", "x"}]}]}], "=", 
+   RowBox[{
+    RowBox[{
+     SubsuperscriptBox["\[Integral]", "2", "3"], 
+     RowBox[{
+      FractionBox["1", 
+       SqrtBox[
+        RowBox[{
+         SuperscriptBox["x", "2"], "-", 
+         RowBox[{"2", "x"}], "+", "1", "-", "1"}]]], 
+      RowBox[{"\[DifferentialD]", "x"}]}]}], "=", 
+    RowBox[{
+     SubsuperscriptBox["\[Integral]", "2", "3"], 
+     RowBox[{
+      FractionBox["1", 
+       SqrtBox[
+        RowBox[{
+         SuperscriptBox[
+          RowBox[{"(", 
+           RowBox[{"x", "-", "1"}], ")"}], "2"], "-", "1"}]]], 
+      RowBox[{"\[DifferentialD]", "x"}]}]}]}]}], 
+  TraditionalForm], "\[IndentingNewLine]", 
+ FormBox[
+  RowBox[{
+   RowBox[{"u", "=", 
+    RowBox[{"x", "-", "1"}]}], ",", 
+   RowBox[{
+    RowBox[{"\[DifferentialD]", "u"}], "=", 
+    RowBox[{"\[DifferentialD]", "x"}]}]}], 
+  TraditionalForm], "\[IndentingNewLine]", 
+ FormBox[
+  RowBox[{"=", 
+   RowBox[{
+    SubsuperscriptBox["\[Integral]", "1", "2"], 
+    RowBox[{
+     FractionBox["1", 
+      SqrtBox[
+       RowBox[{
+        SuperscriptBox["u", "2"], "-", "1"}]]], 
+     RowBox[{"\[DifferentialD]", "u"}]}]}]}], 
+  TraditionalForm], "\[IndentingNewLine]", 
+ FormBox[
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     SuperscriptBox["sin", "2"], "+", 
+     SuperscriptBox["cos", "2"]}], "=", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"1", "\[DoubleLongRightArrow]", 
+       SuperscriptBox["sec", "2"]}], "-", "1"}], "=", 
+     RowBox[{
+      RowBox[{
+       SuperscriptBox["tan", "2"], "\[DoubleLongRightArrow]", "u"}], "=", 
+      RowBox[{"sec", " ", "\[Theta]"}]}]}]}], ",", " ", 
+   RowBox[{
+    RowBox[{"\[DifferentialD]", "u"}], "=", 
+    RowBox[{"sec", " ", "\[Theta]", " ", "tan", " ", "\[Theta]"}]}]}], 
+  TraditionalForm], "\[IndentingNewLine]", 
+ FormBox[
+  RowBox[{"=", 
+   RowBox[{
+    RowBox[{
+     SubsuperscriptBox["\[Integral]", "0", 
+      FractionBox["\[Pi]", "3"]], 
+     RowBox[{
+      FractionBox[
+       RowBox[{"sec", " ", "\[Theta]", " ", "tan", " ", "\[Theta]"}], 
+       SqrtBox[
+        RowBox[{
+         RowBox[{
+          SuperscriptBox["sec", "2"], "\[Theta]"}], "-", "1"}]]], 
+      RowBox[{"\[DifferentialD]", "u"}]}]}], "=", 
+    RowBox[{
+     RowBox[{
+      SubsuperscriptBox["\[Integral]", "0", 
+       FractionBox["\[Pi]", "3"]], 
+      RowBox[{
+       FractionBox[
+        RowBox[{"sec", " ", "\[Theta]", " ", "tan", " ", "\[Theta]"}], 
+        SqrtBox[
+         RowBox[{
+          SuperscriptBox["tan", "2"], "\[Theta]"}]]], 
+       RowBox[{"\[DifferentialD]", "u"}]}]}], "=", 
+     RowBox[{
+      RowBox[{
+       SubsuperscriptBox["\[Integral]", "0", 
+        FractionBox["\[Pi]", "3"]], 
+       RowBox[{
+        FractionBox[
+         RowBox[{"sec", " ", "\[Theta]", " ", "tan", " ", "\[Theta]"}], 
+         RowBox[{"tan", " ", "\[Theta]"}]], 
+        RowBox[{"\[DifferentialD]", "u"}]}]}], "=", 
+      RowBox[{
+       SubsuperscriptBox["\[Integral]", "0", 
+        FractionBox["\[Pi]", "3"]], 
+       RowBox[{"sec", " ", "\[Theta]", 
+        RowBox[{"\[DifferentialD]", "u"}]}]}]}]}]}]}], 
+  TraditionalForm]}], "Input",
+ CellChangeTimes->{{3.715514259720455*^9, 3.715514570842601*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Problem 2.", "Subchapter",
+ CellChangeTimes->{{3.713113970242354*^9, 3.713113971096498*^9}, 
+   3.7137189346538*^9, {3.71413180796672*^9, 3.71413180808799*^9}}],
+
+Cell["\[Ellipsis]", "Text",
+ CellChangeTimes->{{3.7141318123620367`*^9, 3.714131839926858*^9}, {
+  3.715514597411327*^9, 3.715514597667013*^9}}],
+
+Cell[BoxData[{
+ FormBox[
+  RowBox[{
+   RowBox[{
+    SubsuperscriptBox["\[Integral]", "2", "3"], 
+    RowBox[{
+     FractionBox[
+      RowBox[{
+       SuperscriptBox["x", "4"], "+", 
+       SuperscriptBox["x", "3"], "-", 
+       SuperscriptBox["x", "2"], "+", "x"}], 
+      RowBox[{
+       SuperscriptBox["x", "4"], "-", 
+       SuperscriptBox["x", "2"]}]], 
+     RowBox[{"\[DifferentialD]", "x"}]}]}], "=", 
+   RowBox[{
+    RowBox[{
+     SubsuperscriptBox["\[Integral]", "2", "3"], 
+     RowBox[{
+      FractionBox[
+       RowBox[{
+        SuperscriptBox["x", "4"], "-", 
+        SuperscriptBox["x", "2"], "+", 
+        SuperscriptBox["x", "3"], "+", "x"}], 
+       RowBox[{
+        SuperscriptBox["x", "4"], "-", 
+        SuperscriptBox["x", "2"]}]], 
+      RowBox[{"\[DifferentialD]", "x"}]}]}], "=", 
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       SubsuperscriptBox["\[Integral]", "2", "3"], "1"}], "+", 
+      RowBox[{
+       FractionBox[
+        RowBox[{
+         SuperscriptBox["x", "3"], "+", "x"}], 
+        RowBox[{
+         SuperscriptBox["x", "4"], "-", 
+         SuperscriptBox["x", "2"]}]], 
+       RowBox[{"\[DifferentialD]", "x"}]}]}], "=", 
+     RowBox[{
+      RowBox[{
+       RowBox[{
+        SubsuperscriptBox["\[Integral]", "2", "3"], "1"}], "+", 
+       RowBox[{
+        FractionBox[
+         RowBox[{
+          SuperscriptBox["x", "2"], "+", "1"}], 
+         RowBox[{
+          SuperscriptBox["x", "3"], "-", "x"}]], 
+        RowBox[{"\[DifferentialD]", "x"}]}]}], "=", "\[Ellipsis]"}]}]}]}], 
+  TraditionalForm], "\[IndentingNewLine]", 
+ FormBox[
+  RowBox[{
+   FractionBox[
+    RowBox[{
+     SuperscriptBox["x", "2"], "+", "1"}], 
+    RowBox[{
+     RowBox[{"x", "(", 
+      RowBox[{"x", "-", "1"}], ")"}], 
+     RowBox[{"(", 
+      RowBox[{"x", "+", "1"}], ")"}]}]], "=", 
+   RowBox[{
+    FractionBox["A", "x"], "+", 
+    FractionBox["B", 
+     RowBox[{"x", "-", "1"}]], "+", 
+    FractionBox["C", 
+     RowBox[{"x", "+", "1"}]]}]}], TraditionalForm], "\[IndentingNewLine]", 
+ FormBox[
+  RowBox[{
+   RowBox[{
+    SuperscriptBox["x", "2"], "+", "1"}], "=", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"A", "(", 
+      RowBox[{"x", "-", "1"}], ")"}], 
+     RowBox[{"(", 
+      RowBox[{"x", "+", "1"}], ")"}]}], "+", 
+    RowBox[{"B", " ", 
+     RowBox[{"x", "(", 
+      RowBox[{"x", "+", "1"}], ")"}]}], "+", 
+    RowBox[{"C", " ", 
+     RowBox[{"x", "(", 
+      RowBox[{"x", "-", "1"}], ")"}]}]}]}], 
+  TraditionalForm], "\[IndentingNewLine]", 
+ FormBox[
+  RowBox[{"1", "=", 
+   RowBox[{
+    RowBox[{"-", 
+     RowBox[{"A", "\[DoubleLongRightArrow]", "A"}]}], "=", 
+    RowBox[{"-", "1"}]}]}], TraditionalForm], "\[IndentingNewLine]"
+ FormBox[, TraditionalForm]}], "Input",
+ CellChangeTimes->{{3.715514602822859*^9, 3.7155149041554413`*^9}}]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{808, 905},
+WindowMargins->{{Automatic, 287}, {Automatic, 19}},
+FrontEndVersion->"10.3 for Mac OS X x86 (32-bit, 64-bit Kernel) (December 10, \
+2015)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 192, 3, 92, "Title"],
+Cell[CellGroupData[{
+Cell[797, 29, 122, 2, 62, "Subchapter"],
+Cell[922, 33, 121, 2, 30, "Text"],
+Cell[1046, 37, 3398, 110, 213, "Input"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[4481, 152, 166, 2, 62, "Subchapter"],
+Cell[4650, 156, 144, 2, 30, "Text"],
+Cell[4797, 160, 2759, 92, 159, "Input"]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
+

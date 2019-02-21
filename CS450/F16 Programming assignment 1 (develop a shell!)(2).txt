@@ -1,0 +1,14 @@
+ - This programming assignment is inspired by one given at MIT
+   (https://pdos.csail.mit.edu/6.828/2012/homework/xv6-shell.html). The MIT assignment asks the
+   students to implement the pipe “|” and IO indirection “>” operators. We ask you to implement the
+   sequence and parallel command execution operators, “;” and “&” by modifying the skeleton code
+   attached. Invoke your shell from the shell that comes with xv6.
+
+ - You can find an example of using these two operators in page 4 of your text book.
+
+ - Your test data will be graded.
+
+ - Submit a document that will describe the code that you changed (where and why), as well as your
+   test data. This document should not be more than 3 pages with at least a font size of 11.
+
+ - The assignment is due September 14 to the Blackboard.

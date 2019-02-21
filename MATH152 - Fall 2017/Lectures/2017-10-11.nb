@@ -1,0 +1,644 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     18751,        634]
+NotebookOptionsPosition[     17329,        586]
+NotebookOutlinePosition[     17717,        603]
+CellTagsIndexPosition[     17674,        600]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[TextData[{
+ "Notes ",
+ StyleBox["(MATH152, 2017-10-02)",
+  FontSlant->"Italic"]
+}], "Title",
+ CellChangeTimes->{
+  3.713267301164419*^9, {3.713699038922448*^9, 3.713699044162322*^9}, {
+   3.714132060676626*^9, 3.714132060811331*^9}, {3.7143040346241007`*^9, 
+   3.7143040347131033`*^9}, 3.7147357752270327`*^9, {3.715340758836698*^9, 
+   3.71534075906161*^9}, {3.7155153524343243`*^9, 3.715515352713121*^9}, {
+   3.715945426846643*^9, 3.715945433004888*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ StyleBox["Section 11.2", "Subchapter",
+  FontWeight->"Bold"],
+ StyleBox[" (cont\[CloseCurlyQuote]d.)", "Subchapter",
+  FontWeight->"Bold",
+  FontSlant->"Italic"]
+}], "Section",
+ CellChangeTimes->{{3.714133669310968*^9, 3.7141336706338987`*^9}, {
+   3.7147370462499857`*^9, 3.714737048950677*^9}, 3.715340789444729*^9, {
+   3.715341981694352*^9, 3.71534198205567*^9}, {3.715342108717293*^9, 
+   3.7153421165983467`*^9}, {3.7155153433940897`*^9, 3.715515344762432*^9}, {
+   3.715515504947435*^9, 3.7155155099517183`*^9}, {3.715945444597558*^9, 
+   3.715945459642952*^9}, {3.71672287553329*^9, 3.716722900541051*^9}}],
+
+Cell[TextData[{
+ "Theorem:\nIf ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    UnderoverscriptBox["\[Sum]", 
+     RowBox[{"j", "=", "1"}], "\[Infinity]"], 
+    SubscriptBox["a", "j"]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " converges,"
+}], "Text",
+ CellChangeTimes->{{3.716722910863858*^9, 3.7167230092186947`*^9}}],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{
+   RowBox[{
+    UnderscriptBox["lim", 
+     RowBox[{"n", "\[Rule]", "\[Infinity]"}]], 
+    SubscriptBox["a", "n"]}], "=", "0"}], TraditionalForm]], "Input",
+ CellChangeTimes->{{3.716723011169757*^9, 3.716723025603814*^9}}],
+
+Cell["Proof:", "Text",
+ CellChangeTimes->{{3.7167230369806843`*^9, 3.7167230385830297`*^9}}],
+
+Cell[BoxData[{
+ FormBox[
+  RowBox[{
+   RowBox[{Cell["Let "], 
+    SubscriptBox["S", "n"]}], "=", 
+   RowBox[{
+    SubscriptBox["a", "1"], "+", 
+    SubscriptBox["a", "2"], "+", "\[Ellipsis]", "+", 
+    SubscriptBox["a", "n"]}]}], TraditionalForm], "\[IndentingNewLine]", 
+ FormBox[
+  RowBox[{
+   SubscriptBox["a", "n"], "=", 
+   RowBox[{
+    SubscriptBox["S", "n"], "-", 
+    SubscriptBox["S", 
+     RowBox[{"n", "-", "1"}]]}]}], TraditionalForm]}], "Input",
+ CellChangeTimes->{{3.7167230727564783`*^9, 3.716723111860094*^9}}],
+
+Cell[BoxData[{
+ FormBox[
+  RowBox[{Cell["If "], 
+   RowBox[{
+    UnderoverscriptBox["\[Sum]", 
+     RowBox[{"j", "=", "1"}], "\[Infinity]"], 
+    RowBox[{
+     SubscriptBox["a", "j"], Cell[" converges, "], 
+     SubscriptBox[
+      SuperscriptBox[
+       RowBox[{"{", 
+        SubscriptBox["S", "n"], "}"}], "\[Infinity]"], 
+      RowBox[{"n", "=", "1"}]], Cell[TextData[{
+      " converges (to some ",
+      Cell[BoxData[
+       FormBox["S", TraditionalForm]],
+       FormatType->"TraditionalForm"],
+      ".)"
+     }]]}]}]}], TraditionalForm], "\[IndentingNewLine]", 
+ FormBox[
+  RowBox[{
+   RowBox[{
+    UnderscriptBox["lim", 
+     RowBox[{"n", "\[Rule]", "\[Infinity]"}]], 
+    SubscriptBox["S", "n"]}], "=", 
+   RowBox[{
+    RowBox[{"S", Cell[", "], 
+     RowBox[{
+      UnderscriptBox["lim", 
+       RowBox[{"n", "\[Rule]", "\[Infinity]"}]], 
+      SubscriptBox["S", 
+       RowBox[{"n", "-", "1"}]]}]}], "=", 
+    RowBox[{
+     RowBox[{
+      UnderscriptBox["lim", 
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{"n", "-", "1"}], ")"}], "\[Rule]", "\[Infinity]"}]], 
+      SubscriptBox["S", 
+       RowBox[{"n", "-", "1"}]]}], "=", "S"}]}]}], 
+  TraditionalForm], "\[IndentingNewLine]", 
+ FormBox[
+  RowBox[{
+   RowBox[{
+    UnderscriptBox["lim", 
+     RowBox[{"n", "\[Rule]", "\[Infinity]"}]], 
+    SubscriptBox["a", "n"]}], "=", 
+   RowBox[{
+    RowBox[{
+     RowBox[{
+      UnderscriptBox["lim", 
+       RowBox[{"n", "\[Rule]", "\[Infinity]"}]], 
+      SubscriptBox["S", "n"]}], "-", 
+     RowBox[{
+      UnderscriptBox["lim", 
+       RowBox[{"n", "\[Rule]", "\[Infinity]"}]], 
+      SubscriptBox["S", 
+       RowBox[{"n", "-", "1"}]]}]}], "=", 
+    RowBox[{
+     RowBox[{"S", "-", "S"}], "=", "0"}]}]}], TraditionalForm]}], "Input",
+ CellChangeTimes->{{3.716723119233971*^9, 3.716723181431933*^9}, {
+  3.7167232321690063`*^9, 3.716723259583371*^9}, {3.7167232909932756`*^9, 
+  3.716723307345668*^9}, {3.716723352596353*^9, 3.716723369539074*^9}}],
+
+Cell["", "Text",
+ Editable->False,
+ Selectable->False,
+ CellFrame->{{0, 0}, {0, 0.5}},
+ ShowCellBracket->False,
+ CellMargins->{{0, 0}, {1, 1}},
+ CellElementSpacings->{"CellMinHeight"->1},
+ CellFrameMargins->0,
+ CellFrameColor->RGBColor[0, 0, 1],
+ CellSize->{Inherited, 3}],
+
+Cell[TextData[{
+ "If ",
+ Cell[BoxData[
+  FormBox[Cell[TextData[Cell[BoxData[
+    FormBox[
+     SubscriptBox[
+      SuperscriptBox[
+       RowBox[{"{", 
+        SubscriptBox["S", "n"], "}"}], "\[Infinity]"], 
+      RowBox[{"n", "=", "1"}]], TraditionalForm]], "Input",
+    CellChangeTimes->{{3.716723119233971*^9, 3.716723181431933*^9}, {
+     3.7167232321690063`*^9, 3.716723259583371*^9}, {3.7167232909932756`*^9, 
+     3.716723307345668*^9}, {3.716723352596353*^9, 3.716723369539074*^9}}]]], 
+   TraditionalForm]], "Input"],
+ " ",
+ StyleBox["does not",
+  FontSlant->"Italic"],
+ " converge to ",
+ Cell[BoxData[
+  FormBox["0", TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ ", ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    UnderoverscriptBox["\[Sum]", 
+     RowBox[{"j", "=", "1"}], "\[Infinity]"], 
+    SubscriptBox["a", "j"]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " diverges."
+}], "Text",
+ CellChangeTimes->{{3.716723478590046*^9, 3.716723506162962*^9}}],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{
+   RowBox[{
+    UnderoverscriptBox["\[Sum]", 
+     RowBox[{"j", "=", "1"}], "\[Infinity]"], 
+    RowBox[{
+     FractionBox[
+      SuperscriptBox["j", "2"], 
+      RowBox[{
+       RowBox[{"5", 
+        SuperscriptBox["j", "2"]}], "+", "4"}]], "\[DoubleLongRightArrow]", 
+     RowBox[{
+      UnderscriptBox["lim", 
+       RowBox[{"j", "\[Rule]", "\[Infinity]"}]], 
+      FractionBox[
+       SuperscriptBox["j", "2"], 
+       RowBox[{
+        RowBox[{"5", 
+         SuperscriptBox["j", "2"]}], "+", "4"}]]}]}]}], "=", 
+   RowBox[{
+    RowBox[{
+     UnderscriptBox["lim", 
+      RowBox[{"j", "\[Rule]", "\[Infinity]"}]], 
+     FractionBox["1", 
+      RowBox[{"5", "+", 
+       FractionBox["4", 
+        SuperscriptBox["j", "2"]]}]]}], "=", 
+    RowBox[{
+     FractionBox["1", 
+      RowBox[{"5", "+", "0"}]], "=", 
+     RowBox[{
+      FractionBox["1", "5"], "\[NotEqual]", "0"}]}]}]}], 
+  TraditionalForm]], "Input",
+ CellChangeTimes->{{3.7167235075869007`*^9, 3.716723566117001*^9}}],
+
+Cell["", "Text",
+ Editable->False,
+ Selectable->False,
+ CellFrame->{{0, 0}, {0, 0.5}},
+ ShowCellBracket->False,
+ CellMargins->{{0, 0}, {1, 1}},
+ CellElementSpacings->{"CellMinHeight"->1},
+ CellFrameMargins->0,
+ CellFrameColor->RGBColor[0, 0, 1],
+ CellSize->{Inherited, 3}],
+
+Cell[TextData[{
+ "If ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    UnderoverscriptBox["\[Sum]", 
+     RowBox[{"j", "=", "1"}], "\[Infinity]"], 
+    SubscriptBox["a", "j"]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ ", ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    UnderoverscriptBox["\[Sum]", 
+     RowBox[{"j", "=", "1"}], "\[Infinity]"], 
+    SubscriptBox["b", "j"]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " are ",
+ StyleBox["convergent",
+  FontWeight->"Bold"],
+ StyleBox["(!)",
+  FontSlant->"Italic"],
+ " series (and ",
+ Cell[BoxData[
+  FormBox["c", TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " is a constant):"
+}], "Text",
+ CellChangeTimes->{{3.716723576658086*^9, 3.716723610568057*^9}, {
+  3.716723656451791*^9, 3.716723656707933*^9}, {3.716723759331071*^9, 
+  3.7167237600561323`*^9}}],
+
+Cell[BoxData[{
+ FormBox[
+  RowBox[{
+   RowBox[{"\[Bullet]", " ", 
+    RowBox[{
+     UnderoverscriptBox["\[Sum]", 
+      RowBox[{"j", "=", "1"}], "\[Infinity]"], 
+     RowBox[{"c", " ", 
+      SubscriptBox["a", "j"]}]}]}], "=", 
+   RowBox[{"c", " ", 
+    RowBox[{
+     UnderoverscriptBox["\[Sum]", 
+      RowBox[{"j", "=", "1"}], "\[Infinity]"], 
+     SubscriptBox["a", "j"]}]}]}], TraditionalForm], "\[IndentingNewLine]", 
+ FormBox[
+  RowBox[{
+   RowBox[{"\[Bullet]", " ", 
+    RowBox[{
+     UnderoverscriptBox["\[Sum]", 
+      RowBox[{"j", "=", "1"}], "\[Infinity]"], 
+     RowBox[{"(", 
+      RowBox[{
+       SubscriptBox["a", "j"], "+", 
+       SubscriptBox["b", "j"]}], ")"}]}]}], "=", 
+   RowBox[{
+    RowBox[{
+     UnderoverscriptBox["\[Sum]", 
+      RowBox[{"j", "=", "1"}], "\[Infinity]"], 
+     SubscriptBox["a", "j"]}], "+", 
+    RowBox[{
+     UnderoverscriptBox["\[Sum]", 
+      RowBox[{"j", "=", "1"}], "\[Infinity]"], 
+     SubscriptBox["b", "j"]}]}]}], TraditionalForm], "\[IndentingNewLine]", 
+ FormBox[
+  RowBox[{
+   RowBox[{"\[Bullet]", " ", 
+    RowBox[{
+     UnderoverscriptBox["\[Sum]", 
+      RowBox[{"j", "=", "1"}], "\[Infinity]"], 
+     RowBox[{"(", 
+      RowBox[{
+       SubscriptBox["a", "j"], "-", 
+       SubscriptBox["b", "j"]}], ")"}]}]}], "=", 
+   RowBox[{
+    RowBox[{
+     UnderoverscriptBox["\[Sum]", 
+      RowBox[{"j", "=", "1"}], "\[Infinity]"], 
+     SubscriptBox["a", "j"]}], "-", 
+    RowBox[{
+     UnderoverscriptBox["\[Sum]", 
+      RowBox[{"j", "=", "1"}], "\[Infinity]"], 
+     SubscriptBox["b", "j"]}]}]}], TraditionalForm]}], "Input",
+ CellChangeTimes->{{3.716723612103503*^9, 3.716723681974001*^9}, {
+  3.716723763321269*^9, 3.716723763502159*^9}}],
+
+Cell[TextData[{
+ "(i.e. sums are ",
+ StyleBox["linear)",
+  FontSlant->"Italic"]
+}], "Text",
+ CellChangeTimes->{{3.716723764728545*^9, 3.716723773451577*^9}}],
+
+Cell["", "Text",
+ Editable->False,
+ Selectable->False,
+ CellFrame->{{0, 0}, {0, 0.5}},
+ ShowCellBracket->False,
+ CellMargins->{{0, 0}, {1, 1}},
+ CellElementSpacings->{"CellMinHeight"->1},
+ CellFrameMargins->0,
+ CellFrameColor->RGBColor[0, 0, 1],
+ CellSize->{Inherited, 3}],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{
+   RowBox[{
+    UnderoverscriptBox["\[Sum]", 
+     RowBox[{"j", "=", "1"}], "\[Infinity]"], 
+    RowBox[{"(", 
+     RowBox[{
+      FractionBox["3", 
+       RowBox[{"j", "(", 
+        RowBox[{"j", "+", "1"}], ")"}]], "+", 
+      FractionBox["1", 
+       SuperscriptBox["2", "j"]]}], ")"}]}], "=", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"3", 
+      RowBox[{
+       UnderoverscriptBox["\[Sum]", 
+        RowBox[{"j", "=", "1"}], "\[Infinity]"], 
+       FractionBox["1", 
+        RowBox[{"j", "(", 
+         RowBox[{"j", "+", "1"}], ")"}]]}]}], "+", 
+     RowBox[{
+      UnderoverscriptBox["\[Sum]", 
+       RowBox[{"j", "=", "1"}], "\[Infinity]"], 
+      FractionBox["1", 
+       SuperscriptBox["2", "j"]]}]}], "=", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"3", 
+       RowBox[{
+        UnderoverscriptBox["\[Sum]", 
+         RowBox[{"j", "=", "1"}], "\[Infinity]"], 
+        RowBox[{"(", 
+         RowBox[{
+          FractionBox["1", "j"], "-", 
+          FractionBox["1", 
+           RowBox[{"j", "+", "1"}]]}], ")"}]}]}], "+", 
+      RowBox[{
+       UnderoverscriptBox["\[Sum]", 
+        RowBox[{"j", "=", "1"}], "\[Infinity]"], 
+       FractionBox["1", 
+        SuperscriptBox["2", "j"]]}]}], "="}]}]}], TraditionalForm]], "Input",
+ CellChangeTimes->{{3.716723784768055*^9, 3.7167238250380096`*^9}, {
+  3.7167239206995792`*^9, 3.716723939347558*^9}, {3.7167240037490683`*^9, 
+  3.7167240151652107`*^9}, {3.71672408206363*^9, 3.7167240963858757`*^9}}],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{
+   RowBox[{
+    FractionBox["1", 
+     RowBox[{"j", "(", 
+      RowBox[{"j", "+", "1"}], ")"}]], "=", 
+    RowBox[{
+     RowBox[{
+      FractionBox["A", "j"], "+", 
+      RowBox[{
+       FractionBox["B", 
+        RowBox[{"j", "+", "1"}]], "\[DoubleLongRightArrow]", "1"}]}], "=", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"A", " ", "j"}], "+", 
+       RowBox[{"B", " ", "j"}], "+", 
+       RowBox[{"A", "\[DoubleLongRightArrow]", "A"}]}], "=", "1"}]}]}], ",", 
+   RowBox[{"B", "=", 
+    RowBox[{"-", "1"}]}]}], TraditionalForm]], "Input",
+ CellChangeTimes->{{3.716724016836032*^9, 3.716724066307797*^9}}],
+
+Cell["Telescoping sum!!", "Text",
+ CellChangeTimes->{{3.716724315934492*^9, 3.716724319990321*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[StyleBox["Section 11.3", "Subchapter",
+ FontWeight->"Bold"]], "Section",
+ CellChangeTimes->{{3.714133669310968*^9, 3.7141336706338987`*^9}, {
+   3.7147370462499857`*^9, 3.714737048950677*^9}, 3.715340789444729*^9, {
+   3.715341981694352*^9, 3.71534198205567*^9}, {3.715342108717293*^9, 
+   3.7153421165983467`*^9}, {3.7155153433940897`*^9, 3.715515344762432*^9}, {
+   3.715515504947435*^9, 3.7155155099517183`*^9}, {3.715945444597558*^9, 
+   3.715945459642952*^9}, {3.71672287553329*^9, 3.716722900541051*^9}, {
+   3.716724581010873*^9, 3.7167245819817753`*^9}}],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{
+   RowBox[{
+    UnderoverscriptBox["\[Sum]", 
+     RowBox[{"j", "=", "1"}], "\[Infinity]"], 
+    FractionBox["1", 
+     SuperscriptBox["j", "2"]]}], "=", 
+   RowBox[{
+    FractionBox["1", "1"], "+", 
+    FractionBox["1", "4"], "+", 
+    FractionBox["1", "9"], "+", "\[Ellipsis]"}]}], TraditionalForm]], "Input",\
+
+ CellChangeTimes->{{3.7167247415735807`*^9, 3.716724744490862*^9}, {
+  3.716724821725782*^9, 3.716724829444086*^9}}],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{
+   RowBox[{
+    UnderoverscriptBox["\[Sum]", 
+     RowBox[{"j", "=", "1"}], "\[Infinity]"], 
+    FractionBox["1", 
+     SuperscriptBox["j", "2"]]}], "\[LessEqual]", 
+   RowBox[{"1", "+", 
+    RowBox[{
+     SubsuperscriptBox["\[Integral]", "1", "\[Infinity]"], 
+     RowBox[{
+      FractionBox["1", 
+       SuperscriptBox["x", "2"]], 
+      RowBox[{"\[DifferentialD]", "x"}]}]}]}]}], TraditionalForm]], "Input",
+ CellChangeTimes->{{3.7167249765252953`*^9, 3.716724991991647*^9}}],
+
+Cell["", "Text",
+ Editable->False,
+ Selectable->False,
+ CellFrame->{{0, 0}, {0, 0.5}},
+ ShowCellBracket->False,
+ CellMargins->{{0, 0}, {1, 1}},
+ CellElementSpacings->{"CellMinHeight"->1},
+ CellFrameMargins->0,
+ CellFrameColor->RGBColor[0, 0, 1],
+ CellSize->{Inherited, 3}],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     UnderoverscriptBox["\[Sum]", 
+      RowBox[{"j", "=", "1"}], "\[Infinity]"], 
+     FractionBox["1", 
+      SqrtBox["j"]]}], "\[GreaterEqual]", 
+    RowBox[{
+     SubsuperscriptBox["\[Integral]", "1", "\[Infinity]"], 
+     RowBox[{
+      FractionBox["1", 
+       SqrtBox["x"]], 
+      RowBox[{"\[DifferentialD]", "x"}]}]}]}], "=", "\[Infinity]"}], 
+  TraditionalForm]], "Input",
+ CellChangeTimes->{{3.716725246807145*^9, 3.716725249249816*^9}, {
+  3.716725397614544*^9, 3.716725424942504*^9}}],
+
+Cell["", "Text",
+ Editable->False,
+ Selectable->False,
+ CellFrame->{{0, 0}, {0, 0.5}},
+ ShowCellBracket->False,
+ CellMargins->{{0, 0}, {1, 1}},
+ CellElementSpacings->{"CellMinHeight"->1},
+ CellFrameMargins->0,
+ CellFrameColor->RGBColor[0, 0, 1],
+ CellSize->{Inherited, 3}],
+
+Cell[TextData[{
+ "Let ",
+ Cell[BoxData[
+  FormBox["f", TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " be positive, continuous, and decreasing on ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"[", 
+     RowBox[{"1", ",", " ", "\[Infinity]"}]}], ")"}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ "; and ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"f", "(", "n", ")"}], "=", 
+    SubscriptBox["a", "n"]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ ".\nThen ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    UnderoverscriptBox["\[Sum]", 
+     RowBox[{"j", "=", "1"}], "\[Infinity]"], 
+    SubscriptBox["a", "j"]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " converges if-and-only-iff:"
+}], "Text",
+ CellChangeTimes->{{3.7167256917633343`*^9, 3.71672574228432*^9}}],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{
+   SubsuperscriptBox["\[Integral]", "1", "\[Infinity]"], 
+   RowBox[{
+    RowBox[{"f", "(", "x", ")"}], 
+    RowBox[{"\[DifferentialD]", "x"}], Cell[" converges."]}]}], 
+  TraditionalForm]], "Input",
+ CellChangeTimes->{{3.716725743403371*^9, 3.716725762542922*^9}}],
+
+Cell["", "Text",
+ Editable->False,
+ Selectable->False,
+ CellFrame->{{0, 0}, {0, 0.5}},
+ ShowCellBracket->False,
+ CellMargins->{{0, 0}, {1, 1}},
+ CellElementSpacings->{"CellMinHeight"->1},
+ CellFrameMargins->0,
+ CellFrameColor->RGBColor[0, 0, 1],
+ CellSize->{Inherited, 3}],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{
+   RowBox[{
+    UnderoverscriptBox["\[Sum]", 
+     RowBox[{"j", "=", "1"}], "\[Infinity]"], 
+    FractionBox["1", 
+     RowBox[{
+      SuperscriptBox["j", "2"], "+", "1"}]]}], "=", 
+   RowBox[{
+    RowBox[{
+     SubsuperscriptBox["\[Integral]", "1", "\[Infinity]"], 
+     RowBox[{
+      FractionBox["1", 
+       RowBox[{
+        SuperscriptBox["x", "2"], "+", "1"}]], 
+      RowBox[{"\[DifferentialD]", "x"}]}]}], "="}]}], 
+  TraditionalForm]], "Input",
+ CellChangeTimes->{{3.716725929919035*^9, 3.716725972149899*^9}}]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{951, 1143},
+WindowMargins->{{6, Automatic}, {Automatic, 6}},
+Magnification:>1.25 Inherited,
+FrontEndVersion->"10.3 for Mac OS X x86 (32-bit, 64-bit Kernel) (December 10, \
+2015)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 463, 10, 114, "Title"],
+Cell[CellGroupData[{
+Cell[1068, 36, 631, 12, 80, "Section"],
+Cell[1702, 50, 330, 11, 67, "Text"],
+Cell[2035, 63, 257, 7, 45, "Input"],
+Cell[2295, 72, 92, 1, 37, "Text"],
+Cell[2390, 75, 526, 16, 60, "Input"],
+Cell[2919, 93, 1965, 62, 141, "Input"],
+Cell[4887, 157, 272, 9, 6, "Text"],
+Cell[5162, 168, 980, 31, 43, "Text"],
+Cell[6145, 201, 1015, 34, 80, "Input"],
+Cell[7163, 237, 272, 9, 6, "Text"],
+Cell[7438, 248, 831, 30, 43, "Text"],
+Cell[8272, 280, 1696, 53, 199, "Input"],
+Cell[9971, 335, 157, 5, 37, "Text"],
+Cell[10131, 342, 272, 9, 6, "Text"],
+Cell[10406, 353, 1487, 45, 71, "Input"],
+Cell[11896, 400, 642, 20, 65, "Input"],
+Cell[12541, 422, 99, 1, 37, "Text"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[12677, 428, 576, 8, 80, "Section"],
+Cell[13256, 438, 465, 14, 71, "Input"],
+Cell[13724, 454, 513, 15, 71, "Input"],
+Cell[14240, 471, 272, 9, 6, "Text"],
+Cell[14515, 482, 557, 17, 77, "Input"],
+Cell[15075, 501, 272, 9, 6, "Text"],
+Cell[15350, 512, 816, 29, 69, "Text"],
+Cell[16169, 543, 300, 8, 58, "Input"],
+Cell[16472, 553, 272, 9, 6, "Text"],
+Cell[16747, 564, 554, 18, 71, "Input"]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
+
