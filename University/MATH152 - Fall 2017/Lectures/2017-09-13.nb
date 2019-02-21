@@ -1,0 +1,974 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     28733,        965]
+NotebookOptionsPosition[     27361,        920]
+NotebookOutlinePosition[     27748,        937]
+CellTagsIndexPosition[     27705,        934]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[TextData[{
+ "Notes ",
+ StyleBox["(MATH152, 2017-09-13)",
+  FontSlant->"Italic"]
+}], "Title",
+ CellChangeTimes->{
+  3.713267301164419*^9, {3.713699038922448*^9, 3.713699044162322*^9}, {
+   3.714132060676626*^9, 3.714132060811331*^9}, {3.7143040346241007`*^9, 
+   3.7143040347131033`*^9}}],
+
+Cell[TextData[{
+ StyleBox["Summary: ",
+  FontWeight->"Bold"],
+ "If we have the integral ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"\[Integral]", 
+    RowBox[{
+     SuperscriptBox["tan", "m"], "x", " ", 
+     SuperscriptBox["sec", 
+      RowBox[{"n", " "}]], "x", 
+     RowBox[{"\[DifferentialD]", "x"}]}]}], TraditionalForm]]],
+ ", where ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"m", "\[GreaterEqual]", "1"}], ",", " ", 
+    RowBox[{"n", "\[GreaterEqual]", "1"}]}], TraditionalForm]]],
+ ":\n1. If ",
+ Cell[BoxData[
+  FormBox["n", TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " is even, save ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SuperscriptBox["sec", "2"], "x"}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ ", use ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{
+     SuperscriptBox["sec", "2"], "x"}], "=", 
+    RowBox[{
+     RowBox[{
+      SuperscriptBox["tan", "2"], "x"}], "+", "1"}]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ ", set ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"u", "=", 
+    RowBox[{"tan", " ", "x"}]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ "\n2. If ",
+ Cell[BoxData[
+  FormBox["m", TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " is odd, save ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"sec", " ", "x", " ", "tan", " ", "x"}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ ", use ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{
+     SuperscriptBox["tan", "2"], "x"}], "=", 
+    RowBox[{
+     RowBox[{
+      SuperscriptBox["sec", "2"], "x"}], "-", "1"}]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ ", set ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"u", "=", 
+    RowBox[{"sec", " ", "x"}]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ "\n3. (If ",
+ Cell[BoxData[
+  FormBox["m", TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " is even, but ",
+ Cell[BoxData[
+  FormBox["n", TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " is odd, there\[CloseCurlyQuote]s no mechanical method)\n"
+}], "Text",
+ CellChangeTimes->{{3.7143040697502623`*^9, 3.714304227770157*^9}, {
+  3.7143042743528137`*^9, 3.714304282278678*^9}}],
+
+Cell[BoxData[{
+ FormBox[
+  RowBox[{
+   RowBox[{"\[Integral]", 
+    RowBox[{"tan", " ", "x", 
+     RowBox[{"\[DifferentialD]", "x"}]}]}], "=", 
+   RowBox[{"ln", "|", 
+    RowBox[{"sec", " ", "x"}], "|", 
+    RowBox[{"+", "C"}]}]}], TraditionalForm], "\[IndentingNewLine]", 
+ FormBox[
+  RowBox[{
+   RowBox[{"\[Integral]", 
+    RowBox[{"sec", " ", "x", 
+     RowBox[{"\[DifferentialD]", "x"}]}]}], "=", 
+   RowBox[{
+    RowBox[{"\[Integral]", 
+     RowBox[{"sec", " ", 
+      RowBox[{"x", "\[CenterDot]", 
+       FractionBox[
+        RowBox[{
+         RowBox[{"sec", " ", "x"}], "+", 
+         RowBox[{"tan", " ", "x"}]}], 
+        RowBox[{
+         RowBox[{"sec", " ", "x"}], "+", 
+         RowBox[{"tan", " ", "x"}]}]]}], 
+      RowBox[{"\[DifferentialD]", "x"}]}]}], "=", 
+    RowBox[{
+     RowBox[{"\[Integral]", 
+      RowBox[{
+       FractionBox[
+        RowBox[{
+         RowBox[{
+          SuperscriptBox["sec", "2"], "x"}], "+", 
+         RowBox[{"sec", " ", "x", " ", "tan", " ", "x"}]}], 
+        RowBox[{
+         RowBox[{"sec", " ", "x"}], "+", 
+         RowBox[{"tan", " ", "x"}]}]], 
+       RowBox[{"\[DifferentialD]", "x"}]}]}], "=", "\[Ellipsis]"}]}]}], 
+  TraditionalForm], "\[IndentingNewLine]", 
+ FormBox[
+  RowBox[{"u", "=", 
+   RowBox[{
+    RowBox[{"sec", " ", "x"}], "+", 
+    RowBox[{"tan", " ", "x"}]}]}], TraditionalForm], "\[IndentingNewLine]", 
+ FormBox[
+  RowBox[{
+   RowBox[{"\[DifferentialD]", "u"}], "=", 
+   RowBox[{
+    RowBox[{"sec", " ", "x", " ", "tan", " ", "x"}], " ", "+", " ", 
+    RowBox[{
+     SuperscriptBox["sec", "2"], "dx"}]}]}], 
+  TraditionalForm], "\[IndentingNewLine]", 
+ FormBox[
+  RowBox[{"\[Ellipsis]", "=", 
+   RowBox[{
+    RowBox[{"\[Integral]", 
+     FractionBox[
+      RowBox[{"\[DifferentialD]", "u"}], "u"]}], "=", 
+    RowBox[{"ln", "|", 
+     RowBox[{"sec", " ", "x", " ", "tan", " ", "x"}], "|", 
+     RowBox[{"+", "C"}]}]}]}], TraditionalForm]}], "Input",
+ CellChangeTimes->{{3.714304284025853*^9, 3.714304312616987*^9}, {
+  3.714304440837627*^9, 3.714304581794402*^9}}],
+
+Cell["", "Text",
+ Editable->False,
+ Selectable->False,
+ CellFrame->{{0, 0}, {0, 0.5}},
+ ShowCellBracket->False,
+ CellMargins->{{0, 0}, {1, 1}},
+ CellElementSpacings->{"CellMinHeight"->1},
+ CellFrameMargins->0,
+ CellFrameColor->RGBColor[0, 0, 1],
+ CellSize->{Inherited, 3}],
+
+Cell[BoxData[{
+ FormBox[
+  RowBox[{
+   RowBox[{"\[Integral]", 
+    RowBox[{
+     SuperscriptBox["tan", "3"], 
+     RowBox[{"\[DifferentialD]", "x"}]}]}], "=", 
+   RowBox[{
+    RowBox[{"\[Integral]", 
+     RowBox[{
+      SuperscriptBox["tan", "2"], "x", " ", "tan", " ", "x", 
+      RowBox[{"\[DifferentialD]", "x"}]}]}], "=", 
+    RowBox[{
+     RowBox[{"\[Integral]", 
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{
+          SuperscriptBox["sec", "2"], "x"}], "-", "1"}], ")"}], " ", "tan", 
+       " ", "x", 
+       RowBox[{"\[DifferentialD]", "x"}]}]}], "=", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"\[Integral]", 
+        RowBox[{
+         SuperscriptBox["sec", "2"], "x", " ", "tan", " ", "x", 
+         RowBox[{"\[DifferentialD]", "x"}]}]}], "-", 
+       RowBox[{"\[Integral]", 
+        RowBox[{"tan", " ", "x", 
+         RowBox[{"\[DifferentialD]", "x"}]}]}]}], "=", "\[Ellipsis]"}]}]}]}], 
+  TraditionalForm], "\[IndentingNewLine]", 
+ FormBox[
+  RowBox[{"u", "=", 
+   RowBox[{"sec", " ", "x"}]}], TraditionalForm], "\[IndentingNewLine]", 
+ FormBox[
+  RowBox[{
+   RowBox[{"\[DifferentialD]", "u"}], "=", 
+   RowBox[{"sec", " ", "x", " ", "tan", " ", "x", " ", 
+    RowBox[{"\[DifferentialD]", "x"}]}]}], 
+  TraditionalForm], "\[IndentingNewLine]", 
+ FormBox[
+  RowBox[{"\[Ellipsis]", "=", 
+   RowBox[{
+    RowBox[{
+     RowBox[{
+      RowBox[{"\[Integral]", 
+       RowBox[{"u", " ", 
+        RowBox[{"\[DifferentialD]", "u"}]}]}], "-", "ln"}], "|", 
+     RowBox[{"sec", " ", "x"}], "|", 
+     RowBox[{"+", "C"}]}], "=", 
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       FractionBox["1", "2"], 
+       SuperscriptBox["sec", "2"], "x"}], "-", "ln"}], "|", 
+     RowBox[{"sec", " ", "x"}], "|", 
+     RowBox[{"+", "C"}]}]}]}], TraditionalForm]}], "Input",
+ CellChangeTimes->{{3.7143046381739397`*^9, 3.71430464794703*^9}, {
+  3.714304679762032*^9, 3.714304821524033*^9}, {3.714304860273162*^9, 
+  3.7143048688168488`*^9}}],
+
+Cell["", "Text",
+ Editable->False,
+ Selectable->False,
+ CellFrame->{{0, 0}, {0, 0.5}},
+ ShowCellBracket->False,
+ CellMargins->{{0, 0}, {1, 1}},
+ CellElementSpacings->{"CellMinHeight"->1},
+ CellFrameMargins->0,
+ CellFrameColor->RGBColor[0, 0, 1],
+ CellSize->{Inherited, 3}],
+
+Cell[BoxData[{
+ FormBox[
+  RowBox[{
+   RowBox[{"\[Integral]", 
+    RowBox[{
+     SuperscriptBox["sec", "3"], 
+     RowBox[{"\[DifferentialD]", "x"}]}]}], "=", 
+   RowBox[{
+    RowBox[{"\[Integral]", 
+     RowBox[{"sec", " ", "x", " ", 
+      SuperscriptBox["sec", "2"], "x", 
+      RowBox[{"\[DifferentialD]", "x"}]}]}], "=", "\[Ellipsis]"}]}], 
+  TraditionalForm], "\[IndentingNewLine]", 
+ FormBox[
+  RowBox[{
+   RowBox[{"u", "=", 
+    RowBox[{"sec", " ", "x"}]}], ",", " ", 
+   RowBox[{
+    RowBox[{"\[DifferentialD]", "u"}], "=", 
+    RowBox[{"sec", " ", "x", " ", "tan", " ", "x", 
+     RowBox[{"\[DifferentialD]", "x"}]}]}]}], 
+  TraditionalForm], "\[IndentingNewLine]", 
+ FormBox[
+  RowBox[{
+   RowBox[{
+    RowBox[{"\[DifferentialD]", "v"}], "=", 
+    RowBox[{
+     SuperscriptBox["sec", "2"], "x", 
+     RowBox[{"\[DifferentialD]", "x"}]}]}], ",", 
+   RowBox[{"v", "=", 
+    RowBox[{"tan", " ", "x"}]}]}], TraditionalForm], "\[IndentingNewLine]", 
+ FormBox[
+  RowBox[{"\[Ellipsis]", "=", 
+   RowBox[{
+    RowBox[{"uv", "-", 
+     RowBox[{"\[Integral]", 
+      RowBox[{"v", 
+       RowBox[{"\[DifferentialD]", "u"}]}]}]}], "=", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"sec", " ", "x", " ", "tan", " ", "x"}], "-", 
+      RowBox[{"\[Integral]", 
+       RowBox[{
+        SuperscriptBox["tan", "2"], " ", "x", " ", "sec", " ", "x", "  ", 
+        RowBox[{"\[DifferentialD]", "x"}]}]}]}], "=", " ", 
+     "\[Ellipsis]"}]}]}], TraditionalForm]}], "Input",
+ CellChangeTimes->{{3.714305323190982*^9, 3.714305480843017*^9}}],
+
+Cell["", "Text",
+ Editable->False,
+ Selectable->False,
+ CellFrame->{{0, 0}, {0, 0.5}},
+ ShowCellBracket->False,
+ CellMargins->{{0, 0}, {1, 1}},
+ CellElementSpacings->{"CellMinHeight"->1},
+ CellFrameMargins->0,
+ CellFrameColor->RGBColor[0, 0, 1],
+ CellSize->{Inherited, 3}],
+
+Cell[TextData[{
+ "A) ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"\[Integral]", " ", 
+    RowBox[{
+     RowBox[{"sin", "(", "mx", ")"}], 
+     RowBox[{"cos", "(", "nx", ")"}], 
+     RowBox[{"\[DifferentialD]", "x"}]}]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ ": use ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"sin", " ", "A", " ", "cos", " ", "B"}], "=", 
+    RowBox[{
+     FractionBox["1", "2"], "[", 
+     RowBox[{
+      RowBox[{"sin", "(", 
+       RowBox[{"A", "-", "B"}], ")"}], "+", 
+      RowBox[{"sin", "(", 
+       RowBox[{"A", "+", "B"}], ")"}]}], "]"}]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ "\nB) ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"\[Integral]", 
+    RowBox[{
+     RowBox[{"sin", "(", "mx", ")"}], 
+     RowBox[{"sin", "(", "nx", ")"}], 
+     RowBox[{"\[DifferentialD]", "x"}]}]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ ": use ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"sin", " ", "A", " ", "sin", " ", "B"}], "=", 
+    RowBox[{
+     FractionBox["1", "2"], "[", 
+     RowBox[{
+      RowBox[{"cos", "(", 
+       RowBox[{"A", "-", "B"}], ")"}], "-", 
+      RowBox[{"cos", "(", 
+       RowBox[{"A", "+", "B"}], ")"}]}], "]"}]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ "\nC) ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"\[Integral]", 
+    RowBox[{
+     RowBox[{"cos", "(", "mx", ")"}], 
+     RowBox[{"cos", "(", "nx", ")"}], 
+     RowBox[{"\[DifferentialD]", "x"}]}]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ ": use ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"cos", " ", "A", " ", "cos", " ", "B"}], "=", 
+    RowBox[{
+     FractionBox["1", "2"], "[", 
+     RowBox[{
+      RowBox[{"cos", "(", 
+       RowBox[{"A", "-", "B"}], ")"}], "+", 
+      RowBox[{"cos", "(", 
+       RowBox[{"A", "+", "B"}], ")"}]}], "]"}]}], TraditionalForm]],
+  FormatType->"TraditionalForm"]
+}], "Text",
+ CellChangeTimes->{{3.714305485604184*^9, 3.714305651520797*^9}}],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{
+   RowBox[{"\[Integral]", 
+    RowBox[{
+     RowBox[{"sin", "(", 
+      RowBox[{"4", "x"}], ")"}], 
+     RowBox[{"cos", "(", 
+      RowBox[{"5", "x"}], ")"}], 
+     RowBox[{"\[DifferentialD]", "x"}]}]}], "=", 
+   RowBox[{
+    RowBox[{
+     RowBox[{
+      FractionBox["1", "2"], 
+      RowBox[{"\[Integral]", 
+       RowBox[{"sin", "(", 
+        RowBox[{
+         RowBox[{"4", "x"}], "-", 
+         RowBox[{"5", "x"}]}], ")"}]}]}], "+", 
+     RowBox[{
+      RowBox[{"sin", "(", 
+       RowBox[{
+        RowBox[{"4", "x"}], "+", 
+        RowBox[{"5", "x"}]}], ")"}], 
+      RowBox[{"\[DifferentialD]", "x"}]}]}], "=", 
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       FractionBox["1", "2"], 
+       RowBox[{"\[Integral]", 
+        RowBox[{"-", 
+         RowBox[{"sin", "(", "x", ")"}]}]}]}], "+", 
+      RowBox[{
+       RowBox[{"sin", "(", 
+        RowBox[{"9", "x"}], ")"}], 
+       RowBox[{"\[DifferentialD]", "x"}]}]}], "=", 
+     RowBox[{
+      RowBox[{
+       FractionBox["1", "2"], 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"cos", "(", "x", ")"}], "-", 
+         RowBox[{
+          FractionBox["1", "9"], 
+          RowBox[{"cos", "(", 
+           RowBox[{"9", "x"}], ")"}]}]}], ")"}]}], "+", "C"}]}]}]}], 
+  TraditionalForm]], "Input",
+ CellChangeTimes->{{3.7143056678465967`*^9, 3.71430575040938*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[TextData[StyleBox["Section 7.3", "Subchapter"]], "Section",
+ CellChangeTimes->{{3.714133669310968*^9, 3.7141336706338987`*^9}, {
+   3.7141337995784616`*^9, 3.7141337996674137`*^9}, 3.714305798645433*^9}],
+
+Cell["\<\
+\[OpenCurlyDoubleQuote]Inverse substitution\[CloseCurlyDoubleQuote]: You used \
+to generate u(x), and work from there. Inverse, though, is turning *x* into a \
+function: x(w).\
+\>", "Text",
+ CellChangeTimes->{{3.7143059112447567`*^9, 3.714305970269704*^9}}],
+
+Cell["", "Text",
+ Editable->False,
+ Selectable->False,
+ CellFrame->{{0, 0}, {0, 0.5}},
+ ShowCellBracket->False,
+ CellMargins->{{0, 0}, {1, 1}},
+ CellElementSpacings->{"CellMinHeight"->1},
+ CellFrameMargins->0,
+ CellFrameColor->RGBColor[0, 0, 1],
+ CellSize->{Inherited, 3}],
+
+Cell[TextData[{
+ "Find the area of the ellipse ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{
+     FractionBox[
+      SuperscriptBox["x", "2"], 
+      SuperscriptBox["a", "2"]], "+", 
+     FractionBox[
+      SuperscriptBox["y", "2"], 
+      SuperscriptBox["b", "2"]]}], "=", "1"}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ "."
+}], "Text",
+ CellChangeTimes->{{3.714305984266696*^9, 3.714306009292118*^9}}],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{"Theorem", ":", " ", 
+   RowBox[{Cell["Area of a circle:"], 
+    SuperscriptBox["\[Pi]r", "2"]}]}], TraditionalForm]], "Input",
+ CellChangeTimes->{{3.714306220202677*^9, 3.714306234461027*^9}, {
+  3.714306794303364*^9, 3.7143067952120132`*^9}}],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{"y", "=", 
+   RowBox[{
+    SqrtBox[
+     RowBox[{
+      SuperscriptBox["b", "2"], "(", 
+      RowBox[{"1", "-", 
+       FractionBox[
+        SuperscriptBox["x", "2"], 
+        SuperscriptBox["a", "2"]]}], ")"}]], "=", 
+    RowBox[{
+     RowBox[{
+      FractionBox["b", "a"], 
+      SqrtBox[
+       RowBox[{
+        SuperscriptBox["a", "2"], "-", 
+        SuperscriptBox["x", "2"]}]]}], "=", "\[Ellipsis]"}]}]}], 
+  TraditionalForm]], "Input",
+ CellChangeTimes->{{3.714306237635701*^9, 3.7143062829623537`*^9}, {
+  3.714306334868511*^9, 3.714306335142529*^9}}],
+
+Cell[BoxData[{
+ FormBox[
+  RowBox[{Cell["Area"], "=", 
+   RowBox[{
+    RowBox[{"4", 
+     RowBox[{
+      SubsuperscriptBox["\[Integral]", "0", "a"], 
+      RowBox[{
+       FractionBox["b", "a"], 
+       SqrtBox[
+        RowBox[{
+         SuperscriptBox["a", "2"], "-", 
+         SuperscriptBox["x", "2"]}]], 
+       RowBox[{"\[DifferentialD]", "x"}]}]}]}], "=", "\[Ellipsis]"}]}], 
+  TraditionalForm], "\[IndentingNewLine]", 
+ FormBox[
+  RowBox[{
+   RowBox[{"x", "=", 
+    RowBox[{"a", " ", "sin", " ", "\[Theta]"}]}], ",", 
+   RowBox[{
+    RowBox[{"\[DifferentialD]", "x"}], "=", 
+    RowBox[{"a", " ", "cos", " ", "\[Theta]", " ", 
+     RowBox[{"\[DifferentialD]", "\[Theta]"}]}]}], " ", "\[LongDash]", " ", 
+   RowBox[{"0", "\[LessEqual]", "\[Theta]", "\[LessEqual]", 
+    FractionBox["\[Pi]", "2"]}]}], TraditionalForm], "\[IndentingNewLine]", 
+ FormBox[
+  RowBox[{"\[Ellipsis]", "=", 
+   RowBox[{
+    RowBox[{
+     FractionBox[
+      RowBox[{"4", "b"}], "a"], 
+     RowBox[{
+      SubsuperscriptBox["\[Integral]", "0", 
+       FractionBox["\[Pi]", "2"]], 
+      RowBox[{
+       RowBox[{"(", 
+        SqrtBox[
+         RowBox[{
+          SuperscriptBox["a", "2"], "-", 
+          RowBox[{
+           SuperscriptBox["a", "2"], 
+           SuperscriptBox["sin", "2"], "\[Theta]"}]}]], ")"}], 
+       RowBox[{"(", 
+        RowBox[{"a", " ", "cos", " ", "\[Theta]"}], ")"}], 
+       RowBox[{"\[DifferentialD]", "\[Theta]"}]}]}]}], "=", 
+    RowBox[{
+     RowBox[{
+      FractionBox[
+       RowBox[{"4", "b"}], "a"], 
+      RowBox[{
+       SubsuperscriptBox["\[Integral]", "0", 
+        FractionBox["\[Pi]", "2"]], 
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{"|", 
+          RowBox[{"a", " ", "cos", " ", "\[Theta]"}], "|"}], ")"}], 
+        RowBox[{"(", 
+         RowBox[{"a", " ", "cos", " ", "\[Theta]"}], ")"}], 
+        RowBox[{"\[DifferentialD]", "\[Theta]"}]}]}]}], "=", 
+     RowBox[{
+      RowBox[{
+       FractionBox[
+        RowBox[{"4", "b"}], "a"], 
+       RowBox[{
+        SubsuperscriptBox["\[Integral]", "0", 
+         FractionBox["\[Pi]", "2"]], 
+        RowBox[{
+         SuperscriptBox["a", "2"], " ", 
+         SuperscriptBox["cos", "2"], "\[Theta]", 
+         RowBox[{"\[DifferentialD]", "\[Theta]"}]}]}]}], "=", 
+      RowBox[{
+       RowBox[{"4", "ab", 
+        RowBox[{
+         SubsuperscriptBox["\[Integral]", "0", 
+          FractionBox["\[Pi]", "2"]], " ", 
+         RowBox[{
+          SuperscriptBox["cos", "2"], "\[Theta]", 
+          RowBox[{"\[DifferentialD]", "\[Theta]"}]}]}]}], "=", 
+       RowBox[{
+        RowBox[{"4", "ab", 
+         RowBox[{
+          SubsuperscriptBox["\[Integral]", "0", 
+           FractionBox["\[Pi]", "2"]], 
+          RowBox[{
+           FractionBox["1", "2"], 
+           RowBox[{"(", 
+            RowBox[{"1", "+", 
+             RowBox[{"cos", "(", 
+              RowBox[{"2", "\[Theta]"}], ")"}]}], ")"}], 
+           RowBox[{"\[DifferentialD]", "\[Theta]"}]}]}]}], "=", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"2", "a", " ", 
+           RowBox[{"b", "(", 
+            RowBox[{"\[Theta]", "+", 
+             RowBox[{
+              FractionBox["1", "2"], 
+              RowBox[{"sin", "(", 
+               RowBox[{"2", "\[Theta]"}], ")"}]}]}], ")"}]}], 
+          "\[VerticalSeparator]"}], "=", 
+         RowBox[{
+          RowBox[{"2", "a", " ", 
+           RowBox[{"b", "(", 
+            RowBox[{
+             FractionBox["\[Pi]", "2"], "-", "0", "+", "0", "-", "0"}], 
+            ")"}]}], "=", 
+          RowBox[{"\[Pi]", " ", "a", " ", "b"}]}]}]}]}]}]}]}]}], 
+  TraditionalForm], "\[IndentingNewLine]", 
+ FormBox[
+  RowBox[{
+   RowBox[{Cell["If "], "a"}], "=", 
+   RowBox[{"b", "=", 
+    RowBox[{"r", Cell[","]}]}]}], TraditionalForm], "\[IndentingNewLine]", 
+ FormBox[
+  RowBox[{Cell["Area"], "=", 
+   RowBox[{
+    SuperscriptBox["\[Pi]r", "2"], "                                                                                                  ",
+     "\[Square]"}]}], TraditionalForm]}], "Input",
+ CellChangeTimes->{{3.714306345416339*^9, 3.7143064968164577`*^9}, {
+  3.71430657788027*^9, 3.714306761759358*^9}, {3.714306798858016*^9, 
+  3.714306837509891*^9}}],
+
+Cell["", "Text",
+ Editable->False,
+ Selectable->False,
+ CellFrame->{{0, 0}, {0, 0.5}},
+ ShowCellBracket->False,
+ CellMargins->{{0, 0}, {1, 1}},
+ CellElementSpacings->{"CellMinHeight"->1},
+ CellFrameMargins->0,
+ CellFrameColor->RGBColor[0, 0, 1],
+ CellSize->{Inherited, 3}],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     SqrtBox[
+      RowBox[{
+       SuperscriptBox["a", "2"], "-", 
+       SuperscriptBox["x", "2"]}]], "\[DoubleLongRightArrow]", "x"}], "=", 
+    RowBox[{"a", " ", "sin", " ", "\[Theta]"}]}], ",", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"-", 
+      FractionBox["\[Pi]", "2"]}], "\[LessEqual]", "\[Theta]", "\[LessEqual]", 
+     RowBox[{
+      RowBox[{
+       FractionBox["\[Pi]", "2"], "\[DoubleLongRightArrow]", 
+       SuperscriptBox["a", "2"]}], "-", 
+      RowBox[{
+       SuperscriptBox["a", "2"], 
+       SuperscriptBox["sin", "2"], "\[Theta]"}]}]}], "=", 
+    RowBox[{
+     SuperscriptBox["a", "2"], 
+     SuperscriptBox["cos", "2"], "\[Theta]"}]}]}], TraditionalForm]], "Input",\
+
+ CellChangeTimes->{{3.714306853920321*^9, 3.714306898012706*^9}, {
+  3.714306971020873*^9, 3.714306995113011*^9}},
+ Background->RGBColor[0.94, 0.91, 0.88]],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     SqrtBox[
+      RowBox[{
+       SuperscriptBox["a", "2"], "+", 
+       SuperscriptBox["x", "2"]}]], "\[DoubleLongRightArrow]", "x"}], "=", 
+    RowBox[{"a", " ", "tan", " ", "\[Theta]"}]}], ",", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"-", 
+      FractionBox["\[Pi]", "2"]}], 
+     StyleBox["<",
+      Background->RGBColor[1, 0.85, 0.85]], "\[Theta]", 
+     StyleBox["<",
+      Background->RGBColor[1, 0.85, 0.85]], 
+     RowBox[{
+      RowBox[{
+       FractionBox["\[Pi]", "2"], "\[DoubleLongRightArrow]", 
+       SuperscriptBox["a", "2"]}], "+", 
+      RowBox[{
+       SuperscriptBox["a", "2"], 
+       SuperscriptBox["tan", "2"], "\[Theta]"}]}]}], "=", 
+    RowBox[{
+     SuperscriptBox["a", "2"], 
+     SuperscriptBox["sec", "2"], "\[Theta]"}]}]}], TraditionalForm]], "Input",\
+
+ CellChangeTimes->{{3.714306853920321*^9, 3.714306898012706*^9}, {
+  3.714306971020873*^9, 3.714306995113011*^9}, {3.714307114699154*^9, 
+  3.714307165504838*^9}},
+ Background->RGBColor[0.94, 0.91, 0.88]],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     SqrtBox[
+      RowBox[{
+       SuperscriptBox["x", "2"], "-", 
+       SuperscriptBox["a", "2"]}]], "\[DoubleLongRightArrow]", "x"}], "=", 
+    RowBox[{"a", " ", "sec", " ", "\[Theta]"}]}], ",", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"-", 
+      FractionBox["\[Pi]", "2"]}], 
+     StyleBox["<",
+      Background->RGBColor[1, 0.85, 0.85]], "\[Theta]", 
+     StyleBox["<",
+      Background->RGBColor[1, 0.85, 0.85]], 
+     RowBox[{
+      RowBox[{
+       RowBox[{
+        FractionBox["\[Pi]", "2"], "\[DoubleLongRightArrow]", 
+        SuperscriptBox["a", "2"]}], 
+       SuperscriptBox["sec", "2"], "\[Theta]"}], "-", 
+      SuperscriptBox["a", "2"]}]}], "=", 
+    RowBox[{
+     SuperscriptBox["a", "2"], 
+     SuperscriptBox["tan", "2"], "\[Theta]"}]}]}], TraditionalForm]], "Input",\
+
+ CellChangeTimes->{{3.714306853920321*^9, 3.714306898012706*^9}, {
+  3.714306971020873*^9, 3.714306995113011*^9}, {3.714307114699154*^9, 
+  3.7143072080333853`*^9}},
+ Background->RGBColor[0.94, 0.91, 0.88]],
+
+Cell["", "Text",
+ Editable->False,
+ Selectable->False,
+ CellFrame->{{0, 0}, {0, 0.5}},
+ ShowCellBracket->False,
+ CellMargins->{{0, 0}, {1, 1}},
+ CellElementSpacings->{"CellMinHeight"->1},
+ CellFrameMargins->0,
+ CellFrameColor->RGBColor[0, 0, 1],
+ CellSize->{Inherited, 3}],
+
+Cell[BoxData[{
+ FormBox[
+  RowBox[{
+   RowBox[{"\[Integral]", 
+    RowBox[{
+     FractionBox["1", 
+      RowBox[{
+       SuperscriptBox["x", "2"], 
+       SqrtBox[
+        RowBox[{
+         SuperscriptBox["x", "2"], "+", "4"}]]}]], 
+     RowBox[{"\[DifferentialD]", "x"}]}]}], "=", "\[Ellipsis]"}], 
+  TraditionalForm], "\[IndentingNewLine]", 
+ FormBox[
+  RowBox[{
+   RowBox[{"x", "=", 
+    RowBox[{"2", "tan\[Theta]"}]}], ",", " ", 
+   RowBox[{
+    RowBox[{"\[DifferentialD]", "x"}], "=", 
+    RowBox[{"2", 
+     SuperscriptBox["sec", "2"], "\[Theta]", 
+     RowBox[{"\[DifferentialD]", "\[Theta]"}]}]}]}], 
+  TraditionalForm], "\[IndentingNewLine]", 
+ FormBox[
+  RowBox[{"\[Ellipsis]", "=", 
+   RowBox[{
+    RowBox[{"\[Integral]", 
+     RowBox[{
+      FractionBox["1", 
+       RowBox[{"4", " ", 
+        SuperscriptBox["tan", "2"], 
+        RowBox[{"\[Theta]", "\[CenterDot]", "2"}], "sec", " ", "\[Theta]"}]], 
+      
+      RowBox[{"\[DifferentialD]", "\[Theta]"}]}]}], "=", 
+    RowBox[{
+     RowBox[{
+      FractionBox["1", "4"], 
+      RowBox[{"\[Integral]", 
+       RowBox[{
+        FractionBox[
+         RowBox[{"sec", " ", "\[Theta]"}], 
+         RowBox[{
+          SuperscriptBox["tan", "2"], "\[Theta]"}]], 
+        RowBox[{"\[DifferentialD]", "\[Theta]"}]}]}]}], "=", 
+     RowBox[{
+      RowBox[{
+       FractionBox["1", "4"], 
+       RowBox[{"\[Integral]", 
+        RowBox[{
+         FractionBox[
+          RowBox[{"cos", " ", "\[Theta]"}], 
+          RowBox[{
+           SuperscriptBox["sin", "2"], "\[Theta]"}]], 
+         RowBox[{"\[DifferentialD]", "\[Theta]"}]}]}]}], "=", 
+      "\[Ellipsis]"}]}]}]}], TraditionalForm], "\[IndentingNewLine]", 
+ FormBox[
+  RowBox[{
+   RowBox[{"u", "=", 
+    RowBox[{"sin", " ", "\[Theta]"}]}], ",", 
+   RowBox[{
+    RowBox[{"\[DifferentialD]", "u"}], "=", 
+    RowBox[{"cos", " ", "\[Theta]", " ", 
+     RowBox[{"\[DifferentialD]", "\[Theta]"}]}]}]}], 
+  TraditionalForm], "\[IndentingNewLine]", 
+ FormBox[
+  RowBox[{"\[Ellipsis]", "=", 
+   RowBox[{
+    RowBox[{
+     FractionBox["1", "4"], 
+     RowBox[{"\[Integral]", 
+      FractionBox[
+       RowBox[{"\[DifferentialD]", "u"}], 
+       SuperscriptBox["u", "2"]]}]}], "=", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"-", 
+       FractionBox["1", 
+        RowBox[{"4", "u"}]]}], "+", "C"}], "=", 
+     RowBox[{
+      RowBox[{"-", 
+       FractionBox["1", 
+        RowBox[{"4", " ", "sin", " ", "\[Theta]"}]]}], "+", "C"}]}]}]}], 
+  TraditionalForm]}], "Input",
+ CellChangeTimes->{{3.714307423584111*^9, 3.714307656222699*^9}}],
+
+Cell["", "Text",
+ Editable->False,
+ Selectable->False,
+ CellFrame->{{0, 0}, {0, 0.5}},
+ ShowCellBracket->False,
+ CellMargins->{{0, 0}, {1, 1}},
+ CellElementSpacings->{"CellMinHeight"->1},
+ CellFrameMargins->0,
+ CellFrameColor->RGBColor[0, 0, 1],
+ CellSize->{Inherited, 3}],
+
+Cell[BoxData[{
+ FormBox[
+  RowBox[{
+   RowBox[{"\[Integral]", 
+    RowBox[{
+     FractionBox["x", 
+      SqrtBox[
+       RowBox[{
+        SuperscriptBox["x", "2"], "+", "4"}]]], 
+     RowBox[{"\[DifferentialD]", "x"}]}]}], "=", "\[Ellipsis]"}], 
+  TraditionalForm], "\[IndentingNewLine]", 
+ FormBox[
+  RowBox[{"u", "=", 
+   RowBox[{
+    SuperscriptBox["x", "2"], "+", "4"}]}], 
+  TraditionalForm], "\[IndentingNewLine]", 
+ FormBox[
+  RowBox[{
+   RowBox[{"\[DifferentialD]", "u"}], "=", 
+   RowBox[{"2", "x", 
+    RowBox[{"\[DifferentialD]", "x"}]}]}], 
+  TraditionalForm], "\[IndentingNewLine]", 
+ FormBox[
+  RowBox[{"\[Ellipsis]", "=", 
+   RowBox[{
+    RowBox[{
+     FractionBox["1", "2"], 
+     RowBox[{"\[Integral]", 
+      FractionBox[
+       RowBox[{"\[DifferentialD]", "u"}], 
+       SqrtBox["u"]]}]}], "=", 
+    RowBox[{
+     SqrtBox[
+      RowBox[{
+       SuperscriptBox["x", "2"], "+", "4"}]], "+", "C"}]}]}], 
+  TraditionalForm]}], "Input",
+ CellChangeTimes->{{3.7143078388776817`*^9, 3.714307855057499*^9}, {
+  3.71430790296421*^9, 3.714307946221858*^9}}],
+
+Cell["", "Text",
+ Editable->False,
+ Selectable->False,
+ CellFrame->{{0, 0}, {0, 0.5}},
+ ShowCellBracket->False,
+ CellMargins->{{0, 0}, {1, 1}},
+ CellElementSpacings->{"CellMinHeight"->1},
+ CellFrameMargins->0,
+ CellFrameColor->RGBColor[0, 0, 1],
+ CellSize->{Inherited, 3}],
+
+Cell[BoxData[{
+ FormBox[
+  RowBox[{
+   RowBox[{"\[Integral]", 
+    FractionBox[
+     RowBox[{"\[DifferentialD]", "x"}], 
+     SqrtBox[
+      RowBox[{
+       SuperscriptBox["x", "2"], "-", 
+       SuperscriptBox["a", "2"]}]]]}], ",", 
+   RowBox[{"a", ">", "0"}]}], TraditionalForm], "\[IndentingNewLine]", 
+ FormBox[
+  RowBox[{
+   RowBox[{Cell["instead of"], "x"}], "=", 
+   RowBox[{
+    RowBox[{"a", " ", "sec", " ", "\[Theta]", Cell[", try"], "x"}], "=", 
+    RowBox[{"a", " ", "cosh", " ", "t", Cell[": pg. 529"]}]}]}], 
+  TraditionalForm]}], "Input",
+ CellChangeTimes->{{3.714308006997727*^9, 3.714308028787799*^9}, {
+  3.714308059642024*^9, 3.714308099463542*^9}}]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{831, 993},
+WindowMargins->{{6, Automatic}, {Automatic, 6}},
+Magnification:>1.25 Inherited,
+FrontEndVersion->"10.3 for Mac OS X x86 (32-bit, 64-bit Kernel) (December 10, \
+2015)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 292, 8, 114, "Title"],
+Cell[875, 32, 2155, 80, 142, "Text"],
+Cell[3033, 114, 2031, 62, 207, "Input"],
+Cell[5067, 178, 272, 9, 6, "Text"],
+Cell[5342, 189, 1956, 59, 149, "Input"],
+Cell[7301, 250, 272, 9, 6, "Text"],
+Cell[7576, 261, 1525, 46, 148, "Input"],
+Cell[9104, 309, 272, 9, 6, "Text"],
+Cell[9379, 320, 1961, 68, 115, "Text"],
+Cell[11343, 390, 1356, 47, 113, "Input"],
+Cell[CellGroupData[{
+Cell[12724, 441, 208, 2, 80, "Section"],
+Cell[12935, 445, 267, 5, 61, "Text"],
+Cell[13205, 452, 272, 9, 6, "Text"],
+Cell[13480, 463, 424, 15, 55, "Text"],
+Cell[13907, 480, 278, 6, 40, "Input"],
+Cell[14188, 488, 593, 20, 86, "Input"],
+Cell[14784, 510, 4158, 120, 428, "Input"],
+Cell[18945, 632, 272, 9, 6, "Text"],
+Cell[19220, 643, 905, 27, 79, "Input"],
+Cell[20128, 672, 1050, 32, 79, "Input"],
+Cell[21181, 706, 1054, 32, 79, "Input"],
+Cell[22238, 740, 272, 9, 6, "Text"],
+Cell[22513, 751, 2530, 83, 235, "Input"],
+Cell[25046, 836, 272, 9, 6, "Text"],
+Cell[25321, 847, 1066, 37, 187, "Input"],
+Cell[26390, 886, 272, 9, 6, "Text"],
+Cell[26665, 897, 668, 19, 110, "Input"]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)

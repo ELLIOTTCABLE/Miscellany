@@ -1,0 +1,203 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      5213,        193]
+NotebookOptionsPosition[      4595,        166]
+NotebookOutlinePosition[      4982,        183]
+CellTagsIndexPosition[      4939,        180]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Quiz #3", "Title",
+ CellChangeTimes->{{3.713113959602583*^9, 3.713113962912912*^9}, {
+  3.7137186645972853`*^9, 3.7137186646926327`*^9}, {3.714131698802322*^9, 
+  3.714131698962948*^9}}],
+
+Cell[CellGroupData[{
+
+Cell["Problem 1.", "Subchapter",
+ CellChangeTimes->{{3.713113970242354*^9, 3.713113971096498*^9}, 
+   3.7137189346538*^9}],
+
+Cell[TextData[{
+ "Show that ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"y", "=", 
+    RowBox[{
+     RowBox[{"A", "\[CenterDot]", 
+      RowBox[{"sinch", "(", "mx", ")"}]}], "+", 
+     RowBox[{"B", "\[CenterDot]", 
+      RowBox[{"cosh", "(", "mx", ")"}]}]}]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " is a solution of ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SuperscriptBox["y", "\[Prime]\[Prime]"], "=", 
+    RowBox[{
+     SuperscriptBox["m", "2"], "y"}]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ ":"
+}], "Text",
+ CellChangeTimes->{{3.714131701484926*^9, 3.714131760805306*^9}}],
+
+Cell[BoxData[{
+ FormBox[
+  RowBox[{
+   SuperscriptBox["y", "\[Prime]"], "=", 
+   RowBox[{
+    RowBox[{"m", " ", "A", " ", 
+     RowBox[{"cosh", "(", "mx", ")"}]}], "+", 
+    RowBox[{"m", " ", "b", " ", 
+     RowBox[{"sinh", "(", "mx", ")"}]}]}]}], 
+  TraditionalForm], "\[IndentingNewLine]", 
+ FormBox[
+  RowBox[{
+   SuperscriptBox["y", "\[Prime]\[Prime]"], "=", 
+   RowBox[{
+    RowBox[{
+     SuperscriptBox["m", "2"], " ", "A", " ", 
+     RowBox[{"sinh", "(", "mx", ")"}]}], "+", 
+    RowBox[{
+     SuperscriptBox["m", "2"], " ", "B", " ", 
+     RowBox[{"cosh", "(", "mx", ")"}]}]}]}], 
+  TraditionalForm], "\[IndentingNewLine]", 
+ FormBox[
+  RowBox[{"=", 
+   RowBox[{
+    SuperscriptBox["m", "2"], "y"}]}], TraditionalForm]}], "Input",
+ CellChangeTimes->{{3.71413176306872*^9, 3.714131800528211*^9}, {
+  3.714131989587482*^9, 3.714132024305208*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Problem 2.", "Subchapter",
+ CellChangeTimes->{{3.713113970242354*^9, 3.713113971096498*^9}, 
+   3.7137189346538*^9, {3.71413180796672*^9, 3.71413180808799*^9}}],
+
+Cell[TextData[{
+ "Evaluate ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    UnderscriptBox["lim", 
+     RowBox[{"x", "\[Rule]", "0"}]], 
+    RowBox[{
+     RowBox[{"sin", "(", 
+      RowBox[{"5", "x"}], ")"}], 
+     RowBox[{"csc", "(", 
+      RowBox[{"3", "x"}], ")"}]}]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ ":"
+}], "Text",
+ CellChangeTimes->{{3.7141318123620367`*^9, 3.714131839926858*^9}}],
+
+Cell[BoxData[{
+ FormBox[
+  RowBox[{
+   RowBox[{
+    SubscriptBox["lim", 
+     RowBox[{"x", "\[Rule]", "0"}]], 
+    RowBox[{"sin", "(", 
+     RowBox[{"5", "x"}], ")"}]}], "=", "0"}], 
+  TraditionalForm], "\[IndentingNewLine]", 
+ FormBox[
+  RowBox[{
+   RowBox[{
+    SubscriptBox["lim", 
+     RowBox[{"x", "\[Rule]", "0"}]], 
+    RowBox[{"csc", "(", 
+     RowBox[{"3", "x"}], ")"}]}], "=", "0"}], 
+  TraditionalForm], "\[IndentingNewLine]", 
+ FormBox[
+  RowBox[{
+   RowBox[{
+    UnderscriptBox["lim", 
+     RowBox[{"x", "\[Rule]", "0"}]], 
+    FractionBox[
+     RowBox[{"sin", "(", 
+      RowBox[{"5", "x"}], ")"}], 
+     RowBox[{"sin", "(", 
+      RowBox[{"3", "x"}], ")"}]]}], "=", 
+   RowBox[{
+    RowBox[{
+     UnderscriptBox["lim", 
+      RowBox[{"x", "\[Rule]", "0"}]], 
+     FractionBox[
+      RowBox[{
+       FractionBox["\[DifferentialD]", 
+        RowBox[{"\[DifferentialD]", "x"}]], 
+       RowBox[{"sin", "(", 
+        RowBox[{"5", "x"}], ")"}]}], 
+      RowBox[{
+       FractionBox["\[DifferentialD]", 
+        RowBox[{"\[DifferentialD]", "x"}]], 
+       RowBox[{"sin", "(", 
+        RowBox[{"3", "x"}], ")"}]}]]}], "=", 
+    RowBox[{
+     RowBox[{
+      UnderscriptBox["lim", 
+       RowBox[{"x", "\[Rule]", "0"}]], 
+      FractionBox[
+       RowBox[{"5", 
+        RowBox[{"cos", "(", 
+         RowBox[{"5", "x"}], ")"}]}], 
+       RowBox[{"3", 
+        RowBox[{"sin", "(", 
+         RowBox[{"3", "x"}], ")"}]}]]}], "=", 
+     FractionBox["5", "3"]}]}]}], TraditionalForm]}], "Input",
+ CellChangeTimes->{{3.7141318463443317`*^9, 3.7141319239468193`*^9}}]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{1109, 993},
+WindowMargins->{{6, Automatic}, {Automatic, 6}},
+Magnification:>1.5 Inherited,
+FrontEndVersion->"10.3 for Mac OS X x86 (32-bit, 64-bit Kernel) (December 10, \
+2015)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 192, 3, 137, "Title"],
+Cell[CellGroupData[{
+Cell[797, 29, 122, 2, 91, "Subchapter"],
+Cell[922, 33, 610, 21, 49, "Text"],
+Cell[1535, 56, 852, 26, 105, "Input"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2424, 87, 166, 2, 91, "Subchapter"],
+Cell[2593, 91, 406, 15, 48, "Text"],
+Cell[3002, 108, 1565, 54, 159, "Input"]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
+

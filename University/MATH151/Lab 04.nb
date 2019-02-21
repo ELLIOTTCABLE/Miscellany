@@ -1,0 +1,2251 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 9.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[     88320,       2242]
+NotebookOptionsPosition[     82982,       2062]
+NotebookOutlinePosition[     83366,       2079]
+CellTagsIndexPosition[     83323,       2076]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Lab 4 Optimization Yippee!", "Title",
+ CellChangeTimes->{{3.569569488939887*^9, 3.5695694998745127`*^9}, {
+  3.569599419461*^9, 3.569599421314*^9}, {3.573296791483268*^9, 
+  3.5732967917702847`*^9}, {3.573297312764084*^9, 3.5732973129710956`*^9}, {
+  3.634368743938236*^9, 3.634368744083329*^9}, {3.6663370041669455`*^9, 
+  3.666337004759341*^9}}],
+
+Cell["John Erickson, IIT", "Subtitle",
+ CellChangeTimes->{{3.569569507861969*^9, 3.569569515241391*^9}}],
+
+Cell[CellGroupData[{
+
+Cell["Introduction", "Section",
+ CellChangeTimes->{{3.569569540858856*^9, 3.5695695429869785`*^9}}],
+
+Cell[TextData[{
+ "Differential calculus has many applications. In particular you have learned \
+how we can use the derivative to find the extrema (maxima and minima) of \
+functions. In this lab we will explore several classic optimization problems \
+using ",
+ StyleBox["Mathematica",
+  FontSlant->"Italic"],
+ "."
+}], "Text",
+ CellChangeTimes->{{3.5695695612160206`*^9, 3.5695696843340626`*^9}, {
+  3.6343741207355375`*^9, 3.6343741231211195`*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["The Burning Tent Problem", "Section",
+ CellChangeTimes->{{3.491835277196*^9, 3.4918352842869997`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell["The Problem", "Subsection",
+ CellChangeTimes->{{3.569569947454112*^9, 3.569569949213213*^9}}],
+
+Cell[TextData[{
+ "This is one of the all time classic problems! Suppose you are camping next \
+to the shoreline (which is a line) of a lake. You pitch your tent 2 miles \
+from the lake and go for a hike. Somewhat preposterously, you decide to bring \
+a bucket on this hike by the way. At any rate you hike 6 miles west and two \
+miles north and end up at a position 4 miles from the shoreline. To your \
+horror you look back towards your tent and see that your tent is on fire! You \
+can't just run back to your tent, so you decide to run down to the lake fill \
+up your bucket and then run up towards your tent. The question is the \
+following: at what point on the shoreline should you run to in order to get \
+to your tent as fast as possible? The picture below may help you get \
+oriented. A is the point on the laske shore 4 miles directly south of your \
+position and B is the point on the lake shore 2 miles directly south of your \
+tents position. If you call the distance from A to the \
+\[OpenCurlyDoubleQuote]touchdown\[CloseCurlyDoubleQuote] point ",
+ Cell[BoxData[
+  FormBox["x", TraditionalForm]]],
+ ", what value for x will make the total distance you have to run as small as \
+possible? Take your best guess! Clearly it is some number between 0 and 6!"
+}], "Text",
+ CellChangeTimes->{{3.49183559256*^9, 3.491835778142*^9}, {3.491835917057*^9, 
+   3.491836051317*^9}, {3.491836090058*^9, 3.4918361293529997`*^9}, {
+   3.49183616081*^9, 3.491836206001*^9}, {3.5695729083124638`*^9, 
+   3.569572960820467*^9}, {3.569573050075572*^9, 3.56957341211228*^9}, {
+   3.569573448147341*^9, 3.569573460939072*^9}, {3.569594839439*^9, 
+   3.569594839826*^9}, 3.5732968113014016`*^9, {3.5732968789832726`*^9, 
+   3.5732968812014*^9}}],
+
+Cell[GraphicsData["Metafile", "\<\
+CF5dJ6E]HGAYHf4PEfU^I6mgLb15CDHPAVmbKF5d0@00019D0@0008`0001O0000?@0006D2003m0000
+f0P008X5000Y@000@A/00215CDH00040E1800:@000030000400006`00000000000@00003000>0@00
+b`0000000000000000000;0N103h60<0D`1[06D0M01S06P0L01Q06@0001306`0J@1`0000000A0000
+300000P000090000400009d200060@002`000100000I0P00d@0000X0000@000000000000000<0000
+4000000000000000AP0002P0000L0000AdA9@`80001h0000>`400?X2000k0@000000024000080000
+9P0001`0000100000000004000000000002002D0000<00000@0005L0000T0000H0000?/0001T0P00
+n`000080001h03/1nP8k0B80000<0000ooooobP0000<00000@0004H0000D0000200004M4BD<30000
+AP0002P0000L0000AdA9@`80003d0000GP000>X1000k0@0000000240000800009P0001`000010000
+0000004000000000002002D0000<00000@0005L0000T0000a00004/000290@00n`000080003d05h0
+jP4k0B80000<0000ooooobP0000<00000@0004H0000D0000200004M4BD<30000AP0002P0000L0000
+AdA9@`80003Z0@00bP0004@2000k0@0000000240000800009P0001`0000100000000004000000000
+002002D0000<00000@0005L0000T0000R@400:40003B0@00n`00008000140/X0jP4k0B80000<0000
+ooooobP0000<00000@0004H0000D0000200004M4BD<30000AP0002P0000L0000AdA9@`80001e0000
+>04007`0000o0@000000024000080000500000`0000=00009`0001P00001000000000?l000000000
+9@0000`0000100009P0001`0000200000000000000000000000002D0000<00000P0002X0000H0000
+MP0003T1001j0000?@400280000<0000ooooobP0000<00000P0002P0000<00000@0004H0000D0000
+200004M4BD<30000AP0002P0000L0000AdA9@`80003g0P00>0400?h2000o0@000000024000080000
+500000`0000=00009`0001P00001000000000?l0000000009@0000`0000100009P0001`000020000
+0000000000000000000002D0000<00000P0002X0000H0000n08003T1003l0P00?@400280000<0000
+ooooobP0000<00000P0002P0000<00000@0004H0000D0000200004M4BD<30000AP0002P0000L0000
+AdA9@`80003^0000C@0000<1001R00000000024000080000500000`0000=00009`0001P000010000
+00000?l0000000009@0000`0000100009P0001`0000200000000000000000000000002D0000<0000
+0P0002X0000H0000lP0005`0003f0000H0000280000<0000ooooobP0000<00000P0002P0000<0000
+0@00024000080000DP00070100010000m?ooo`0000000000000009010000000000000440LP1Y0640
+K000000000000000000000000000000000000000000000000000000000000000000000000000095l
+2<IC0?h:8C_`SAP022000<0E6@38XAP0N04D00PP003X0P00000D0=Ce4P3HmA80<?PB01S^T7c`1Y5l
+ooooon/6TG`8n18000000<P5TGcHZQP0e?PB0545TGa81a@0K@FAO8<;42GPZQP0h:XH0>2Z603PZQP0
+0P000000000@0000000D02CF602<0000R?PB0?NalWOn2R4k400100D0002dma806>j@O:Sh4P2<a_5g
+G:kbMoh:8C/00180800003SH600P00000000000000000000V?PB00`000000000O`io0P00002/ET/0
+kP000=Q1:@4P@RT1I7H02000000U000030000040000H000030000000000B000030000040000N0000
+600000000000000000000000001;000040000000000500007P0001P0003^0000C@0000T1001M0000
+E0000600002o0000?@000=40001900000@0004YAZD6c[ZQ1kP0004d000030000C000000000000000
+00000?ooooooooooE00005T0K`1e00002@0000L000080000B`000100000000001@000280000<0000
+ooooobP0000<00000@0004H0000D0000200004M4BD<30000AP0002P0000L0000AdA9@`80000o0P00
+_00005L2003>00000000024000080000500000`0000=00009`0001P00001000000000?l000000000
+9@0000`0000100009P0001`0000200000000000000000000000002D0000<00000P0002X0000H0000
+@P800<P000160P00c0000280000<0000ooooobP0000<00000P0002P0000<00000@00024000080000
+DP00070100010000m?ooo`0000000000000009010000000000000440LP1Y0640K000000000000000
+0000000000000000000000000000000000000000000000000000000000000180a?LB000000381I5l
+f:XH093h4P1A1I5lB0LD06d5TGa32PZbh:XH0>2Z6038XAP00000000000000000000000Sh4P08n180
+00000<P5TGcHZQP0e?PB0545TGa81a@0K@FAO8<;42KPZQP0h:XH00<00000000000000000002=2MEg
+oPXQ>`00000500000`0000<000000000kP0004d0000001@0G@0002P0000100000@00010000000040
+80000=Cg4P0@0000b?PB01S^T7a`1I5looooo``000000000O`io0P00002/ET/0?`800<12:@48@bT1
+I7H02000000U000030000040000H000030000000000B000030000040000N00006000000000000000
+00000000001;000040000000000500007P0001P0000o0P00_00005d2003<0000E00006@0003>0@00
+UP000><1002R00000@0004YAZD6c[ZQ1?`800;`000040000C00000000000000000000?oooooooooo
+E00005@0I@1^07@02@0000L0000800000`0004/0000@0000000000D0000R000030000?oooolX0000
+3000004000160000500000P00017A4U30`0004H0000X0000700004M4BD<20000k00002h1003j0000
+?`400000000Q0000200001@0000<00003@0002L0000H00000@000000003o0000000002D0000<0000
+0@0002H0000L00000P0000000000000000000000000U000030000080000Z000060000?@0000i0@00
+n00003d1000R000030000?oooolX000030000080000X000030000040000Q000020000580001`0@00
+0@000?Coool0000000000000002@0@000000000000110780J@1Q06`0000000000000000000000000
+000000000000000000000000000000000000000000000000000B0<Cg4P000000b0FAO=RZ602@n180
+D@FAO4P7501]1I5l@`X:]>2Z603PZQP0b:4H000000000000000000000008n1802?PB000000381I5l
+f:XH0=Ch4P1A1I5lB0LD06d5TGb32a0Wh:XH0>2Z600400000000000000000000S@WEMoh:8C/00000
+1@0000@000040000000003l2002l0000000D0<`0000X00000@000040000@000000010200003Dma80
+40000<Sh4P0HkY1lL0FAO?ooool<0000000007l>O`800000[5I;0>`0002X@bT1l4<Y0FAf00P00000
+9@0000`000010000600000`0000000004P0000`0000100007P0001P0000000000000000000000000
+B`000100000000001@0001h0000H0000k00002h1003h0000?P4005@0001D0000_@000?4000330000
+o@000040001:DJU1/jjX@N`0000^0@000@0004`00000000000000000003ooooooooooe0000110000
+2@0004/0000@0000000000D0000R000030000?oooolX00003000004000160000500000P00017A4U3
+0`0004H0000X0000700004M4BD<20000i`4003P1003^0@00?`400000000Q0000200001@0000<0000
+3@0002L0000H00000@000000003o0000000002D0000<00000@0002H0000L00000P00000000000000
+00000000000U000030000080000Z000060000>P1000i0@00k04003d1000R000030000?oooolX0000
+30000080000X00003000004000160000500000P00017A4U30`0004H0000X0000700004M4BD<20000
+?`8002h1001;0P00?`400000000Q0000200001@0000<00003@0002L0000H00000@000000003o0000
+000002D0000<00000@0002H0000L00000P0000000000000000000000000U000030000080000Z0000
+600004D2000i0@00B@8003d1000R000030000?oooolX000030000080000X000030000040000Q0000
+20000580001`0@000@000?Coool0000000000000002@0@000000000000110780J@1Q06`000000000
+0000000000000000000000000000000000000000000000000000000000000000000B0<Cg4P000000
+b0FAO=RZ602@n180D@FAO4P7501]1I5l@`X:]^2Z603PZQP0b:4H000000000000000000000008n180
+2?PB000000381I5lf:XH0=Ch4P1A1I5lB0LD06d5TGb32a0Yh:XH0>2Z600100000000000000000000
+S@WEMoh:8C/000001@0000400001000000000>`0000^0@00000D03h1000X00000@000040000@0000
+00010200003Dma8040000<Sh4P0HkY1lL0FAO?ooool<0000000007l>O`800000[5I;03l200288bT1
+d2<Y0FAf00P000009@0000`000010000600000`0000000004P0000`0000100007P0001P000000000
+0000000000000000B`000100000000001@0001h0000H0000?`8002h1001;0P00?P4005@0001D0000
+cP400?40003D0@00o@000040001:DJU1/jjX@Cl2000^0@000@0004`00000000000000000003ooooo
+oooooe00001200002@0004/0000@0000000000D0000R000030000?oooolX00003000004000160000
+500000P00017A4U30`000140000<00000@0000h0000D000000000100000D0000
+\>"], "Graphics",
+ TextAlignment->Center,
+ ImageSize->{352.6, 138.40373831775702`},
+ ImageMargins->{{207.8, 0.}, {0., 0.}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["A Simple Manipulate", "Subsection",
+ CellChangeTimes->{{3.491836222668*^9, 3.491836229769*^9}, {
+  3.628895410181404*^9, 3.6288954109979515`*^9}}],
+
+Cell[TextData[{
+ "Use the manipulate below to play with the ",
+ Cell[BoxData[
+  FormBox["x", TraditionalForm]]],
+ " slider to find approximately where the total distance is minimized and see \
+how close your guess came. Note that the Manipulate is set so that initially ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"a", "=", "4"}], ",", " ", 
+    RowBox[{"b", "=", "2"}], ",", " ", 
+    RowBox[{
+     RowBox[{"and", " ", "c"}], "=", "6"}]}], TraditionalForm]]],
+ " as stated above, we will play with these values later, but you should \
+leave them set to these values for the moment."
+}], "Text",
+ CellChangeTimes->{{3.5695734782020597`*^9, 3.569573553822385*^9}, {
+   3.5695735874033055`*^9, 3.569573655562204*^9}, 3.574422422367*^9}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"\[IndentingNewLine]", 
+  RowBox[{"Manipulate", "[", 
+   RowBox[{
+    RowBox[{"Show", "[", 
+     RowBox[{
+      RowBox[{"Graphics", "[", 
+       RowBox[{"Line", "[", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"-", "1"}], ",", "0"}], "}"}], ",", 
+          RowBox[{"{", 
+           RowBox[{"7", ",", "0"}], "}"}]}], "}"}], "]"}], "]"}], ",", 
+      RowBox[{"Graphics", "[", 
+       RowBox[{"{", 
+        RowBox[{"Red", ",", 
+         RowBox[{"Point", "[", 
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"{", 
+             RowBox[{"0", ",", "a"}], "}"}], ",", 
+            RowBox[{"{", 
+             RowBox[{"x", ",", "0"}], "}"}], ",", 
+            RowBox[{"{", 
+             RowBox[{"c", ",", "b"}], "}"}]}], "}"}], "]"}]}], "}"}], "]"}], 
+      ",", 
+      RowBox[{"Graphics", "[", 
+       RowBox[{"Line", "[", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{"0", ",", "a"}], "}"}], ",", 
+          RowBox[{"{", 
+           RowBox[{"x", ",", "0"}], "}"}], ",", 
+          RowBox[{"{", 
+           RowBox[{"c", ",", "b"}], "}"}]}], "}"}], "]"}], "]"}], ",", 
+      RowBox[{"Graphics", "[", 
+       RowBox[{"If", "[", 
+        RowBox[{"Hero", ",", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"Line", "[", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"{", 
+               RowBox[{"x", ",", "0"}], "}"}], ",", 
+              RowBox[{"{", 
+               RowBox[{"c", ",", 
+                RowBox[{"-", "b"}]}], "}"}]}], "}"}], "]"}], ",", "Red", ",", 
+           RowBox[{"Point", "[", 
+            RowBox[{"{", 
+             RowBox[{"c", ",", 
+              RowBox[{"-", "b"}]}], "}"}], "]"}]}], "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"Red", ",", 
+           RowBox[{"Point", "[", 
+            RowBox[{"{", 
+             RowBox[{"x", ",", "0"}], "}"}], "]"}]}], "}"}]}], "]"}], "]"}], 
+      ",", 
+      RowBox[{"PlotLabel", "\[Rule]", 
+       RowBox[{"If", "[", 
+        RowBox[{"angles", ",", 
+         RowBox[{"Grid", "[", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{
+              "\"\<total distance\>\"", ",", "\"\<angle 1\>\"", ",", 
+               "\"\<angle 2\>\""}], "}"}], ",", 
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{"ToString", "[", 
+                RowBox[{"N", "[", 
+                 RowBox[{
+                  RowBox[{"Sqrt", "[", 
+                   RowBox[{
+                    SuperscriptBox["x", "2"], "+", 
+                    SuperscriptBox["a", "2"]}], "]"}], "+", 
+                  RowBox[{"Sqrt", "[", 
+                   RowBox[{
+                    SuperscriptBox["b", "2"], "+", 
+                    SuperscriptBox[
+                    RowBox[{"(", 
+                    RowBox[{"c", "-", "x"}], ")"}], "2"]}], "]"}]}], "]"}], 
+                "]"}], ",", 
+               RowBox[{"ToString", "[", 
+                RowBox[{"N", "[", 
+                 RowBox[{
+                  RowBox[{"ArcTan", "[", 
+                   RowBox[{"a", "/", "x"}], "]"}], "/", "Degree"}], "]"}], 
+                "]"}], ",", 
+               RowBox[{"ToString", "[", 
+                RowBox[{"N", "[", 
+                 RowBox[{
+                  RowBox[{"ArcTan", "[", 
+                   RowBox[{"b", "/", 
+                    RowBox[{"(", 
+                    RowBox[{"c", "-", "x"}], ")"}]}], "]"}], "/", "Degree"}], 
+                 "]"}], "]"}]}], "}"}]}], "}"}], ",", 
+           RowBox[{"Frame", "\[Rule]", " ", "All"}]}], "]"}], ",", 
+         RowBox[{"Grid", "[", 
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"{", "\"\<total distance\>\"", "}"}], ",", 
+            RowBox[{"{", 
+             RowBox[{"ToString", "[", 
+              RowBox[{"N", "[", 
+               RowBox[{
+                RowBox[{"Sqrt", "[", 
+                 RowBox[{
+                  SuperscriptBox["x", "2"], "+", 
+                  SuperscriptBox["a", "2"]}], "]"}], "+", 
+                RowBox[{"Sqrt", "[", 
+                 RowBox[{
+                  SuperscriptBox["b", "2"], "+", 
+                  SuperscriptBox[
+                   RowBox[{"(", 
+                    RowBox[{"c", "-", "x"}], ")"}], "2"]}], "]"}]}], "]"}], 
+              "]"}], "}"}]}], "}"}], "]"}]}], "]"}]}], ",", 
+      RowBox[{"PlotRange", "\[Rule]", " ", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"-", ".1"}], ",", "6.1"}], "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{
+            RowBox[{
+             RowBox[{"-", "6"}], "*", 
+             RowBox[{"If", "[", 
+              RowBox[{"Hero", ",", "1", ",", "0"}], "]"}]}], "-", ".1"}], ",",
+            "6"}], "}"}]}], "}"}]}]}], "]"}], ",", "\[IndentingNewLine]", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"a", ",", "4"}], "}"}], ",", "0.01", ",", "6"}], "}"}], ",", 
+    "\[IndentingNewLine]", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"b", ",", "2"}], "}"}], ",", "0.01", ",", "6"}], "}"}], ",", 
+    "\[IndentingNewLine]", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"c", ",", "6"}], "}"}], ",", "0.01", ",", "6"}], "}"}], ",", 
+    "\[IndentingNewLine]", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"x", ",", "1"}], "}"}], ",", "0.01", ",", "5.9", ",", 
+      RowBox[{"Appearance", "\[Rule]", " ", "\"\<Labeled\>\""}]}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"angles", ",", "False"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"True", ",", "False"}], "}"}]}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"Hero", ",", "False", ",", "\"\<show Heron's\>\""}], "}"}], 
+      ",", 
+      RowBox[{"{", 
+       RowBox[{"True", ",", "False"}], "}"}]}], "}"}]}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.424730738711785*^9, 3.4247308310657845`*^9}, {
+   3.424730872804785*^9, 3.424730913958785*^9}, {3.4247316968747845`*^9, 
+   3.4247316970427847`*^9}, {3.4247317729647846`*^9, 
+   3.4247318276607847`*^9}, {3.424732019645785*^9, 3.424732024274785*^9}, {
+   3.424732061585785*^9, 3.4247320809567847`*^9}, {3.4247321139107847`*^9, 
+   3.424732114692785*^9}, {3.424732463105785*^9, 3.424732466626785*^9}, {
+   3.424734791064785*^9, 3.4247348363187847`*^9}, 3.424737543381785*^9, {
+   3.424737578654785*^9, 3.424737591359785*^9}, {3.424737718050785*^9, 
+   3.424737764257785*^9}, {3.4247377984177847`*^9, 3.4247378722687845`*^9}, 
+   3.424739192166785*^9, {3.424739478718785*^9, 3.424739489335785*^9}, {
+   3.4247395502667847`*^9, 3.424739595540785*^9}, {3.424739673852785*^9, 
+   3.424739719062785*^9}, {3.424739860491785*^9, 3.424739868106785*^9}, {
+   3.4247400003447847`*^9, 3.424740035710785*^9}, {3.4247402276367846`*^9, 
+   3.4247402363137846`*^9}, {3.424740316366785*^9, 3.4247403179897847`*^9}, {
+   3.424740365087785*^9, 3.4247403689457846`*^9}, {3.424740475064785*^9, 
+   3.424740480625785*^9}, {3.4247583006619997`*^9, 3.424758306116*^9}, {
+   3.42475836171*^9, 3.424758387028*^9}, {3.4247584174709997`*^9, 
+   3.4247585301879997`*^9}, {3.424758593082*^9, 3.424758607837*^9}, {
+   3.4596888665903616`*^9, 3.459688965818105*^9}, {3.4596935139706755`*^9, 
+   3.4596935142203007`*^9}, {3.4596938385775647`*^9, 3.459693976792139*^9}, {
+   3.459694201033936*^9, 3.459694253470914*^9}, {3.459694450487398*^9, 
+   3.459694457445266*^9}, {3.4596945226089725`*^9, 3.459694523903822*^9}, {
+   3.459694590253174*^9, 3.459694658583802*^9}, {3.4596947077412925`*^9, 
+   3.4596947079441004`*^9}, 3.459694744714714*^9, 3.459694793170178*^9, {
+   3.4596948321560774`*^9, 3.459694845603795*^9}, {3.4628803315706*^9, 
+   3.4628803373894*^9}, {3.4628803822706003`*^9, 3.4628804052962*^9}, {
+   3.4628817073501997`*^9, 3.4628818236014*^9}, {3.4628825917454*^9, 
+   3.4628826190142*^9}, {3.4628826530534*^9, 3.4628828414858*^9}, {
+   3.4628838137246*^9, 3.4628838208694*^9}, {3.4916740375268*^9, 
+   3.4916740551703997`*^9}, {3.4916749785968*^9, 3.4916750223859997`*^9}, {
+   3.4916751131*^9, 3.4916751544244003`*^9}, {3.4916752932488003`*^9, 
+   3.4916753258996*^9}, {3.4916754663932*^9, 3.491675479856*^9}, {
+   3.4916755480748*^9, 3.4916755598684*^9}, {3.4916756844188004`*^9, 
+   3.4916756931548*^9}, {3.4916757539168*^9, 3.4916757661784*^9}, {
+   3.4916758092967997`*^9, 3.491675814554*^9}, {3.491676361179*^9, 
+   3.4916763700242*^9}, {3.4916767580274*^9, 3.4916767647042*^9}, {
+   3.4916768317686*^9, 3.4916768696766*^9}, {3.4916769402354*^9, 
+   3.4916769630114*^9}, {3.4916771047061996`*^9, 3.491677113099*^9}, {
+   3.4916771996633997`*^9, 3.491677243203*^9}, {3.4916773054314003`*^9, 
+   3.4916773284102*^9}, {3.4916775970422*^9, 3.4916776000685997`*^9}, {
+   3.491678740179*^9, 3.4916787772757998`*^9}, {3.4916790296214*^9, 
+   3.4916790788238*^9}, {3.4918352031289997`*^9, 3.4918352131400003`*^9}, {
+   3.491836634028*^9, 3.491836670658*^9}, {3.5695705419131136`*^9, 
+   3.5695705590290923`*^9}, {3.5695706693044*^9, 3.569570676453809*^9}, {
+   3.5695709778410473`*^9, 3.5695711985396705`*^9}, {3.569571305686799*^9, 
+   3.5695713730816536`*^9}, {3.5695716041958723`*^9, 3.569571670448662*^9}, {
+   3.569571827088621*^9, 3.5695718541401687`*^9}, {3.5695719982934136`*^9, 
+   3.569572021932766*^9}, {3.5695729989936504`*^9, 3.569573001519795*^9}, {
+   3.628886972274132*^9, 3.628886994873169*^9}, {3.6288870750046654`*^9, 
+   3.628887085113413*^9}, {3.6288873332778516`*^9, 3.628887393501363*^9}, {
+   3.6288875315496173`*^9, 3.628887553253106*^9}, {3.6288876055860443`*^9, 
+   3.628887611904262*^9}, 3.628888322959549*^9, {3.628888512918271*^9, 
+   3.6288885470930867`*^9}, {3.6288885852095327`*^9, 
+   3.6288887631156187`*^9}, {3.6288887943583326`*^9, 
+   3.6288888824161205`*^9}, {3.6288889169481745`*^9, 
+   3.6288889183431053`*^9}, {3.628889050775739*^9, 3.6288890518484554`*^9}, 
+   3.628889169055904*^9, {3.628889702575077*^9, 3.6288897494984035`*^9}, {
+   3.628890025382662*^9, 3.628890035477401*^9}, {3.628890132714184*^9, 
+   3.6288901426408095`*^9}, {3.628890761258562*^9, 3.628890761500725*^9}, {
+   3.6288910881688786`*^9, 3.628891089289626*^9}, {3.628892154395593*^9, 
+   3.6288922904933558`*^9}, {3.6288923455601187`*^9, 3.628892345682201*^9}}],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`a$$ = 4, $CellContext`angles$$ = 
+    False, $CellContext`b$$ = 2, $CellContext`c$$ = 6, $CellContext`Hero$$ = 
+    False, $CellContext`x$$ = 1, Typeset`show$$ = True, 
+    Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+    Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+    "\"untitled\"", Typeset`specs$$ = {{{
+       Hold[$CellContext`a$$], 4}, 0.01, 6}, {{
+       Hold[$CellContext`b$$], 2}, 0.01, 6}, {{
+       Hold[$CellContext`c$$], 6}, 0.01, 6}, {{
+       Hold[$CellContext`x$$], 1}, 0.01, 5.9}, {{
+       Hold[$CellContext`angles$$], False}, {True, False}}, {{
+       Hold[$CellContext`Hero$$], False, "show Heron's"}, {True, False}}}, 
+    Typeset`size$$ = {360., {190., 195.}}, Typeset`update$$ = 0, 
+    Typeset`initDone$$, Typeset`skipInitDone$$ = 
+    True, $CellContext`a$81894$$ = 0, $CellContext`b$81895$$ = 
+    0, $CellContext`c$81896$$ = 0, $CellContext`x$81897$$ = 
+    0, $CellContext`angles$81898$$ = False, $CellContext`Hero$81899$$ = 
+    False}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, 
+      "Variables" :> {$CellContext`a$$ = 4, $CellContext`angles$$ = 
+        False, $CellContext`b$$ = 2, $CellContext`c$$ = 
+        6, $CellContext`Hero$$ = False, $CellContext`x$$ = 1}, 
+      "ControllerVariables" :> {
+        Hold[$CellContext`a$$, $CellContext`a$81894$$, 0], 
+        Hold[$CellContext`b$$, $CellContext`b$81895$$, 0], 
+        Hold[$CellContext`c$$, $CellContext`c$81896$$, 0], 
+        Hold[$CellContext`x$$, $CellContext`x$81897$$, 0], 
+        Hold[$CellContext`angles$$, $CellContext`angles$81898$$, False], 
+        Hold[$CellContext`Hero$$, $CellContext`Hero$81899$$, False]}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> Show[
+        Graphics[
+         Line[{{-1, 0}, {7, 0}}]], 
+        Graphics[{Red, 
+          
+          Point[{{0, $CellContext`a$$}, {$CellContext`x$$, 
+             0}, {$CellContext`c$$, $CellContext`b$$}}]}], 
+        Graphics[
+         Line[{{
+           0, $CellContext`a$$}, {$CellContext`x$$, 
+            0}, {$CellContext`c$$, $CellContext`b$$}}]], 
+        Graphics[
+         If[$CellContext`Hero$$, {
+           
+           Line[{{$CellContext`x$$, 
+              0}, {$CellContext`c$$, -$CellContext`b$$}}], Red, 
+           Point[{$CellContext`c$$, -$CellContext`b$$}]}, {Red, 
+           Point[{$CellContext`x$$, 0}]}]], PlotLabel -> 
+        If[$CellContext`angles$$, 
+          Grid[{{"total distance", "angle 1", "angle 2"}, {
+             ToString[
+              N[
+              Sqrt[$CellContext`x$$^2 + $CellContext`a$$^2] + 
+               Sqrt[$CellContext`b$$^2 + ($CellContext`c$$ - \
+$CellContext`x$$)^2]]], 
+             ToString[
+              N[ArcTan[$CellContext`a$$/$CellContext`x$$]/Degree]], 
+             ToString[
+              N[
+              ArcTan[$CellContext`b$$/($CellContext`c$$ - $CellContext`x$$)]/
+               Degree]]}}, Frame -> All], 
+          Grid[{{"total distance"}, {
+             ToString[
+              N[
+              Sqrt[$CellContext`x$$^2 + $CellContext`a$$^2] + 
+               Sqrt[$CellContext`b$$^2 + ($CellContext`c$$ - \
+$CellContext`x$$)^2]]]}}]], 
+        PlotRange -> {{-0.1, 
+          6.1}, {(-6) If[$CellContext`Hero$$, 1, 0] - 0.1, 6}}], 
+      "Specifications" :> {{{$CellContext`a$$, 4}, 0.01, 
+         6}, {{$CellContext`b$$, 2}, 0.01, 6}, {{$CellContext`c$$, 6}, 0.01, 
+         6}, {{$CellContext`x$$, 1}, 0.01, 5.9, Appearance -> 
+         "Labeled"}, {{$CellContext`angles$$, False}, {
+         True, False}}, {{$CellContext`Hero$$, False, "show Heron's"}, {
+         True, False}}}, "Options" :> {}, "DefaultOptions" :> {}],
+     ImageSizeCache->{405., {299., 304.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{3.634369036618618*^9, 3.667555164744789*^9}]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Some Questions for the Burning Tent Problem", "Subsection",
+ CellChangeTimes->{{3.491836731999*^9, 3.491836739219*^9}, {
+  3.5695726342857904`*^9, 3.5695726368709383`*^9}, {3.6343722192259274`*^9, 
+  3.6343722273877897`*^9}}],
+
+Cell[TextData[{
+ "1.\tBy playing with the sliders above, find the value of the approximate \
+value of ",
+ Cell[BoxData[
+  FormBox["x", TraditionalForm]]],
+ " for which the total distance traveled is a \tminimum for our situation in \
+which \t",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"a", "=", "4"}], ",", " ", 
+    RowBox[{"b", "=", "2"}], ",", " ", 
+    RowBox[{
+     RowBox[{"and", " ", "c"}], "=", "6"}]}], TraditionalForm]]],
+ ". "
+}], "Text",
+ CellChangeTimes->{{3.491837001624*^9, 3.4918370020959997`*^9}, {
+  3.49183748663*^9, 3.4918375471219997`*^9}, {3.5695948653640003`*^9, 
+  3.569594873291*^9}, {3.5695949195690002`*^9, 3.5695949632349997`*^9}, {
+  3.56960031815*^9, 3.5696003547460003`*^9}, {3.634372431502022*^9, 
+  3.634372435682789*^9}}],
+
+Cell[BoxData[
+ RowBox[{"~", Cell["x=4"]}]], "Text",
+ CellChangeTimes->{{3.667551121914318*^9, 3.667551146695393*^9}},
+ Background->RGBColor[0.94, 0.91, 0.88]],
+
+Cell[TextData[{
+ "2.\tNow try and think of a formula involving ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"a", "=", "4"}], ",", " ", 
+    RowBox[{"b", "=", "2"}], ",", " ", 
+    RowBox[{
+     RowBox[{"and", " ", "c"}], "=", "6"}]}], TraditionalForm]]],
+ " that would have given you the answer in problem 1. \t\tYou\
+\[CloseCurlyQuote]re probably not going to be able to do this unless you\
+\[CloseCurlyQuote]re some kind of insane genius type or you already know the \
+\tanswer. "
+}], "Text",
+ CellChangeTimes->{{3.56959694355*^9, 3.569597068133*^9}, {3.569600320764*^9, 
+  3.5696003632320004`*^9}, {3.6343724327328377`*^9, 3.634372438806861*^9}, {
+  3.6343728347333508`*^9, 3.6343728413292027`*^9}, {3.6343738652218776`*^9, 
+  3.634373869648811*^9}}],
+
+Cell[BoxData["\[Ellipsis]"], "Text",
+ CellChangeTimes->{{3.667551121914318*^9, 3.667551161290719*^9}, 
+   3.6675525260097103`*^9},
+ Background->RGBColor[0.94, 0.91, 0.88]],
+
+Cell[TextData[{
+ "3.\tNow create an expression for the total distance traveled where ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"a", ",", " ", "b", ",", " ", 
+    RowBox[{"and", " ", "c"}]}], TraditionalForm]]],
+ " are just free parameters. You might want to \tcall it  \
+\[OpenCurlyDoubleQuote]totalDistance\[CloseCurlyDoubleQuote] or something \
+like that so you can use it later."
+}], "Text",
+ CellChangeTimes->{{3.569597079612*^9, 3.569597194363*^9}, {3.569597618363*^9,
+    3.569597650901*^9}, {3.569600323525*^9, 3.569600365725*^9}, {
+   3.6343724411494203`*^9, 3.63437244642391*^9}, {3.634372877117116*^9, 
+   3.6343728847221575`*^9}, {3.6343732643307085`*^9, 3.6343732685945377`*^9}, 
+   3.634373872740863*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"TotalDistance", "[", "x_", "]"}], ":=", 
+  RowBox[{
+   SqrtBox[
+    RowBox[{
+     SuperscriptBox["a", "2"], "+", 
+     SuperscriptBox["x", "2"]}]], "+", 
+   SqrtBox[
+    RowBox[{
+     SuperscriptBox["b", "2"], "+", 
+     SuperscriptBox[
+      RowBox[{"(", 
+       RowBox[{"c", "-", "x"}], ")"}], "2"]}]]}]}]], "Input",
+ CellChangeTimes->{{3.6675512188161983`*^9, 3.667551220229622*^9}, {
+   3.6675513927754183`*^9, 3.667551409792076*^9}, 3.6675515177750397`*^9, {
+   3.6675515753527937`*^9, 3.667551700255327*^9}, {3.667551730706728*^9, 
+   3.667551731611012*^9}, {3.667551769958047*^9, 3.667551813450026*^9}},
+ Background->RGBColor[0.94, 0.91, 0.88]],
+
+Cell["\<\
+4.\tThen take the derivative of the expression you found in problem 3. It \
+should be a mess. You should call it something like \t\
+\[OpenCurlyDoubleQuote]deriv\[CloseCurlyDoubleQuote] so you don\
+\[CloseCurlyQuote]t have to copy and paste.\
+\>", "Text",
+ CellChangeTimes->{{3.5695972022349997`*^9, 3.569597300146*^9}, {
+   3.569597338582*^9, 3.569597350424*^9}, {3.569600368818*^9, 
+   3.569600369295*^9}, 3.6343724487214403`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"DD", "[", "x_", "]"}], ":=", 
+  RowBox[{"D", "[", 
+   RowBox[{
+    RowBox[{"TotalDistance", "[", "x", "]"}], ",", " ", "x"}], 
+   "]"}]}]], "Input",
+ CellChangeTimes->{{3.667551883541644*^9, 3.667551889733643*^9}},
+ Background->RGBColor[0.94, 0.91, 0.88]],
+
+Cell["\<\
+5.\tThen solve for the critical point(s) by using the solve function. You \
+will need to specify that you are solving for x \t\tbecause of all the \
+symbols floating around. This answer, should be simple. You should plug in \
+the critical points and end \tpoints into the original function.\
+\>", "Text",
+ CellChangeTimes->{{3.569597328499*^9, 3.569597329039*^9}, {3.569597377273*^9,
+    3.569597386441*^9}, {3.569597418667*^9, 3.569597478273*^9}, {
+   3.569597775234*^9, 3.5695977949440002`*^9}, {3.569598034664*^9, 
+   3.569598062052*^9}, {3.569599542756*^9, 3.569599549822*^9}, 
+   3.569600325479*^9, {3.5696003715220003`*^9, 3.569600378337*^9}, {
+   3.6343692708509274`*^9, 3.6343693839747653`*^9}, {3.6343724514887576`*^9, 
+   3.6343724525514565`*^9}, {3.6343729599465337`*^9, 3.634372968028891*^9}, {
+   3.634373187326997*^9, 3.6343732135823193`*^9}, 3.634373311825292*^9, {
+   3.634373876414296*^9, 3.634373886345279*^9}, 3.6675511666928787`*^9}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Solve", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"DD", "[", "x", "]"}], "\[Equal]", "0"}], ",", "x"}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.667551873080394*^9, 3.6675519157346697`*^9}},
+ Background->RGBColor[0.94, 0.91, 0.88]],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"x", "\[Rule]", 
+     FractionBox[
+      RowBox[{"a", " ", "c"}], 
+      RowBox[{"a", "-", "b"}]]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"x", "\[Rule]", 
+     FractionBox[
+      RowBox[{"a", " ", "c"}], 
+      RowBox[{"a", "+", "b"}]]}], "}"}]}], "}"}]], "Output",
+ CellChangeTimes->{{3.667551896793806*^9, 3.66755192567026*^9}, 
+   3.667555165286866*^9},
+ Background->RGBColor[0.94, 0.91, 0.88]]
+}, Open  ]],
+
+Cell[TextData[{
+ "6.\tNow plug into the expression for x the values of ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"a", "=", "4"}], ",", " ", 
+    RowBox[{"b", "=", "2"}], ",", " ", 
+    RowBox[{
+     RowBox[{"and", " ", "c"}], "=", "6"}]}], TraditionalForm]]],
+ " to see if it agrees with your approximation for the \tbest ",
+ Cell[BoxData[
+  FormBox["x", TraditionalForm]]]
+}], "Text",
+ CellChangeTimes->{{3.569597502223*^9, 3.569597566303*^9}, {3.5695976567*^9, 
+   3.569597661823*^9}, 3.6343724539573946`*^9}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Solve", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"DD", "[", "x", "]"}], "\[Equal]", "0"}], ",", "x"}], "]"}], "/.", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"a", "\[Rule]", "4"}], ",", 
+    RowBox[{"b", "\[Rule]", "2"}], ",", 
+    RowBox[{"c", "\[Rule]", "6"}]}], "}"}]}]], "Input",
+ CellChangeTimes->{{3.667551954021778*^9, 3.667551962741012*^9}, {
+  3.667552031136157*^9, 3.66755203756842*^9}},
+ Background->RGBColor[0.94, 0.91, 0.88]],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"x", "\[Rule]", "12"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"x", "\[Rule]", "4"}], "}"}]}], "}"}]], "Output",
+ CellChangeTimes->{{3.66755203201481*^9, 3.6675520381017647`*^9}, 
+   3.667555165367921*^9},
+ Background->RGBColor[0.94, 0.91, 0.88]]
+}, Open  ]],
+
+Cell[TextData[{
+ "7.\tAlso plug your value of ",
+ Cell[BoxData[
+  FormBox["x", TraditionalForm]]],
+ " and ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"a", "=", "4"}], ",", " ", 
+    RowBox[{"b", "=", "2"}], ",", " ", 
+    RowBox[{
+     RowBox[{"and", " ", "c"}], "=", "6"}]}], TraditionalForm]]],
+ " into your \[OpenCurlyDoubleQuote]totalDistance\[CloseCurlyDoubleQuote] \
+function and see if agrees with what you \tfound to be the shortest distance."
+}], "Text",
+ CellChangeTimes->{{3.569597673335*^9, 3.569597759722*^9}, {3.569600382381*^9,
+    3.569600382766*^9}, 3.6343724582312236`*^9, 3.634373537608758*^9}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     RowBox[{"TotalDistance", "[", "#", "]"}], "/.", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"a", "\[Rule]", "4"}], ",", 
+       RowBox[{"b", "\[Rule]", "2"}], ",", 
+       RowBox[{"c", "\[Rule]", "6"}]}], "}"}]}], "&"}], " ", "@", "4"}], "//",
+   "N"}]], "Input",
+ CellChangeTimes->{{3.667552062982046*^9, 3.66755213882873*^9}},
+ Background->RGBColor[0.94, 0.91, 0.88]],
+
+Cell[BoxData["8.485281374238571`"], "Output",
+ CellChangeTimes->{{3.667552080245084*^9, 3.66755213277907*^9}, 
+   3.667555165428278*^9},
+ Background->RGBColor[0.94, 0.91, 0.88]]
+}, Open  ]],
+
+Cell["\<\
+8.\tClick the angle check box and use the x slider again. What do you notice \
+about the angles the lines make with the \t\tshoreline at the minimum?\
+\>", "Text",
+ CellChangeTimes->{{3.491837549913*^9, 3.4918375855109997`*^9}, {
+   3.569594978665*^9, 3.569595013873*^9}, 3.569596936314*^9, 
+   3.569597801711*^9, {3.569600385957*^9, 3.5696003864040003`*^9}, {
+   3.6343724594940605`*^9, 3.634372460026415*^9}}],
+
+Cell[TextData[{
+ "They\[CloseCurlyQuote]re both approaching ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"45", "\[Degree]"}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ "."
+}], "Text",
+ CellChangeTimes->{{3.6675521962449493`*^9, 3.667552243737672*^9}},
+ Background->RGBColor[0.94, 0.91, 0.88]],
+
+Cell["\<\
+9.\tThe answer to 5 was so simple, it suggests that there might be a simple \
+but clever explanation for why the minimum \t\toccurs where it does. There \
+is, and Heron of Alexandria found it! Click on the \
+\[OpenCurlyDoubleQuote]show Heron\[CloseCurlyDoubleQuote] box and see if you \
+can \t\texplain his most brilliant and elegant solution in your own words.\
+\>", "Text",
+ CellChangeTimes->{{3.4918375919960003`*^9, 3.491837690274*^9}, 
+   3.5695950329049997`*^9, {3.569597837375*^9, 3.569597911249*^9}, {
+   3.569599856757*^9, 3.5696000449700003`*^9}, {3.569600327641*^9, 
+   3.569600331068*^9}, {3.569600388701*^9, 3.569600408566*^9}, {
+   3.569603456609*^9, 3.569603463626*^9}, {3.569603662215*^9, 
+   3.5696036723129997`*^9}, {3.5732961168086786`*^9, 
+   3.5732961251291547`*^9}, {3.5732968436962547`*^9, 
+   3.5732968969032974`*^9}, {3.6343691316997824`*^9, 3.634369162790017*^9}, {
+   3.634372461257228*^9, 3.634372463496719*^9}, {3.6343738893993025`*^9, 
+   3.634373891558736*^9}, 3.667551170148561*^9, {3.6675522361848307`*^9, 
+   3.667552239625718*^9}}],
+
+Cell["\<\
+If you reflect the second point across the \[OpenCurlyQuote]target line\
+\[CloseCurlyQuote], then it becomes a simple matter of calculating the \
+shortest distance between two points (a straight line.)\
+\>", "Text",
+ CellChangeTimes->{{3.6675521962449493`*^9, 3.667552243737672*^9}, {
+  3.6675522765072107`*^9, 3.66755231347001*^9}},
+ Background->RGBColor[0.94, 0.91, 0.88]],
+
+Cell[TextData[{
+ "10.\tUsing the picture from Heron and similar triangles see if you can \
+derive by algebra the correct value of ",
+ Cell[BoxData[
+  FormBox["x", TraditionalForm]]],
+ " you found \t\tabove."
+}], "Text",
+ CellChangeTimes->{{3.491837694266*^9, 3.491837694825*^9}, {3.491837760969*^9,
+    3.491837808179*^9}, 3.569595034641*^9, {3.569597924451*^9, 
+   3.569597924576*^9}, {3.6343738933679338`*^9, 3.6343738937621956`*^9}}],
+
+Cell[BoxData["\[Ellipsis]"], "Text",
+ CellChangeTimes->{{3.667551121914318*^9, 3.667551161290719*^9}, {
+  3.6675523815058193`*^9, 3.667552382266204*^9}},
+ Background->RGBColor[0.94, 0.91, 0.88]]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Surface Area and Volume of a Box Problem", "Section",
+ CellChangeTimes->{{3.5245672009076147`*^9, 3.5245672148072147`*^9}, {
+  3.573296908459959*^9, 3.5732969088499813`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell["The Problem", "Subsection",
+ CellChangeTimes->{{3.524567237099614*^9, 3.524567239502014*^9}, {
+  3.569598182501*^9, 3.569598189034*^9}}],
+
+Cell[TextData[{
+ "One of the standard optimization problems encountered by first year \
+calculus students is some variation of maximizing the volume of a box, in \
+this case one without a top, subject to the constraint that the surface area \
+is some fixed number, in this case 4 square units. The manipulate below \
+illustrates a  box in both it\[CloseCurlyQuote]s fully formed and cut open \
+state. In the cut open version you can tell that the total area is the same \
+regardless of the value of ",
+ Cell[BoxData[
+  FormBox["x", TraditionalForm]]],
+ " chosen since the box gets higher. The question is for what value of ",
+ Cell[BoxData[
+  FormBox["x", TraditionalForm]]],
+ "  and ",
+ Cell[BoxData[
+  FormBox["h", TraditionalForm]]],
+ " do you get the largest volume and what is that largest volume? "
+}], "Text",
+ CellChangeTimes->{{3.5245673075804143`*^9, 3.524567447450014*^9}, 
+   3.5245674941564145`*^9, {3.5245676535728145`*^9, 3.5245677250676146`*^9}, {
+   3.5245677909776144`*^9, 3.5245677917732143`*^9}, {3.5245678275128145`*^9, 
+   3.5245678644068146`*^9}, {3.524567903235214*^9, 3.5245680273332143`*^9}, {
+   3.569598231755*^9, 3.569598283276*^9}, 3.5695993808389997`*^9, 
+   3.5732968677516303`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["A Simple Manipulate", "Subsection",
+ CellChangeTimes->{{3.5695981445480003`*^9, 3.5695981492939997`*^9}}],
+
+Cell[TextData[{
+ "Using the above calculations and some programming principles from ",
+ StyleBox["Mathematica",
+  FontSlant->"Italic"],
+ " we can create a simple demonstrations of this classic problem. You should \
+be sort of impressed with how little code it takes to make these things by \
+the way. I can\[CloseCurlyQuote]t really take much credit: ",
+ StyleBox["Mathematica",
+  FontSlant->"Italic"],
+ " is acting through me and I am merely a conduit."
+}], "Text",
+ CellChangeTimes->{{3.569598341663*^9, 3.569598411635*^9}, {
+  3.6344176057998734`*^9, 3.6344176351866107`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Manipulate", "[", 
+  RowBox[{
+   RowBox[{"Module", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"h", "=", 
+       FractionBox[
+        RowBox[{"4", "-", 
+         SuperscriptBox["x", "2"]}], 
+        RowBox[{"4", "x"}]]}], "}"}], ",", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"Graphics", "[", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{"Red", ",", 
+             RowBox[{"Polygon", "[", 
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"{", 
+                 RowBox[{
+                  RowBox[{"-", 
+                   FractionBox["x", "2"]}], ",", 
+                  RowBox[{"-", 
+                   FractionBox["x", "2"]}]}], "}"}], ",", 
+                RowBox[{"{", 
+                 RowBox[{
+                  RowBox[{
+                   RowBox[{"-", "h"}], "-", 
+                   FractionBox["x", "2"]}], ",", 
+                  RowBox[{"-", 
+                   FractionBox["x", "2"]}]}], "}"}], ",", 
+                RowBox[{"{", 
+                 RowBox[{
+                  RowBox[{
+                   RowBox[{"-", "h"}], "-", 
+                   FractionBox["x", "2"]}], ",", 
+                  FractionBox["x", "2"]}], "}"}], ",", 
+                RowBox[{"{", 
+                 RowBox[{
+                  RowBox[{"-", 
+                   FractionBox["x", "2"]}], ",", 
+                  FractionBox["x", "2"]}], "}"}]}], "}"}], "]"}], ",", 
+             RowBox[{"Polygon", "[", 
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"{", 
+                 RowBox[{
+                  RowBox[{"-", 
+                   FractionBox["x", "2"]}], ",", 
+                  FractionBox["x", "2"]}], "}"}], ",", 
+                RowBox[{"{", 
+                 RowBox[{
+                  RowBox[{"-", 
+                   FractionBox["x", "2"]}], ",", 
+                  RowBox[{"h", "+", 
+                   FractionBox["x", "2"]}]}], "}"}], ",", 
+                RowBox[{"{", 
+                 RowBox[{
+                  FractionBox["x", "2"], ",", 
+                  RowBox[{"h", "+", 
+                   FractionBox["x", "2"]}]}], "}"}], ",", 
+                RowBox[{"{", 
+                 RowBox[{
+                  FractionBox["x", "2"], ",", 
+                  FractionBox["x", "2"]}], "}"}]}], "}"}], "]"}], ",", 
+             RowBox[{"Polygon", "[", 
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"{", 
+                 RowBox[{
+                  FractionBox["x", "2"], ",", 
+                  FractionBox["x", "2"]}], "}"}], ",", 
+                RowBox[{"{", 
+                 RowBox[{
+                  RowBox[{"h", "+", 
+                   FractionBox["x", "2"]}], ",", 
+                  FractionBox["x", "2"]}], "}"}], ",", 
+                RowBox[{"{", 
+                 RowBox[{
+                  RowBox[{"h", "+", 
+                   FractionBox["x", "2"]}], ",", 
+                  RowBox[{"-", 
+                   FractionBox["x", "2"]}]}], "}"}], ",", 
+                RowBox[{"{", 
+                 RowBox[{
+                  FractionBox["x", "2"], ",", 
+                  RowBox[{"-", 
+                   FractionBox["x", "2"]}]}], "}"}]}], "}"}], "]"}], ",", 
+             "\[IndentingNewLine]", 
+             RowBox[{"Polygon", "[", 
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"{", 
+                 RowBox[{
+                  FractionBox["x", "2"], ",", 
+                  RowBox[{"-", 
+                   FractionBox["x", "2"]}]}], "}"}], ",", 
+                RowBox[{"{", 
+                 RowBox[{
+                  FractionBox["x", "2"], ",", 
+                  RowBox[{
+                   RowBox[{"-", "h"}], "-", 
+                   FractionBox["x", "2"]}]}], "}"}], ",", 
+                RowBox[{"{", 
+                 RowBox[{
+                  RowBox[{"-", 
+                   FractionBox["x", "2"]}], ",", 
+                  RowBox[{
+                   RowBox[{"-", "h"}], "-", 
+                   FractionBox["x", "2"]}]}], "}"}], ",", 
+                RowBox[{"{", 
+                 RowBox[{
+                  RowBox[{"-", 
+                   FractionBox["x", "2"]}], ",", 
+                  RowBox[{"-", 
+                   FractionBox["x", "2"]}]}], "}"}]}], "}"}], "]"}], ",", 
+             "Blue", ",", " ", 
+             RowBox[{"Rectangle", "[", 
+              RowBox[{
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"-", 
+                  FractionBox["x", "2"]}], ",", 
+                 RowBox[{"-", 
+                  FractionBox["x", "2"]}]}], "}"}], ",", 
+               RowBox[{"{", 
+                RowBox[{
+                 FractionBox["x", "2"], ",", 
+                 FractionBox["x", "2"]}], "}"}]}], "]"}]}], "}"}], ",", 
+           RowBox[{"PlotRange", "\[Rule]", "5"}], ",", 
+           RowBox[{"PlotLabel", "\[Rule]", 
+            RowBox[{
+            "\"\<surface area of sides \>\"", "<>", 
+             "\"\<\!\(\*Cell[TextData[Cell[BoxData[
+FormBox[
+RowBox[{
+SuperscriptBox[\"x\", \"2\"], \"+\", 
+RowBox[{\"4\", \"xh\"}]}], TraditionalForm]]]]]\)\>\""}]}]}], "]"}], ",", 
+         RowBox[{"Graphics3D", "[", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{"Red", ",", 
+               RowBox[{"Cuboid", "[", 
+                RowBox[{
+                 RowBox[{"{", 
+                  RowBox[{"0", ",", "0", ",", "0"}], "}"}], ",", 
+                 RowBox[{"{", 
+                  RowBox[{"x", ",", "x", ",", "h"}], "}"}]}], "]"}]}], "}"}], 
+             ",", 
+             RowBox[{"{", 
+              RowBox[{"Blue", ",", 
+               RowBox[{"Polygon", "[", 
+                RowBox[{"{", 
+                 RowBox[{
+                  RowBox[{"{", 
+                   RowBox[{"0", ",", "0", ",", "h"}], "}"}], ",", 
+                  RowBox[{"{", 
+                   RowBox[{"0", ",", "x", ",", "h"}], "}"}], ",", 
+                  RowBox[{"{", 
+                   RowBox[{"x", ",", "x", ",", "h"}], "}"}], ",", 
+                  RowBox[{"{", 
+                   RowBox[{"x", ",", "0", ",", "h"}], "}"}]}], "}"}], "]"}]}],
+               "}"}]}], "}"}], ",", 
+           RowBox[{"Boxed", "\[Rule]", " ", "False"}], ",", " ", 
+           RowBox[{"PlotRange", "\[Rule]", " ", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"{", 
+               RowBox[{"0", ",", "5"}], "}"}], ",", 
+              RowBox[{"{", 
+               RowBox[{"0", ",", "5"}], "}"}], ",", 
+              RowBox[{"{", 
+               RowBox[{"0", ",", "5"}], "}"}]}], "}"}]}], ",", 
+           RowBox[{"PlotLabel", "\[Rule]", 
+            RowBox[{"\"\<Volume of box = \>\"", "<>", 
+             RowBox[{"ToString", "[", " ", 
+              RowBox[{
+               FractionBox["1", "4"], " ", "x", " ", 
+               RowBox[{"(", 
+                RowBox[{"4", "-", 
+                 SuperscriptBox["x", "2"]}], ")"}]}], "]"}]}]}]}], "]"}], ",",
+          "\[IndentingNewLine]", 
+         RowBox[{"Plot", "[", 
+          RowBox[{
+           RowBox[{
+            FractionBox["1", "4"], " ", "t", " ", 
+            RowBox[{"(", 
+             RowBox[{"4", "-", 
+              SuperscriptBox["t", "2"]}], ")"}]}], ",", 
+           RowBox[{"{", 
+            RowBox[{"t", ",", "0", ",", "2"}], "}"}], ",", 
+           RowBox[{"AxesLabel", "\[Rule]", " ", 
+            RowBox[{"{", 
+             RowBox[{"\"\<x\>\"", ",", "\"\<vol\>\""}], "}"}]}], ",", 
+           RowBox[{"Epilog", "\[Rule]", " ", 
+            RowBox[{"{", 
+             RowBox[{"Point", "[", 
+              RowBox[{"{", 
+               RowBox[{"x", ",", 
+                RowBox[{
+                 FractionBox["1", "4"], " ", "x", " ", 
+                 RowBox[{"(", 
+                  RowBox[{"4", "-", 
+                   SuperscriptBox["x", "2"]}], ")"}]}]}], "}"}], "]"}], 
+             "}"}]}]}], "]"}]}], "\[IndentingNewLine]", "}"}], "}"}], "//", 
+      "TableForm"}]}], "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", "0.2", ",", "2"}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.5208651169332*^9, 3.5208652467408*^9}, {
+   3.5208652836036*^9, 3.5208653215116*^9}, {3.5208653853468*^9, 
+   3.5208654343152*^9}, {3.5208654739704*^9, 3.5208655498176003`*^9}, {
+   3.5208658499772*^9, 3.520865982468*^9}, {3.5208660180671997`*^9, 
+   3.5208660216396*^9}, {3.5208660551484003`*^9, 3.5208660582060003`*^9}, {
+   3.5208662293691998`*^9, 3.5208662592432003`*^9}, {3.5208662904744*^9, 
+   3.5208663373836*^9}, {3.5208665300436*^9, 3.5208665600424*^9}, {
+   3.5208666779316*^9, 3.5208667291776*^9}, {3.5208668016708*^9, 
+   3.5208668443368*^9}, {3.5208674332836*^9, 3.5208674356548*^9}, {
+   3.5208675121884003`*^9, 3.5208675617028*^9}, {3.5208677377799997`*^9, 
+   3.520867778418*^9}, {3.5208678510204*^9, 3.5208679001604*^9}, {
+   3.5208679331076*^9, 3.5208679579896*^9}, {3.5208679978943996`*^9, 
+   3.5208680026368*^9}, {3.5208683336376*^9, 3.5208683373816*^9}, {
+   3.5208683674896*^9, 3.5208684238836*^9}, {3.5208695147176*^9, 
+   3.5208695580076*^9}, {3.5208696276928*^9, 3.5208696331996*^9}, {
+   3.5208697005916*^9, 3.5208697554412003`*^9}, 3.5208702019288*^9, 
+   3.5208703124704*^9, {3.5208704281288*^9, 3.5208704904664*^9}, {
+   3.5208707694256*^9, 3.5208708841636*^9}, {3.5208709396216*^9, 
+   3.5208709729276*^9}, {3.5208711378352003`*^9, 3.520871148568*^9}, {
+   3.5208714672136*^9, 3.5208714991468*^9}, 3.520871539426*^9, {
+   3.5208716346328*^9, 3.5208716402176*^9}, {3.5208718036744003`*^9, 
+   3.520871812582*^9}, {3.5208720695495996`*^9, 3.5208721263648*^9}, {
+   3.5244756549049997`*^9, 3.52447565846*^9}, {3.524480627676*^9, 
+   3.524480631916*^9}, {3.524480668033*^9, 3.5244807069630003`*^9}, {
+   3.5244807873389997`*^9, 3.524480831484*^9}, {3.5244814018129997`*^9, 
+   3.5244814047650003`*^9}, {3.524481438678*^9, 3.524481441656*^9}, {
+   3.524481493258*^9, 3.52448152744*^9}, {3.524481621583*^9, 
+   3.524481708767*^9}, {3.5244833929969997`*^9, 3.524483395106*^9}, {
+   3.5244834779849997`*^9, 3.524483503275*^9}, {3.524483538966*^9, 
+   3.524483543118*^9}, {3.524483691656*^9, 3.524483692756*^9}, {
+   3.5244838435699997`*^9, 3.524483964474*^9}, {3.524484020979*^9, 
+   3.524484079507*^9}, {3.524484113071*^9, 3.524484223598*^9}, {
+   3.524484290269*^9, 3.524484303441*^9}, {3.524484499085*^9, 
+   3.524484501259*^9}, {3.52448457585*^9, 3.524484581085*^9}, {
+   3.524484623892*^9, 3.524484671302*^9}, {3.524484729067*^9, 
+   3.5244847314*^9}, {3.524568200810214*^9, 3.5245682284066143`*^9}, {
+   3.5245683935844145`*^9, 3.524568433863614*^9}, 3.5245922033954134`*^9, 
+   3.5245922443144135`*^9, {3.5245923414304132`*^9, 3.5245923647704134`*^9}, {
+   3.5245932153774137`*^9, 3.524593332856414*^9}, {3.5245933822884135`*^9, 
+   3.5245934079174137`*^9}, {3.5245934888394136`*^9, 
+   3.5245935297444134`*^9}, {3.5245937247274137`*^9, 
+   3.5245937281824136`*^9}, {3.5245941250834136`*^9, 3.524594187019414*^9}, {
+   3.524594244467414*^9, 3.524594359146414*^9}, {3.5245943931564136`*^9, 
+   3.5245944354824133`*^9}, {3.634416977370042*^9, 3.634416992215725*^9}, {
+   3.6344170360150614`*^9, 3.6344170562886724`*^9}, {3.634417124885333*^9, 
+   3.634417158857267*^9}, {3.6344172162063417`*^9, 3.6344172200190153`*^9}, {
+   3.634417259105319*^9, 3.6344173139379272`*^9}, {3.634417667262545*^9, 
+   3.634417736266143*^9}}],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`x$$ = 0.2, Typeset`show$$ = True, 
+    Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+    Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+    "\"untitled\"", Typeset`specs$$ = {{
+      Hold[$CellContext`x$$], 0.2, 2}}, Typeset`size$$ = {
+    594., {101.634033203125, 107.365966796875}}, Typeset`update$$ = 0, 
+    Typeset`initDone$$, Typeset`skipInitDone$$ = 
+    True, $CellContext`x$81944$$ = 0}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, "Variables" :> {$CellContext`x$$ = 0.2}, 
+      "ControllerVariables" :> {
+        Hold[$CellContext`x$$, $CellContext`x$81944$$, 0]}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> 
+      Module[{$CellContext`h$ = (4 - $CellContext`x$$^2)/(
+          4 $CellContext`x$$)}, 
+        TableForm[{{
+           Graphics[{Red, 
+             
+             Polygon[{{-($CellContext`x$$/2), -($CellContext`x$$/
+                 2)}, {-$CellContext`h$ - $CellContext`x$$/
+                2, -($CellContext`x$$/
+                 2)}, {-$CellContext`h$ - $CellContext`x$$/
+                2, $CellContext`x$$/
+                2}, {-($CellContext`x$$/2), $CellContext`x$$/2}}], 
+             
+             Polygon[{{-($CellContext`x$$/2), $CellContext`x$$/
+                2}, {-($CellContext`x$$/
+                 2), $CellContext`h$ + $CellContext`x$$/2}, {$CellContext`x$$/
+                2, $CellContext`h$ + $CellContext`x$$/2}, {$CellContext`x$$/
+                2, $CellContext`x$$/2}}], 
+             
+             Polygon[{{$CellContext`x$$/2, $CellContext`x$$/
+                2}, {$CellContext`h$ + $CellContext`x$$/2, $CellContext`x$$/
+                2}, {$CellContext`h$ + $CellContext`x$$/2, -($CellContext`x$$/
+                 2)}, {$CellContext`x$$/2, -($CellContext`x$$/2)}}], 
+             
+             Polygon[{{$CellContext`x$$/
+                2, -($CellContext`x$$/2)}, {$CellContext`x$$/
+                2, -$CellContext`h$ - $CellContext`x$$/
+                2}, {-($CellContext`x$$/
+                 2), -$CellContext`h$ - $CellContext`x$$/
+                2}, {-($CellContext`x$$/2), -($CellContext`x$$/2)}}], Blue, 
+             
+             Rectangle[{-($CellContext`x$$/2), -($CellContext`x$$/
+                2)}, {$CellContext`x$$/2, $CellContext`x$$/2}]}, PlotRange -> 
+            5, PlotLabel -> 
+            StringJoin[
+             "surface area of sides ", 
+              "\!\(\*Cell[TextData[Cell[BoxData[\nFormBox[\n\n  RowBox[{\n\
+SuperscriptBox[\"x\", \"2\"], \"+\", \nRowBox[{\"4\", \"xh\"}]}], \n  \
+TraditionalForm]]]]]\)"]], 
+           Graphics3D[{{Red, 
+              
+              Cuboid[{0, 0, 
+               0}, {$CellContext`x$$, $CellContext`x$$, $CellContext`h$}]}, {
+             Blue, 
+              
+              Polygon[{{0, 0, $CellContext`h$}, {
+                0, $CellContext`x$$, $CellContext`h$}, {$CellContext`x$$, \
+$CellContext`x$$, $CellContext`h$}, {$CellContext`x$$, 
+                 0, $CellContext`h$}}]}}, Boxed -> False, 
+            PlotRange -> {{0, 5}, {0, 5}, {0, 5}}, PlotLabel -> 
+            StringJoin["Volume of box = ", 
+              ToString[(1/4) $CellContext`x$$ (4 - $CellContext`x$$^2)]]], 
+           
+           Plot[(1/4) $CellContext`t (4 - $CellContext`t^2), {$CellContext`t, 
+             0, 2}, AxesLabel -> {"x", "vol"}, Epilog -> {
+              
+              Point[{$CellContext`x$$, (1/4) $CellContext`x$$ (
+                 4 - $CellContext`x$$^2)}]}]}}]], 
+      "Specifications" :> {{$CellContext`x$$, 0.2, 2}}, "Options" :> {}, 
+      "DefaultOptions" :> {}],
+     ImageSizeCache->{639., {147., 152.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{{3.524568411898814*^9, 3.5245684352676144`*^9}, 
+   3.524592247778414*^9, 3.5245923662154136`*^9, 3.5245924785794134`*^9, 
+   3.5245933339354134`*^9, {3.5245933866974134`*^9, 3.524593419000414*^9}, {
+   3.524593508467414*^9, 3.5245935313014135`*^9}, {3.5245942766364136`*^9, 
+   3.5245943001554136`*^9}, {3.5245943362354136`*^9, 3.524594364257414*^9}, {
+   3.5245944168644133`*^9, 3.5245944364374137`*^9}, 3.5696005063780003`*^9, {
+   3.6344169790732307`*^9, 3.634416993059517*^9}, {3.634417044592256*^9, 
+   3.6344170570699654`*^9}, {3.6344171269323144`*^9, 3.634417161774254*^9}, 
+   3.6344172209219937`*^9, {3.634417264676282*^9, 3.634417314787366*^9}, 
+   3.6344176801570816`*^9, 3.634417738813126*^9, 3.667555165503779*^9}]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["\<\
+Some Questions for the Surface Area and Volume of a Box Problem\
+\>", "Section",
+ CellChangeTimes->{{3.5245936455914135`*^9, 3.5245936492374134`*^9}, {
+  3.634372242373724*^9, 3.6343722509447265`*^9}}],
+
+Cell[TextData[{
+ "1.\tBy playing with the sliders find the approximate value of ",
+ Cell[BoxData[
+  FormBox["x", TraditionalForm]]],
+ " that gives you the maximum volume. "
+}], "Text",
+ CellChangeTimes->{{3.5245945763324137`*^9, 3.5245946533214135`*^9}, {
+  3.569598460168*^9, 3.5695984762019997`*^9}}],
+
+Cell[TextData[{
+ "~ ",
+ Cell[BoxData[
+  FormBox["0.152", TraditionalForm]],
+  FormatType->"TraditionalForm"]
+}], "Text",
+ CellChangeTimes->{{3.6675525007641706`*^9, 3.6675525044250097`*^9}, {
+  3.667553024813137*^9, 3.66755305118918*^9}, {3.66755316458267*^9, 
+  3.6675531760618*^9}},
+ Background->RGBColor[0.94, 0.91, 0.88]],
+
+Cell[TextData[{
+ "2.\tIn an input cell below create an expression using ",
+ Cell[BoxData[
+  FormBox["x", TraditionalForm]]],
+ " and ",
+ Cell[BoxData[
+  FormBox["h", TraditionalForm]]],
+ " for the surface area of our box and set it equal to 4.Then use \t\
+Mathematica  to solve the equation for ",
+ Cell[BoxData[
+  FormBox["h", TraditionalForm]]],
+ " in terms of ",
+ Cell[BoxData[
+  FormBox["x", TraditionalForm]]],
+ ". "
+}], "Text",
+ CellChangeTimes->{{3.569598596592*^9, 3.5695985969960003`*^9}, {
+  3.569598783462*^9, 3.5695989757460003`*^9}, {3.569600445981*^9, 
+  3.569600453984*^9}, {3.5732961488315105`*^9, 3.57329614917353*^9}, {
+  3.6343688438383455`*^9, 3.634368850047903*^9}, {3.634372308322714*^9, 
+  3.6343723162129393`*^9}, {3.6344174021170797`*^9, 3.634417402382719*^9}, {
+  3.6344174425314646`*^9, 3.634417496402091*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"SA", "[", 
+   RowBox[{"x_", ",", "h_"}], "]"}], ":=", 
+  RowBox[{
+   SuperscriptBox["x", "2"], "+", 
+   RowBox[{"4", "x", " ", "h"}]}]}]], "Input",
+ CellChangeTimes->{{3.667552545352187*^9, 3.667552589703116*^9}},
+ Background->RGBColor[0.94, 0.91, 0.88]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"someH", "=", 
+  RowBox[{
+   RowBox[{"Solve", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"SA", "[", 
+       RowBox[{"x", ",", "h"}], "]"}], "\[Equal]", "4"}], ",", "h"}], "]"}], "//",
+    "First"}]}]], "Input",
+ CellChangeTimes->{{3.6675526013109627`*^9, 3.6675526313526583`*^9}, {
+  3.667552929479786*^9, 3.6675529443526373`*^9}},
+ Background->RGBColor[0.94, 0.91, 0.88]],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"h", "\[Rule]", 
+   FractionBox[
+    RowBox[{"4", "-", 
+     SuperscriptBox["x", "2"]}], 
+    RowBox[{"4", " ", "x"}]]}], "}"}]], "Output",
+ CellChangeTimes->{{3.6675526171578903`*^9, 3.667552631675192*^9}, 
+   3.66755294531705*^9, {3.66755505546589*^9, 3.66755505999901*^9}, 
+   3.667555165661681*^9},
+ Background->RGBColor[0.94, 0.91, 0.88]]
+}, Open  ]],
+
+Cell[TextData[{
+ "3.\tWrite down an expression for volume in terms of ",
+ Cell[BoxData[
+  FormBox["x", TraditionalForm]]],
+ " and ",
+ Cell[BoxData[
+  FormBox["h", TraditionalForm]]],
+ ". Call it something like \[OpenCurlyDoubleQuote]vol\[CloseCurlyDoubleQuote]."
+}], "Text",
+ CellChangeTimes->{{3.5695989807460003`*^9, 3.569599012709*^9}, {
+  3.6344174039296665`*^9, 3.634417404070306*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Vol", "[", 
+   RowBox[{"x_", ",", "h_"}], "]"}], ":=", 
+  RowBox[{
+   SuperscriptBox["x", "2"], "h"}]}]], "Input",
+ CellChangeTimes->{{3.6675526419002247`*^9, 3.667552661786162*^9}},
+ Background->RGBColor[0.94, 0.91, 0.88]],
+
+Cell[TextData[{
+ "4.\tPlug your answer for ",
+ Cell[BoxData[
+  FormBox["h", TraditionalForm]]],
+ " from 3 into your expression for ",
+ Cell[BoxData[
+  FormBox["vol", TraditionalForm]]],
+ " to get an expression for the volume in terms of ",
+ Cell[BoxData[
+  FormBox["x", TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ "."
+}], "Text",
+ CellChangeTimes->{{3.5695990160769997`*^9, 3.569599051243*^9}, {
+  3.569599097844*^9, 3.5695991001470003`*^9}, {3.634417405351622*^9, 
+  3.6344174058155136`*^9}, {3.6344175075432043`*^9, 3.6344175247786603`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Vol", "[", 
+   RowBox[{"x", ",", "h"}], "]"}], "/.", "someH"}]], "Input",
+ CellChangeTimes->{{3.667552687774417*^9, 3.667552696099675*^9}, {
+  3.667552811499175*^9, 3.6675529093124313`*^9}, {3.667552953353054*^9, 
+  3.667552954761306*^9}},
+ Background->RGBColor[0.94, 0.91, 0.88]],
+
+Cell[BoxData[
+ RowBox[{
+  FractionBox["1", "4"], " ", "x", " ", 
+  RowBox[{"(", 
+   RowBox[{"4", "-", 
+    SuperscriptBox["x", "2"]}], ")"}]}]], "Output",
+ CellChangeTimes->{{3.667552904269575*^9, 3.6675529099272213`*^9}, 
+   3.667552955174996*^9, 3.667555060125346*^9, 3.667555165744287*^9},
+ Background->RGBColor[0.94, 0.91, 0.88]]
+}, Open  ]],
+
+Cell["\<\
+5.\tNow take the derivative of the new expression you have for vol in terms \
+of x.\
+\>", "Text",
+ CellChangeTimes->{{3.569599077705*^9, 3.569599126863*^9}, {
+  3.634417407527341*^9, 3.63441740780169*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Deriv", "[", "x_", "]"}], ":=", 
+  RowBox[{"D", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"Vol", "[", 
+      RowBox[{"x", ",", "h"}], "]"}], "/.", "someH"}], ",", "x"}], 
+   "]"}]}]], "Input",
+ CellChangeTimes->{{3.6675529598493223`*^9, 3.667552964585739*^9}, {
+  3.667553243485683*^9, 3.667553265904017*^9}},
+ Background->RGBColor[0.94, 0.91, 0.88]],
+
+Cell[TextData[{
+ "6.\tNow set that derivative equal to zero and solve for x. Verify that your \
+answer is about the same as what you found in \tproblem 1. Also, use \
+Mathematica to find ",
+ Cell[BoxData[
+  FormBox["h", TraditionalForm]]],
+ " and to plug in and \tfind the maximum volume. To show you have found the \t\
+maximum, analyze the sign of the first derivative. Hint: for this you need to \
+use the Reduce command."
+}], "Text",
+ CellChangeTimes->{{3.5695991299440002`*^9, 3.569599165921*^9}, {
+  3.569599229862*^9, 3.569599296269*^9}, {3.569599353267*^9, 
+  3.569599353539*^9}, {3.5696004560950003`*^9, 3.5696004958900003`*^9}, {
+  3.5732961552208757`*^9, 3.5732961715288086`*^9}, {3.634369413000434*^9, 
+  3.634369436125205*^9}, {3.6343723431466923`*^9, 3.6343723498954225`*^9}, {
+  3.63441740887987*^9, 3.634417409223637*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"solutions", "=", 
+  RowBox[{
+   RowBox[{"Solve", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"Deriv", "[", "x", "]"}], "\[Equal]", "0"}], ",", "x"}], "]"}], 
+   "//", "N"}]}]], "Input",
+ CellChangeTimes->{{3.6675529916295347`*^9, 3.667553003323262*^9}, {
+  3.667553078950676*^9, 3.6675530806545*^9}, {3.667553283256351*^9, 
+  3.667553284935371*^9}},
+ Background->RGBColor[0.94, 0.91, 0.88]],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"x", "\[Rule]", 
+     RowBox[{"-", "1.1547005383792517`"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"x", "\[Rule]", "1.1547005383792517`"}], "}"}]}], "}"}]], "Output",
+ CellChangeTimes->{{3.667552998959475*^9, 3.667553003880979*^9}, 
+   3.667553082055707*^9, 3.667553286868312*^9, 3.667555060188753*^9, 
+   3.667555165829032*^9},
+ Background->RGBColor[0.94, 0.91, 0.88]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"theH", "=", 
+  RowBox[{
+   RowBox[{"someH", "/.", "solutions"}], "//", "Last"}]}]], "Input",
+ CellChangeTimes->{{3.667553121272938*^9, 3.66755313020054*^9}, {
+  3.6675531830588007`*^9, 3.667553203876268*^9}, {3.6675534593144073`*^9, 
+  3.6675534611322002`*^9}},
+ Background->RGBColor[0.94, 0.91, 0.88]],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"h", "\[Rule]", "0.5773502691896255`"}], "}"}]], "Output",
+ CellChangeTimes->{{3.667553127717383*^9, 3.667553133344603*^9}, {
+   3.667553183933951*^9, 3.667553205001857*^9}, 3.6675532883363247`*^9, 
+   3.667555060242364*^9, 3.667555166242827*^9},
+ Background->RGBColor[0.94, 0.91, 0.88]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"Vol", "[", 
+    RowBox[{"x", ",", "h"}], "]"}], "/.", 
+   RowBox[{"(", 
+    RowBox[{"solutions", "//", "Last"}], ")"}]}], "/.", "theH"}]], "Input",
+ CellChangeTimes->{{3.667554964940536*^9, 3.667555064701425*^9}},
+ Background->RGBColor[0.94, 0.91, 0.88]],
+
+Cell[BoxData["0.7698003589195009`"], "Output",
+ CellChangeTimes->{{3.667554997205875*^9, 3.667555065561306*^9}, 
+   3.667555166312243*^9},
+ Background->RGBColor[0.94, 0.91, 0.88]]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["The Triangle and Square Cut Wire Problem", "Section",
+ CellChangeTimes->{{3.6343703192731857`*^9, 3.63437037013405*^9}, {
+  3.634372503785261*^9, 3.6343725043606434`*^9}}],
+
+Cell["\<\
+A wire 10cm long is to be cut and bent into pieces: an equilateral triangle \
+and a square. How should the wire be cut so that the area bounded by the \
+resulting shapes is as large as possible.  How should the wire be cut so that \
+the area bounded by the resulting shapes is as small as possible?\
+\>", "Text",
+ CellChangeTimes->{{3.57020610938*^9, 3.570206109801*^9}, {
+   3.5702067230030003`*^9, 3.570206886612*^9}, {3.572069149047908*^9, 
+   3.5720691540951962`*^9}, 3.572069691727947*^9, {3.5720699659866333`*^9, 
+   3.5720699673827133`*^9}, {3.634370373941574*^9, 3.634370462711536*^9}, {
+   3.634372390982484*^9, 3.634372399779314*^9}}],
+
+Cell["\<\
+We include a Manipulate below, but you should solve this problem without \
+having your hand held.\
+\>", "Text",
+ CellChangeTimes->{
+  3.6343704652402105`*^9, {3.6343721465389338`*^9, 3.6343721469341946`*^9}, {
+   3.634372265807581*^9, 3.634372267628175*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Manipulate", "[", 
+  RowBox[{
+   RowBox[{"GraphicsRow", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"Graphics", "[", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"EdgeForm", "[", "Thick", "]"}], ",", "Red", ",", 
+           RowBox[{"Rectangle", "[", 
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{"0", ",", "0"}], "}"}], ",", 
+             RowBox[{
+              FractionBox["1", "4"], 
+              RowBox[{"{", 
+               RowBox[{"x", ",", "x"}], "}"}]}]}], "]"}]}], "}"}], ",", 
+         RowBox[{"PlotLabel", "\[Rule]", " ", 
+          RowBox[{"\"\<perimeter = \>\"", "<>", 
+           RowBox[{"ToString", "[", "x", "]"}]}]}], ",", 
+         RowBox[{"PlotRange", "\[Rule]", 
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"-", "3"}], ",", "3"}], "}"}], ",", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"-", ".1"}], ",", "3"}], "}"}]}], "}"}]}]}], "]"}], ",", 
+       RowBox[{"Graphics", "[", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"EdgeForm", "[", "Thick", "]"}], ",", "Red", ",", 
+           RowBox[{"Polygon", "[", 
+            RowBox[{
+             FractionBox[
+              RowBox[{"(", 
+               RowBox[{"10", "-", "x"}], ")"}], "6"], 
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{"{", 
+                RowBox[{"1", ",", "0"}], "}"}], ",", 
+               RowBox[{"{", 
+                RowBox[{"0", ",", 
+                 RowBox[{"Sqrt", "[", "3", "]"}]}], "}"}], ",", 
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"-", "1"}], ",", "0"}], "}"}]}], "}"}]}], "]"}]}], 
+          "}"}], ",", 
+         RowBox[{"PlotLabel", "\[Rule]", " ", 
+          RowBox[{"\"\<perimeter = \>\"", "<>", 
+           RowBox[{"ToString", "[", 
+            RowBox[{"10", "-", "x"}], "]"}]}]}], ",", 
+         RowBox[{"PlotRange", "\[Rule]", 
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"-", "3"}], ",", "3"}], "}"}], ",", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"-", ".1"}], ",", "3"}], "}"}]}], "}"}]}]}], "]"}]}], 
+      "}"}], ",", 
+     RowBox[{"PlotLabel", "\[Rule]", 
+      RowBox[{"\"\<total area = \>\"", "<>", 
+       RowBox[{"ToString", "[", 
+        RowBox[{
+         FractionBox[
+          SuperscriptBox["x", "2"], "16"], "+", 
+         RowBox[{
+          FractionBox[
+           SqrtBox["3"], "4"], 
+          SuperscriptBox[
+           RowBox[{"(", 
+            FractionBox[
+             RowBox[{"10", "-", "x"}], "3"], ")"}], "2"]}]}], "]"}]}]}]}], 
+    "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", "0.0", ",", "10"}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.6343705336101675`*^9, 3.634370553134287*^9}, {
+   3.6343706142386837`*^9, 3.6343706522266407`*^9}, {3.6343706967179513`*^9, 
+   3.634370700031148*^9}, {3.634371034052544*^9, 3.634371038689623*^9}, {
+   3.634371079229494*^9, 3.6343710821934595`*^9}, {3.634371213541614*^9, 
+   3.6343712230789356`*^9}, {3.6343713582251883`*^9, 3.6343713601314516`*^9}, 
+   3.634371426415757*^9, {3.6343716113930655`*^9, 3.634371619743606*^9}, {
+   3.6343716497562237`*^9, 3.634371695058153*^9}, {3.6343717274781017`*^9, 
+   3.6343718256062455`*^9}, {3.634371875198165*^9, 3.634371969369938*^9}, {
+   3.6359539367433558`*^9, 3.635953969995125*^9}, {3.635954000970948*^9, 
+   3.635954144381389*^9}, {3.6359541891813235`*^9, 3.635954192306466*^9}, {
+   3.6359542447478867`*^9, 3.63595426621879*^9}, {3.6359542965641527`*^9, 
+   3.635954319315364*^9}, {3.6359543551610203`*^9, 3.635954355582918*^9}, {
+   3.6359544330070868`*^9, 3.6359544628524237`*^9}, {3.6359544964178658`*^9, 
+   3.6359545105442953`*^9}}],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`x$$ = 4.78, Typeset`show$$ = True, 
+    Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+    Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+    "\"untitled\"", Typeset`specs$$ = {{
+      Hold[$CellContext`x$$], 0., 10}}, Typeset`size$$ = {360., {55., 59.}}, 
+    Typeset`update$$ = 0, Typeset`initDone$$, Typeset`skipInitDone$$ = 
+    True, $CellContext`x$87625$$ = 0}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, "Variables" :> {$CellContext`x$$ = 0.}, 
+      "ControllerVariables" :> {
+        Hold[$CellContext`x$$, $CellContext`x$87625$$, 0]}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> GraphicsRow[{
+         Graphics[{
+           EdgeForm[Thick], Red, 
+           Rectangle[{0, 0}, (1/4) {$CellContext`x$$, $CellContext`x$$}]}, 
+          PlotLabel -> StringJoin["perimeter = ", 
+            ToString[$CellContext`x$$]], PlotRange -> {{-3, 3}, {-0.1, 3}}], 
+         Graphics[{
+           EdgeForm[Thick], Red, 
+           Polygon[((10 - $CellContext`x$$)/6) {{1, 0}, {0, 
+               Sqrt[3]}, {-1, 0}}]}, PlotLabel -> StringJoin["perimeter = ", 
+            ToString[10 - $CellContext`x$$]], 
+          PlotRange -> {{-3, 3}, {-0.1, 3}}]}, PlotLabel -> 
+        StringJoin["total area = ", 
+          
+          ToString[$CellContext`x$$^2/
+            16 + (Sqrt[3]/4) ((10 - $CellContext`x$$)/3)^2]]], 
+      "Specifications" :> {{$CellContext`x$$, 0., 10}}, "Options" :> {}, 
+      "DefaultOptions" :> {}],
+     ImageSizeCache->{405., {99., 104.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{
+  3.6343716269558897`*^9, 3.6343717421092587`*^9, {3.6343718032121553`*^9, 
+   3.6343718264968405`*^9}, {3.6343719438307047`*^9, 3.6343719703195677`*^9}, 
+   3.6359539710264063`*^9, 3.635954003627316*^9, {3.6359540395310297`*^9, 
+   3.6359540793466816`*^9}, 3.635954321331072*^9, 3.635954356707952*^9, 
+   3.6359545158101788`*^9, 3.667555166393546*^9, 3.66755539447891*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Maximization \[Ellipsis]", "Subsubsection",
+ CellChangeTimes->{{3.667555875504603*^9, 3.6675558826172256`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"Clear", "[", 
+  RowBox[{
+  "SA", ",", "length", ",", "soft", ",", "s", ",", "t", ",", "L", ",", 
+   "solutions"}], "]"}]], "Input",
+ CellChangeTimes->{{3.667554502151423*^9, 3.667554516132743*^9}, {
+  3.66755477077596*^9, 3.6675547717924967`*^9}},
+ Background->RGBColor[0.94, 0.91, 0.88]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"length", "=", 
+  RowBox[{"L", "==", 
+   RowBox[{
+    RowBox[{"4", "s"}], "+", 
+    RowBox[{"3", "t"}]}]}]}]], "Input",
+ CellChangeTimes->{{3.667554277194297*^9, 3.6675542868426247`*^9}},
+ Background->RGBColor[0.94, 0.91, 0.88]],
+
+Cell[BoxData[
+ RowBox[{"L", "\[Equal]", 
+  RowBox[{
+   RowBox[{"4", " ", "s"}], "+", 
+   RowBox[{"3", " ", "t"}]}]}]], "Output",
+ CellChangeTimes->{3.667554306913393*^9, 3.667554525234951*^9, 
+  3.667554777254936*^9, 3.667555166730895*^9, 3.667555395097534*^9, 
+  3.6675559403461103`*^9},
+ Background->RGBColor[0.94, 0.91, 0.88]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"tofs", "=", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"Solve", "[", 
+     RowBox[{"length", ",", "t"}], "]"}], "/.", 
+    RowBox[{"L", "\[Rule]", "10"}]}], "//", "First"}]}]], "Input",
+ CellChangeTimes->{{3.667554862315528*^9, 3.66755486998072*^9}},
+ Background->RGBColor[0.94, 0.91, 0.88]],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"t", "\[Rule]", 
+   RowBox[{
+    FractionBox["1", "3"], " ", 
+    RowBox[{"(", 
+     RowBox[{"10", "-", 
+      RowBox[{"4", " ", "s"}]}], ")"}]}]}], "}"}]], "Output",
+ CellChangeTimes->{3.667554871891871*^9, 3.667555166779871*^9, 
+  3.667555395146418*^9, 3.667555940391282*^9},
+ Background->RGBColor[0.94, 0.91, 0.88]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"soft", "=", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"Solve", "[", 
+     RowBox[{"length", ",", "s"}], "]"}], "/.", 
+    RowBox[{"L", "\[Rule]", "10"}]}], "//", "First"}]}]], "Input",
+ CellChangeTimes->{{3.667554317588361*^9, 3.6675543819081097`*^9}},
+ NumberMarks->False,
+ Background->RGBColor[0.94, 0.91, 0.88]],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"s", "\[Rule]", 
+   RowBox[{
+    FractionBox["1", "4"], " ", 
+    RowBox[{"(", 
+     RowBox[{"10", "-", 
+      RowBox[{"3", " ", "t"}]}], ")"}]}]}], "}"}]], "Output",
+ CellChangeTimes->{{3.667554324720433*^9, 3.667554382325574*^9}, 
+   3.667554526930314*^9, 3.6675547776455717`*^9, 3.6675551668641768`*^9, 
+   3.667555395200017*^9, 3.667555940449053*^9},
+ Background->RGBColor[0.94, 0.91, 0.88]]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"SA", "[", 
+   RowBox[{"s_", ",", "t_"}], "]"}], ":=", 
+  RowBox[{
+   SuperscriptBox["s", "2"], "+", 
+   RowBox[{
+    FractionBox[
+     SqrtBox["3"], "4"], 
+    SuperscriptBox["t", "2"]}]}]}]], "Input",
+ CellChangeTimes->{{3.667554431528741*^9, 3.667554438225644*^9}},
+ Background->RGBColor[0.94, 0.91, 0.88]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"SA", "[", "t_", "]"}], ":=", 
+  RowBox[{
+   RowBox[{"SA", "[", 
+    RowBox[{"s", ",", "t"}], "]"}], "/.", "soft"}]}]], "Input",
+ CellChangeTimes->{{3.6675544147572927`*^9, 3.667554459650255*^9}},
+ Background->RGBColor[0.94, 0.91, 0.88]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"dSA", "[", "t_", "]"}], ":=", 
+  RowBox[{"D", "[", 
+   RowBox[{
+    RowBox[{"SA", "[", "t", "]"}], ",", "t"}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.667554607304195*^9, 3.667554642634451*^9}},
+ Background->RGBColor[0.94, 0.91, 0.88]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"solutions", "=", 
+  RowBox[{"Solve", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"dSA", "[", "t", "]"}], "\[Equal]", "0"}], ",", "t"}], 
+   "]"}]}]], "Input",
+ CellChangeTimes->{{3.667554752055316*^9, 3.6675547670802927`*^9}},
+ Background->RGBColor[0.94, 0.91, 0.88]],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"{", 
+   RowBox[{"t", "\[Rule]", 
+    FractionBox["30", 
+     RowBox[{"9", "+", 
+      RowBox[{"4", " ", 
+       SqrtBox["3"]}]}]]}], "}"}], "}"}]], "Output",
+ CellChangeTimes->{{3.667554757919869*^9, 3.667554787584388*^9}, 
+   3.667555167532268*^9, 3.667555395312335*^9, 3.6675559406648607`*^9},
+ Background->RGBColor[0.94, 0.91, 0.88]]
+}, Open  ]],
+
+Cell[TextData[{
+ StyleBox["(I\[CloseCurlyQuote]m assuming below that the set of solutions \
+includes the end-points; otherwise, there ",
+  FontSlant->"Italic"],
+ StyleBox["is",
+  FontWeight->"Bold",
+  FontSlant->"Italic"],
+ StyleBox[" no optimal solution, as the total surface-area increases at both \
+ends of the domain.)",
+  FontSlant->"Italic"]
+}], "Text",
+ CellChangeTimes->{{3.667555777508569*^9, 3.667555799917548*^9}, {
+  3.667555834712981*^9, 3.667555866408854*^9}},
+ Background->RGBColor[0.94, 0.91, 0.88]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"criticals", "=", 
+  RowBox[{"{", 
+   RowBox[{"0", ",", 
+    RowBox[{
+     RowBox[{"t", "/.", "solutions"}], "//", "Last"}], ",", 
+    RowBox[{"t", "/.", 
+     RowBox[{"(", 
+      RowBox[{"tofs", "/.", 
+       RowBox[{"s", "\[Rule]", "0"}]}], ")"}]}]}], "}"}]}]], "Input",
+ CellChangeTimes->{{3.667554794443561*^9, 3.667554852709106*^9}, {
+  3.667554883132815*^9, 3.667554914518878*^9}, {3.667555435311288*^9, 
+  3.667555436397455*^9}, {3.6675555240098677`*^9, 3.667555576059566*^9}},
+ Background->RGBColor[0.94, 0.91, 0.88]],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"0", ",", 
+   FractionBox["30", 
+    RowBox[{"9", "+", 
+     RowBox[{"4", " ", 
+      SqrtBox["3"]}]}]], ",", 
+   FractionBox["10", "3"]}], "}"}]], "Output",
+ CellChangeTimes->{
+  3.667555395365843*^9, 3.6675554375098352`*^9, {3.667555543006727*^9, 
+   3.667555576257659*^9}, 3.667555940780985*^9},
+ Background->RGBColor[0.94, 0.91, 0.88]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"SA", "[", "t", "]"}], "/.", 
+   RowBox[{"t", "\[Rule]", "criticals"}]}], "//", "N"}]], "Input",
+ CellChangeTimes->{{3.667555622295064*^9, 3.667555622806168*^9}},
+ Background->RGBColor[0.94, 0.91, 0.88]],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"6.25`", ",", "2.718528233424163`", ",", "4.811252243246883`"}], 
+  "}"}]], "Output",
+ CellChangeTimes->{3.667555623138729*^9, 3.6675559409817543`*^9, 
+  3.667556158220036*^9},
+ Background->RGBColor[0.94, 0.91, 0.88]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"soft", "/.", 
+  RowBox[{"t", "\[Rule]", "0"}]}]], "Input",
+ CellChangeTimes->{{3.667555691613999*^9, 3.667555694641317*^9}},
+ Background->RGBColor[0.94, 0.91, 0.88]],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"s", "\[Rule]", 
+   FractionBox["5", "2"]}], "}"}]], "Output",
+ CellChangeTimes->{3.667555695028867*^9, 3.667555941031741*^9},
+ Background->RGBColor[0.94, 0.91, 0.88]]
+}, Open  ]],
+
+Cell[TextData[{
+ "The size of the ",
+ StyleBox["square",
+  FontSlant->"Italic"],
+ " should be maximized, at the expense of the triangle. (That is, ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"t", "=", "0"}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ ", ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"s", "=", 
+    FractionBox["5", "2"]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " is the optimal solution to this problem, involving an infinitely small \
+triangle, and a square of perimiter ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"10", "cm"}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ "; lending a total surface-area of ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"6.25`", " ", 
+    SuperscriptBox["cm", "2"]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ ".)"
+}], "Text",
+ CellChangeTimes->{{3.667555628359075*^9, 3.66755568630951*^9}, {
+  3.66755571811405*^9, 3.667555763835636*^9}, {3.667555891673896*^9, 
+  3.667555899136751*^9}, {3.6675561739263*^9, 3.66755618867131*^9}},
+ Background->RGBColor[0.94, 0.91, 0.88]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Minimization \[Ellipsis]", "Subsubsection",
+ CellChangeTimes->{{3.667555875504603*^9, 3.6675558826172256`*^9}, {
+  3.6675559148193398`*^9, 3.6675559161390877`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"SA", "[", "t", "]"}], "/.", 
+   RowBox[{"t", "\[Rule]", "criticals"}]}], "//", "N"}]], "Input",
+ CellChangeTimes->{{3.667555622295064*^9, 3.667555622806168*^9}},
+ Background->RGBColor[0.94, 0.91, 0.88]],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"6.25`", ",", "2.718528233424163`", ",", "4.811252243246883`"}], 
+  "}"}]], "Output",
+ CellChangeTimes->{3.667555623138729*^9, 3.667556136849759*^9},
+ Background->RGBColor[0.94, 0.91, 0.88]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"3", "t"}], "/.", "solutions"}], "//", "Last"}], "//", 
+  "N"}]], "Input",
+ CellChangeTimes->{{3.667556099649147*^9, 3.667556113387877*^9}, {
+  3.667556237121499*^9, 3.667556239097014*^9}},
+ Background->RGBColor[0.94, 0.91, 0.88]],
+
+Cell[BoxData["5.650354826521339`"], "Output",
+ CellChangeTimes->{{3.667556109890576*^9, 3.667556114289277*^9}, 
+   3.667556239826166*^9},
+ Background->RGBColor[0.94, 0.91, 0.88]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     RowBox[{"4", "s"}], "/.", "soft"}], "/.", "solutions"}], "//", "Last"}], 
+  "//", "N"}]], "Input",
+ CellChangeTimes->{{3.667555691613999*^9, 3.667555694641317*^9}, {
+  3.667555967173502*^9, 3.667556012039401*^9}, {3.667556281954949*^9, 
+  3.667556286315217*^9}},
+ Background->RGBColor[0.94, 0.91, 0.88]],
+
+Cell[BoxData["4.349645173478661`"], "Output",
+ CellChangeTimes->{
+  3.667555695028867*^9, {3.667555971032243*^9, 3.667556012428917*^9}, {
+   3.667556283505431*^9, 3.66755628860753*^9}},
+ Background->RGBColor[0.94, 0.91, 0.88]]
+}, Open  ]],
+
+Cell[TextData[{
+ "To minimize, we reach the local minimum at ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"t", "=", 
+    RowBox[{"~", "1.8834516088404463`"}]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ "; in the optimal solution to this problem, we produce a triangle of \
+perimiter ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"~", "5.650354826521339`"}], "cm"}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ ", and a square of perimiter ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"~", "4.349645173478661`"}], "cm"}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ "; yielding a total surface-area of ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"2.718528233424163`", 
+    SuperscriptBox["cm", "2"]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ "."
+}], "Text",
+ CellChangeTimes->{{3.667555628359075*^9, 3.66755568630951*^9}, {
+  3.66755571811405*^9, 3.667555763835636*^9}, {3.667555891673896*^9, 
+  3.667555899136751*^9}, {3.6675560221196537`*^9, 3.667556077681898*^9}, {
+  3.667556198960229*^9, 3.667556298118175*^9}, {3.667556335117798*^9, 
+  3.667556355694249*^9}},
+ Background->RGBColor[0.94, 0.91, 0.88]]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+},
+WindowToolbars->"EditBar",
+WindowSize->{1143, 695},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+FrontEndVersion->"10.3 for Mac OS X x86 (32-bit, 64-bit Kernel) (December 10, \
+2015)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[579, 22, 353, 5, 92, "Title"],
+Cell[935, 29, 104, 1, 51, "Subtitle"],
+Cell[CellGroupData[{
+Cell[1064, 34, 99, 1, 64, "Section"],
+Cell[1166, 37, 447, 10, 49, "Text"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[1650, 52, 108, 1, 64, "Section"],
+Cell[CellGroupData[{
+Cell[1783, 57, 99, 1, 44, "Subsection"],
+Cell[1885, 60, 1736, 26, 145, "Text"],
+Cell[3624, 88, 6541, 83, 147, "Graphics"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[10202, 176, 152, 2, 44, "Subsection"],
+Cell[10357, 180, 743, 17, 70, "Text"],
+Cell[CellGroupData[{
+Cell[11125, 201, 10369, 229, 264, "Input"],
+Cell[21497, 432, 4439, 93, 620, "Output"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[25985, 531, 231, 3, 44, "Subsection"],
+Cell[26219, 536, 765, 20, 51, "Text"],
+Cell[26987, 558, 158, 3, 47, "Text"],
+Cell[27148, 563, 761, 17, 50, "Text"],
+Cell[27912, 582, 171, 3, 44, "Text"],
+Cell[28086, 587, 715, 14, 50, "Text"],
+Cell[28804, 603, 686, 18, 58, "Input"],
+Cell[29493, 623, 441, 8, 49, "Text"],
+Cell[29937, 633, 290, 8, 44, "Input"],
+Cell[30230, 643, 963, 14, 49, "Text"],
+Cell[CellGroupData[{
+Cell[31218, 661, 255, 7, 44, "Input"],
+Cell[31476, 670, 471, 15, 61, "Output"]
+}, Open  ]],
+Cell[31962, 688, 522, 14, 31, "Text"],
+Cell[CellGroupData[{
+Cell[32509, 706, 475, 13, 44, "Input"],
+Cell[32987, 721, 318, 9, 44, "Output"]
+}, Open  ]],
+Cell[33320, 733, 622, 16, 31, "Text"],
+Cell[CellGroupData[{
+Cell[33967, 753, 440, 13, 44, "Input"],
+Cell[34410, 768, 177, 3, 44, "Output"]
+}, Open  ]],
+Cell[34602, 774, 421, 7, 30, "Text"],
+Cell[35026, 783, 299, 9, 47, "Text"],
+Cell[35328, 794, 1076, 17, 49, "Text"],
+Cell[36407, 813, 384, 7, 46, "Text"],
+Cell[36794, 822, 436, 9, 31, "Text"],
+Cell[37233, 833, 194, 3, 44, "Text"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[37476, 842, 180, 2, 64, "Section"],
+Cell[CellGroupData[{
+Cell[37681, 848, 142, 2, 44, "Subsection"],
+Cell[37826, 852, 1214, 23, 89, "Text"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[39077, 880, 111, 1, 44, "Subsection"],
+Cell[39191, 883, 579, 12, 68, "Text"],
+Cell[CellGroupData[{
+Cell[39795, 899, 11385, 261, 343, "Input"],
+Cell[51183, 1162, 5042, 99, 316, "Output"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[56286, 1268, 211, 4, 64, "Section"],
+Cell[56500, 1274, 302, 7, 31, "Text"],
+Cell[56805, 1283, 325, 9, 47, "Text"],
+Cell[57133, 1294, 836, 21, 51, "Text"],
+Cell[57972, 1317, 289, 8, 48, "Input"],
+Cell[CellGroupData[{
+Cell[58286, 1329, 399, 11, 44, "Input"],
+Cell[58688, 1342, 382, 10, 65, "Output"]
+}, Open  ]],
+Cell[59085, 1355, 390, 10, 31, "Text"],
+Cell[59478, 1367, 258, 7, 48, "Input"],
+Cell[59739, 1376, 553, 15, 31, "Text"],
+Cell[CellGroupData[{
+Cell[60317, 1395, 315, 7, 44, "Input"],
+Cell[60635, 1404, 333, 8, 63, "Output"]
+}, Open  ]],
+Cell[60983, 1415, 215, 5, 30, "Text"],
+Cell[61201, 1422, 387, 11, 44, "Input"],
+Cell[61591, 1435, 837, 15, 69, "Text"],
+Cell[CellGroupData[{
+Cell[62453, 1454, 417, 11, 44, "Input"],
+Cell[62873, 1467, 443, 11, 102, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[63353, 1483, 326, 7, 44, "Input"],
+Cell[63682, 1492, 326, 6, 44, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[64045, 1503, 301, 8, 44, "Input"],
+Cell[64349, 1513, 179, 3, 44, "Output"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[64577, 1522, 177, 2, 64, "Section"],
+Cell[64757, 1526, 654, 10, 49, "Text"],
+Cell[65414, 1538, 268, 6, 30, "Text"],
+Cell[CellGroupData[{
+Cell[65707, 1548, 3878, 96, 189, "Input"],
+Cell[69588, 1646, 2606, 52, 220, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[72231, 1703, 117, 1, 35, "Subsubsection"],
+Cell[72351, 1706, 312, 7, 44, "Input"],
+Cell[CellGroupData[{
+Cell[72688, 1717, 251, 7, 44, "Input"],
+Cell[72942, 1726, 329, 8, 44, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[73308, 1739, 308, 8, 44, "Input"],
+Cell[73619, 1749, 357, 10, 64, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[74013, 1764, 332, 9, 44, "Input"],
+Cell[74348, 1775, 434, 11, 63, "Output"]
+}, Open  ]],
+Cell[74797, 1789, 343, 11, 69, "Input"],
+Cell[75143, 1802, 271, 7, 44, "Input"],
+Cell[75417, 1811, 271, 7, 44, "Input"],
+Cell[CellGroupData[{
+Cell[75713, 1822, 291, 8, 44, "Input"],
+Cell[76007, 1832, 376, 10, 68, "Output"]
+}, Open  ]],
+Cell[76398, 1845, 515, 13, 65, "Text"],
+Cell[CellGroupData[{
+Cell[76938, 1862, 548, 13, 44, "Input"],
+Cell[77489, 1877, 378, 11, 68, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[77904, 1893, 249, 6, 44, "Input"],
+Cell[78156, 1901, 256, 6, 44, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[78449, 1912, 189, 4, 44, "Input"],
+Cell[78641, 1918, 206, 5, 62, "Output"]
+}, Open  ]],
+Cell[78862, 1926, 1053, 32, 76, "Text"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[79952, 1963, 170, 2, 35, "Subsubsection"],
+Cell[CellGroupData[{
+Cell[80147, 1969, 249, 6, 44, "Input"],
+Cell[80399, 1977, 229, 5, 44, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[80665, 1987, 289, 8, 44, "Input"],
+Cell[80957, 1997, 178, 3, 44, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[81172, 2005, 368, 10, 44, "Input"],
+Cell[81543, 2017, 226, 4, 44, "Output"]
+}, Open  ]],
+Cell[81784, 2024, 1158, 33, 68, "Text"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)

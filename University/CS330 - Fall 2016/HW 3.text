@@ -1,0 +1,28 @@
+1. 
+
+2. 
+
+### No. 3
+To show that (x³ + 2x) / (2x + 1) ∈ O(x²):
+
+Letting k be a positive constant such that the following holds, let us find an M where ...
+  |(x³ + 2x) / (2x + 1)|   ≤  M × x²     whenever x ≥ k
+
+Since x is positive, (x³ + 2x) / (2x + 1) is positive, thus:
+   (x³ + 2x) / (2x + 1)    ≤  M × x²
+
+Similarly, x² is positive,
+   (x³ + 2x) / x²×(2x + 1) ≤ (M × x²) × 1/x²
+   (x³ + 2x) / (2x³ + x²)  ≤  M
+   (x² + 2)  / (2x² + x)   ≤  M
+
+Note also that 2 ≤ 2x², and x ≤ x², implying:
+   (x² + 2)  / (2x² + x)   ≤ (x² + 2x²) / (2x² + x²)
+   (x² + 2)  / (2x² + x)   ≤  3x² / 3x²
+   (x² + 2)  / (2x² + x)   ≤  1
+
+Thus, (x³ + 2x) / (2x + 1) ∈ O(x²) because (x³ + 2x) / (2x + 1) ≤ 1x² whenever n > 1.
+
+
+### No. 4
+

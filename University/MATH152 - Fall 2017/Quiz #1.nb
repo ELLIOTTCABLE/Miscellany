@@ -1,0 +1,221 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      5603,        212]
+NotebookOptionsPosition[      4768,        178]
+NotebookOutlinePosition[      5154,        195]
+CellTagsIndexPosition[      5111,        192]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Quiz #1", "Title",
+ CellChangeTimes->{{3.713113959602583*^9, 3.713113962912912*^9}}],
+
+Cell[CellGroupData[{
+
+Cell["Problem 1.", "Subchapter",
+ CellChangeTimes->{{3.713113970242354*^9, 3.713113971096498*^9}}],
+
+Cell["Show that f(x) has an inverse.", "Text",
+ CellChangeTimes->{{3.7131139797022657`*^9, 3.713114010459277*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"f", "[", "x_", "]"}], ":=", 
+  RowBox[{
+   SuperscriptBox["x", "3"], "+", 
+   RowBox[{"2", "x"}], "+", "1"}]}]], "Input",
+ CellChangeTimes->{{3.713113966080306*^9, 3.713113977729603*^9}}],
+
+Cell["\<\
+It suffices to show that f(x) is increasing; we do this by deriving and \
+showing positivity:\
+\>", "Text",
+ CellChangeTimes->{{3.713114012682043*^9, 3.71311405824438*^9}}],
+
+Cell[BoxData[{
+ FormBox[
+  RowBox[{
+   RowBox[{
+    RowBox[{"f", "'"}], 
+    RowBox[{"(", "x", ")"}]}], "=", 
+   RowBox[{
+    RowBox[{"3", 
+     SuperscriptBox["x", "2"]}], "+", "2"}]}], 
+  TraditionalForm], "\[IndentingNewLine]", 
+ FormBox[
+  RowBox[{
+   RowBox[{"3", 
+    SuperscriptBox["x", "2"]}], ">", 
+   RowBox[{"0", 
+    RowBox[{"\[ForAll]", "x"}]}]}], TraditionalForm]}], "Input",
+ CellChangeTimes->{{3.713114107026238*^9, 3.713114152844599*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Problem 2.", "Subchapter",
+ CellChangeTimes->{{3.713114159520117*^9, 3.7131141624487467`*^9}}],
+
+Cell[TextData[{
+ "Find ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{
+     RowBox[{"(", 
+      SuperscriptBox["f", 
+       RowBox[{"-", "1"}]], ")"}], "'"}], 
+    RowBox[{
+     RowBox[{"(", "4", ")"}], "."}]}], TraditionalForm]],
+  FormatType->"TraditionalForm"]
+}], "Text",
+ CellChangeTimes->{{3.7131141659400053`*^9, 3.713114178499936*^9}, {
+  3.713114215015086*^9, 3.7131142210250673`*^9}}],
+
+Cell[BoxData[{
+ FormBox[
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     RowBox[{"(", 
+      SuperscriptBox["f", 
+       RowBox[{"-", "1"}]], ")"}], "'"}], 
+    RowBox[{"(", "a", ")"}]}], "=", 
+   FractionBox["1", 
+    RowBox[{
+     RowBox[{"f", "'"}], 
+     RowBox[{"(", 
+      RowBox[{
+       SuperscriptBox["f", 
+        RowBox[{"-", "1"}]], "(", "a", ")"}], ")"}]}]]}], 
+  TraditionalForm], "\[IndentingNewLine]", 
+ FormBox[
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     SuperscriptBox["f", 
+      RowBox[{"-", "1"}]], "(", "a", ")"}], "\[Implies]", 
+    "\[IndentingNewLine]", "4"}], "=", 
+   RowBox[{
+    RowBox[{
+     RowBox[{
+      SuperscriptBox["x", "3"], "+", 
+      RowBox[{"2", "x"}], "+", "1"}], "\[Implies]", "\[IndentingNewLine]", 
+     "x"}], "=", "1"}]}], TraditionalForm]}], "Input",
+ CellChangeTimes->{{3.713114245910602*^9, 3.713114285604885*^9}, {
+  3.713114329826509*^9, 3.713114331130377*^9}, {3.713114386197607*^9, 
+  3.713114426120648*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Problem 3.", "Subchapter",
+ CellChangeTimes->{{3.713114614172435*^9, 3.713114616534664*^9}}],
+
+Cell[TextData[{
+ "Find the derivative of ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"h", "(", "x", ")"}], "=", 
+    RowBox[{
+     SuperscriptBox["x", "2"], "\[CenterDot]", 
+     SuperscriptBox["e", 
+      RowBox[{"2", "x"}]]}]}], TraditionalForm]],
+  FormatType->"TraditionalForm"]
+}], "Text",
+ CellChangeTimes->{{3.71311461899395*^9, 3.713114629850906*^9}}],
+
+Cell[BoxData[{
+ FormBox[
+  RowBox[{
+   RowBox[{
+    RowBox[{"h", "'"}], 
+    RowBox[{"(", "x", ")"}]}], "=", 
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{
+      SuperscriptBox["x", "2"], 
+      SuperscriptBox["e", 
+       RowBox[{"2", "x"}]]}], ")"}], "'"}]}], 
+  TraditionalForm], "\[IndentingNewLine]", 
+ FormBox[
+  RowBox[{"=", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"2", 
+      RowBox[{"x", "\[CenterDot]", 
+       SuperscriptBox["e", 
+        RowBox[{"2", "x"}]]}]}], "+", 
+     RowBox[{"2", 
+      SuperscriptBox["x", "2"], 
+      SuperscriptBox["e", 
+       RowBox[{"2", "x"}]]}]}], "=", 
+    RowBox[{"2", 
+     RowBox[{"x", "\[CenterDot]", 
+      SuperscriptBox["e", 
+       RowBox[{"2", "x"}]], "\[CenterDot]", 
+      RowBox[{"(", 
+       RowBox[{"1", "+", 
+        RowBox[{"2", "x"}]}], ")"}]}]}]}]}], TraditionalForm]}], "Input",
+ CellChangeTimes->{{3.713114648321846*^9, 3.7131146849064827`*^9}, {
+  3.713114726628806*^9, 3.713114776585466*^9}}]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{711, 843},
+WindowMargins->{{6, Automatic}, {Automatic, 6}},
+Magnification:>1.5 Inherited,
+FrontEndVersion->"10.3 for Mac OS X x86 (32-bit, 64-bit Kernel) (December 10, \
+2015)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 90, 1, 137, "Title"],
+Cell[CellGroupData[{
+Cell[695, 27, 98, 1, 91, "Subchapter"],
+Cell[796, 30, 114, 1, 46, "Text"],
+Cell[913, 33, 222, 6, 46, "Input"],
+Cell[1138, 41, 182, 4, 76, "Text"],
+Cell[1323, 47, 455, 16, 78, "Input"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[1815, 68, 100, 1, 91, "Subchapter"],
+Cell[1918, 71, 400, 14, 51, "Text"],
+Cell[2321, 87, 954, 32, 172, "Input"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3312, 124, 98, 1, 91, "Subchapter"],
+Cell[3413, 127, 368, 12, 47, "Text"],
+Cell[3784, 141, 956, 33, 81, "Input"]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)

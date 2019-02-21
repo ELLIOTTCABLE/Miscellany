@@ -1,0 +1,453 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     12296,        444]
+NotebookOptionsPosition[     11070,        400]
+NotebookOutlinePosition[     11458,        417]
+CellTagsIndexPosition[     11415,        414]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[TextData[{
+ "Notes ",
+ StyleBox["(MATH152, 2017-09-01)",
+  FontSlant->"Italic"]
+}], "Title",
+ CellChangeTimes->{
+  3.713267301164419*^9, {3.713699054900259*^9, 3.713699057160079*^9}}],
+
+Cell[CellGroupData[{
+
+Cell["Inverse trigonometric functions.", "Subchapter",
+ CellChangeTimes->{{3.713267320798235*^9, 3.71326732880711*^9}}],
+
+Cell[TextData[{
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"y", "=", 
+    RowBox[{
+     SuperscriptBox["sin", 
+      RowBox[{"-", "1"}]], "x"}]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " is the inverse function of ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"x", "=", 
+    RowBox[{"sin", " ", "y"}]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ ", also called ",
+ Cell[BoxData[
+  FormBox["arcsin", TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ "."
+}], "Text",
+ CellChangeTimes->{{3.713267605020191*^9, 3.713267649935069*^9}}],
+
+Cell[BoxData[{
+ FormBox[
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     SuperscriptBox["sin", 
+      RowBox[{"-", "1"}]], "(", 
+     RowBox[{"sin", " ", "x"}], ")"}], "=", "x"}], ",", 
+   RowBox[{
+    RowBox[{"-", 
+     FractionBox["\[Pi]", "2"]}], "\[LessEqual]", "x", "\[LessEqual]", 
+    FractionBox["\[Pi]", "2"]}]}], TraditionalForm], "\[IndentingNewLine]", 
+ FormBox[
+  RowBox[{
+   RowBox[{
+    RowBox[{"sin", "(", 
+     RowBox[{
+      SuperscriptBox["sin", 
+       RowBox[{"-", "1"}]], "x"}], ")"}], "=", "x"}], ",", 
+   RowBox[{
+    RowBox[{"-", "1"}], "\[LessEqual]", "x", "\[LessEqual]", "1"}]}], 
+  TraditionalForm]}], "Input",
+ CellChangeTimes->{{3.713267740200169*^9, 3.713267808477915*^9}}],
+
+Cell[BoxData[{
+ FormBox[
+  RowBox[{
+   RowBox[{"sin", " ", 
+    RowBox[{"x", ":", 
+     RowBox[{"[", 
+      RowBox[{
+       RowBox[{"-", 
+        FractionBox["\[Pi]", "2"]}], ",", 
+       FractionBox["\[Pi]", "2"]}], "]"}]}]}], "\[Rule]", 
+   RowBox[{"[", 
+    RowBox[{
+     RowBox[{"-", "1"}], ",", "1"}], "]"}]}], 
+  TraditionalForm], "\[IndentingNewLine]", 
+ FormBox[
+  RowBox[{
+   RowBox[{
+    SuperscriptBox["sin", 
+     RowBox[{"-", "1"}]], 
+    RowBox[{"x", ":", 
+     RowBox[{"[", 
+      RowBox[{
+       RowBox[{"-", "1"}], ",", "1"}], "]"}]}]}], "\[Rule]", 
+   RowBox[{"[", 
+    RowBox[{
+     RowBox[{"-", 
+      FractionBox["\[Pi]", "2"]}], ",", 
+     FractionBox["\[Pi]", "2"]}], "]"}]}], TraditionalForm]}], "Input",
+ CellChangeTimes->{{3.713267809647229*^9, 3.713267849488391*^9}}],
+
+Cell["", "Text",
+ Editable->False,
+ Selectable->False,
+ CellFrame->{{0, 0}, {0, 0.5}},
+ ShowCellBracket->False,
+ CellMargins->{{0, 0}, {1, 1}},
+ CellElementSpacings->{"CellMinHeight"->1},
+ CellFrameMargins->0,
+ CellFrameColor->RGBColor[0, 0, 1],
+ CellSize->{Inherited, 3}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Tan", "[", 
+  RowBox[{"ArcSin", "[", 
+   RowBox[{"1", "/", "3"}], "]"}], "]"}]], "Input",
+ CellChangeTimes->{{3.713267931021099*^9, 3.713267933842162*^9}, {
+  3.713268280608223*^9, 3.713268299368992*^9}}],
+
+Cell[BoxData[
+ FractionBox["1", 
+  RowBox[{"2", " ", 
+   SqrtBox["2"]}]]], "Output",
+ CellChangeTimes->{
+  3.713267934481596*^9, {3.713268281949304*^9, 3.7132682998115873`*^9}}]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{
+  SuperscriptBox["h", "2"], "=", 
+  RowBox[{
+   SuperscriptBox[
+    RowBox[{"(", 
+     RowBox[{"a", "+", "b"}], ")"}], "2"], "-", 
+   RowBox[{"4", "\[CenterDot]", 
+    RowBox[{"(", 
+     RowBox[{
+      FractionBox["1", "2"], 
+      RowBox[{"a", "\[CenterDot]", "b"}]}], ")"}]}]}]}]], "Input",
+ CellChangeTimes->{{3.713268155452454*^9, 3.7132681883977423`*^9}}],
+
+Cell["", "Text",
+ Editable->False,
+ Selectable->False,
+ CellFrame->{{0, 0}, {0, 0.5}},
+ ShowCellBracket->False,
+ CellMargins->{{0, 0}, {1, 1}},
+ CellElementSpacings->{"CellMinHeight"->1},
+ CellFrameMargins->0,
+ CellFrameColor->RGBColor[0, 0, 1],
+ CellSize->{Inherited, 3}],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{
+   FractionBox["\[DifferentialD]", 
+    RowBox[{"\[DifferentialD]", "x"}]], 
+   RowBox[{"(", 
+    RowBox[{
+     SuperscriptBox["sin", 
+      RowBox[{"-", "1"}]], "x"}], ")"}]}], TraditionalForm]], "Input",
+ CellChangeTimes->{{3.7132688599783783`*^9, 3.713268891661916*^9}}],
+
+Cell[TextData[{
+ "Let ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"y", "=", 
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       SuperscriptBox["sin", 
+        RowBox[{"-", "1"}]], "x"}], "\[Implies]", 
+      RowBox[{"sin", " ", "y"}]}], "=", "x"}]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ ";"
+}], "Text",
+ CellChangeTimes->{{3.713268893576417*^9, 3.7132689115655193`*^9}}],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{
+   FractionBox[
+    RowBox[{"\[DifferentialD]", "y"}], 
+    RowBox[{"\[DifferentialD]", "x"}]], "=", 
+   RowBox[{
+    RowBox[{"?", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"(", 
+        SuperscriptBox["f", 
+         RowBox[{"-", "1"}]], ")"}], "'"}], 
+      RowBox[{"(", "x", ")"}]}]}], "=", 
+    RowBox[{
+     FractionBox["1", 
+      RowBox[{
+       RowBox[{"f", "'"}], 
+       RowBox[{"(", 
+        RowBox[{
+         SuperscriptBox["f", 
+          RowBox[{"-", "1"}]], "(", "x", ")"}], ")"}]}]], "=", 
+     FractionBox["1", 
+      RowBox[{
+       RowBox[{"f", "'"}], 
+       RowBox[{"(", "y", ")"}]}]]}]}]}], TraditionalForm]], "Input",
+ CellChangeTimes->{{3.713268913692567*^9, 3.71326897236698*^9}}],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{
+   FractionBox["1", 
+    FractionBox[
+     RowBox[{"\[DifferentialD]", "x"}], 
+     RowBox[{"\[DifferentialD]", "y"}]]], "=", 
+   RowBox[{
+    FractionBox["1", 
+     RowBox[{"cos", " ", "y"}]], "=", 
+    RowBox[{
+     FractionBox["1", 
+      SqrtBox[
+       RowBox[{"1", "-", 
+        RowBox[{
+         SuperscriptBox["sin", "2"], "y"}]}]]], "=", 
+     FractionBox["1", 
+      SqrtBox[
+       RowBox[{"1", "-", 
+        SuperscriptBox["x", "2"]}]]]}]}]}], TraditionalForm]], "Input",
+ CellChangeTimes->{{3.713268984815497*^9, 3.713269032396988*^9}}],
+
+Cell["", "Text",
+ Editable->False,
+ Selectable->False,
+ CellFrame->{{0, 0}, {0, 0.5}},
+ ShowCellBracket->False,
+ CellMargins->{{0, 0}, {1, 1}},
+ CellElementSpacings->{"CellMinHeight"->1},
+ CellFrameMargins->0,
+ CellFrameColor->RGBColor[0, 0, 1],
+ CellSize->{Inherited, 3}],
+
+Cell[BoxData[{
+ FormBox[
+  RowBox[{
+   RowBox[{
+    RowBox[{"f", "(", "x", ")"}], "=", 
+    RowBox[{
+     SuperscriptBox["sin", 
+      RowBox[{"-", "1"}]], "(", 
+     RowBox[{
+      SuperscriptBox["x", "2"], "-", "1"}], ")"}]}], ",", " ", 
+   RowBox[{
+    RowBox[{"f", ":", 
+     RowBox[{"[", 
+      RowBox[{
+       RowBox[{"-", 
+        SqrtBox["2"]}], ",", 
+       SqrtBox["2"]}], "]"}]}], "\[Rule]", 
+    RowBox[{"[", ",", "]"}]}]}], TraditionalForm], "\[IndentingNewLine]", 
+ FormBox[
+  RowBox[{
+   RowBox[{
+    RowBox[{"-", "1"}], "\[LessEqual]", 
+    RowBox[{
+     SuperscriptBox["x", "2"], "-", "1"}], "\[LessEqual]", 
+    RowBox[{"1", "\[DoubleLongRightArrow]", "0"}], "\[LessEqual]", 
+    SuperscriptBox["x", "2"], "\[LessEqual]", 
+    RowBox[{"2", "\[DoubleLongRightArrow]", "0"}], "\[LessEqual]"}], "|", "x",
+    "|", 
+   RowBox[{"\[LessEqual]", 
+    RowBox[{
+     SqrtBox["2"], "\[DoubleLongRightArrow]", 
+     RowBox[{"-", 
+      SqrtBox["2"]}]}], "\[LessEqual]", "x", "\[LessEqual]", 
+    SqrtBox["2"]}]}], TraditionalForm]}], "Input",
+ CellChangeTimes->{{3.7132695492099543`*^9, 3.71326955651248*^9}, {
+  3.713269593338975*^9, 3.713269627677082*^9}, {3.713269775359219*^9, 
+  3.713269834576961*^9}, {3.713270388380715*^9, 3.7132703971499577`*^9}}],
+
+Cell["", "Text",
+ Editable->False,
+ Selectable->False,
+ CellFrame->{{0, 0}, {0, 0.5}},
+ ShowCellBracket->False,
+ CellMargins->{{0, 0}, {1, 1}},
+ CellElementSpacings->{"CellMinHeight"->1},
+ CellFrameMargins->0,
+ CellFrameColor->RGBColor[0, 0, 1],
+ CellSize->{Inherited, 3}],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{
+   RowBox[{
+    RowBox[{"f", "'"}], 
+    RowBox[{"(", "x", ")"}]}], "=", 
+   RowBox[{
+    FractionBox[
+     RowBox[{"2", "x"}], 
+     SqrtBox[
+      RowBox[{"1", "-", 
+       SuperscriptBox[
+        RowBox[{"(", 
+         RowBox[{
+          SuperscriptBox["x", "2"], "-", "1"}], ")"}], "2"]}]]], "="}]}], 
+  TraditionalForm]], "Input",
+ CellChangeTimes->{{3.713269874727418*^9, 3.713269918866502*^9}, {
+  3.713269965594995*^9, 3.713269966019266*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Expand", "[", 
+  RowBox[{"1", "-", 
+   SuperscriptBox[
+    RowBox[{"(", 
+     RowBox[{
+      SuperscriptBox["x", "2"], "-", "1"}], ")"}], "2"]}], "]"}]], "Input",
+ CellChangeTimes->{{3.7132698979902563`*^9, 3.7132699036803083`*^9}, {
+  3.713269945805614*^9, 3.713269953077146*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"2", " ", 
+   SuperscriptBox["x", "2"]}], "-", 
+  SuperscriptBox["x", "4"]}]], "Output",
+ CellChangeTimes->{
+  3.713269904264594*^9, {3.713269948561569*^9, 3.7132699534089613`*^9}}]
+}, Open  ]],
+
+Cell[BoxData[{
+ FormBox[
+  RowBox[{
+   RowBox[{
+    RowBox[{"f", "'"}], ":", 
+    RowBox[{"[", 
+     RowBox[{
+      RowBox[{"-", 
+       SqrtBox["2"]}], ",", 
+      SqrtBox["2"]}], "]"}]}], "\[Rule]", 
+   RowBox[{"[", ",", "]"}]}], TraditionalForm], "\[IndentingNewLine]", 
+ FormBox[
+  RowBox[{
+   RowBox[{"0", "\[LessEqual]", 
+    SuperscriptBox[
+     RowBox[{"(", 
+      RowBox[{
+       SuperscriptBox["x", "2"], "-", "1"}], ")"}], "2"], "<", 
+    RowBox[{"1", "\[DoubleLongRightArrow]", "0"}], "<"}], " ", "|", 
+   RowBox[{
+    SuperscriptBox["x", "2"], "-", "1"}], "|", 
+   RowBox[{"<", 
+    RowBox[{"1", "\[DoubleLongRightArrow]", 
+     RowBox[{"-", "1"}]}], "<", " ", 
+    RowBox[{
+     SuperscriptBox["x", "2"], "-", "1"}], "<", 
+    RowBox[{"1", "\[DoubleLongRightArrow]", "0"}], "<", " ", 
+    SuperscriptBox["x", "2"], "<", 
+    RowBox[{"2", "\[DoubleLongRightArrow]", "\[IndentingNewLine]", "0"}], 
+    "<"}], " ", "|", "x", "|", 
+   RowBox[{"<", 
+    RowBox[{
+     SqrtBox["2"], "\[DoubleLongRightArrow]", 
+     RowBox[{"-", 
+      SqrtBox["2"]}]}], "<", " ", "x", "<", 
+    RowBox[{
+     SqrtBox["2"], 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"&", "x"}], "\[NotEqual]", "0"}], ")"}]}]}]}], 
+  TraditionalForm]}], "Input",
+ CellChangeTimes->{{3.713269969476881*^9, 3.713269976559947*^9}, {
+  3.713270022220989*^9, 3.7132701294261293`*^9}, {3.7132701751131277`*^9, 
+  3.713270228523168*^9}, {3.71327032688962*^9, 3.713270400959093*^9}, {
+  3.713270445229438*^9, 3.713270459301626*^9}}],
+
+Cell["", "Text",
+ Editable->False,
+ Selectable->False,
+ CellFrame->{{0, 0}, {0, 0.5}},
+ ShowCellBracket->False,
+ CellMargins->{{0, 0}, {1, 1}},
+ CellElementSpacings->{"CellMinHeight"->1},
+ CellFrameMargins->0,
+ CellFrameColor->RGBColor[0, 0, 1],
+ CellSize->{Inherited, 3}]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{949, 843},
+WindowMargins->{{Automatic, 213}, {Automatic, 8}},
+Magnification:>1.5 Inherited,
+FrontEndVersion->"10.3 for Mac OS X x86 (32-bit, 64-bit Kernel) (December 10, \
+2015)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 188, 6, 137, "Title"],
+Cell[CellGroupData[{
+Cell[793, 32, 119, 1, 91, "Subchapter"],
+Cell[915, 35, 550, 20, 49, "Text"],
+Cell[1468, 57, 698, 22, 102, "Input"],
+Cell[2169, 81, 794, 28, 121, "Input"],
+Cell[2966, 111, 272, 9, 8, "Text"],
+Cell[CellGroupData[{
+Cell[3263, 124, 228, 5, 43, "Input"],
+Cell[3494, 131, 177, 5, 71, "Output"]
+}, Open  ]],
+Cell[3686, 139, 384, 12, 69, "Input"],
+Cell[4073, 153, 272, 9, 8, "Text"],
+Cell[4348, 164, 308, 9, 73, "Input"],
+Cell[4659, 175, 382, 14, 48, "Text"],
+Cell[5044, 191, 765, 26, 144, "Input"],
+Cell[5812, 219, 584, 20, 136, "Input"],
+Cell[6399, 241, 272, 9, 12, "Text"],
+Cell[6674, 252, 1262, 36, 148, "Input"],
+Cell[7939, 290, 272, 9, 12, "Text"],
+Cell[8214, 301, 485, 17, 172, "Input"],
+Cell[CellGroupData[{
+Cell[8724, 322, 305, 8, 78, "Input"],
+Cell[9032, 332, 215, 6, 67, "Output"]
+}, Open  ]],
+Cell[9262, 341, 1505, 44, 207, "Input"],
+Cell[10770, 387, 272, 9, 12, "Text"]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)

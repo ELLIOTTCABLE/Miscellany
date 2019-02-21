@@ -1,0 +1,445 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     12992,        436]
+NotebookOptionsPosition[     12058,        399]
+NotebookOutlinePosition[     12414,        415]
+CellTagsIndexPosition[     12371,        412]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[TextData[{
+ "Notes ",
+ StyleBox["(MATH152, 2017-08-25)",
+  FontSlant->"Italic"]
+}], "Title",
+ CellChangeTimes->{{3.71266226711128*^9, 3.712662268694374*^9}, {
+  3.712662306559126*^9, 3.712662344392305*^9}}],
+
+Cell[TextData[{
+ "If ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"a", ">", "0"}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ ", ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"a", "\[NotEqual]", "1"}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ ", ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"f", "(", "x", ")"}], "=", 
+    SuperscriptBox["a", "x"]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " is a continuous 1-to-1 function, with domain \[DoubleStruckCapitalR] and \
+range ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"(", 
+    RowBox[{"0", ",", "\[Infinity]"}], ")"}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ ".\nIf ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"a", ">", "1"}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ ", ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["a", "x"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " is increasing.\nIf ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"a", "<", "1"}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ ", ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["a", "x"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " is decreasing.\nIf ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"a", ">", "1"}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ ", the ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{
+     UnderscriptBox["lim", 
+      RowBox[{"x", "\[Rule]", "\[Infinity]"}]], 
+     SuperscriptBox["a", "x"]}], "=", "\[Infinity]"}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ ", ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{
+     UnderscriptBox["lim", 
+      RowBox[{"x", "\[Rule]", 
+       RowBox[{"-", "\[Infinity]"}]}]], 
+     SuperscriptBox["a", "x"]}], "=", "0"}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ ".\nIf ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"a", "<", "1"}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ ", the ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{
+     UnderscriptBox["lim", 
+      RowBox[{"x", "\[Rule]", "\[Infinity]"}]], 
+     SuperscriptBox["a", "x"]}], "=", 
+    RowBox[{
+     RowBox[{
+      UnderscriptBox["lim", 
+       RowBox[{"x", "\[Rule]", 
+        RowBox[{"-", "\[Infinity]"}]}]], 
+      SuperscriptBox["a", 
+       RowBox[{"-", "x"}]]}], "=", "0"}]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ ", ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{
+     UnderscriptBox["lim", 
+      RowBox[{"x", "\[Rule]", 
+       RowBox[{"-", "\[Infinity]"}]}]], 
+     SuperscriptBox["a", "x"]}], "=", 
+    RowBox[{
+     RowBox[{
+      UnderscriptBox["lim", 
+       RowBox[{"x", "\[Rule]", "\[Infinity]"}]], 
+      SuperscriptBox["a", 
+       RowBox[{"-", "x"}]]}], "=", "\[Infinity]"}]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ "."
+}], "Text",
+ CellChangeTimes->{{3.712662272418288*^9, 3.7126622969927177`*^9}, {
+  3.7126623515516987`*^9, 3.712662396910632*^9}, {3.712662438786817*^9, 
+  3.712662641112399*^9}, {3.712662759220354*^9, 3.712662759929331*^9}}],
+
+Cell[TextData[{
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SuperscriptBox["a", 
+     RowBox[{"x", "+", "y"}]], "=", 
+    RowBox[{
+     SuperscriptBox["a", "x"], "\[CenterDot]", 
+     SuperscriptBox["a", "y"]}]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ "\n",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SuperscriptBox["a", 
+     RowBox[{"x", "-", "y"}]], "=", 
+    FractionBox[
+     SuperscriptBox["a", "x"], 
+     SuperscriptBox["a", "y"]]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ "\n",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SuperscriptBox["a", 
+     RowBox[{"x", "\[CenterDot]", "y"}]], "=", 
+    SuperscriptBox[
+     RowBox[{"(", 
+      SuperscriptBox["a", "x"], ")"}], "y"]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ "\n",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SuperscriptBox[
+     RowBox[{"(", 
+      RowBox[{"a", "\[CenterDot]", "b"}], ")"}], "x"], "=", 
+    RowBox[{
+     SuperscriptBox["a", "x"], "\[CenterDot]", 
+     SuperscriptBox["b", "x"]}]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ "\n",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SuperscriptBox["a", 
+     RowBox[{"x", "/", "y"}]], "=", 
+    RowBox[{
+     SuperscriptBox["a", 
+      RowBox[{"x", "\[CenterDot]", 
+       FractionBox["1", "y"]}]], "=", 
+     RowBox[{
+      SuperscriptBox[
+       RowBox[{"(", 
+        SuperscriptBox["a", "x"], ")"}], 
+       FractionBox["1", "y"]], "=", 
+      RadicalBox[
+       SuperscriptBox["a", "x"], "y"]}]}]}], TraditionalForm]],
+  FormatType->"TraditionalForm"]
+}], "Text",
+ CellChangeTimes->{{3.712662767412107*^9, 3.7126630171956587`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell["Example: Bacteria, human population", "Subchapter",
+ CellChangeTimes->{{3.712663138079891*^9, 3.712663142178837*^9}, {
+  3.712663178282317*^9, 3.7126631819791718`*^9}, {3.712663970781139*^9, 
+  3.712663977187841*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"BAC", "=", 
+   RowBox[{"List", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+      "t", ",", " ", "0", ",", " ", "1", ",", "2", ",", " ", "3", ",", " ", 
+       "\[Ellipsis]", ",", " ", "n", ",", " ", "\[Ellipsis]"}], "}"}], ",", 
+     " ", 
+     RowBox[{"{", 
+      RowBox[{
+      "bac", ",", " ", "1", ",", " ", "2", ",", " ", "4", ",", " ", "8", ",", 
+       " ", "\[Ellipsis]", ",", " ", 
+       SuperscriptBox["2", "n"], ",", " ", "\[Ellipsis]"}], "}"}]}], "]"}]}], 
+  ";", 
+  RowBox[{"Grid", "[", 
+   RowBox[{"BAC", ",", 
+    RowBox[{"Alignment", "\[Rule]", "Left"}], ",", 
+    RowBox[{"Spacings", "\[Rule]", 
+     RowBox[{"{", 
+      RowBox[{"2", ",", "1"}], "}"}]}], ",", 
+    RowBox[{"Frame", "\[Rule]", "All"}], ",", 
+    RowBox[{"ItemStyle", "\[Rule]", "\"\<Text\>\""}]}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.7126631836084423`*^9, 3.712663238004887*^9}, {
+  3.7126634888524733`*^9, 3.712663518684445*^9}}],
+
+Cell[BoxData[
+ TagBox[GridBox[{
+    {"t", "0", "1", "2", "3", "\[Ellipsis]", "n", "\[Ellipsis]"},
+    {"bac", "1", "2", "4", "8", "\[Ellipsis]", 
+     SuperscriptBox["2", "n"], "\[Ellipsis]"}
+   },
+   AutoDelete->False,
+   GridBoxAlignment->{"Columns" -> {{Left}}},
+   GridBoxFrame->{"Columns" -> {{True}}, "Rows" -> {{True}}},
+   GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+   GridBoxItemStyle->{"Columns" -> {{"Text"}}, "Rows" -> {{"Text"}}},
+   GridBoxSpacings->{"Columns" -> {{2}}, "Rows" -> {{1}}}],
+  "Grid"]], "Output",
+ CellChangeTimes->{
+  3.712663206108563*^9, 3.712663238739706*^9, {3.712663510166143*^9, 
+   3.712663519006707*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"POP", "=", 
+   RowBox[{"List", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+      "yr", ",", " ", "00", ",", " ", "10", ",", "20", ",", " ", "30", ",", 
+       " ", "40", ",", " ", "50", ",", " ", "60", ",", "70", ",", "80", ",", 
+       "90", ",", " ", "100"}], "}"}], ",", " ", 
+     RowBox[{"{", 
+      RowBox[{
+      "pop", ",", " ", "1.65", ",", " ", "1.75", ",", "1.86", ",", "2.07", 
+       ",", "2.3", ",", "2.56", ",", "3.04", ",", "3.71", ",", "4.45", ",", 
+       "5.28", ",", "6.08"}], "}"}]}], "]"}]}], ";", 
+  RowBox[{"Grid", "[", 
+   RowBox[{"POP", ",", 
+    RowBox[{"Alignment", "\[Rule]", "Left"}], ",", 
+    RowBox[{"Spacings", "\[Rule]", 
+     RowBox[{"{", 
+      RowBox[{"1", ",", "1"}], "}"}]}], ",", 
+    RowBox[{"Frame", "\[Rule]", "All"}], ",", 
+    RowBox[{"ItemStyle", "\[Rule]", "\"\<Text\>\""}]}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.712663342502328*^9, 3.712663454515375*^9}, {
+  3.712663524343643*^9, 3.712663550495121*^9}, {3.712663734711575*^9, 
+  3.7126637534195337`*^9}}],
+
+Cell[BoxData[
+ TagBox[GridBox[{
+    {"yr", "0", "10", "20", "30", "40", "50", "60", "70", "80", "90", "100"},
+    {"pop", "1.65`", "1.75`", "1.86`", "2.07`", "2.3`", "2.56`", "3.04`", 
+     "3.71`", "4.45`", "5.28`", "6.08`"}
+   },
+   AutoDelete->False,
+   GridBoxAlignment->{"Columns" -> {{Left}}},
+   GridBoxFrame->{"Columns" -> {{True}}, "Rows" -> {{True}}},
+   GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+   GridBoxItemStyle->{"Columns" -> {{"Text"}}, "Rows" -> {{"Text"}}},
+   GridBoxSpacings->{"Columns" -> {{1}}, "Rows" -> {{1}}}],
+  "Grid"]], "Output",
+ CellChangeTimes->{{3.712663546591281*^9, 3.712663550699465*^9}, 
+   3.712663753710258*^9}]
+}, Open  ]],
+
+Cell[TextData[Cell[BoxData[
+ FormBox[
+  RowBox[{"P", "\[TildeTilde]", 
+   RowBox[{
+    RowBox[{"(", "0.008079266", ")"}], "\[CenterDot]", 
+    SuperscriptBox[
+     RowBox[{"(", "1.013731", ")"}], "t"]}]}], TraditionalForm]],
+ FormatType->"TraditionalForm"]], "Text",
+ CellChangeTimes->{{3.712663822216443*^9, 3.7126638886067343`*^9}}],
+
+Cell[TextData[{
+ "Radioactive decay: ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{
+     SuperscriptBox["\[InvisiblePrefixScriptBase]", "90"], "Sr"}], 
+    UnderscriptBox["\[LongRightArrow]", 
+     RowBox[{
+      SubscriptBox["t", 
+       RowBox[{"1", "/", "2"}]], ":", " ", 
+      RowBox[{"28.8", " ", "years"}]}]], 
+    RowBox[{
+     SuperscriptBox["\[InvisiblePrefixScriptBase]", "90"], "Yt"}], 
+    UnderscriptBox["\[LongRightArrow]", 
+     RowBox[{
+      SubscriptBox["t", 
+       RowBox[{"1", "/", "2"}]], ":", " ", 
+      RowBox[{"64.1", "hrs"}]}]], 
+    RowBox[{
+     SuperscriptBox["\[InvisiblePrefixScriptBase]", "90"], "Zr"}]}], 
+   TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ "\n",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"M", "\[CenterDot]", 
+    SuperscriptBox[
+     RowBox[{"(", 
+      FractionBox["1", "2"], ")"}], 
+     FractionBox["t", "28.8"]]}], TraditionalForm]],
+  FormatType->"TraditionalForm"]
+}], "Text",
+ CellChangeTimes->{{3.7126641214459257`*^9, 3.712664210338427*^9}, {
+  3.7126642482743998`*^9, 3.712664278739202*^9}, {3.712664366152884*^9, 
+  3.712664423320133*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"f", "[", 
+   RowBox[{"n_", ",", "m_"}], "]"}], ":=", 
+  RowBox[{"Solve", "[", 
+   RowBox[{
+    RowBox[{
+     SuperscriptBox["x", "n"], "==", 
+     SuperscriptBox["m", "x"]}], ",", "x"}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.7126652458094273`*^9, 3.7126653030813093`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"f", "[", 
+   RowBox[{"100", ",", "2"}], "]"}], "//", "N"}]], "Input",
+ CellChangeTimes->{{3.712665286074094*^9, 3.712665308767252*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Solve", "::", "ifun"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Inverse functions are being used by \
+\[NoBreak]\\!\\(\\*RowBox[{\\\"Solve\\\"}]\\)\[NoBreak], so some solutions \
+may not be found; use Reduce for complete solution information. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/Solve/ifun\\\", \
+ButtonNote -> \\\"Solve::ifun\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{{3.712665293947941*^9, 3.712665309061741*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"x", "\[Rule]", "1.0070044400215195`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"x", "\[Rule]", 
+     RowBox[{"-", "0.9931397199331576`"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"x", "\[Rule]", "996.0002259329424`"}], "}"}]}], "}"}]], "Output",\
+
+ CellChangeTimes->{{3.71266529400403*^9, 3.712665309067771*^9}}]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{711, 843},
+WindowMargins->{{6, Automatic}, {Automatic, 6}},
+FrontEndVersion->"10.3 for Mac OS X x86 (32-bit, 64-bit Kernel) (December 10, \
+2015)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 211, 6, 92, "Title"],
+Cell[794, 30, 2986, 110, 113, "Text"],
+Cell[3783, 142, 1610, 60, 125, "Text"],
+Cell[CellGroupData[{
+Cell[5418, 206, 223, 3, 62, "Subchapter"],
+Cell[CellGroupData[{
+Cell[5666, 213, 963, 25, 69, "Input"],
+Cell[6632, 240, 671, 15, 75, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[7340, 260, 1053, 25, 80, "Input"],
+Cell[8396, 287, 680, 14, 73, "Output"]
+}, Open  ]],
+Cell[9091, 304, 334, 8, 32, "Text"],
+Cell[9428, 314, 1111, 35, 79, "Text"],
+Cell[10542, 351, 310, 9, 35, "Input"],
+Cell[CellGroupData[{
+Cell[10877, 364, 170, 4, 28, "Input"],
+Cell[11050, 370, 576, 11, 42, "Message"],
+Cell[11629, 383, 389, 11, 28, "Output"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
