@@ -1,3 +1,6 @@
 [submodule "CS450/xv6"]
 	path = University/CS450/xv6
 	url = https://github.com/ELLIOTTCABLE/xv6.git
+[submodule "University/CS350/Final Project"]
+	path = University/CS350/Final Project
+	url = https://github.com/ELLIOTTCABLE/CS350-calculator
