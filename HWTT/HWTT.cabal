@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 34bb553718495b2d9642ef8d470183d56392b5714c9fcb3f956f14e74fa52cd7
+-- hash: 7c98b3ee76ed48d4f3142c8dd09cd836c62bfaebef27546b3c73d2082fdda1c8
 
 name:           HWTT
 version:        0.1.0.0
@@ -27,7 +27,9 @@ source-repository head
 
 library
   exposed-modules:
+      Chapter1
       Lib
+      Throwaway
   other-modules:
       Paths_HWTT
   hs-source-dirs:
